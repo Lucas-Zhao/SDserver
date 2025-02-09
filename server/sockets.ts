@@ -343,6 +343,19 @@ export class ServerStream extends Streams.ObjectReadWriteStream<string> {
 			const staticRequestHandler = (req: http.IncomingMessage, res: http.ServerResponse) => {
 				// console.log(`static rq: ${req.socket.remoteAddress}:${req.socket.remotePort} -> ${req.socket.localAddress}:${req.socket.localPort} - ${req.method} ${req.url} ${req.httpVersion} - ${req.rawHeaders.join('|')}`);
 				req.resume();
+
+				// Needed for the custom client to work
+				res.setHeader('Access-Control-Allow-Origin', '*'); // Allow all origins
+				res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS'); // Allowed methods
+				res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization'); // Allowed headers
+			
+				// Handle preflight requests
+				if (req.method === 'OPTIONS') {
+					res.writeHead(200);
+					res.end();
+					return;
+				}
+
 				req.addListener('end', () => {
 					if (config.customhttpresponse &&
 							config.customhttpresponse(req, res)) {

@@ -108,6 +108,9 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	megakhan: "Kangaskhan-Mega",
 	megalop: "Lopunny-Mega",
 	megaluc: "Lucario-Mega",
+	megalucariox: "Lucario-Mega-X",
+	mlucariox: "Lucario-Mega-X",
+	lucariox: "Lucario-Mega-X",
 	megamaw: "Mawile-Mega",
 	megamedi: "Medicham-Mega",
 	megamewtwo: "Mewtwo-Mega-Y",
@@ -2367,4 +2370,8 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	venomiconp: "Venomicon",
 	venomiconprologue: "Venomicon",
 	volk: "Volkraken",
+
+	//NEW CUSTOM POKEMON
+	zerapiu:"Zerapium",
+	zera:"Zerapium"
 };

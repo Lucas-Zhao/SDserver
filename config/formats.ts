@@ -18,6 +18,21 @@ The column value will be ignored for repeat sections.
 */
 
 export const Formats: import('../sim/dex-formats').FormatList = [
+	{ section: "Exclusive" },
+	{
+		name: "[Gen 9] National Dex Legacy",
+		mod: "gen9",
+		debug: true,
+		battle: {},
+		ruleset: [
+			"Team Preview",
+			"Cancel Mod",
+			"Max Team Size = 6",
+			"Max Move Count = 4",
+			"Max Level = 100",
+			"Default Level = 100",
+		],
+	},
 
 	// S/V Singles
 	///////////////////////////////////////////////////////////////////

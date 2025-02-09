@@ -3767,4 +3767,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 	pokestarufopropu2: {
 		name: "Pokestar UFO-PropU2",
 	},
+	zerapium: {
+		name: "Zerapium"
+	}
 };

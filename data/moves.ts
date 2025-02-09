@@ -66,6 +66,52 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Poison",
 		contestType: "Clever",
 	},
+
+	emote: {
+		num: -999,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Emote",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1, bypasssub: 1, metronome: 1},
+		volatileStatus: 'taunt',
+		boosts:{ spe:2, spd:2},
+		condition: {
+			duration: 3,
+			onStart(target) {
+				if (target.activeTurns && !this.queue.willMove(target)) {
+					this.effectState.duration!++;
+				}
+				this.add('-start', target, 'move: Emote');
+			},
+			onResidualOrder: 15,
+			onEnd(target) {
+				this.add('-end', target, 'move: Emote');
+			},
+			onDisableMove(pokemon) {
+				for (const moveSlot of pokemon.moveSlots) {
+					const move = this.dex.moves.get(moveSlot.id);
+					if (move.category === 'Status' && move.id !== 'mefirst') {
+						pokemon.disableMove(moveSlot.id);
+					}
+				}
+			},
+			onBeforeMovePriority: 5,
+			onBeforeMove(attacker, defender, move) {
+				if (!move.isZ && !move.isMax && move.category === 'Status' && move.id !== 'mefirst') {
+					this.add('cant', attacker, 'move: Emote', move);
+					return false;
+				}
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+		zMove: {boost: {atk: 1}},
+		contestType: "Clever",
+	},
 	acidarmor: {
 		num: 151,
 		accuracy: true,

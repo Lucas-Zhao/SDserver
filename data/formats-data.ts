@@ -2700,6 +2700,11 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "Illegal",
 		natDexTier: "Uber",
 	},
+	lucariomegax: {
+		isNonstandard: "Past",
+		tier: "Legacy",
+		natDexTier: "Legacy",
+	},
 	hippopotas: {
 		tier: "LC",
 	},

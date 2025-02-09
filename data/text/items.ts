@@ -1006,6 +1006,10 @@ export const ItemsText: {[id: IDEntry]: ItemText} = {
 		name: "Lucarionite",
 		shortDesc: "If held by a Lucario, this item allows it to Mega Evolve in battle.",
 	},
+	lucarionitex: {
+		name: "Lucarionite X",
+		shortDesc: "If held by a Lucario, this item allows it to Mega Evolve in battle.",
+	},
 	luckypunch: {
 		name: "Lucky Punch",
 		shortDesc: "If held by a Chansey, its critical hit ratio is raised by 2 stages.",

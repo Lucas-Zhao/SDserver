@@ -26,6 +26,11 @@ export const MovesText: {[id: IDEntry]: MoveText} = {
 		desc: "No additional effect.",
 		shortDesc: "Usually goes first.",
 	},
+	emote: {
+		name: "Emote",
+		desc: "Target can only choose damaging moves. raises user's spd and spe by 2.",
+		shortDesc: "Target can only choose damaging moves. raises user's spd and spe by 2.",
+	},
 	acid: {
 		name: "Acid",
 		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",

@@ -3211,6 +3211,20 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		gen: 6,
 		isNonstandard: "Past",
 	},
+	lucarionitex: {
+		name: "Lucarionite X",
+		spritenum: 594,
+		megaStone: "Lucario-Mega-X",
+		megaEvolves: "Lucario",
+		itemUser: ["Lucario"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 673,
+		gen: 6,
+		isNonstandard: "Past",
+	},
 	luckypunch: {
 		name: "Lucky Punch",
 		spritenum: 261,
