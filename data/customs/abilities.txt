@@ -1,0 +1,12 @@
+monsoonsurge: {
+		onStart(source) {
+			this.field.setWeather('raindance');
+			this.field.weatherState.duration = 10;
+		},
+		flags: {},
+		name: "Monsoon Surge",
+		rating: 4,
+		num: 2,
+	},
+
+	

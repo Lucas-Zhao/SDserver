@@ -1698,7 +1698,6 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onModifyDefPriority: 2,
 		onModifyDef(def, pokemon) {
-			console.log(pokemon.baseSpecies)
 			if (pokemon.baseSpecies.nfe) {
 				return this.chainModify(1.5);
 			}
@@ -3212,20 +3211,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		gen: 6,
 		isNonstandard: "Past",
 	},
-	lucarionitex: {
-		name: "Lucarionite X",
-		spritenum: 594,
-		megaStone: "Lucario-Mega-X",
-		megaEvolves: "Lucario",
-		itemUser: ["Lucario"],
-		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-			return true;
-		},
-		num: 673,
-		gen: 6,
-		isNonstandard: "Past",
-	},
+	
 	luckypunch: {
 		name: "Lucky Punch",
 		spritenum: 261,
@@ -3237,6 +3223,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 				return critRatio + 2;
 			}
 		},
+		
 		itemUser: ["Chansey"],
 		num: 256,
 		gen: 2,
@@ -7668,4 +7655,19 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		gen: 8,
 		isNonstandard: "CAP",
 	},
-};
+
+/*CUSTOM ITEMS*/
+lucarionitex: {
+		name: "Lucarionite X",
+		spritenum: 594,
+		megaStone: "Lucario-Mega",
+		megaEvolves: "Lucario",
+		itemUser: ["Lucario"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1000,
+		gen: 6,
+		isNonstandard: "Past",
+	},};

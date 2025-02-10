@@ -20192,7 +20192,9 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		"weightkg": 61,
 		"color": "White",
 		"eggGroups": ["Undiscovered"],
-		"gen": 5
+		"gen": 5,
+		"prevo": "Shuckle",
+		"evoType": "trade"
 	},
 	"amphezium": {
 		"num": -9799,
@@ -20209,7 +20211,23 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		"color": "White",
 		"eggGroups": ["Undiscovered"],
 		"gen": 5
-	},
+	}
 
 	
 };
+ 
+	/*
+	 function to add custom evolutions to existing pokemon,
+	 this is basically done to let existing pokemon have 
+	 the eviolite bonus if a custom pokemon is added as its evolution
+	*/ 
+			(() => {
+	let toChangePokemon = [{"name":"Shuckle","evotype":"trade","from":"Zerapium"}];
+	toChangePokemon.forEach((val) => {
+		//val = JSON.parse(val)
+		if (Pokedex[toID(val.name)].evos)
+			Pokedex[toID(val.name)]?.evos?.push(val.from);
+		if (!Pokedex[toID(val.name)].evos)
+			Pokedex[toID(val.name)]?.evos?.push(val.from);
+	});
+})();

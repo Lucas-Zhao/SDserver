@@ -1061,17 +1061,6 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 4,
 		num: 2,
 	},
-	monsoonsurge: {
-		onStart(source) {
-			if (source.species.id === 'kyogre' && source.item === 'blueorb') return;
-			this.field.setWeather('raindance');
-			this.field.weatherState.duration = 10;
-		},
-		flags: {},
-		name: "Monsoon Surge",
-		rating: 4,
-		num: 2,
-	},
 	drought: {
 		onStart(source) {
 			if (source.species.id === 'groudon' && source.item === 'redorb') return;
@@ -5651,4 +5640,17 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3,
 		num: -4,
 	},
-};
+
+/*CUSTOM ABILITIES*/
+monsoonsurge: {
+		onStart(source) {
+			this.field.setWeather('raindance');
+			this.field.weatherState.duration = 10;
+		},
+		flags: {},
+		name: "Monsoon Surge",
+		rating: 4,
+		num: 2,
+	},
+
+	};
