@@ -7,7 +7,7 @@
 		"types": ["Ghost", "Dark"],
 		"gender": "N",
 		"baseStats": { "hp": 100, "atk": 150, "def": 100, "spa": 150, "spd": 100, "spe": 150 },
-		"abilities": { "0": "Levitate" },
+		"abilities": { "0": "Monsoon Surge" },
 		"heightm": 1.5,
 		"weightkg": 61,
 		"color": "White",
