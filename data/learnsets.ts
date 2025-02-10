@@ -99716,7 +99716,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 
 /*CUSTOM LEARNSETS*/
 "zerapium":{
-	"learnsets": {
+	"learnset": {
 		"tailwhip": ["9L4", "7L4", "6L4", "5L4"],
 	}
 },};

@@ -20222,12 +20222,12 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	 the eviolite bonus if a custom pokemon is added as its evolution
 	*/ 
 			(() => {
-	let toChangePokemon = [{"name":"Shuckle","evotype":"trade","from":"Zerapium"}];
+	let toChangePokemon = [{"name":"shuckle","evotype":"trade","from":"Zerapium"}];
 	toChangePokemon.forEach((val) => {
 		//val = JSON.parse(val)
-		if (Pokedex[toID(val.name)].evos)
-			Pokedex[toID(val.name)]?.evos?.push(val.from);
-		if (!Pokedex[toID(val.name)].evos)
-			Pokedex[toID(val.name)]?.evos?.push(val.from);
+		if (Pokedex[(val.name)].evos)
+			Pokedex[(val.name)]?.evos?.push(val.from);
+		if (!Pokedex[(val.name)].evos)
+			Pokedex[(val.name)]?.evos?.push(val.from);
 	});
 })();

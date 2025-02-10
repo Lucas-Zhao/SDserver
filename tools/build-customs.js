@@ -22,7 +22,7 @@ function getPrevoPokemon(txt) {
 		if (val.prevo)
 			evos.push(
 				JSON.stringify({
-					name: val.prevo,
+					name: toID(val.prevo),
 					evotype: val.evoType,
 					from: val.name,
 				})
@@ -62,10 +62,10 @@ exports.importPokedexData = () => {
 	let toChangePokemon = [${existingChanges}];
 	toChangePokemon.forEach((val) => {
 		//val = JSON.parse(val)
-		if (Pokedex[toID(val.name)].evos)
-			Pokedex[toID(val.name)]?.evos?.push(val.from);
-		if (!Pokedex[toID(val.name)].evos)
-			Pokedex[toID(val.name)]?.evos?.push(val.from);
+		if (Pokedex[(val.name)].evos)
+			Pokedex[(val.name)]?.evos?.push(val.from);
+		if (!Pokedex[(val.name)].evos)
+			Pokedex[(val.name)]?.evos?.push(val.from);
 	});
 })();`;
 
