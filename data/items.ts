@@ -1698,6 +1698,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onModifyDefPriority: 2,
 		onModifyDef(def, pokemon) {
+			console.log(pokemon.baseSpecies)
 			if (pokemon.baseSpecies.nfe) {
 				return this.chainModify(1.5);
 			}

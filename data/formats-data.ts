@@ -2705,6 +2705,11 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "Legacy",
 		natDexTier: "Legacy",
 	},
+	zerapium: {
+		isNonstandard: "Unobtainable",
+		tier: "Legacy",
+		natDexTier: "Legacy",
+	},
 	hippopotas: {
 		tier: "LC",
 	},

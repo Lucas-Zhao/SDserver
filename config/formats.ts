@@ -24,6 +24,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: "gen9",
 		debug: true,
 		battle: {},
+		teraPreviewDefault: true,
 		ruleset: [
 			"Team Preview",
 			"Cancel Mod",
@@ -31,6 +32,8 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			"Max Move Count = 4",
 			"Max Level = 100",
 			"Default Level = 100",
+			"Obtainable Moves",
+			"Obtainable Abilities"
 		],
 	},
 

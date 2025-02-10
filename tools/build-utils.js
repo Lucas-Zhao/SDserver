@@ -4,6 +4,10 @@ const fs = require("fs");
 const child_process = require("child_process");
 const esbuild = require('esbuild');
 
+
+
+
+
 const copyOverDataJSON = (file = 'data') => {
 	const files = fs.readdirSync(file);
 	for (const f of files) {
