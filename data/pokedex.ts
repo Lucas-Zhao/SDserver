@@ -20178,9 +20178,8 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		gen: 5,
 	},
 
-/*CUSTOM POKEMONS*/
-	"zerapium": {
-		"num": -1000,
+/*CUSTOM POKEMONS*/	"zerapium": {
+		"num": -9999,
 		"forme": "",
 		"baseForme": "Alien",
 		"baseSpecies": "Zerapium",
@@ -20188,17 +20187,15 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		"types": ["Ghost", "Dark"],
 		"gender": "N",
 		"baseStats": { "hp": 100, "atk": 150, "def": 100, "spa": 150, "spd": 100, "spe": 150 },
-		"abilities": { "0": "Levitate" },
+		"abilities": { "0": "Monsoon Surge" },
 		"heightm": 1.5,
 		"weightkg": 61,
 		"color": "White",
 		"eggGroups": ["Undiscovered"],
-		"gen": 5,
-		"prevo": "Shuckle",
-		"evoType": "trade"
+		"gen": 5
 	},
 	"amphezium": {
-		"num": -1001,
+		"num": -9799,
 		"forme": "",
 		"baseForme": "Alien",
 		"baseSpecies": "Amphezium",
@@ -20214,11 +20211,5 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		"gen": 5
 	},
 
+	
 };
-
-(() => {
-	if(Pokedex.shuckle.evos) Pokedex.shuckle.evos.push("Zerapium")
-	if(!Pokedex.shuckle.evos) Pokedex.shuckle.evos = ["Zerapium"]
-
-})()
-
