@@ -12,7 +12,9 @@
 		"weightkg": 61,
 		"color": "White",
 		"eggGroups": ["Undiscovered"],
-		"gen": 5
+		"gen": 5,
+		"prevo": "Shuckle",
+		"evoType": "trade"
 	},
 	"amphezium": {
 		"num": -9799,
@@ -29,6 +31,6 @@
 		"color": "White",
 		"eggGroups": ["Undiscovered"],
 		"gen": 5
-	},
+	}
 
 	
