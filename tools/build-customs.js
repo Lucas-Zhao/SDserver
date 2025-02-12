@@ -120,12 +120,7 @@ let importFormatsData = () => {
 		const pokedexFileContent = fs.readFileSync(sourceFilePath, "utf-8");
 
 		const newEntries = customFileContent;
-		const oldEntries = pokedexFileContent
-			.replace(
-				`export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable = {`,
-				""
-			)
-			.split("/*CUSTOM FORMATS*/");
+		const oldEntries = pokedexFileContent.split("/*CUSTOM FORMATS*/");
 
 		if (oldEntries[1]) {
 			oldEntries[0] += `/*CUSTOM FORMATS*/\n${newEntries}\n};\n`;
