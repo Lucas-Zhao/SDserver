@@ -1,4 +1,4 @@
-export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable = {
+
 
 	bulbasaur: {
 		tier: "LC",
@@ -6044,5 +6044,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "megalucarioy":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
 , "megazoroark":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
 , "lucariomegay":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
+, "hydreigonmega":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
 
 };

@@ -63,12 +63,7 @@ let importPokedexData = () => {
 		const pokedexFileContent = fs.readFileSync(sourceFilePath, "utf-8");
 
 		const newEntries = customFileContent;
-		const oldEntries = pokedexFileContent
-			.replace(
-				`export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {`,
-				""
-			)
-			.split("/*CUSTOM POKEMONS*/");
+		const oldEntries = pokedexFileContent.split("/*CUSTOM POKEMONS*/");
 
 		let bufFunc = ``;
 

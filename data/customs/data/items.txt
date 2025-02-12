@@ -2,3 +2,4 @@
 , "shucklionitex":{"name":"Shucklionite X","itemUser":["Shuckle"],"megaEvolves":"Shuckle-Mega","num":-1003,"isNonstandard":"Unobtainable"}
 , "zoroarkium":{"name":"Zoroarkium","itemUser":["Zoroark"],"megaEvolves":"Mega Zoroark","num":-1003,"isNonstandard":"Unobtainable"}
 , "lucarionitey":{"name":"Lucarionite Y","itemUser":["Lucario"],"megaEvolves":"Lucario-Mega-Y","num":-1005,"isNonstandard":"Unobtainable"}
+, "hydreigonite":{"name":"Hydreigonite","itemUser":["Hydreigon"],"megaEvolves":"Hydreigon-Mega","num":-1005,"isNonstandard":"Unobtainable"}
