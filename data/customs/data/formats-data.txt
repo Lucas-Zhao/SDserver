@@ -1,0 +1,4 @@
+ "shucklemega":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
+, "megalucariox":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
+, "megalucarioy":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
+, "megazoroark":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
