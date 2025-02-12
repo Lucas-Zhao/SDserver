@@ -2,3 +2,4 @@
 , "megalucariox":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
 , "megalucarioy":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
 , "megazoroark":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
+, "lucariomegay":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}

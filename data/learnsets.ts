@@ -99720,4 +99720,5 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 , "megalucariox":{"learnset":{"aurasphere":["9L4"],"closecombat":["9L4"]}}
 , "megalucarioy":{"learnset":{"aurasphere":["9L4"]}}
 , "megazoroark":{"learnset":{"aurasphere":["9L4"],"closecombat":["9L4"]}}
+, "lucariomegay":{"learnset":{"aurasphere":["9L4"]}}
 };

@@ -20182,6 +20182,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
  "megalucariox":{"name":"Mega Lucario X","types":["Normal"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":"60","atk":"140","def":"60","spa":"140","spd":"60","spe":"140"},"abilities":{"0":"Wonder Guard"},"heightm":"67","weightkg":"121","prevo":"Lucario","evoType":"trade","requiredItem":"Lucarionite X","num":-1021}
 , "megalucarioy":{"name":"Mega Lucario Y","types":["Electric","Fire"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":50,"atk":140,"def":50,"spa":140,"spd":50,"spe":140},"abilities":{"0":"Wonder Guard"},"heightm":"67","weightkg":"121","prevo":"Lucario","evoType":"trade","requiredItem":"Lucarionite Y","num":-1021}
 , "megazoroark":{"name":"Mega Zoroark","types":["Fighting","Fire"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":"60","atk":"140","def":"60","spa":"140","spd":"60","spe":"140"},"abilities":{"0":"Wonder Guard"},"heightm":"67","weightkg":"121","prevo":"Zoroark","evoType":"trade","requiredItem":"Zoroarkium","num":-1021}
+, "lucariomegay":{"name":"Lucario-Mega-Y","types":["Normal"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":60,"atk":150,"def":50,"spa":160,"spd":50,"spe":150},"abilities":{"0":"Wonder Guard"},"heightm":"67","weightkg":"121","prevo":"Lucario","evoType":"trade","requiredItem":"Lucarionite Y","num":-1021}
 
 };
  
@@ -20191,7 +20192,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	 the eviolite bonus if a custom pokemon is added as its evolution
 	*/ 
 			(() => {
-	let toChangePokemon = [{"name":"lucario","evotype":"trade","from":"Mega Lucario X"},{"name":"lucario","evotype":"trade","from":"Mega Lucario Y"},{"name":"zoroark","evotype":"trade","from":"Mega Zoroark"}];
+	let toChangePokemon = [{"name":"lucario","evotype":"trade","from":"Mega Lucario X"},{"name":"lucario","evotype":"trade","from":"Mega Lucario Y"},{"name":"zoroark","evotype":"trade","from":"Mega Zoroark"},{"name":"lucario","evotype":"trade","from":"Lucario-Mega-Y"}];
 	toChangePokemon.forEach((val) => {
 		//val = JSON.parse(val)
 		if (Pokedex[(val.name)].evos)

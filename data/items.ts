@@ -8386,39 +8386,12 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
 /*CUSTOM ITEMS*/
  "lucarionitex":{"name":"Lucarionite X","spritenum":594,"megaStone":"Lucario-Mega","megaEvolves":"Lucario","itemUser":["Lucario"],"num":-1000,"gen":6,"isNonstandard":"Past"}
 , "shucklionitex":{"name":"Shucklionite X","itemUser":["Shuckle"],"megaEvolves":"Shuckle-Mega","num":-1003,"isNonstandard":"Unobtainable"}
 , "zoroarkium":{"name":"Zoroarkium","itemUser":["Zoroark"],"megaEvolves":"Mega Zoroark","num":-1003,"isNonstandard":"Unobtainable"}
-, "lucarionitey":{"name":"Lucarionite Y","itemUser":["Lucario"],"megaEvolves":"Mega Lucario Y","num":-1005,"isNonstandard":"Unobtainable"}
-
+, "lucarionitey":{"name":"Lucarionite Y","itemUser":["Lucario"],"megaEvolves":"Lucario-Mega-Y","num":-1005,"isNonstandard":"Unobtainable"}
 };
 /*FUNCTIONS*/
-
-//lucarionitexstart
-Items["lucarionitex"].onTakeItem = function(item, source){
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-			return true;
-		}
-//lucarionitexend
-//shucklionitexstart
-Items["shucklionitex"].onTakeItem = function(item, source) {
-        if (item.megaEvolves === source.baseSpecies.baseSpecies)
-          return false;
-        return true;
-      }
-//shucklionitexend//zoroarkiumstart
-
-Items["zoroarkium"].onTakeItem = function(item, source) {
-        if (item.megaEvolves === source.baseSpecies.baseSpecies)
-          return false;
-        return true;
-      }
-
-//zoroarkiumend//lucarioniteystart
-Items["lucarionitey"].onTakeItem = function(item, source) {
-        if (item.megaEvolves === source.baseSpecies.baseSpecies)
-          return false;
-        return true;
-      }
-//lucarioniteyend
+undefined
