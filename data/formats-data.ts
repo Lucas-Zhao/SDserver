@@ -2705,11 +2705,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "Legacy",
 		natDexTier: "Legacy",
 	},
-	zerapium: {
-		isNonstandard: "Unobtainable",
-		tier: "Legacy",
-		natDexTier: "Legacy",
-	},
+	
 	hippopotas: {
 		tier: "LC",
 	},
@@ -6040,4 +6036,11 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		isNonstandard: "Custom",
 		tier: "Illegal",
 	},
+
+/*CUSTOM FORMATS*/
+ "shucklemega":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
+, "megalucariox":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
+, "megalucarioy":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
+, "megazoroark":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
+
 };

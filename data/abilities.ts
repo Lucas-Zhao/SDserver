@@ -5641,16 +5641,269 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: -4,
 	},
 
-/*CUSTOM ABILITIES*/
-monsoonsurge: {
-		onStart(source) {
-			this.field.setWeather('raindance');
-			this.field.weatherState.duration = 10;
-		},
-		flags: {},
-		name: "Monsoon Surge",
-		rating: 4,
-		num: 2,
-	},
 
-	};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CUSTOM ABILITIES*/
+ "monsoonsurge":{"flags":{},"name":"Monsoon Surge","rating":4,"num":2}
+, "blizzardveil":{"name":"Blizzard Veil","flags":{},"num":-2,"rating":4}
+, "sandstormrage":{"name":"Sandstorm Rage","flags":{},"num":-3,"rating":4}
+, "solarflare":{"name":"Solar Flare","flags":{},"num":-4,"rating":4}
+, "eerieresonance":{"name":"Eerie Resonance","flags":{},"num":-5,"rating":4}
+, "mindscapedomain":{"name":"Mindscape Domain","flags":{},"num":-6,"rating":4}
+, "verdantbloom":{"name":"Verdant Bloom","flags":{},"num":-7,"rating":4}
+, "mystichaze":{"name":"Mystic Haze","flags":{},"num":-8,"rating":4}
+, "tundrecore":{"name":"Tundre Core","flags":{},"num":-9,"rating":4}
+, "desertheart":{"name":"Desert Heart","flags":{},"num":-10,"rating":4}
+, "aquacircuit":{"name":"Aqua Circuit","flags":{},"num":-11,"rating":4}
+, "psychicpulse":{"name":"Psychic Pulse","flags":{},"num":-12,"rating":4}
+, "mysticaura":{"name":"Mystic Aura","flags":{},"num":-13,"rating":4}
+, "overgrowthengine":{"name":"Overgrowth Engine","flags":{},"num":-14,"rating":4}
+, "arcanemight":{"name":"Arcane Might","flags":{},"num":-15,"rating":5}
+, "terrify":{"name":"Terrify","flags":{},"num":-16,"rating":3.5}
+, "charisma":{"name":"Charisma","flags":{},"num":-17,"rating":3}
+, "mentalfortitude":{"name":"Mental Fortitude","flags":{},"num":-18,"rating":4}
+, "accelerationofruin":{"name":"Acceleration of Ruin","flags":{},"num":-19,"rating":4.5}
+, "prismaticaura":{"name":"Prismatic Aura","flags":{},"num":-20,"rating":2.5}
+, "adaptivemastery":{"name":"Adaptive Mastery","flags":{},"num":-21,"rating":3.5}
+
+};
+/*FUNCTIONS*/
+
+//monsoonsurgestart
+Abilities["monsoonsurge"].onStart = function(source){
+	this.field.setWeather('raindance');
+	this.field.weatherState.duration = 10;
+}
+
+//monsoonsurgeend//blizzardveilstart
+Abilities["blizzardveil"].onStart = function(source) {
+			this.field.setWeather('snow');
+			this.field.weatherState.duration = 10;
+		}
+//blizzardveilend//sandstormragestart
+Abilities["sandstormrage"].onStart = function(source) {
+			this.field.setWeather('sandstorm');
+			this.field.weatherState.duration = 10;
+		}
+//sandstormrageend//solarflarestart
+Abilities["solarflare"].onStart = function(source) {
+			this.field.setWeather('sunnyday');
+			this.field.weatherState.duration = 10;
+		}
+//solarflareend//eerieresonancestart
+Abilities["eerieresonance"].onStart = function(source) {
+			this.field.setTerrain('electricterrain');
+			this.field.terrainState.duration = 10;
+		}
+//eerieresonanceend//mindscapedomainstart
+Abilities["mindscapedomain"].onStart = function(source) {
+			this.field.setTerrain('psychicterrain');
+			this.field.terrainState.duration = 10;
+		}
+//mindscapedomainend//verdantbloomstart
+Abilities["verdantbloom"].onStart = function(source) {
+			this.field.setTerrain('grassyterrain');
+			this.field.terrainState.duration = 10;
+		}
+//verdantbloomend//mystichazestart
+Abilities["mystichaze"].onStart = function(source) {
+			this.field.setTerrain('mistyterrain');
+			this.field.terrainState.duration = 10;
+		}
+//mystichazeend//tundrecorestart
+Abilities["tundrecore"].onStart = function(pokemon) {
+			this.singleEvent('WeatherChange', this.effect, this.effectState, pokemon);
+		}
+
+Abilities["tundrecore"].onWeatherChange = function(pokemon) {
+			if(!this.field.isWeather("snow")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			this.boost({[bestStat]: 1.5}, pokemon);
+		}
+//tundrecoreend//desertheartstart
+Abilities["desertheart"].onStart = function(pokemon) {
+			this.singleEvent('WeatherChange', this.effect, this.effectState, pokemon);
+		}
+
+Abilities["desertheart"].onWeatherChange = function(pokemon) {
+			if(!this.field.isWeather("sandstorm")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			this.boost({[bestStat]: 1.5}, pokemon);
+		}
+//desertheartend//aquacircuitstart
+Abilities["aquacircuit"].onStart = function(pokemon) {
+			this.singleEvent('WeatherChange', this.effect, this.effectState, pokemon);
+		}
+
+Abilities["aquacircuit"].onWeatherChange = function(pokemon) {
+			if(!this.field.isWeather("raindance")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			this.boost({[bestStat]: 1.5}, pokemon);
+		}
+//aquacircuitend//psychicpulsestart
+Abilities["psychicpulse"].onStart = function(pokemon) {
+			this.singleEvent('TerrainChange', this.effect, this.effectState, pokemon);
+		}
+
+Abilities["psychicpulse"].onTerrainChange = function(pokemon, source){
+			if(!this.field.isTerrain("psychicterrain")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			this.boost({[bestStat]: 1.5}, pokemon);
+		}
+//psychicpulseend//mysticaurastart
+Abilities["mysticaura"].onStart = function(pokemon) {
+			this.singleEvent('TerrainChange', this.effect, this.effectState, pokemon);
+		}
+
+Abilities["mysticaura"].onTerrainChange = function(pokemon, source){
+			if(!this.field.isTerrain("mistyterrain")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			this.boost({[bestStat]: 1.5}, pokemon);
+		}
+//mysticauraend//overgrowthenginestart
+Abilities["overgrowthengine"].onStart = function(pokemon) {
+			this.singleEvent('TerrainChange', this.effect, this.effectState, pokemon);
+		}
+
+Abilities["overgrowthengine"].onTerrainChange = function(pokemon, source){
+			if(!this.field.isTerrain("grassyterrain")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			this.boost({[bestStat]: 1.5}, pokemon);
+		}
+//overgrowthengineend//arcanemightstart
+Abilities["arcanemight"].onModifySpA = function(spa) {
+			return this.chainModify(2);
+		}
+//arcanemightend//terrifystart
+Abilities["terrify"].onStart = function(pokemon) {
+			let activated = false;
+			for (const target of pokemon.adjacentFoes()) {
+				if (!activated) {
+					this.add('-ability', pokemon, 'Terrify', 'boost');
+					activated = true;
+				}
+				if (target.volatiles['substitute']) {
+					this.add('-immune', target);
+				} else {
+					this.boost({spa: -1}, target, pokemon, null, true);
+				}
+			}
+		}
+//terrifyend//charismastart
+Abilities["charisma"].onSourceAfterFaint = function(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				this.boost({spa: length}, source);
+			}
+		}
+//charismaend//mentalfortitudestart
+Abilities["mentalfortitude"].onDamagingHit = function(damage, target, source, effect) {
+			this.boost({spd: 1});
+		}
+//mentalfortitudeend//accelerationofruinstart
+Abilities["accelerationofruin"].onStart = function(pokemon) {
+			if (this.suppressingAbility(pokemon)) return;
+			this.add('-ability', pokemon, 'Acceleration of Ruin');
+		}
+
+Abilities["accelerationofruin"].onAnyModifySpe = function(spe, target) {
+			const abilityHolder = this.effectState.target;
+			if (target.hasAbility('Acceleration of Ruin')) return;
+		//	if (!move.ruinedSpe?.hasAbility('Sword of Ruin')) move.ruinedDef = abilityHolder;
+		//	if (move.ruinedDef !== abilityHolder) return;
+			this.debug('Acceleration of Ruin Spe drop');
+			return this.chainModify(0.75);
+		}
+//accelerationofruinend//prismaticaurastart
+Abilities["prismaticaura"].onDamagingHit = function(damage, target, source, move) {
+			if (move.basePower > 0 && !this.checkMoveMakesContact(move, source, target, true)) {
+				this.damage(source.baseMaxhp / 8, source, target);
+			}
+		}
+//prismaticauraend//adaptivemasterystart
+Abilities["adaptivemastery"].onModifySpA = function(atk, attacker, defender, move) {
+			if (true) {
+				this.debug('Adaptive Mastery boost');
+				return this.chainModify(1.5);
+			}
+		}
+
+Abilities["adaptivemastery"].onModifyAtk = function(atk, attacker, defender, move) {
+			if (true) {
+				this.debug('Adaptive Mastery boost');
+				return this.chainModify(1.5);
+			}
+		}

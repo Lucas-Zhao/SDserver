@@ -1,4 +1,4 @@
-export const Items: import('../sim/dex-items').ItemDataTable = {
+export const Items: import("../sim/dex-items").ItemDataTable = {
 	abilityshield: {
 		name: "Ability Shield",
 		spritenum: 746,
@@ -9,10 +9,14 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		// Neutralizing Gas protection implemented in Pokemon.ignoringAbility() within sim/pokemon.ts
 		// and in Neutralizing Gas itself within data/abilities.ts
 		onSetAbility(ability, target, source, effect) {
-			if (effect && effect.effectType === 'Ability' && effect.name !== 'Trace') {
-				this.add('-ability', source, effect);
+			if (
+				effect &&
+				effect.effectType === "Ability" &&
+				effect.name !== "Trace"
+			) {
+				this.add("-ability", source, effect);
 			}
-			this.add('-block', target, 'item: Ability Shield');
+			this.add("-block", target, "item: Ability Shield");
 			return null;
 		},
 		// Mold Breaker protection implemented in Battle.suppressingAbility() within sim/battle.ts
@@ -54,7 +58,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			basePower: 30,
 		},
 		onDamagingHit(damage, target, source, move) {
-			if (move.type === 'Water') {
+			if (move.type === "Water") {
 				target.useItem();
 			}
 		},
@@ -69,12 +73,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 741,
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (user.baseSpecies.num === 483 && (move.type === 'Steel' || move.type === 'Dragon')) {
+			if (
+				user.baseSpecies.num === 483 &&
+				(move.type === "Steel" || move.type === "Dragon")
+			) {
 				return this.chainModify([4915, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
-			if (source?.baseSpecies.num === 483 || pokemon.baseSpecies.num === 483) {
+			if (
+				source?.baseSpecies.num === 483 ||
+				pokemon.baseSpecies.num === 483
+			) {
 				return false;
 			}
 			return true;
@@ -92,7 +102,10 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (user.baseSpecies.num === 483 && (move.type === 'Steel' || move.type === 'Dragon')) {
+			if (
+				user.baseSpecies.num === 483 &&
+				(move.type === "Steel" || move.type === "Dragon")
+			) {
 				return this.chainModify([4915, 4096]);
 			}
 		},
@@ -111,10 +124,10 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			// which deletes boost.atk,
 			// but not if the holder's attack is already at -6 (or +6 if it has Contrary),
 			// which sets boost.atk to 0
-			if (target.boosts['spe'] === 6 || boost.atk === 0) {
+			if (target.boosts["spe"] === 6 || boost.atk === 0) {
 				return;
 			}
-			if (effect.name === 'Intimidate') {
+			if (effect.name === "Intimidate") {
 				target.useItem();
 			}
 		},
@@ -161,18 +174,31 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Dragon",
 		},
 		onUpdate(pokemon) {
-			if (pokemon.hp <= pokemon.maxhp / 4 || (pokemon.hp <= pokemon.maxhp / 2 &&
-					pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony)) {
+			if (
+				pokemon.hp <= pokemon.maxhp / 4 ||
+				(pokemon.hp <= pokemon.maxhp / 2 &&
+					pokemon.hasAbility("gluttony") &&
+					pokemon.abilityState.gluttony)
+			) {
 				pokemon.eatItem();
 			}
 		},
 		onTryEatItem(item, pokemon) {
-			if (!this.runEvent('TryHeal', pokemon, null, this.effect, pokemon.baseMaxhp / 3)) return false;
+			if (
+				!this.runEvent(
+					"TryHeal",
+					pokemon,
+					null,
+					this.effect,
+					pokemon.baseMaxhp / 3
+				)
+			)
+				return false;
 		},
 		onEat(pokemon) {
 			this.heal(pokemon.baseMaxhp / 3);
-			if (pokemon.getNature().minus === 'spd') {
-				pokemon.addVolatile('confusion');
+			if (pokemon.getNature().minus === "spd") {
+				pokemon.addVolatile("confusion");
 			}
 		},
 		num: 162,
@@ -185,24 +211,39 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			basePower: 10,
 		},
 		onStart(target) {
-			if (!target.ignoringItem() && !this.field.getPseudoWeather('gravity')) {
-				this.add('-item', target, 'Air Balloon');
+			if (
+				!target.ignoringItem() &&
+				!this.field.getPseudoWeather("gravity")
+			) {
+				this.add("-item", target, "Air Balloon");
 			}
 		},
 		// airborneness implemented in sim/pokemon.js:Pokemon#isGrounded
 		onDamagingHit(damage, target, source, move) {
-			this.add('-enditem', target, 'Air Balloon');
-			target.item = '';
+			this.add("-enditem", target, "Air Balloon");
+			target.item = "";
 			this.clearEffectState(target.itemState);
-			this.runEvent('AfterUseItem', target, null, null, this.dex.items.get('airballoon'));
+			this.runEvent(
+				"AfterUseItem",
+				target,
+				null,
+				null,
+				this.dex.items.get("airballoon")
+			);
 		},
 		onAfterSubDamage(damage, target, source, effect) {
-			this.debug('effect: ' + effect.id);
-			if (effect.effectType === 'Move') {
-				this.add('-enditem', target, 'Air Balloon');
-				target.item = '';
+			this.debug("effect: " + effect.id);
+			if (effect.effectType === "Move") {
+				this.add("-enditem", target, "Air Balloon");
+				target.item = "";
 				this.clearEffectState(target.itemState);
-				this.runEvent('AfterUseItem', target, null, null, this.dex.items.get('airballoon'));
+				this.runEvent(
+					"AfterUseItem",
+					target,
+					null,
+					null,
+					this.dex.items.get("airballoon")
+				);
 			}
 		},
 		num: 541,
@@ -270,13 +311,17 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Ground",
 		},
 		onUpdate(pokemon) {
-			if (pokemon.hp <= pokemon.maxhp / 4 || (pokemon.hp <= pokemon.maxhp / 2 &&
-					pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony)) {
+			if (
+				pokemon.hp <= pokemon.maxhp / 4 ||
+				(pokemon.hp <= pokemon.maxhp / 2 &&
+					pokemon.hasAbility("gluttony") &&
+					pokemon.abilityState.gluttony)
+			) {
 				pokemon.eatItem();
 			}
 		},
 		onEat(pokemon) {
-			this.boost({spd: 1});
+			this.boost({ spd: 1 });
 		},
 		num: 205,
 		gen: 3,
@@ -300,12 +345,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Ice",
 		},
 		onUpdate(pokemon) {
-			if (pokemon.status === 'frz') {
+			if (pokemon.status === "frz") {
 				pokemon.eatItem();
 			}
 		},
 		onEat(pokemon) {
-			if (pokemon.status === 'frz') {
+			if (pokemon.status === "frz") {
 				pokemon.cureStatus();
 			}
 		},
@@ -325,7 +370,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		onDisableMove(pokemon) {
 			for (const moveSlot of pokemon.moveSlots) {
 				const move = this.dex.moves.get(moveSlot.id);
-				if (move.category === 'Status' && move.id !== 'mefirst') {
+				if (move.category === "Status" && move.id !== "mefirst") {
 					pokemon.disableMove(moveSlot.id);
 				}
 			}
@@ -365,18 +410,21 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Steel",
 		},
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Steel' && target.getMoveHitData(move).typeMod > 0) {
-				const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+			if (move.type === "Steel" && target.getMoveHitData(move).typeMod > 0) {
+				const hitSub =
+					target.volatiles["substitute"] &&
+					!move.flags["bypasssub"] &&
+					!(move.infiltrates && this.gen >= 6);
 				if (hitSub) return;
 
 				if (target.eatItem()) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
+					this.debug("-50% reduction");
+					this.add("-enditem", target, this.effect, "[weaken]");
 					return this.chainModify(0.5);
 				}
 			}
 		},
-		onEat() { },
+		onEat() {},
 		num: 199,
 		gen: 4,
 	},
@@ -436,7 +484,10 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onUpdate(pokemon) {
 			if (pokemon.hp <= pokemon.maxhp / 2) {
-				if (this.runEvent('TryHeal', pokemon, null, this.effect, 20) && pokemon.useItem()) {
+				if (
+					this.runEvent("TryHeal", pokemon, null, this.effect, 20) &&
+					pokemon.useItem()
+				) {
 					this.heal(20);
 				}
 			}
@@ -471,7 +522,13 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onTryHealPriority: 1,
 		onTryHeal(damage, target, source, effect) {
-			const heals = ['drain', 'leechseed', 'ingrain', 'aquaring', 'strengthsap'];
+			const heals = [
+				"drain",
+				"leechseed",
+				"ingrain",
+				"aquaring",
+				"strengthsap",
+			];
 			if (heals.includes(effect.id)) {
 				return this.chainModify([5324, 4096]);
 			}
@@ -497,7 +554,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move && move.type === 'Fighting') {
+			if (move && move.type === "Fighting") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
@@ -512,7 +569,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move && move.type === 'Dark') {
+			if (move && move.type === "Dark") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
@@ -528,7 +585,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		onResidualOrder: 5,
 		onResidualSubOrder: 4,
 		onResidual(pokemon) {
-			if (pokemon.hasType('Poison')) {
+			if (pokemon.hasType("Poison")) {
 				this.heal(pokemon.baseMaxhp / 16);
 			} else {
 				this.damage(pokemon.baseMaxhp / 8);
@@ -570,12 +627,16 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 41,
 		onSwitchInPriority: -1,
 		onSwitchIn(pokemon) {
-			if (pokemon.isActive && pokemon.baseSpecies.name === 'Kyogre' && !pokemon.transformed) {
-				pokemon.formeChange('Kyogre-Primal', this.effect, true);
+			if (
+				pokemon.isActive &&
+				pokemon.baseSpecies.name === "Kyogre" &&
+				!pokemon.transformed
+			) {
+				pokemon.formeChange("Kyogre-Primal", this.effect, true);
 			}
 		},
 		onTakeItem(item, source) {
-			if (source.baseSpecies.baseSpecies === 'Kyogre') return false;
+			if (source.baseSpecies.baseSpecies === "Kyogre") return false;
 			return true;
 		},
 		itemUser: ["Kyogre"],
@@ -616,16 +677,27 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		onSwitchInPriority: -2,
 		onStart(pokemon) {
 			this.effectState.started = true;
-			((this.effect as any).onUpdate as (p: Pokemon) => void).call(this, pokemon);
+			((this.effect as any).onUpdate as (p: Pokemon) => void).call(
+				this,
+				pokemon
+			);
 		},
 		onUpdate(pokemon) {
 			if (!this.effectState.started || pokemon.transformed) return;
 
-			if (pokemon.hasAbility('protosynthesis') && !this.field.isWeather('sunnyday') && pokemon.useItem()) {
-				pokemon.addVolatile('protosynthesis');
+			if (
+				pokemon.hasAbility("protosynthesis") &&
+				!this.field.isWeather("sunnyday") &&
+				pokemon.useItem()
+			) {
+				pokemon.addVolatile("protosynthesis");
 			}
-			if (pokemon.hasAbility('quarkdrive') && !this.field.isTerrain('electricterrain') && pokemon.useItem()) {
-				pokemon.addVolatile('quarkdrive');
+			if (
+				pokemon.hasAbility("quarkdrive") &&
+				!this.field.isTerrain("electricterrain") &&
+				pokemon.useItem()
+			) {
+				pokemon.addVolatile("quarkdrive");
 			}
 		},
 		onTakeItem(item, source) {
@@ -652,8 +724,8 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onModifyAccuracyPriority: -2,
 		onModifyAccuracy(accuracy) {
-			if (typeof accuracy !== 'number') return;
-			this.debug('brightpowder - decreasing accuracy');
+			if (typeof accuracy !== "number") return;
+			this.debug("brightpowder - decreasing accuracy");
 			return this.chainModify([3686, 4096]);
 		},
 		num: 213,
@@ -664,9 +736,9 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 53,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status') return;
-			if (move.type === 'Bug' && source.useItem()) {
-				source.addVolatile('gem');
+			if (target === source || move.category === "Status") return;
+			if (move.type === "Bug" && source.useItem()) {
+				source.addVolatile("gem");
 			}
 		},
 		num: 558,
@@ -676,9 +748,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	bugmemory: {
 		name: "Bug Memory",
 		spritenum: 673,
-		onMemory: 'Bug',
+		onMemory: "Bug",
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 773) || pokemon.baseSpecies.num === 773) {
+			if (
+				(source && source.baseSpecies.num === 773) ||
+				pokemon.baseSpecies.num === 773
+			) {
 				return false;
 			}
 			return true;
@@ -692,7 +767,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	buginiumz: {
 		name: "Buginium Z",
 		spritenum: 642,
-		onPlate: 'Bug',
+		onPlate: "Bug",
 		onTakeItem: false,
 		zMove: true,
 		zMoveType: "Bug",
@@ -705,12 +780,15 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		name: "Burn Drive",
 		spritenum: 54,
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 649) || pokemon.baseSpecies.num === 649) {
+			if (
+				(source && source.baseSpecies.num === 649) ||
+				pokemon.baseSpecies.num === 649
+			) {
 				return false;
 			}
 			return true;
 		},
-		onDrive: 'Fire',
+		onDrive: "Fire",
 		forcedForme: "Genesect-Burn",
 		itemUser: ["Genesect-Burn"],
 		num: 118,
@@ -738,7 +816,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			basePower: 30,
 		},
 		onDamagingHit(damage, target, source, move) {
-			if (move.type === 'Electric') {
+			if (move.type === "Electric") {
 				target.useItem();
 			}
 		},
@@ -756,7 +834,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move && move.type === 'Fire') {
+			if (move && move.type === "Fire") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
@@ -800,18 +878,21 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Rock",
 		},
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Rock' && target.getMoveHitData(move).typeMod > 0) {
-				const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+			if (move.type === "Rock" && target.getMoveHitData(move).typeMod > 0) {
+				const hitSub =
+					target.volatiles["substitute"] &&
+					!move.flags["bypasssub"] &&
+					!(move.infiltrates && this.gen >= 6);
 				if (hitSub) return;
 
 				if (target.eatItem()) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
+					this.debug("-50% reduction");
+					this.add("-enditem", target, this.effect, "[weaken]");
 					return this.chainModify(0.5);
 				}
 			}
 		},
-		onEat() { },
+		onEat() {},
 		num: 195,
 		gen: 4,
 	},
@@ -824,12 +905,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Fire",
 		},
 		onUpdate(pokemon) {
-			if (pokemon.status === 'par') {
+			if (pokemon.status === "par") {
 				pokemon.eatItem();
 			}
 		},
 		onEat(pokemon) {
-			if (pokemon.status === 'par') {
+			if (pokemon.status === "par") {
 				pokemon.cureStatus();
 			}
 		},
@@ -853,12 +934,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Water",
 		},
 		onUpdate(pokemon) {
-			if (pokemon.status === 'slp') {
+			if (pokemon.status === "slp") {
 				pokemon.eatItem();
 			}
 		},
 		onEat(pokemon) {
-			if (pokemon.status === 'slp') {
+			if (pokemon.status === "slp") {
 				pokemon.cureStatus();
 			}
 		},
@@ -875,17 +956,19 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onSourceModifyDamage(damage, source, target, move) {
 			if (
-				move.type === 'Normal' &&
-				(!target.volatiles['substitute'] || move.flags['bypasssub'] || (move.infiltrates && this.gen >= 6))
+				move.type === "Normal" &&
+				(!target.volatiles["substitute"] ||
+					move.flags["bypasssub"] ||
+					(move.infiltrates && this.gen >= 6))
 			) {
 				if (target.eatItem()) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
+					this.debug("-50% reduction");
+					this.add("-enditem", target, this.effect, "[weaken]");
 					return this.chainModify(0.5);
 				}
 			}
 		},
-		onEat() { },
+		onEat() {},
 		num: 200,
 		gen: 4,
 	},
@@ -893,12 +976,15 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		name: "Chill Drive",
 		spritenum: 67,
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 649) || pokemon.baseSpecies.num === 649) {
+			if (
+				(source && source.baseSpecies.num === 649) ||
+				pokemon.baseSpecies.num === 649
+			) {
 				return false;
 			}
 			return true;
 		},
-		onDrive: 'Ice',
+		onDrive: "Ice",
 		forcedForme: "Genesect-Chill",
 		itemUser: ["Genesect-Chill"],
 		num: 119,
@@ -921,17 +1007,19 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			basePower: 10,
 		},
 		onStart(pokemon) {
-			if (pokemon.volatiles['choicelock']) {
-				this.debug('removing choicelock: ' + pokemon.volatiles['choicelock']);
+			if (pokemon.volatiles["choicelock"]) {
+				this.debug(
+					"removing choicelock: " + pokemon.volatiles["choicelock"]
+				);
 			}
-			pokemon.removeVolatile('choicelock');
+			pokemon.removeVolatile("choicelock");
 		},
 		onModifyMove(move, pokemon) {
-			pokemon.addVolatile('choicelock');
+			pokemon.addVolatile("choicelock");
 		},
 		onModifyAtkPriority: 1,
 		onModifyAtk(atk, pokemon) {
-			if (pokemon.volatiles['dynamax']) return;
+			if (pokemon.volatiles["dynamax"]) return;
 			return this.chainModify(1.5);
 		},
 		isChoice: true,
@@ -945,16 +1033,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			basePower: 10,
 		},
 		onStart(pokemon) {
-			if (pokemon.volatiles['choicelock']) {
-				this.debug('removing choicelock: ' + pokemon.volatiles['choicelock']);
+			if (pokemon.volatiles["choicelock"]) {
+				this.debug(
+					"removing choicelock: " + pokemon.volatiles["choicelock"]
+				);
 			}
-			pokemon.removeVolatile('choicelock');
+			pokemon.removeVolatile("choicelock");
 		},
 		onModifyMove(move, pokemon) {
-			pokemon.addVolatile('choicelock');
+			pokemon.addVolatile("choicelock");
 		},
 		onModifySpe(spe, pokemon) {
-			if (pokemon.volatiles['dynamax']) return;
+			if (pokemon.volatiles["dynamax"]) return;
 			return this.chainModify(1.5);
 		},
 		isChoice: true,
@@ -968,17 +1058,19 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			basePower: 10,
 		},
 		onStart(pokemon) {
-			if (pokemon.volatiles['choicelock']) {
-				this.debug('removing choicelock: ' + pokemon.volatiles['choicelock']);
+			if (pokemon.volatiles["choicelock"]) {
+				this.debug(
+					"removing choicelock: " + pokemon.volatiles["choicelock"]
+				);
 			}
-			pokemon.removeVolatile('choicelock');
+			pokemon.removeVolatile("choicelock");
 		},
 		onModifyMove(move, pokemon) {
-			pokemon.addVolatile('choicelock');
+			pokemon.addVolatile("choicelock");
 		},
 		onModifySpAPriority: 1,
 		onModifySpA(spa, pokemon) {
-			if (pokemon.volatiles['dynamax']) return;
+			if (pokemon.volatiles["dynamax"]) return;
 			return this.chainModify(1.5);
 		},
 		isChoice: true,
@@ -994,18 +1086,24 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Fighting",
 		},
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Fighting' && target.getMoveHitData(move).typeMod > 0) {
-				const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+			if (
+				move.type === "Fighting" &&
+				target.getMoveHitData(move).typeMod > 0
+			) {
+				const hitSub =
+					target.volatiles["substitute"] &&
+					!move.flags["bypasssub"] &&
+					!(move.infiltrates && this.gen >= 6);
 				if (hitSub) return;
 
 				if (target.eatItem()) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
+					this.debug("-50% reduction");
+					this.add("-enditem", target, this.effect, "[weaken]");
 					return this.chainModify(0.5);
 				}
 			}
 		},
-		onEat() { },
+		onEat() {},
 		num: 189,
 		gen: 4,
 	},
@@ -1036,8 +1134,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 					showMsg = true;
 				}
 			}
-			if (showMsg && !(effect as ActiveMove).secondaries && effect.id !== 'octolock') {
-				this.add('-fail', target, 'unboost', '[from] item: Clear Amulet', '[of] ' + target);
+			if (
+				showMsg &&
+				!(effect as ActiveMove).secondaries &&
+				effect.id !== "octolock"
+			) {
+				this.add(
+					"-fail",
+					target,
+					"unboost",
+					"[from] item: Clear Amulet",
+					"[of] " + target
+				);
 			}
 		},
 		num: 1882,
@@ -1061,18 +1169,24 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Flying",
 		},
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Flying' && target.getMoveHitData(move).typeMod > 0) {
-				const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+			if (
+				move.type === "Flying" &&
+				target.getMoveHitData(move).typeMod > 0
+			) {
+				const hitSub =
+					target.volatiles["substitute"] &&
+					!move.flags["bypasssub"] &&
+					!(move.infiltrates && this.gen >= 6);
 				if (hitSub) return;
 
 				if (target.eatItem()) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
+					this.debug("-50% reduction");
+					this.add("-enditem", target, this.effect, "[weaken]");
 					return this.chainModify(0.5);
 				}
 			}
 		},
-		onEat() { },
+		onEat() {},
 		num: 192,
 		gen: 4,
 	},
@@ -1085,18 +1199,21 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Dark",
 		},
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Dark' && target.getMoveHitData(move).typeMod > 0) {
-				const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+			if (move.type === "Dark" && target.getMoveHitData(move).typeMod > 0) {
+				const hitSub =
+					target.volatiles["substitute"] &&
+					!move.flags["bypasssub"] &&
+					!(move.infiltrates && this.gen >= 6);
 				if (hitSub) return;
 
 				if (target.eatItem()) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
+					this.debug("-50% reduction");
+					this.add("-enditem", target, this.effect, "[weaken]");
 					return this.chainModify(0.5);
 				}
 			}
 		},
-		onEat() { },
+		onEat() {},
 		num: 198,
 		gen: 4,
 	},
@@ -1108,12 +1225,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (user.baseSpecies.name.startsWith('Ogerpon-Cornerstone')) {
+			if (user.baseSpecies.name.startsWith("Ogerpon-Cornerstone")) {
 				return this.chainModify([4915, 4096]);
 			}
 		},
 		onTakeItem(item, source) {
-			if (source.baseSpecies.baseSpecies === 'Ogerpon') return false;
+			if (source.baseSpecies.baseSpecies === "Ogerpon") return false;
 			return true;
 		},
 		forcedForme: "Ogerpon-Cornerstone",
@@ -1151,8 +1268,10 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			basePower: 30,
 		},
 		onModifySecondaries(secondaries) {
-			this.debug('Covert Cloak prevent secondary');
-			return secondaries.filter(effect => !!(effect.self || effect.dustproof));
+			this.debug("Covert Cloak prevent secondary");
+			return secondaries.filter(
+				(effect) => !!(effect.self || effect.dustproof)
+			);
 		},
 		num: 1885,
 		gen: 9,
@@ -1178,16 +1297,23 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		onFractionalPriority(priority, pokemon) {
 			if (
 				priority <= 0 &&
-				(pokemon.hp <= pokemon.maxhp / 4 || (pokemon.hp <= pokemon.maxhp / 2 &&
-				pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony))
+				(pokemon.hp <= pokemon.maxhp / 4 ||
+					(pokemon.hp <= pokemon.maxhp / 2 &&
+						pokemon.hasAbility("gluttony") &&
+						pokemon.abilityState.gluttony))
 			) {
 				if (pokemon.eatItem()) {
-					this.add('-activate', pokemon, 'item: Custap Berry', '[consumed]');
+					this.add(
+						"-activate",
+						pokemon,
+						"item: Custap Berry",
+						"[consumed]"
+					);
 					return 0.1;
 				}
 			}
 		},
-		onEat() { },
+		onEat() {},
 		num: 210,
 		gen: 4,
 	},
@@ -1205,9 +1331,9 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 89,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status') return;
-			if (move.type === 'Dark' && source.useItem()) {
-				source.addVolatile('gem');
+			if (target === source || move.category === "Status") return;
+			if (move.type === "Dark" && source.useItem()) {
+				source.addVolatile("gem");
 			}
 		},
 		num: 562,
@@ -1217,9 +1343,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	darkmemory: {
 		name: "Dark Memory",
 		spritenum: 683,
-		onMemory: 'Dark',
+		onMemory: "Dark",
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 773) || pokemon.baseSpecies.num === 773) {
+			if (
+				(source && source.baseSpecies.num === 773) ||
+				pokemon.baseSpecies.num === 773
+			) {
 				return false;
 			}
 			return true;
@@ -1233,7 +1362,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	darkiniumz: {
 		name: "Darkinium Z",
 		spritenum: 646,
-		onPlate: 'Dark',
+		onPlate: "Dark",
 		onTakeItem: false,
 		zMove: true,
 		zMoveType: "Dark",
@@ -1270,7 +1399,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onModifySpDPriority: 2,
 		onModifySpD(spd, pokemon) {
-			if (pokemon.baseSpecies.name === 'Clamperl') {
+			if (pokemon.baseSpecies.name === "Clamperl") {
 				return this.chainModify(2);
 			}
 		},
@@ -1287,7 +1416,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onModifySpAPriority: 1,
 		onModifySpA(spa, pokemon) {
-			if (pokemon.baseSpecies.name === 'Clamperl') {
+			if (pokemon.baseSpecies.name === "Clamperl") {
 				return this.chainModify(2);
 			}
 		},
@@ -1304,9 +1433,10 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onAttractPriority: -100,
 		onAttract(target, source) {
-			this.debug('attract intercepted: ' + target + ' from ' + source);
+			this.debug("attract intercepted: " + target + " from " + source);
 			if (!source || source === target) return;
-			if (!source.volatiles['attract']) source.addVolatile('attract', target);
+			if (!source.volatiles["attract"])
+				source.addVolatile("attract", target);
 		},
 		num: 280,
 		gen: 4,
@@ -1346,12 +1476,15 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		name: "Douse Drive",
 		spritenum: 103,
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 649) || pokemon.baseSpecies.num === 649) {
+			if (
+				(source && source.baseSpecies.num === 649) ||
+				pokemon.baseSpecies.num === 649
+			) {
 				return false;
 			}
 			return true;
 		},
-		onDrive: 'Water',
+		onDrive: "Water",
 		forcedForme: "Genesect-Douse",
 		itemUser: ["Genesect-Douse"],
 		num: 116,
@@ -1361,15 +1494,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	dracoplate: {
 		name: "Draco Plate",
 		spritenum: 105,
-		onPlate: 'Dragon',
+		onPlate: "Dragon",
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move && move.type === 'Dragon') {
+			if (move && move.type === "Dragon") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 493) || pokemon.baseSpecies.num === 493) {
+			if (
+				(source && source.baseSpecies.num === 493) ||
+				pokemon.baseSpecies.num === 493
+			) {
 				return false;
 			}
 			return true;
@@ -1386,7 +1522,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move && move.type === 'Dragon') {
+			if (move && move.type === "Dragon") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
@@ -1398,9 +1534,9 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 107,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status') return;
-			if (move.type === 'Dragon' && source.useItem()) {
-				source.addVolatile('gem');
+			if (target === source || move.category === "Status") return;
+			if (move.type === "Dragon" && source.useItem()) {
+				source.addVolatile("gem");
 			}
 		},
 		num: 561,
@@ -1410,9 +1546,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	dragonmemory: {
 		name: "Dragon Memory",
 		spritenum: 682,
-		onMemory: 'Dragon',
+		onMemory: "Dragon",
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 773) || pokemon.baseSpecies.num === 773) {
+			if (
+				(source && source.baseSpecies.num === 773) ||
+				pokemon.baseSpecies.num === 773
+			) {
 				return false;
 			}
 			return true;
@@ -1435,7 +1574,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	dragoniumz: {
 		name: "Dragonium Z",
 		spritenum: 645,
-		onPlate: 'Dragon',
+		onPlate: "Dragon",
 		onTakeItem: false,
 		zMove: true,
 		zMoveType: "Dragon",
@@ -1447,15 +1586,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	dreadplate: {
 		name: "Dread Plate",
 		spritenum: 110,
-		onPlate: 'Dark',
+		onPlate: "Dark",
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move && move.type === 'Dark') {
+			if (move && move.type === "Dark") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 493) || pokemon.baseSpecies.num === 493) {
+			if (
+				(source && source.baseSpecies.num === 493) ||
+				pokemon.baseSpecies.num === 493
+			) {
 				return false;
 			}
 			return true;
@@ -1512,15 +1654,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	earthplate: {
 		name: "Earth Plate",
 		spritenum: 117,
-		onPlate: 'Ground',
+		onPlate: "Ground",
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move && move.type === 'Ground') {
+			if (move && move.type === "Ground") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 493) || pokemon.baseSpecies.num === 493) {
+			if (
+				(source && source.baseSpecies.num === 493) ||
+				pokemon.baseSpecies.num === 493
+			) {
 				return false;
 			}
 			return true;
@@ -1548,9 +1693,23 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onAfterMoveSecondaryPriority: 2,
 		onAfterMoveSecondary(target, source, move) {
-			if (source && source !== target && target.hp && move && move.category !== 'Status' && !move.flags['futuremove']) {
-				if (!this.canSwitch(target.side) || target.forceSwitchFlag || target.beingCalledBack || target.isSkyDropped()) return;
-				if (target.volatiles['commanding'] || target.volatiles['commanded']) return;
+			if (
+				source &&
+				source !== target &&
+				target.hp &&
+				move &&
+				move.category !== "Status" &&
+				!move.flags["futuremove"]
+			) {
+				if (
+					!this.canSwitch(target.side) ||
+					target.forceSwitchFlag ||
+					target.beingCalledBack ||
+					target.isSkyDropped()
+				)
+					return;
+				if (target.volatiles["commanding"] || target.volatiles["commanded"])
+					return;
 				for (const pokemon of this.getAllActive()) {
 					if (pokemon.switchFlag === true) return;
 				}
@@ -1572,7 +1731,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			basePower: 50,
 		},
 		onAfterBoost(boost, target, source, effect) {
-			if (this.activeMove?.id === 'partingshot') return;
+			if (this.activeMove?.id === "partingshot") return;
 			let eject = false;
 			let i: BoostID;
 			for (i in boost) {
@@ -1583,7 +1742,11 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			if (eject) {
 				if (target.hp) {
 					if (!this.canSwitch(target.side)) return;
-					if (target.volatiles['commanding'] || target.volatiles['commanded']) return;
+					if (
+						target.volatiles["commanding"] ||
+						target.volatiles["commanded"]
+					)
+						return;
 					for (const pokemon of this.getAllActive()) {
 						if (pokemon.switchFlag === true) return;
 					}
@@ -1608,9 +1771,14 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 120,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status' || move.flags['pledgecombo']) return;
-			if (move.type === 'Electric' && source.useItem()) {
-				source.addVolatile('gem');
+			if (
+				target === source ||
+				move.category === "Status" ||
+				move.flags["pledgecombo"]
+			)
+				return;
+			if (move.type === "Electric" && source.useItem()) {
+				source.addVolatile("gem");
 			}
 		},
 		num: 550,
@@ -1620,9 +1788,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	electricmemory: {
 		name: "Electric Memory",
 		spritenum: 679,
-		onMemory: 'Electric',
+		onMemory: "Electric",
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 773) || pokemon.baseSpecies.num === 773) {
+			if (
+				(source && source.baseSpecies.num === 773) ||
+				pokemon.baseSpecies.num === 773
+			) {
 				return false;
 			}
 			return true;
@@ -1641,12 +1812,15 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onSwitchInPriority: -1,
 		onStart(pokemon) {
-			if (!pokemon.ignoringItem() && this.field.isTerrain('electricterrain')) {
+			if (
+				!pokemon.ignoringItem() &&
+				this.field.isTerrain("electricterrain")
+			) {
 				pokemon.useItem();
 			}
 		},
 		onTerrainChange(pokemon) {
-			if (this.field.isTerrain('electricterrain')) {
+			if (this.field.isTerrain("electricterrain")) {
 				pokemon.useItem();
 			}
 		},
@@ -1659,7 +1833,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	electriumz: {
 		name: "Electrium Z",
 		spritenum: 634,
-		onPlate: 'Electric',
+		onPlate: "Electric",
 		onTakeItem: false,
 		zMove: true,
 		zMoveType: "Electric",
@@ -1684,9 +1858,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			}
 		},
 		onTryEatItem(item, pokemon) {
-			if (!this.runEvent('TryHeal', pokemon, null, this.effect, pokemon.baseMaxhp / 4)) return false;
+			if (
+				!this.runEvent(
+					"TryHeal",
+					pokemon,
+					null,
+					this.effect,
+					pokemon.baseMaxhp / 4
+				)
+			)
+				return false;
 		},
-		onEat() { },
+		onEat() {},
 		num: 208,
 		gen: 3,
 	},
@@ -1728,7 +1911,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	fairiumz: {
 		name: "Fairium Z",
 		spritenum: 648,
-		onPlate: 'Fairy',
+		onPlate: "Fairy",
 		onTakeItem: false,
 		zMove: true,
 		zMoveType: "Fairy",
@@ -1745,7 +1928,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move && move.type === 'Fairy') {
+			if (move && move.type === "Fairy") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
@@ -1757,9 +1940,9 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 611,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status') return;
-			if (move.type === 'Fairy' && source.useItem()) {
-				source.addVolatile('gem');
+			if (target === source || move.category === "Status") return;
+			if (move.type === "Fairy" && source.useItem()) {
+				source.addVolatile("gem");
 			}
 		},
 		num: 715,
@@ -1769,9 +1952,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	fairymemory: {
 		name: "Fairy Memory",
 		spritenum: 684,
-		onMemory: 'Fairy',
+		onMemory: "Fairy",
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 773) || pokemon.baseSpecies.num === 773) {
+			if (
+				(source && source.baseSpecies.num === 773) ||
+				pokemon.baseSpecies.num === 773
+			) {
 				return false;
 			}
 			return true;
@@ -1794,9 +1980,9 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 139,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status') return;
-			if (move.type === 'Fighting' && source.useItem()) {
-				source.addVolatile('gem');
+			if (target === source || move.category === "Status") return;
+			if (move.type === "Fighting" && source.useItem()) {
+				source.addVolatile("gem");
 			}
 		},
 		num: 553,
@@ -1806,9 +1992,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	fightingmemory: {
 		name: "Fighting Memory",
 		spritenum: 668,
-		onMemory: 'Fighting',
+		onMemory: "Fighting",
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 773) || pokemon.baseSpecies.num === 773) {
+			if (
+				(source && source.baseSpecies.num === 773) ||
+				pokemon.baseSpecies.num === 773
+			) {
 				return false;
 			}
 			return true;
@@ -1822,7 +2011,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	fightiniumz: {
 		name: "Fightinium Z",
 		spritenum: 637,
-		onPlate: 'Fighting',
+		onPlate: "Fighting",
 		onTakeItem: false,
 		zMove: true,
 		zMoveType: "Fighting",
@@ -1840,18 +2029,31 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Bug",
 		},
 		onUpdate(pokemon) {
-			if (pokemon.hp <= pokemon.maxhp / 4 || (pokemon.hp <= pokemon.maxhp / 2 &&
-					pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony)) {
+			if (
+				pokemon.hp <= pokemon.maxhp / 4 ||
+				(pokemon.hp <= pokemon.maxhp / 2 &&
+					pokemon.hasAbility("gluttony") &&
+					pokemon.abilityState.gluttony)
+			) {
 				pokemon.eatItem();
 			}
 		},
 		onTryEatItem(item, pokemon) {
-			if (!this.runEvent('TryHeal', pokemon, null, this.effect, pokemon.baseMaxhp / 3)) return false;
+			if (
+				!this.runEvent(
+					"TryHeal",
+					pokemon,
+					null,
+					this.effect,
+					pokemon.baseMaxhp / 3
+				)
+			)
+				return false;
 		},
 		onEat(pokemon) {
 			this.heal(pokemon.baseMaxhp / 3);
-			if (pokemon.getNature().minus === 'atk') {
-				pokemon.addVolatile('confusion');
+			if (pokemon.getNature().minus === "atk") {
+				pokemon.addVolatile("confusion");
 			}
 		},
 		num: 159,
@@ -1862,9 +2064,14 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 141,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status' || move.flags['pledgecombo']) return;
-			if (move.type === 'Fire' && source.useItem()) {
-				source.addVolatile('gem');
+			if (
+				target === source ||
+				move.category === "Status" ||
+				move.flags["pledgecombo"]
+			)
+				return;
+			if (move.type === "Fire" && source.useItem()) {
+				source.addVolatile("gem");
 			}
 		},
 		num: 548,
@@ -1874,9 +2081,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	firememory: {
 		name: "Fire Memory",
 		spritenum: 676,
-		onMemory: 'Fire',
+		onMemory: "Fire",
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 773) || pokemon.baseSpecies.num === 773) {
+			if (
+				(source && source.baseSpecies.num === 773) ||
+				pokemon.baseSpecies.num === 773
+			) {
 				return false;
 			}
 			return true;
@@ -1899,7 +2109,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	firiumz: {
 		name: "Firium Z",
 		spritenum: 632,
-		onPlate: 'Fire',
+		onPlate: "Fire",
 		onTakeItem: false,
 		zMove: true,
 		zMoveType: "Fire",
@@ -1911,15 +2121,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	fistplate: {
 		name: "Fist Plate",
 		spritenum: 143,
-		onPlate: 'Fighting',
+		onPlate: "Fighting",
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move && move.type === 'Fighting') {
+			if (move && move.type === "Fighting") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 493) || pokemon.baseSpecies.num === 493) {
+			if (
+				(source && source.baseSpecies.num === 493) ||
+				pokemon.baseSpecies.num === 493
+			) {
 				return false;
 			}
 			return true;
@@ -1933,12 +2146,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 145,
 		fling: {
 			basePower: 30,
-			status: 'brn',
+			status: "brn",
 		},
 		onResidualOrder: 28,
 		onResidualSubOrder: 3,
 		onResidual(pokemon) {
-			pokemon.trySetStatus('brn', pokemon);
+			pokemon.trySetStatus("brn", pokemon);
 		},
 		num: 273,
 		gen: 4,
@@ -1946,15 +2159,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	flameplate: {
 		name: "Flame Plate",
 		spritenum: 146,
-		onPlate: 'Fire',
+		onPlate: "Fire",
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move && move.type === 'Fire') {
+			if (move && move.type === "Fire") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 493) || pokemon.baseSpecies.num === 493) {
+			if (
+				(source && source.baseSpecies.num === 493) ||
+				pokemon.baseSpecies.num === 493
+			) {
 				return false;
 			}
 			return true;
@@ -1989,9 +2205,9 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 149,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status') return;
-			if (move.type === 'Flying' && source.useItem()) {
-				source.addVolatile('gem');
+			if (target === source || move.category === "Status") return;
+			if (move.type === "Flying" && source.useItem()) {
+				source.addVolatile("gem");
 			}
 		},
 		num: 556,
@@ -2001,9 +2217,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	flyingmemory: {
 		name: "Flying Memory",
 		spritenum: 669,
-		onMemory: 'Flying',
+		onMemory: "Flying",
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 773) || pokemon.baseSpecies.num === 773) {
+			if (
+				(source && source.baseSpecies.num === 773) ||
+				pokemon.baseSpecies.num === 773
+			) {
 				return false;
 			}
 			return true;
@@ -2017,7 +2236,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	flyiniumz: {
 		name: "Flyinium Z",
 		spritenum: 640,
-		onPlate: 'Flying',
+		onPlate: "Flying",
 		onTakeItem: false,
 		zMove: true,
 		zMoveType: "Flying",
@@ -2034,7 +2253,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onDamagePriority: -40,
 		onDamage(damage, target, source, effect) {
-			if (this.randomChance(1, 10) && damage >= target.hp && effect && effect.effectType === 'Move') {
+			if (
+				this.randomChance(1, 10) &&
+				damage >= target.hp &&
+				effect &&
+				effect.effectType === "Move"
+			) {
 				this.add("-activate", target, "item: Focus Band");
 				return target.hp - 1;
 			}
@@ -2050,7 +2274,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onDamagePriority: -40,
 		onDamage(damage, target, source, effect) {
-			if (target.hp === target.maxhp && damage >= target.hp && effect && effect.effectType === 'Move') {
+			if (
+				target.hp === target.maxhp &&
+				damage >= target.hp &&
+				effect &&
+				effect.effectType === "Move"
+			) {
 				if (target.useItem()) {
 					return target.hp - 1;
 				}
@@ -2158,13 +2387,17 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Ice",
 		},
 		onUpdate(pokemon) {
-			if (pokemon.hp <= pokemon.maxhp / 4 || (pokemon.hp <= pokemon.maxhp / 2 &&
-					pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony)) {
+			if (
+				pokemon.hp <= pokemon.maxhp / 4 ||
+				(pokemon.hp <= pokemon.maxhp / 2 &&
+					pokemon.hasAbility("gluttony") &&
+					pokemon.abilityState.gluttony)
+			) {
 				pokemon.eatItem();
 			}
 		},
 		onEat(pokemon) {
-			this.boost({def: 1});
+			this.boost({ def: 1 });
 		},
 		num: 202,
 		gen: 3,
@@ -2216,9 +2449,9 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 161,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status') return;
-			if (move.type === 'Ghost' && source.useItem()) {
-				source.addVolatile('gem');
+			if (target === source || move.category === "Status") return;
+			if (move.type === "Ghost" && source.useItem()) {
+				source.addVolatile("gem");
 			}
 		},
 		num: 560,
@@ -2228,9 +2461,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	ghostmemory: {
 		name: "Ghost Memory",
 		spritenum: 674,
-		onMemory: 'Ghost',
+		onMemory: "Ghost",
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 773) || pokemon.baseSpecies.num === 773) {
+			if (
+				(source && source.baseSpecies.num === 773) ||
+				pokemon.baseSpecies.num === 773
+			) {
 				return false;
 			}
 			return true;
@@ -2244,7 +2480,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	ghostiumz: {
 		name: "Ghostium Z",
 		spritenum: 644,
-		onPlate: 'Ghost',
+		onPlate: "Ghost",
 		onTakeItem: false,
 		zMove: true,
 		zMoveType: "Ghost",
@@ -2281,9 +2517,14 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 172,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status' || move.flags['pledgecombo']) return;
-			if (move.type === 'Grass' && source.useItem()) {
-				source.addVolatile('gem');
+			if (
+				target === source ||
+				move.category === "Status" ||
+				move.flags["pledgecombo"]
+			)
+				return;
+			if (move.type === "Grass" && source.useItem()) {
+				source.addVolatile("gem");
 			}
 		},
 		num: 551,
@@ -2293,9 +2534,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	grassmemory: {
 		name: "Grass Memory",
 		spritenum: 678,
-		onMemory: 'Grass',
+		onMemory: "Grass",
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 773) || pokemon.baseSpecies.num === 773) {
+			if (
+				(source && source.baseSpecies.num === 773) ||
+				pokemon.baseSpecies.num === 773
+			) {
 				return false;
 			}
 			return true;
@@ -2309,7 +2553,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	grassiumz: {
 		name: "Grassium Z",
 		spritenum: 635,
-		onPlate: 'Grass',
+		onPlate: "Grass",
 		onTakeItem: false,
 		zMove: true,
 		zMoveType: "Grass",
@@ -2326,12 +2570,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onSwitchInPriority: -1,
 		onStart(pokemon) {
-			if (!pokemon.ignoringItem() && this.field.isTerrain('grassyterrain')) {
+			if (!pokemon.ignoringItem() && this.field.isTerrain("grassyterrain")) {
 				pokemon.useItem();
 			}
 		},
 		onTerrainChange(pokemon) {
-			if (this.field.isTerrain('grassyterrain')) {
+			if (this.field.isTerrain("grassyterrain")) {
 				pokemon.useItem();
 			}
 		},
@@ -2375,12 +2619,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 743,
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (user.baseSpecies.num === 487 && (move.type === 'Ghost' || move.type === 'Dragon')) {
+			if (
+				user.baseSpecies.num === 487 &&
+				(move.type === "Ghost" || move.type === "Dragon")
+			) {
 				return this.chainModify([4915, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
-			if (source?.baseSpecies.num === 487 || pokemon.baseSpecies.num === 487) {
+			if (
+				source?.baseSpecies.num === 487 ||
+				pokemon.baseSpecies.num === 487
+			) {
 				return false;
 			}
 			return true;
@@ -2398,7 +2648,10 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (user.baseSpecies.num === 487 && (move.type === 'Ghost' || move.type === 'Dragon')) {
+			if (
+				user.baseSpecies.num === 487 &&
+				(move.type === "Ghost" || move.type === "Dragon")
+			) {
 				return this.chainModify([4915, 4096]);
 			}
 		},
@@ -2411,9 +2664,9 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 182,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status') return;
-			if (move.type === 'Ground' && source.useItem()) {
-				source.addVolatile('gem');
+			if (target === source || move.category === "Status") return;
+			if (move.type === "Ground" && source.useItem()) {
+				source.addVolatile("gem");
 			}
 		},
 		num: 555,
@@ -2423,9 +2676,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	groundmemory: {
 		name: "Ground Memory",
 		spritenum: 671,
-		onMemory: 'Ground',
+		onMemory: "Ground",
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 773) || pokemon.baseSpecies.num === 773) {
+			if (
+				(source && source.baseSpecies.num === 773) ||
+				pokemon.baseSpecies.num === 773
+			) {
 				return false;
 			}
 			return true;
@@ -2439,7 +2695,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	groundiumz: {
 		name: "Groundium Z",
 		spritenum: 639,
-		onPlate: 'Ground',
+		onPlate: "Ground",
 		onTakeItem: false,
 		zMove: true,
 		zMoveType: "Ground",
@@ -2471,18 +2727,24 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Dragon",
 		},
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Dragon' && target.getMoveHitData(move).typeMod > 0) {
-				const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+			if (
+				move.type === "Dragon" &&
+				target.getMoveHitData(move).typeMod > 0
+			) {
+				const hitSub =
+					target.volatiles["substitute"] &&
+					!move.flags["bypasssub"] &&
+					!(move.infiltrates && this.gen >= 6);
 				if (hitSub) return;
 
 				if (target.eatItem()) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
+					this.debug("-50% reduction");
+					this.add("-enditem", target, this.effect, "[weaken]");
 					return this.chainModify(0.5);
 				}
 			}
 		},
-		onEat() { },
+		onEat() {},
 		num: 197,
 		gen: 4,
 	},
@@ -2494,7 +2756,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move && move.type === 'Rock') {
+			if (move && move.type === "Rock") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
@@ -2516,12 +2778,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (user.baseSpecies.name.startsWith('Ogerpon-Hearthflame')) {
+			if (user.baseSpecies.name.startsWith("Ogerpon-Hearthflame")) {
 				return this.chainModify([4915, 4096]);
 			}
 		},
 		onTakeItem(item, source) {
-			if (source.baseSpecies.baseSpecies === 'Ogerpon') return false;
+			if (source.baseSpecies.baseSpecies === "Ogerpon") return false;
 			return true;
 		},
 		forcedForme: "Ogerpon-Hearthflame",
@@ -2614,18 +2876,31 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Dark",
 		},
 		onUpdate(pokemon) {
-			if (pokemon.hp <= pokemon.maxhp / 4 || (pokemon.hp <= pokemon.maxhp / 2 &&
-					pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony)) {
+			if (
+				pokemon.hp <= pokemon.maxhp / 4 ||
+				(pokemon.hp <= pokemon.maxhp / 2 &&
+					pokemon.hasAbility("gluttony") &&
+					pokemon.abilityState.gluttony)
+			) {
 				pokemon.eatItem();
 			}
 		},
 		onTryEatItem(item, pokemon) {
-			if (!this.runEvent('TryHeal', pokemon, null, this.effect, pokemon.baseMaxhp / 3)) return false;
+			if (
+				!this.runEvent(
+					"TryHeal",
+					pokemon,
+					null,
+					this.effect,
+					pokemon.baseMaxhp / 3
+				)
+			)
+				return false;
 		},
 		onEat(pokemon) {
 			this.heal(pokemon.baseMaxhp / 3);
-			if (pokemon.getNature().minus === 'def') {
-				pokemon.addVolatile('confusion');
+			if (pokemon.getNature().minus === "def") {
+				pokemon.addVolatile("confusion");
 			}
 		},
 		num: 163,
@@ -2636,9 +2911,9 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 218,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status') return;
-			if (move.type === 'Ice' && source.useItem()) {
-				source.addVolatile('gem');
+			if (target === source || move.category === "Status") return;
+			if (move.type === "Ice" && source.useItem()) {
+				source.addVolatile("gem");
 			}
 		},
 		num: 552,
@@ -2648,9 +2923,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	icememory: {
 		name: "Ice Memory",
 		spritenum: 681,
-		onMemory: 'Ice',
+		onMemory: "Ice",
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 773) || pokemon.baseSpecies.num === 773) {
+			if (
+				(source && source.baseSpecies.num === 773) ||
+				pokemon.baseSpecies.num === 773
+			) {
 				return false;
 			}
 			return true;
@@ -2673,15 +2951,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	icicleplate: {
 		name: "Icicle Plate",
 		spritenum: 220,
-		onPlate: 'Ice',
+		onPlate: "Ice",
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move.type === 'Ice') {
+			if (move.type === "Ice") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 493) || pokemon.baseSpecies.num === 493) {
+			if (
+				(source && source.baseSpecies.num === 493) ||
+				pokemon.baseSpecies.num === 493
+			) {
 				return false;
 			}
 			return true;
@@ -2693,7 +2974,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	iciumz: {
 		name: "Icium Z",
 		spritenum: 636,
-		onPlate: 'Ice',
+		onPlate: "Ice",
 		onTakeItem: false,
 		zMove: true,
 		zMoveType: "Ice",
@@ -2725,15 +3006,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	insectplate: {
 		name: "Insect Plate",
 		spritenum: 223,
-		onPlate: 'Bug',
+		onPlate: "Bug",
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move.type === 'Bug') {
+			if (move.type === "Bug") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 493) || pokemon.baseSpecies.num === 493) {
+			if (
+				(source && source.baseSpecies.num === 493) ||
+				pokemon.baseSpecies.num === 493
+			) {
 				return false;
 			}
 			return true;
@@ -2750,8 +3034,13 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onEffectiveness(typeMod, target, type, move) {
 			if (!target) return;
-			if (target.volatiles['ingrain'] || target.volatiles['smackdown'] || this.field.getPseudoWeather('gravity')) return;
-			if (move.type === 'Ground' && target.hasType('Flying')) return 0;
+			if (
+				target.volatiles["ingrain"] ||
+				target.volatiles["smackdown"] ||
+				this.field.getPseudoWeather("gravity")
+			)
+				return;
+			if (move.type === "Ground" && target.hasType("Flying")) return 0;
 		},
 		// airborneness negation implemented in sim/pokemon.js:Pokemon#isGrounded
 		onModifySpe(spe) {
@@ -2763,15 +3052,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	ironplate: {
 		name: "Iron Plate",
 		spritenum: 225,
-		onPlate: 'Steel',
+		onPlate: "Steel",
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move.type === 'Steel') {
+			if (move.type === "Steel") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 493) || pokemon.baseSpecies.num === 493) {
+			if (
+				(source && source.baseSpecies.num === 493) ||
+				pokemon.baseSpecies.num === 493
+			) {
 				return false;
 			}
 			return true;
@@ -2789,13 +3081,22 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Dragon",
 		},
 		onDamagingHit(damage, target, source, move) {
-			if (move.category === 'Physical' && source.hp && source.isActive && !source.hasAbility('magicguard')) {
+			if (
+				move.category === "Physical" &&
+				source.hp &&
+				source.isActive &&
+				!source.hasAbility("magicguard")
+			) {
 				if (target.eatItem()) {
-					this.damage(source.baseMaxhp / (target.hasAbility('ripen') ? 4 : 8), source, target);
+					this.damage(
+						source.baseMaxhp / (target.hasAbility("ripen") ? 4 : 8),
+						source,
+						target
+					);
 				}
 			}
 		},
-		onEat() { },
+		onEat() {},
 		num: 211,
 		gen: 4,
 	},
@@ -2818,18 +3119,21 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Ghost",
 		},
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Ghost' && target.getMoveHitData(move).typeMod > 0) {
-				const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+			if (move.type === "Ghost" && target.getMoveHitData(move).typeMod > 0) {
+				const hitSub =
+					target.volatiles["substitute"] &&
+					!move.flags["bypasssub"] &&
+					!(move.infiltrates && this.gen >= 6);
 				if (hitSub) return;
 
 				if (target.eatItem()) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
+					this.debug("-50% reduction");
+					this.add("-enditem", target, this.effect, "[weaken]");
 					return this.chainModify(0.5);
 				}
 			}
 		},
-		onEat() { },
+		onEat() {},
 		num: 196,
 		gen: 4,
 	},
@@ -2842,18 +3146,24 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Poison",
 		},
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Poison' && target.getMoveHitData(move).typeMod > 0) {
-				const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+			if (
+				move.type === "Poison" &&
+				target.getMoveHitData(move).typeMod > 0
+			) {
+				const hitSub =
+					target.volatiles["substitute"] &&
+					!move.flags["bypasssub"] &&
+					!(move.infiltrates && this.gen >= 6);
 				if (hitSub) return;
 
 				if (target.eatItem()) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
+					this.debug("-50% reduction");
+					this.add("-enditem", target, this.effect, "[weaken]");
 					return this.chainModify(0.5);
 				}
 			}
 		},
-		onEat() { },
+		onEat() {},
 		num: 190,
 		gen: 4,
 	},
@@ -2866,13 +3176,13 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Fairy",
 		},
 		onAfterMoveSecondary(target, source, move) {
-			if (move.category === 'Physical') {
-				if (move.id === 'present' && move.heal) return;
+			if (move.category === "Physical") {
+				if (move.id === "present" && move.heal) return;
 				target.eatItem();
 			}
 		},
 		onEat(pokemon) {
-			this.boost({def: 1});
+			this.boost({ def: 1 });
 		},
 		num: 687,
 		gen: 6,
@@ -2908,18 +3218,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 236,
 		fling: {
 			basePower: 30,
-			volatileStatus: 'flinch',
+			volatileStatus: "flinch",
 		},
 		onModifyMovePriority: -1,
 		onModifyMove(move) {
 			if (move.category !== "Status") {
 				if (!move.secondaries) move.secondaries = [];
 				for (const secondary of move.secondaries) {
-					if (secondary.volatileStatus === 'flinch') return;
+					if (secondary.volatileStatus === "flinch") return;
 				}
 				move.secondaries.push({
 					chance: 10,
-					volatileStatus: 'flinch',
+					volatileStatus: "flinch",
 				});
 			}
 		},
@@ -2956,13 +3266,17 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Flying",
 		},
 		onUpdate(pokemon) {
-			if (pokemon.hp <= pokemon.maxhp / 4 || (pokemon.hp <= pokemon.maxhp / 2 &&
-					pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony)) {
+			if (
+				pokemon.hp <= pokemon.maxhp / 4 ||
+				(pokemon.hp <= pokemon.maxhp / 2 &&
+					pokemon.hasAbility("gluttony") &&
+					pokemon.abilityState.gluttony)
+			) {
 				pokemon.eatItem();
 			}
 		},
 		onEat(pokemon) {
-			pokemon.addVolatile('focusenergy');
+			pokemon.addVolatile("focusenergy");
 		},
 		num: 206,
 		gen: 3,
@@ -3003,8 +3317,8 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onModifyAccuracyPriority: -2,
 		onModifyAccuracy(accuracy) {
-			if (typeof accuracy !== 'number') return;
-			this.debug('lax incense - decreasing accuracy');
+			if (typeof accuracy !== "number") return;
+			this.debug("lax incense - decreasing accuracy");
 			return this.chainModify([3686, 4096]);
 		},
 		num: 255,
@@ -3027,7 +3341,11 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		spritenum: 475,
 		onModifyCritRatio(critRatio, user) {
-			if (["farfetchd", "sirfetchd"].includes(this.toID(user.baseSpecies.baseSpecies))) {
+			if (
+				["farfetchd", "sirfetchd"].includes(
+					this.toID(user.baseSpecies.baseSpecies)
+				)
+			) {
 				return critRatio + 2;
 			}
 		},
@@ -3060,17 +3378,24 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onUpdate(pokemon) {
 			if (!pokemon.hp) return;
-			if (pokemon.moveSlots.some(move => move.pp === 0)) {
+			if (pokemon.moveSlots.some((move) => move.pp === 0)) {
 				pokemon.eatItem();
 			}
 		},
 		onEat(pokemon) {
-			const moveSlot = pokemon.moveSlots.find(move => move.pp === 0) ||
-				pokemon.moveSlots.find(move => move.pp < move.maxpp);
+			const moveSlot =
+				pokemon.moveSlots.find((move) => move.pp === 0) ||
+				pokemon.moveSlots.find((move) => move.pp < move.maxpp);
 			if (!moveSlot) return;
 			moveSlot.pp += 10;
 			if (moveSlot.pp > moveSlot.maxpp) moveSlot.pp = moveSlot.maxpp;
-			this.add('-activate', pokemon, 'item: Leppa Berry', moveSlot.move, '[consumed]');
+			this.add(
+				"-activate",
+				pokemon,
+				"item: Leppa Berry",
+				moveSlot.move,
+				"[consumed]"
+			);
 		},
 		num: 154,
 		gen: 3,
@@ -3091,13 +3416,17 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Grass",
 		},
 		onUpdate(pokemon) {
-			if (pokemon.hp <= pokemon.maxhp / 4 || (pokemon.hp <= pokemon.maxhp / 2 &&
-					pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony)) {
+			if (
+				pokemon.hp <= pokemon.maxhp / 4 ||
+				(pokemon.hp <= pokemon.maxhp / 2 &&
+					pokemon.hasAbility("gluttony") &&
+					pokemon.abilityState.gluttony)
+			) {
 				pokemon.eatItem();
 			}
 		},
 		onEat(pokemon) {
-			this.boost({atk: 1});
+			this.boost({ atk: 1 });
 		},
 		num: 201,
 		gen: 3,
@@ -3112,8 +3441,19 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			return this.chainModify([5324, 4096]);
 		},
 		onAfterMoveSecondarySelf(source, target, move) {
-			if (source && source !== target && move && move.category !== 'Status' && !source.forceSwitchFlag) {
-				this.damage(source.baseMaxhp / 10, source, source, this.dex.items.get('lifeorb'));
+			if (
+				source &&
+				source !== target &&
+				move &&
+				move.category !== "Status" &&
+				!source.forceSwitchFlag
+			) {
+				this.damage(
+					source.baseMaxhp / 10,
+					source,
+					source,
+					this.dex.items.get("lifeorb")
+				);
 			}
 		},
 		num: 270,
@@ -3124,21 +3464,38 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 251,
 		fling: {
 			basePower: 30,
-			status: 'par',
+			status: "par",
 		},
 		onModifyAtkPriority: 1,
 		onModifyAtk(atk, pokemon) {
-			if (pokemon.baseSpecies.baseSpecies === 'Pikachu') {
+			if (pokemon.baseSpecies.baseSpecies === "Pikachu") {
 				return this.chainModify(2);
 			}
 		},
 		onModifySpAPriority: 1,
 		onModifySpA(spa, pokemon) {
-			if (pokemon.baseSpecies.baseSpecies === 'Pikachu') {
+			if (pokemon.baseSpecies.baseSpecies === "Pikachu") {
 				return this.chainModify(2);
 			}
 		},
-		itemUser: ["Pikachu", "Pikachu-Cosplay", "Pikachu-Rock-Star", "Pikachu-Belle", "Pikachu-Pop-Star", "Pikachu-PhD", "Pikachu-Libre", "Pikachu-Original", "Pikachu-Hoenn", "Pikachu-Sinnoh", "Pikachu-Unova", "Pikachu-Kalos", "Pikachu-Alola", "Pikachu-Partner", "Pikachu-Starter", "Pikachu-World"],
+		itemUser: [
+			"Pikachu",
+			"Pikachu-Cosplay",
+			"Pikachu-Rock-Star",
+			"Pikachu-Belle",
+			"Pikachu-Pop-Star",
+			"Pikachu-PhD",
+			"Pikachu-Libre",
+			"Pikachu-Original",
+			"Pikachu-Hoenn",
+			"Pikachu-Sinnoh",
+			"Pikachu-Unova",
+			"Pikachu-Kalos",
+			"Pikachu-Alola",
+			"Pikachu-Partner",
+			"Pikachu-Starter",
+			"Pikachu-World",
+		],
 		num: 236,
 		gen: 2,
 	},
@@ -3211,7 +3568,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		gen: 6,
 		isNonstandard: "Past",
 	},
-	
+
 	luckypunch: {
 		name: "Lucky Punch",
 		spritenum: 261,
@@ -3219,11 +3576,11 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			basePower: 40,
 		},
 		onModifyCritRatio(critRatio, user) {
-			if (user.baseSpecies.name === 'Chansey') {
+			if (user.baseSpecies.name === "Chansey") {
 				return critRatio + 2;
 			}
 		},
-		
+
 		itemUser: ["Chansey"],
 		num: 256,
 		gen: 2,
@@ -3242,13 +3599,13 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			pokemon.eatItem();
 		},
 		onUpdate(pokemon) {
-			if (pokemon.status || pokemon.volatiles['confusion']) {
+			if (pokemon.status || pokemon.volatiles["confusion"]) {
 				pokemon.eatItem();
 			}
 		},
 		onEat(pokemon) {
 			pokemon.cureStatus();
-			pokemon.removeVolatile('confusion');
+			pokemon.removeVolatile("confusion");
 		},
 		num: 157,
 		gen: 3,
@@ -3260,7 +3617,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			basePower: 30,
 		},
 		onDamagingHit(damage, target, source, move) {
-			if (move.type === 'Water') {
+			if (move.type === "Water") {
 				target.useItem();
 			}
 		},
@@ -3293,12 +3650,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 742,
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (user.baseSpecies.num === 484 && (move.type === 'Water' || move.type === 'Dragon')) {
+			if (
+				user.baseSpecies.num === 484 &&
+				(move.type === "Water" || move.type === "Dragon")
+			) {
 				return this.chainModify([4915, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
-			if (source?.baseSpecies.num === 484 || pokemon.baseSpecies.num === 484) {
+			if (
+				source?.baseSpecies.num === 484 ||
+				pokemon.baseSpecies.num === 484
+			) {
 				return false;
 			}
 			return true;
@@ -3316,7 +3679,10 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (user.baseSpecies.num === 484 && (move.type === 'Water' || move.type === 'Dragon')) {
+			if (
+				user.baseSpecies.num === 484 &&
+				(move.type === "Water" || move.type === "Dragon")
+			) {
 				return this.chainModify([4915, 4096]);
 			}
 		},
@@ -3373,7 +3739,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move.type === 'Electric') {
+			if (move.type === "Electric") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
@@ -3389,18 +3755,31 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Ghost",
 		},
 		onUpdate(pokemon) {
-			if (pokemon.hp <= pokemon.maxhp / 4 || (pokemon.hp <= pokemon.maxhp / 2 &&
-					pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony)) {
+			if (
+				pokemon.hp <= pokemon.maxhp / 4 ||
+				(pokemon.hp <= pokemon.maxhp / 2 &&
+					pokemon.hasAbility("gluttony") &&
+					pokemon.abilityState.gluttony)
+			) {
 				pokemon.eatItem();
 			}
 		},
 		onTryEatItem(item, pokemon) {
-			if (!this.runEvent('TryHeal', pokemon, null, this.effect, pokemon.baseMaxhp / 3)) return false;
+			if (
+				!this.runEvent(
+					"TryHeal",
+					pokemon,
+					null,
+					this.effect,
+					pokemon.baseMaxhp / 3
+				)
+			)
+				return false;
 		},
 		onEat(pokemon) {
 			this.heal(pokemon.baseMaxhp / 3);
-			if (pokemon.getNature().minus === 'spe') {
-				pokemon.addVolatile('confusion');
+			if (pokemon.getNature().minus === "spe") {
+				pokemon.addVolatile("confusion");
 			}
 		},
 		num: 161,
@@ -3424,7 +3803,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 403,
 		onTakeItem(item, source) {
 			if (!this.activeMove) return false;
-			if (this.activeMove.id !== 'knockoff' && this.activeMove.id !== 'thief' && this.activeMove.id !== 'covet') return false;
+			if (
+				this.activeMove.id !== "knockoff" &&
+				this.activeMove.id !== "thief" &&
+				this.activeMove.id !== "covet"
+			)
+				return false;
 		},
 		num: 137,
 		gen: 2,
@@ -3462,12 +3846,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Dark",
 		},
 		onAfterMoveSecondary(target, source, move) {
-			if (move.category === 'Special') {
+			if (move.category === "Special") {
 				target.eatItem();
 			}
 		},
 		onEat(pokemon) {
-			this.boost({spd: 1});
+			this.boost({ spd: 1 });
 		},
 		num: 688,
 		gen: 6,
@@ -3516,15 +3900,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	meadowplate: {
 		name: "Meadow Plate",
 		spritenum: 282,
-		onPlate: 'Grass',
+		onPlate: "Grass",
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move.type === 'Grass') {
+			if (move.type === "Grass") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 493) || pokemon.baseSpecies.num === 493) {
+			if (
+				(source && source.baseSpecies.num === 493) ||
+				pokemon.baseSpecies.num === 493
+			) {
 				return false;
 			}
 			return true;
@@ -3553,13 +3940,28 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		fling: {
 			basePower: 10,
 			effect(pokemon) {
-				const conditions = ['attract', 'taunt', 'encore', 'torment', 'disable', 'healblock'];
+				const conditions = [
+					"attract",
+					"taunt",
+					"encore",
+					"torment",
+					"disable",
+					"healblock",
+				];
 				for (const firstCondition of conditions) {
 					if (pokemon.volatiles[firstCondition]) {
 						for (const secondCondition of conditions) {
 							pokemon.removeVolatile(secondCondition);
-							if (firstCondition === 'attract' && secondCondition === 'attract') {
-								this.add('-end', pokemon, 'move: Attract', '[from] item: Mental Herb');
+							if (
+								firstCondition === "attract" &&
+								secondCondition === "attract"
+							) {
+								this.add(
+									"-end",
+									pokemon,
+									"move: Attract",
+									"[from] item: Mental Herb"
+								);
 							}
 						}
 						return;
@@ -3568,14 +3970,29 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			},
 		},
 		onUpdate(pokemon) {
-			const conditions = ['attract', 'taunt', 'encore', 'torment', 'disable', 'healblock'];
+			const conditions = [
+				"attract",
+				"taunt",
+				"encore",
+				"torment",
+				"disable",
+				"healblock",
+			];
 			for (const firstCondition of conditions) {
 				if (pokemon.volatiles[firstCondition]) {
 					if (!pokemon.useItem()) return;
 					for (const secondCondition of conditions) {
 						pokemon.removeVolatile(secondCondition);
-						if (firstCondition === 'attract' && secondCondition === 'attract') {
-							this.add('-end', pokemon, 'move: Attract', '[from] item: Mental Herb');
+						if (
+							firstCondition === "attract" &&
+							secondCondition === "attract"
+						) {
+							this.add(
+								"-end",
+								pokemon,
+								"move: Attract",
+								"[from] item: Mental Herb"
+							);
 						}
 					}
 					return;
@@ -3613,7 +4030,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move.type === 'Steel') {
+			if (move.type === "Steel") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
@@ -3628,7 +4045,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 287,
 		onModifyDefPriority: 2,
 		onModifyDef(def, pokemon) {
-			if (pokemon.species.name === 'Ditto' && !pokemon.transformed) {
+			if (pokemon.species.name === "Ditto" && !pokemon.transformed) {
 				return this.chainModify(2);
 			}
 		},
@@ -3644,23 +4061,26 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			basePower: 30,
 		},
 		onStart(pokemon) {
-			pokemon.addVolatile('metronome');
+			pokemon.addVolatile("metronome");
 		},
 		condition: {
 			onStart(pokemon) {
-				this.effectState.lastMove = '';
+				this.effectState.lastMove = "";
 				this.effectState.numConsecutive = 0;
 			},
 			onTryMovePriority: -2,
 			onTryMove(pokemon, target, move) {
-				if (!pokemon.hasItem('metronome')) {
-					pokemon.removeVolatile('metronome');
+				if (!pokemon.hasItem("metronome")) {
+					pokemon.removeVolatile("metronome");
 					return;
 				}
 				if (move.callsMove) return;
-				if (this.effectState.lastMove === move.id && pokemon.moveLastTurnResult) {
+				if (
+					this.effectState.lastMove === move.id &&
+					pokemon.moveLastTurnResult
+				) {
 					this.effectState.numConsecutive++;
-				} else if (pokemon.volatiles['twoturnmove']) {
+				} else if (pokemon.volatiles["twoturnmove"]) {
 					if (this.effectState.lastMove !== move.id) {
 						this.effectState.numConsecutive = 1;
 					} else {
@@ -3673,8 +4093,13 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			},
 			onModifyDamage(damage, source, target, move) {
 				const dmgMod = [4096, 4915, 5734, 6553, 7372, 8192];
-				const numConsecutive = this.effectState.numConsecutive > 5 ? 5 : this.effectState.numConsecutive;
-				this.debug(`Current Metronome boost: ${dmgMod[numConsecutive]}/4096`);
+				const numConsecutive =
+					this.effectState.numConsecutive > 5
+						? 5
+						: this.effectState.numConsecutive;
+				this.debug(
+					`Current Metronome boost: ${dmgMod[numConsecutive]}/4096`
+				);
 				return this.chainModify([dmgMod[numConsecutive], 4096]);
 			},
 		},
@@ -3729,21 +4154,25 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Rock",
 		},
 		onResidual(pokemon) {
-			if (pokemon.hp <= pokemon.maxhp / 4 || (pokemon.hp <= pokemon.maxhp / 2 &&
-					pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony)) {
+			if (
+				pokemon.hp <= pokemon.maxhp / 4 ||
+				(pokemon.hp <= pokemon.maxhp / 2 &&
+					pokemon.hasAbility("gluttony") &&
+					pokemon.abilityState.gluttony)
+			) {
 				pokemon.eatItem();
 			}
 		},
 		onEat(pokemon) {
-			pokemon.addVolatile('micleberry');
+			pokemon.addVolatile("micleberry");
 		},
 		condition: {
 			duration: 2,
 			onSourceAccuracy(accuracy, target, source, move) {
 				if (!move.ohko) {
-					this.add('-enditem', source, 'Micle Berry');
-					source.removeVolatile('micleberry');
-					if (typeof accuracy === 'number') {
+					this.add("-enditem", source, "Micle Berry");
+					source.removeVolatile("micleberry");
+					if (typeof accuracy === "number") {
 						return this.chainModify([4915, 4096]);
 					}
 				}
@@ -3758,7 +4187,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		onTakeItem: false,
 		zMove: "Let's Snuggle Forever",
 		zMoveFrom: "Play Rough",
-		itemUser: ["Mimikyu", "Mimikyu-Busted", "Mimikyu-Totem", "Mimikyu-Busted-Totem"],
+		itemUser: [
+			"Mimikyu",
+			"Mimikyu-Busted",
+			"Mimikyu-Totem",
+			"Mimikyu-Busted-Totem",
+		],
 		num: 924,
 		isNonstandard: "Past",
 		gen: 7,
@@ -3766,15 +4200,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	mindplate: {
 		name: "Mind Plate",
 		spritenum: 291,
-		onPlate: 'Psychic',
+		onPlate: "Psychic",
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move.type === 'Psychic') {
+			if (move.type === "Psychic") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 493) || pokemon.baseSpecies.num === 493) {
+			if (
+				(source && source.baseSpecies.num === 493) ||
+				pokemon.baseSpecies.num === 493
+			) {
 				return false;
 			}
 			return true;
@@ -3791,7 +4228,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 292,
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move.type === 'Grass') {
+			if (move.type === "Grass") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
@@ -3805,8 +4242,10 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			basePower: 30,
 		},
 		onFoeAfterBoost(boost, target, source, effect) {
-			if (effect?.name === 'Opportunist' || effect?.name === 'Mirror Herb') return;
-			if (!this.effectState.boosts) this.effectState.boosts = {} as SparseBoostsTable;
+			if (effect?.name === "Opportunist" || effect?.name === "Mirror Herb")
+				return;
+			if (!this.effectState.boosts)
+				this.effectState.boosts = {} as SparseBoostsTable;
 			const boostPlus = this.effectState.boosts;
 			let i: BoostID;
 			for (i in boost) {
@@ -3848,12 +4287,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onSwitchInPriority: -1,
 		onStart(pokemon) {
-			if (!pokemon.ignoringItem() && this.field.isTerrain('mistyterrain')) {
+			if (!pokemon.ignoringItem() && this.field.isTerrain("mistyterrain")) {
 				pokemon.useItem();
 			}
 		},
 		onTerrainChange(pokemon) {
-			if (this.field.isTerrain('mistyterrain')) {
+			if (this.field.isTerrain("mistyterrain")) {
 				pokemon.useItem();
 			}
 		},
@@ -3887,7 +4326,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 16,
 		onBasePower(basePower, user, target, move) {
-			if (move.category === 'Physical') {
+			if (move.category === "Physical") {
 				return this.chainModify([4505, 4096]);
 			}
 		},
@@ -3902,7 +4341,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move.type === 'Water') {
+			if (move.type === "Water") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
@@ -3944,7 +4383,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move.type === 'Ice') {
+			if (move.type === "Ice") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
@@ -3969,9 +4408,14 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 307,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status' || move.flags['pledgecombo']) return;
-			if (move.type === 'Normal' && source.useItem()) {
-				source.addVolatile('gem');
+			if (
+				target === source ||
+				move.category === "Status" ||
+				move.flags["pledgecombo"]
+			)
+				return;
+			if (move.type === "Normal" && source.useItem()) {
+				source.addVolatile("gem");
 			}
 		},
 		num: 564,
@@ -3996,18 +4440,21 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Fire",
 		},
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Fire' && target.getMoveHitData(move).typeMod > 0) {
-				const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+			if (move.type === "Fire" && target.getMoveHitData(move).typeMod > 0) {
+				const hitSub =
+					target.volatiles["substitute"] &&
+					!move.flags["bypasssub"] &&
+					!(move.infiltrates && this.gen >= 6);
 				if (hitSub) return;
 
 				if (target.eatItem()) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
+					this.debug("-50% reduction");
+					this.add("-enditem", target, this.effect, "[weaken]");
 					return this.chainModify(0.5);
 				}
 			}
 		},
-		onEat() { },
+		onEat() {},
 		num: 184,
 		gen: 4,
 	},
@@ -4019,7 +4466,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move.type === 'Psychic') {
+			if (move.type === "Psychic") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
@@ -4051,7 +4498,8 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			}
 		},
 		onTryEatItem(item, pokemon) {
-			if (!this.runEvent('TryHeal', pokemon, null, this.effect, 10)) return false;
+			if (!this.runEvent("TryHeal", pokemon, null, this.effect, 10))
+				return false;
 		},
 		onEat(pokemon) {
 			this.heal(10);
@@ -4098,18 +4546,21 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Water",
 		},
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Water' && target.getMoveHitData(move).typeMod > 0) {
-				const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+			if (move.type === "Water" && target.getMoveHitData(move).typeMod > 0) {
+				const hitSub =
+					target.volatiles["substitute"] &&
+					!move.flags["bypasssub"] &&
+					!(move.infiltrates && this.gen >= 6);
 				if (hitSub) return;
 
 				if (target.eatItem()) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
+					this.debug("-50% reduction");
+					this.add("-enditem", target, this.effect, "[weaken]");
 					return this.chainModify(0.5);
 				}
 			}
 		},
-		onEat() { },
+		onEat() {},
 		num: 185,
 		gen: 4,
 	},
@@ -4122,18 +4573,24 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Psychic",
 		},
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Psychic' && target.getMoveHitData(move).typeMod > 0) {
-				const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+			if (
+				move.type === "Psychic" &&
+				target.getMoveHitData(move).typeMod > 0
+			) {
+				const hitSub =
+					target.volatiles["substitute"] &&
+					!move.flags["bypasssub"] &&
+					!(move.infiltrates && this.gen >= 6);
 				if (hitSub) return;
 
 				if (target.eatItem()) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
+					this.debug("-50% reduction");
+					this.add("-enditem", target, this.effect, "[weaken]");
 					return this.chainModify(0.5);
 				}
 			}
 		},
-		onEat() { },
+		onEat() {},
 		num: 193,
 		gen: 4,
 	},
@@ -4146,12 +4603,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Electric",
 		},
 		onUpdate(pokemon) {
-			if (pokemon.status === 'psn' || pokemon.status === 'tox') {
+			if (pokemon.status === "psn" || pokemon.status === "tox") {
 				pokemon.eatItem();
 			}
 		},
 		onEat(pokemon) {
-			if (pokemon.status === 'psn' || pokemon.status === 'tox') {
+			if (pokemon.status === "psn" || pokemon.status === "tox") {
 				pokemon.cureStatus();
 			}
 		},
@@ -4167,12 +4624,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Ground",
 		},
 		onUpdate(pokemon) {
-			if (pokemon.volatiles['confusion']) {
+			if (pokemon.volatiles["confusion"]) {
 				pokemon.eatItem();
 			}
 		},
 		onEat(pokemon) {
-			pokemon.removeVolatile('confusion');
+			pokemon.removeVolatile("confusion");
 		},
 		num: 156,
 		gen: 3,
@@ -4186,13 +4643,17 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Poison",
 		},
 		onUpdate(pokemon) {
-			if (pokemon.hp <= pokemon.maxhp / 4 || (pokemon.hp <= pokemon.maxhp / 2 &&
-					pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony)) {
+			if (
+				pokemon.hp <= pokemon.maxhp / 4 ||
+				(pokemon.hp <= pokemon.maxhp / 2 &&
+					pokemon.hasAbility("gluttony") &&
+					pokemon.abilityState.gluttony)
+			) {
 				pokemon.eatItem();
 			}
 		},
 		onEat(pokemon) {
-			this.boost({spa: 1});
+			this.boost({ spa: 1 });
 		},
 		num: 204,
 		gen: 3,
@@ -4228,7 +4689,15 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		onTakeItem: false,
 		zMove: "10,000,000 Volt Thunderbolt",
 		zMoveFrom: "Thunderbolt",
-		itemUser: ["Pikachu-Original", "Pikachu-Hoenn", "Pikachu-Sinnoh", "Pikachu-Unova", "Pikachu-Kalos", "Pikachu-Alola", "Pikachu-Partner"],
+		itemUser: [
+			"Pikachu-Original",
+			"Pikachu-Hoenn",
+			"Pikachu-Sinnoh",
+			"Pikachu-Unova",
+			"Pikachu-Kalos",
+			"Pikachu-Alola",
+			"Pikachu-Partner",
+		],
 		num: 836,
 		isNonstandard: "Past",
 		gen: 7,
@@ -4263,15 +4732,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	pixieplate: {
 		name: "Pixie Plate",
 		spritenum: 610,
-		onPlate: 'Fairy',
+		onPlate: "Fairy",
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move && move.type === 'Fairy') {
+			if (move && move.type === "Fairy") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 493) || pokemon.baseSpecies.num === 493) {
+			if (
+				(source && source.baseSpecies.num === 493) ||
+				pokemon.baseSpecies.num === 493
+			) {
 				return false;
 			}
 			return true;
@@ -4295,11 +4767,11 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 343,
 		fling: {
 			basePower: 70,
-			status: 'psn',
+			status: "psn",
 		},
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move.type === 'Poison') {
+			if (move.type === "Poison") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
@@ -4311,9 +4783,9 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 344,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status') return;
-			if (move.type === 'Poison' && source.useItem()) {
-				source.addVolatile('gem');
+			if (target === source || move.category === "Status") return;
+			if (move.type === "Poison" && source.useItem()) {
+				source.addVolatile("gem");
 			}
 		},
 		num: 554,
@@ -4323,9 +4795,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	poisonmemory: {
 		name: "Poison Memory",
 		spritenum: 670,
-		onMemory: 'Poison',
+		onMemory: "Poison",
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 773) || pokemon.baseSpecies.num === 773) {
+			if (
+				(source && source.baseSpecies.num === 773) ||
+				pokemon.baseSpecies.num === 773
+			) {
 				return false;
 			}
 			return true;
@@ -4339,7 +4814,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	poisoniumz: {
 		name: "Poisonium Z",
 		spritenum: 638,
-		onPlate: 'Poison',
+		onPlate: "Poison",
 		onTakeItem: false,
 		zMove: true,
 		zMoveType: "Poison",
@@ -4422,9 +4897,9 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	powerherb: {
 		onChargeMove(pokemon, target, move) {
 			if (pokemon.useItem()) {
-				this.debug('power herb - remove charge turn for ' + move.id);
-				this.attrLastMove('[still]');
-				this.addMove('-anim', pokemon, move.name, target);
+				this.debug("power herb - remove charge turn for " + move.id);
+				this.attrLastMove("[still]");
+				this.addMove("-anim", pokemon, move.name, target);
 				return false; // skip charge turn
 			}
 		},
@@ -4513,9 +4988,9 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 369,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status') return;
-			if (move.type === 'Psychic' && source.useItem()) {
-				source.addVolatile('gem');
+			if (target === source || move.category === "Status") return;
+			if (move.type === "Psychic" && source.useItem()) {
+				source.addVolatile("gem");
 			}
 		},
 		num: 557,
@@ -4525,9 +5000,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	psychicmemory: {
 		name: "Psychic Memory",
 		spritenum: 680,
-		onMemory: 'Psychic',
+		onMemory: "Psychic",
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 773) || pokemon.baseSpecies.num === 773) {
+			if (
+				(source && source.baseSpecies.num === 773) ||
+				pokemon.baseSpecies.num === 773
+			) {
 				return false;
 			}
 			return true;
@@ -4546,12 +5024,15 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onSwitchInPriority: -1,
 		onStart(pokemon) {
-			if (!pokemon.ignoringItem() && this.field.isTerrain('psychicterrain')) {
+			if (
+				!pokemon.ignoringItem() &&
+				this.field.isTerrain("psychicterrain")
+			) {
 				pokemon.useItem();
 			}
 		},
 		onTerrainChange(pokemon) {
-			if (this.field.isTerrain('psychicterrain')) {
+			if (this.field.isTerrain("psychicterrain")) {
 				pokemon.useItem();
 			}
 		},
@@ -4564,7 +5045,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	psychiumz: {
 		name: "Psychium Z",
 		spritenum: 641,
-		onPlate: 'Psychic',
+		onPlate: "Psychic",
 		onTakeItem: false,
 		zMove: true,
 		zMoveType: "Psychic",
@@ -4581,14 +5062,14 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 23,
 		onBasePower(basePower, attacker, defender, move) {
-			if (move.flags['punch']) {
-				this.debug('Punching Glove boost');
+			if (move.flags["punch"]) {
+				this.debug("Punching Glove boost");
 				return this.chainModify([4506, 4096]);
 			}
 		},
 		onModifyMovePriority: 1,
 		onModifyMove(move) {
-			if (move.flags['punch']) delete move.flags['contact'];
+			if (move.flags["punch"]) delete move.flags["contact"];
 		},
 		num: 1884,
 		gen: 9,
@@ -4615,9 +5096,10 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	quickclaw: {
 		onFractionalPriorityPriority: -2,
 		onFractionalPriority(priority, pokemon, target, move) {
-			if (move.category === "Status" && pokemon.hasAbility("myceliummight")) return;
+			if (move.category === "Status" && pokemon.hasAbility("myceliummight"))
+				return;
 			if (priority <= 0 && this.randomChance(1, 5)) {
-				this.add('-activate', pokemon, 'item: Quick Claw');
+				this.add("-activate", pokemon, "item: Quick Claw");
 				return 0.1;
 			}
 		},
@@ -4636,7 +5118,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			basePower: 10,
 		},
 		onModifySpe(spe, pokemon) {
-			if (pokemon.species.name === 'Ditto' && !pokemon.transformed) {
+			if (pokemon.species.name === "Ditto" && !pokemon.transformed) {
 				return this.chainModify(2);
 			}
 		},
@@ -4676,12 +5158,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Grass",
 		},
 		onUpdate(pokemon) {
-			if (pokemon.status === 'brn') {
+			if (pokemon.status === "brn") {
 				pokemon.eatItem();
 			}
 		},
 		onEat(pokemon) {
-			if (pokemon.status === 'brn') {
+			if (pokemon.status === "brn") {
 				pokemon.cureStatus();
 			}
 		},
@@ -4705,18 +5187,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 383,
 		fling: {
 			basePower: 30,
-			volatileStatus: 'flinch',
+			volatileStatus: "flinch",
 		},
 		onModifyMovePriority: -1,
 		onModifyMove(move) {
 			if (move.category !== "Status") {
 				if (!move.secondaries) move.secondaries = [];
 				for (const secondary of move.secondaries) {
-					if (secondary.volatileStatus === 'flinch') return;
+					if (secondary.volatileStatus === "flinch") return;
 				}
 				move.secondaries.push({
 					chance: 10,
-					volatileStatus: 'flinch',
+					volatileStatus: "flinch",
 				});
 			}
 		},
@@ -4752,13 +5234,25 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			basePower: 10,
 		},
 		onAfterMoveSecondary(target, source, move) {
-			if (source && source !== target && source.hp && target.hp && move && move.category !== 'Status') {
-				if (!source.isActive || !this.canSwitch(source.side) || source.forceSwitchFlag || target.forceSwitchFlag) {
+			if (
+				source &&
+				source !== target &&
+				source.hp &&
+				target.hp &&
+				move &&
+				move.category !== "Status"
+			) {
+				if (
+					!source.isActive ||
+					!this.canSwitch(source.side) ||
+					source.forceSwitchFlag ||
+					target.forceSwitchFlag
+				) {
 					return;
 				}
 				// The item is used up even against a pokemon with Ingrain or that otherwise can't be forced out
 				if (target.useItem(source)) {
-					if (this.runEvent('DragOut', source, target, move)) {
+					if (this.runEvent("DragOut", source, target, move)) {
 						source.forceSwitchFlag = true;
 					}
 				}
@@ -4772,12 +5266,16 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 390,
 		onSwitchInPriority: -1,
 		onSwitchIn(pokemon) {
-			if (pokemon.isActive && pokemon.baseSpecies.name === 'Groudon' && !pokemon.transformed) {
-				pokemon.formeChange('Groudon-Primal', this.effect, true);
+			if (
+				pokemon.isActive &&
+				pokemon.baseSpecies.name === "Groudon" &&
+				!pokemon.transformed
+			) {
+				pokemon.formeChange("Groudon-Primal", this.effect, true);
 			}
 		},
 		onTakeItem(item, source) {
-			if (source.baseSpecies.baseSpecies === 'Groudon') return false;
+			if (source.baseSpecies.baseSpecies === "Groudon") return false;
 			return true;
 		},
 		itemUser: ["Groudon"],
@@ -4811,18 +5309,21 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Grass",
 		},
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Grass' && target.getMoveHitData(move).typeMod > 0) {
-				const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+			if (move.type === "Grass" && target.getMoveHitData(move).typeMod > 0) {
+				const hitSub =
+					target.volatiles["substitute"] &&
+					!move.flags["bypasssub"] &&
+					!(move.infiltrates && this.gen >= 6);
 				if (hitSub) return;
 
 				if (target.eatItem()) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
+					this.debug("-50% reduction");
+					this.add("-enditem", target, this.effect, "[weaken]");
 					return this.chainModify(0.5);
 				}
 			}
 		},
-		onEat() { },
+		onEat() {},
 		num: 187,
 		gen: 4,
 	},
@@ -4841,9 +5342,9 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 415,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status') return;
-			if (move.type === 'Rock' && source.useItem()) {
-				source.addVolatile('gem');
+			if (target === source || move.category === "Status") return;
+			if (move.type === "Rock" && source.useItem()) {
+				source.addVolatile("gem");
 			}
 		},
 		num: 559,
@@ -4858,7 +5359,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move.type === 'Rock') {
+			if (move.type === "Rock") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
@@ -4869,9 +5370,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	rockmemory: {
 		name: "Rock Memory",
 		spritenum: 672,
-		onMemory: 'Rock',
+		onMemory: "Rock",
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 773) || pokemon.baseSpecies.num === 773) {
+			if (
+				(source && source.baseSpecies.num === 773) ||
+				pokemon.baseSpecies.num === 773
+			) {
 				return false;
 			}
 			return true;
@@ -4885,7 +5389,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	rockiumz: {
 		name: "Rockium Z",
 		spritenum: 643,
-		onPlate: 'Rock',
+		onPlate: "Rock",
 		onTakeItem: false,
 		zMove: true,
 		zMoveType: "Rock",
@@ -4917,13 +5421,16 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onSwitchInPriority: -1,
 		onStart(pokemon) {
-			if (!pokemon.ignoringItem() && this.field.getPseudoWeather('trickroom')) {
+			if (
+				!pokemon.ignoringItem() &&
+				this.field.getPseudoWeather("trickroom")
+			) {
 				pokemon.useItem();
 			}
 		},
 		onAnyPseudoWeatherChange() {
 			const pokemon = this.effectState.target;
-			if (this.field.getPseudoWeather('trickroom')) {
+			if (this.field.getPseudoWeather("trickroom")) {
 				pokemon.useItem(pokemon);
 			}
 		},
@@ -4951,7 +5458,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move.type === 'Grass') {
+			if (move.type === "Grass") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
@@ -4968,18 +5475,21 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Fairy",
 		},
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Fairy' && target.getMoveHitData(move).typeMod > 0) {
-				const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+			if (move.type === "Fairy" && target.getMoveHitData(move).typeMod > 0) {
+				const hitSub =
+					target.volatiles["substitute"] &&
+					!move.flags["bypasssub"] &&
+					!(move.infiltrates && this.gen >= 6);
 				if (hitSub) return;
 
 				if (target.eatItem()) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
+					this.debug("-50% reduction");
+					this.add("-enditem", target, this.effect, "[weaken]");
 					return this.chainModify(0.5);
 				}
 			}
 		},
-		onEat() { },
+		onEat() {},
 		num: 686,
 		gen: 6,
 	},
@@ -4992,13 +5502,22 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Dark",
 		},
 		onDamagingHit(damage, target, source, move) {
-			if (move.category === 'Special' && source.hp && source.isActive && !source.hasAbility('magicguard')) {
+			if (
+				move.category === "Special" &&
+				source.hp &&
+				source.isActive &&
+				!source.hasAbility("magicguard")
+			) {
 				if (target.eatItem()) {
-					this.damage(source.baseMaxhp / (target.hasAbility('ripen') ? 4 : 8), source, target);
+					this.damage(
+						source.baseMaxhp / (target.hasAbility("ripen") ? 4 : 8),
+						source,
+						target
+					);
 				}
 			}
 		},
-		onEat() { },
+		onEat() {},
 		num: 212,
 		gen: 4,
 	},
@@ -5006,7 +5525,10 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		name: "Rusted Shield",
 		spritenum: 699,
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 889) || pokemon.baseSpecies.num === 889) {
+			if (
+				(source && source.baseSpecies.num === 889) ||
+				pokemon.baseSpecies.num === 889
+			) {
 				return false;
 			}
 			return true;
@@ -5019,7 +5541,10 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		name: "Rusted Sword",
 		spritenum: 698,
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 888) || pokemon.baseSpecies.num === 888) {
+			if (
+				(source && source.baseSpecies.num === 888) ||
+				pokemon.baseSpecies.num === 888
+			) {
 				return false;
 			}
 			return true;
@@ -5066,11 +5591,16 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			basePower: 80,
 		},
 		onImmunity(type, pokemon) {
-			if (type === 'sandstorm' || type === 'hail' || type === 'powder') return false;
+			if (type === "sandstorm" || type === "hail" || type === "powder")
+				return false;
 		},
 		onTryHit(pokemon, source, move) {
-			if (move.flags['powder'] && pokemon !== source && this.dex.getImmunity('powder', pokemon)) {
-				this.add('-activate', pokemon, 'item: Safety Goggles', move.name);
+			if (
+				move.flags["powder"] &&
+				pokemon !== source &&
+				this.dex.getImmunity("powder", pokemon)
+			) {
+				this.add("-activate", pokemon, "item: Safety Goggles", move.name);
 				return null;
 			}
 		},
@@ -5096,13 +5626,17 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Fighting",
 		},
 		onUpdate(pokemon) {
-			if (pokemon.hp <= pokemon.maxhp / 4 || (pokemon.hp <= pokemon.maxhp / 2 &&
-					pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony)) {
+			if (
+				pokemon.hp <= pokemon.maxhp / 4 ||
+				(pokemon.hp <= pokemon.maxhp / 2 &&
+					pokemon.hasAbility("gluttony") &&
+					pokemon.abilityState.gluttony)
+			) {
 				pokemon.eatItem();
 			}
 		},
 		onEat(pokemon) {
-			this.boost({spe: 1});
+			this.boost({ spe: 1 });
 		},
 		num: 203,
 		gen: 3,
@@ -5169,7 +5703,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move && move.type === 'Water') {
+			if (move && move.type === "Water") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
@@ -5185,7 +5719,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move && move.type === 'Flying') {
+			if (move && move.type === "Flying") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
@@ -5247,12 +5781,15 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		name: "Shock Drive",
 		spritenum: 442,
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 649) || pokemon.baseSpecies.num === 649) {
+			if (
+				(source && source.baseSpecies.num === 649) ||
+				pokemon.baseSpecies.num === 649
+			) {
 				return false;
 			}
 			return true;
 		},
-		onDrive: 'Electric',
+		onDrive: "Electric",
 		forcedForme: "Genesect-Shock",
 		itemUser: ["Genesect-Shock"],
 		num: 117,
@@ -5268,18 +5805,24 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Ground",
 		},
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Ground' && target.getMoveHitData(move).typeMod > 0) {
-				const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+			if (
+				move.type === "Ground" &&
+				target.getMoveHitData(move).typeMod > 0
+			) {
+				const hitSub =
+					target.volatiles["substitute"] &&
+					!move.flags["bypasssub"] &&
+					!(move.infiltrates && this.gen >= 6);
 				if (hitSub) return;
 
 				if (target.eatItem()) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
+					this.debug("-50% reduction");
+					this.add("-enditem", target, this.effect, "[weaken]");
 					return this.chainModify(0.5);
 				}
 			}
 		},
-		onEat() { },
+		onEat() {},
 		num: 191,
 		gen: 4,
 	},
@@ -5291,7 +5834,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move.type === 'Normal') {
+			if (move.type === "Normal") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
@@ -5306,7 +5849,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move.type === 'Bug') {
+			if (move.type === "Bug") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
@@ -5327,7 +5870,16 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			}
 		},
 		onTryEatItem(item, pokemon) {
-			if (!this.runEvent('TryHeal', pokemon, null, this.effect, pokemon.baseMaxhp / 4)) return false;
+			if (
+				!this.runEvent(
+					"TryHeal",
+					pokemon,
+					null,
+					this.effect,
+					pokemon.baseMaxhp / 4
+				)
+			)
+				return false;
 		},
 		onEat(pokemon) {
 			this.heal(pokemon.baseMaxhp / 4);
@@ -5348,15 +5900,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	skyplate: {
 		name: "Sky Plate",
 		spritenum: 450,
-		onPlate: 'Flying',
+		onPlate: "Flying",
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move.type === 'Flying') {
+			if (move.type === "Flying") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 493) || pokemon.baseSpecies.num === 493) {
+			if (
+				(source && source.baseSpecies.num === 493) ||
+				pokemon.baseSpecies.num === 493
+			) {
 				return false;
 			}
 			return true;
@@ -5406,7 +5961,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			basePower: 30,
 		},
 		onDamagingHit(damage, target, source, move) {
-			if (move.type === 'Ice') {
+			if (move.type === "Ice") {
 				target.useItem();
 			}
 		},
@@ -5424,7 +5979,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move.type === 'Ground') {
+			if (move.type === "Ground") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
@@ -5451,8 +6006,9 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (
-				move && (user.baseSpecies.num === 380 || user.baseSpecies.num === 381) &&
-				(move.type === 'Psychic' || move.type === 'Dragon')
+				move &&
+				(user.baseSpecies.num === 380 || user.baseSpecies.num === 381) &&
+				(move.type === "Psychic" || move.type === "Dragon")
 			) {
 				return this.chainModify([4915, 4096]);
 			}
@@ -5469,7 +6025,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move.type === 'Ghost') {
+			if (move.type === "Ghost") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
@@ -5492,15 +6048,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	splashplate: {
 		name: "Splash Plate",
 		spritenum: 463,
-		onPlate: 'Water',
+		onPlate: "Water",
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move.type === 'Water') {
+			if (move.type === "Water") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 493) || pokemon.baseSpecies.num === 493) {
+			if (
+				(source && source.baseSpecies.num === 493) ||
+				pokemon.baseSpecies.num === 493
+			) {
 				return false;
 			}
 			return true;
@@ -5512,15 +6071,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	spookyplate: {
 		name: "Spooky Plate",
 		spritenum: 464,
-		onPlate: 'Ghost',
+		onPlate: "Ghost",
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move.type === 'Ghost') {
+			if (move.type === "Ghost") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 493) || pokemon.baseSpecies.num === 493) {
+			if (
+				(source && source.baseSpecies.num === 493) ||
+				pokemon.baseSpecies.num === 493
+			) {
 				return false;
 			}
 			return true;
@@ -5545,8 +6107,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Psychic",
 		},
 		onUpdate(pokemon) {
-			if (pokemon.hp <= pokemon.maxhp / 4 || (pokemon.hp <= pokemon.maxhp / 2 &&
-					pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony)) {
+			if (
+				pokemon.hp <= pokemon.maxhp / 4 ||
+				(pokemon.hp <= pokemon.maxhp / 2 &&
+					pokemon.hasAbility("gluttony") &&
+					pokemon.abilityState.gluttony)
+			) {
 				pokemon.eatItem();
 			}
 		},
@@ -5554,7 +6120,11 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			const stats: BoostID[] = [];
 			let stat: BoostID;
 			for (stat in pokemon.boosts) {
-				if (stat !== 'accuracy' && stat !== 'evasion' && pokemon.boosts[stat] < 6) {
+				if (
+					stat !== "accuracy" &&
+					stat !== "evasion" &&
+					pokemon.boosts[stat] < 6
+				) {
 					stats.push(stat);
 				}
 			}
@@ -5596,9 +6166,9 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 473,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status') return;
-			if (move.type === 'Steel' && source.useItem()) {
-				source.addVolatile('gem');
+			if (target === source || move.category === "Status") return;
+			if (move.type === "Steel" && source.useItem()) {
+				source.addVolatile("gem");
 			}
 		},
 		num: 563,
@@ -5608,9 +6178,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	steelmemory: {
 		name: "Steel Memory",
 		spritenum: 675,
-		onMemory: 'Steel',
+		onMemory: "Steel",
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 773) || pokemon.baseSpecies.num === 773) {
+			if (
+				(source && source.baseSpecies.num === 773) ||
+				pokemon.baseSpecies.num === 773
+			) {
 				return false;
 			}
 			return true;
@@ -5624,7 +6197,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	steeliumz: {
 		name: "Steelium Z",
 		spritenum: 647,
-		onPlate: 'Steel',
+		onPlate: "Steel",
 		onTakeItem: false,
 		zMove: true,
 		zMoveType: "Steel",
@@ -5640,7 +6213,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		spritenum: 475,
 		onModifyCritRatio(critRatio, user) {
-			if (this.toID(user.baseSpecies.baseSpecies) === 'farfetchd') {
+			if (this.toID(user.baseSpecies.baseSpecies) === "farfetchd") {
 				return critRatio + 2;
 			}
 		},
@@ -5661,7 +6234,13 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			this.damage(pokemon.baseMaxhp / 8);
 		},
 		onHit(target, source, move) {
-			if (source && source !== target && !source.item && move && this.checkMoveMakesContact(move, source, target)) {
+			if (
+				source &&
+				source !== target &&
+				!source.item &&
+				move &&
+				this.checkMoveMakesContact(move, source, target)
+			) {
 				const barb = target.takeItem();
 				if (!barb) return; // Gen 4 Multitype
 				source.setItem(barb);
@@ -5674,15 +6253,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	stoneplate: {
 		name: "Stone Plate",
 		spritenum: 477,
-		onPlate: 'Rock',
+		onPlate: "Rock",
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move.type === 'Rock') {
+			if (move.type === "Rock") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 493) || pokemon.baseSpecies.num === 493) {
+			if (
+				(source && source.baseSpecies.num === 493) ||
+				pokemon.baseSpecies.num === 493
+			) {
 				return false;
 			}
 			return true;
@@ -5770,18 +6352,21 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Bug",
 		},
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Bug' && target.getMoveHitData(move).typeMod > 0) {
-				const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+			if (move.type === "Bug" && target.getMoveHitData(move).typeMod > 0) {
+				const hitSub =
+					target.volatiles["substitute"] &&
+					!move.flags["bypasssub"] &&
+					!(move.infiltrates && this.gen >= 6);
 				if (hitSub) return;
 
 				if (target.eatItem()) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
+					this.debug("-50% reduction");
+					this.add("-enditem", target, this.effect, "[weaken]");
 					return this.chainModify(0.5);
 				}
 			}
 		},
-		onEat() { },
+		onEat() {},
 		num: 194,
 		gen: 4,
 	},
@@ -5822,7 +6407,10 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onModifyAtkPriority: 1,
 		onModifyAtk(atk, pokemon) {
-			if (pokemon.baseSpecies.baseSpecies === 'Cubone' || pokemon.baseSpecies.baseSpecies === 'Marowak') {
+			if (
+				pokemon.baseSpecies.baseSpecies === "Cubone" ||
+				pokemon.baseSpecies.baseSpecies === "Marowak"
+			) {
 				return this.chainModify(2);
 			}
 		},
@@ -5838,7 +6426,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			basePower: 30,
 		},
 		onAfterMoveSecondarySelf(target, source, move) {
-			if (move.flags['sound']) {
+			if (move.flags["sound"]) {
 				target.useItem();
 			}
 		},
@@ -5869,12 +6457,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 515,
 		fling: {
 			basePower: 30,
-			status: 'tox',
+			status: "tox",
 		},
 		onResidualOrder: 28,
 		onResidualSubOrder: 3,
 		onResidual(pokemon) {
-			pokemon.trySetStatus('tox', pokemon);
+			pokemon.trySetStatus("tox", pokemon);
 		},
 		num: 272,
 		gen: 4,
@@ -5882,15 +6470,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	toxicplate: {
 		name: "Toxic Plate",
 		spritenum: 516,
-		onPlate: 'Poison',
+		onPlate: "Poison",
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move.type === 'Poison') {
+			if (move.type === "Poison") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 493) || pokemon.baseSpecies.num === 493) {
+			if (
+				(source && source.baseSpecies.num === 493) ||
+				pokemon.baseSpecies.num === 493
+			) {
 				return false;
 			}
 			return true;
@@ -6907,7 +7498,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move.type === 'Psychic') {
+			if (move.type === "Psychic") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
@@ -6973,20 +7564,32 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		// Partially implemented in Pokemon.effectiveWeather() in sim/pokemon.ts
 		onStart(pokemon) {
 			if (!pokemon.ignoringItem()) return;
-			if (['sunnyday', 'raindance', 'desolateland', 'primordialsea'].includes(this.field.effectiveWeather())) {
-				this.runEvent('WeatherChange', pokemon, pokemon, this.effect);
+			if (
+				["sunnyday", "raindance", "desolateland", "primordialsea"].includes(
+					this.field.effectiveWeather()
+				)
+			) {
+				this.runEvent("WeatherChange", pokemon, pokemon, this.effect);
 			}
 		},
 		onUpdate(pokemon) {
 			if (!this.effectState.inactive) return;
 			this.effectState.inactive = false;
-			if (['sunnyday', 'raindance', 'desolateland', 'primordialsea'].includes(this.field.effectiveWeather())) {
-				this.runEvent('WeatherChange', pokemon, pokemon, this.effect);
+			if (
+				["sunnyday", "raindance", "desolateland", "primordialsea"].includes(
+					this.field.effectiveWeather()
+				)
+			) {
+				this.runEvent("WeatherChange", pokemon, pokemon, this.effect);
 			}
 		},
 		onEnd(pokemon) {
-			if (['sunnyday', 'raindance', 'desolateland', 'primordialsea'].includes(this.field.effectiveWeather())) {
-				this.runEvent('WeatherChange', pokemon, pokemon, this.effect);
+			if (
+				["sunnyday", "raindance", "desolateland", "primordialsea"].includes(
+					this.field.effectiveWeather()
+				)
+			) {
+				this.runEvent("WeatherChange", pokemon, pokemon, this.effect);
 			}
 			this.effectState.inactive = true;
 		},
@@ -7016,17 +7619,23 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Electric",
 		},
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Electric' && target.getMoveHitData(move).typeMod > 0) {
-				const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+			if (
+				move.type === "Electric" &&
+				target.getMoveHitData(move).typeMod > 0
+			) {
+				const hitSub =
+					target.volatiles["substitute"] &&
+					!move.flags["bypasssub"] &&
+					!(move.infiltrates && this.gen >= 6);
 				if (hitSub) return;
 				if (target.eatItem()) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
+					this.debug("-50% reduction");
+					this.add("-enditem", target, this.effect, "[weaken]");
 					return this.chainModify(0.5);
 				}
 			}
 		},
-		onEat() { },
+		onEat() {},
 		num: 186,
 		gen: 4,
 	},
@@ -7035,9 +7644,14 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 528,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status' || move.flags['pledgecombo']) return;
-			if (move.type === 'Water' && source.useItem()) {
-				source.addVolatile('gem');
+			if (
+				target === source ||
+				move.category === "Status" ||
+				move.flags["pledgecombo"]
+			)
+				return;
+			if (move.type === "Water" && source.useItem()) {
+				source.addVolatile("gem");
 			}
 		},
 		num: 549,
@@ -7047,9 +7661,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	watermemory: {
 		name: "Water Memory",
 		spritenum: 677,
-		onMemory: 'Water',
+		onMemory: "Water",
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 773) || pokemon.baseSpecies.num === 773) {
+			if (
+				(source && source.baseSpecies.num === 773) ||
+				pokemon.baseSpecies.num === 773
+			) {
 				return false;
 			}
 			return true;
@@ -7072,7 +7689,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	wateriumz: {
 		name: "Waterium Z",
 		spritenum: 633,
-		onPlate: 'Water',
+		onPlate: "Water",
 		onTakeItem: false,
 		zMove: true,
 		zMoveType: "Water",
@@ -7102,7 +7719,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move.type === 'Water') {
+			if (move.type === "Water") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
@@ -7117,7 +7734,11 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			basePower: 80,
 		},
 		onDamagingHit(damage, target, source, move) {
-			if (!move.damage && !move.damageCallback && target.getMoveHitData(move).typeMod > 0) {
+			if (
+				!move.damage &&
+				!move.damageCallback &&
+				target.getMoveHitData(move).typeMod > 0
+			) {
 				target.useItem();
 			}
 		},
@@ -7136,12 +7757,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (user.baseSpecies.name.startsWith('Ogerpon-Wellspring')) {
+			if (user.baseSpecies.name.startsWith("Ogerpon-Wellspring")) {
 				return this.chainModify([4915, 4096]);
 			}
 		},
 		onTakeItem(item, source) {
-			if (source.baseSpecies.baseSpecies === 'Ogerpon') return false;
+			if (source.baseSpecies.baseSpecies === "Ogerpon") return false;
 			return true;
 		},
 		forcedForme: "Ogerpon-Wellspring",
@@ -7189,16 +7810,22 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 				}
 				if (activate) {
 					pokemon.setBoost(boosts);
-					this.add('-clearnegativeboost', pokemon, '[silent]');
+					this.add("-clearnegativeboost", pokemon, "[silent]");
 				}
 			},
 		},
 		onAnySwitchInPriority: -2,
 		onAnySwitchIn() {
-			((this.effect as any).onUpdate as (p: Pokemon) => void).call(this, this.effectState.target);
+			((this.effect as any).onUpdate as (p: Pokemon) => void).call(
+				this,
+				this.effectState.target
+			);
 		},
 		onStart(pokemon) {
-			((this.effect as any).onUpdate as (p: Pokemon) => void).call(this, pokemon);
+			((this.effect as any).onUpdate as (p: Pokemon) => void).call(
+				this,
+				pokemon
+			);
 		},
 		onUpdate(pokemon) {
 			let activate = false;
@@ -7212,7 +7839,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			}
 			if (activate && pokemon.useItem()) {
 				pokemon.setBoost(boosts);
-				this.add('-clearnegativeboost', pokemon, '[silent]');
+				this.add("-clearnegativeboost", pokemon, "[silent]");
 			}
 		},
 		num: 214,
@@ -7226,7 +7853,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onSourceModifyAccuracyPriority: -2,
 		onSourceModifyAccuracy(accuracy) {
-			if (typeof accuracy === 'number') {
+			if (typeof accuracy === "number") {
 				return this.chainModify([4505, 4096]);
 			}
 		},
@@ -7242,18 +7869,31 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Rock",
 		},
 		onUpdate(pokemon) {
-			if (pokemon.hp <= pokemon.maxhp / 4 || (pokemon.hp <= pokemon.maxhp / 2 &&
-					pokemon.hasAbility('gluttony') && pokemon.abilityState.gluttony)) {
+			if (
+				pokemon.hp <= pokemon.maxhp / 4 ||
+				(pokemon.hp <= pokemon.maxhp / 2 &&
+					pokemon.hasAbility("gluttony") &&
+					pokemon.abilityState.gluttony)
+			) {
 				pokemon.eatItem();
 			}
 		},
 		onTryEatItem(item, pokemon) {
-			if (!this.runEvent('TryHeal', pokemon, null, this.effect, pokemon.baseMaxhp / 3)) return false;
+			if (
+				!this.runEvent(
+					"TryHeal",
+					pokemon,
+					null,
+					this.effect,
+					pokemon.baseMaxhp / 3
+				)
+			)
+				return false;
 		},
 		onEat(pokemon) {
 			this.heal(pokemon.baseMaxhp / 3);
-			if (pokemon.getNature().minus === 'spa') {
-				pokemon.addVolatile('confusion');
+			if (pokemon.getNature().minus === "spa") {
+				pokemon.addVolatile("confusion");
 			}
 		},
 		num: 160,
@@ -7267,7 +7907,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 16,
 		onBasePower(basePower, user, target, move) {
-			if (move.category === 'Special') {
+			if (move.category === "Special") {
 				return this.chainModify([4505, 4096]);
 			}
 		},
@@ -7283,33 +7923,39 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Ice",
 		},
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Ice' && target.getMoveHitData(move).typeMod > 0) {
-				const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+			if (move.type === "Ice" && target.getMoveHitData(move).typeMod > 0) {
+				const hitSub =
+					target.volatiles["substitute"] &&
+					!move.flags["bypasssub"] &&
+					!(move.infiltrates && this.gen >= 6);
 				if (hitSub) return;
 
 				if (target.eatItem()) {
-					this.debug('-50% reduction');
-					this.add('-enditem', target, this.effect, '[weaken]');
+					this.debug("-50% reduction");
+					this.add("-enditem", target, this.effect, "[weaken]");
 					return this.chainModify(0.5);
 				}
 			}
 		},
-		onEat() { },
+		onEat() {},
 		num: 188,
 		gen: 4,
 	},
 	zapplate: {
 		name: "Zap Plate",
 		spritenum: 572,
-		onPlate: 'Electric',
+		onPlate: "Electric",
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (move.type === 'Electric') {
+			if (move.type === "Electric") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
-			if ((source && source.baseSpecies.num === 493) || pokemon.baseSpecies.num === 493) {
+			if (
+				(source && source.baseSpecies.num === 493) ||
+				pokemon.baseSpecies.num === 493
+			) {
 				return false;
 			}
 			return true;
@@ -7326,8 +7972,8 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onSourceModifyAccuracyPriority: -2,
 		onSourceModifyAccuracy(accuracy, target) {
-			if (typeof accuracy === 'number' && !this.queue.willMove(target)) {
-				this.debug('Zoom Lens boosting accuracy');
+			if (typeof accuracy === "number" && !this.queue.willMove(target)) {
+				this.debug("Zoom Lens boosting accuracy");
 				return this.chainModify([4915, 4096]);
 			}
 		},
@@ -7342,7 +7988,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 388,
 		onUpdate(pokemon) {
 			if (pokemon.useItem()) {
-				pokemon.addVolatile('confusion');
+				pokemon.addVolatile("confusion");
 			}
 		},
 		boosts: {
@@ -7367,7 +8013,8 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			}
 		},
 		onTryEatItem(item, pokemon) {
-			if (!this.runEvent('TryHeal', pokemon, null, this.effect, 10)) return false;
+			if (!this.runEvent("TryHeal", pokemon, null, this.effect, 10))
+				return false;
 		},
 		onEat(pokemon) {
 			this.heal(10);
@@ -7385,12 +8032,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Ground",
 		},
 		onUpdate(pokemon) {
-			if (pokemon.volatiles['confusion']) {
+			if (pokemon.volatiles["confusion"]) {
 				pokemon.eatItem();
 			}
 		},
 		onEat(pokemon) {
-			pokemon.removeVolatile('confusion');
+			pokemon.removeVolatile("confusion");
 		},
 		num: 156,
 		gen: 2,
@@ -7405,12 +8052,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Ice",
 		},
 		onUpdate(pokemon) {
-			if (pokemon.status === 'frz') {
+			if (pokemon.status === "frz") {
 				pokemon.eatItem();
 			}
 		},
 		onEat(pokemon) {
-			if (pokemon.status === 'frz') {
+			if (pokemon.status === "frz") {
 				pokemon.cureStatus();
 			}
 		},
@@ -7433,7 +8080,8 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			}
 		},
 		onTryEatItem(item, pokemon) {
-			if (!this.runEvent('TryHeal', pokemon, null, this.effect, 30)) return false;
+			if (!this.runEvent("TryHeal", pokemon, null, this.effect, 30))
+				return false;
 		},
 		onEat(pokemon) {
 			this.heal(30);
@@ -7451,12 +8099,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Grass",
 		},
 		onUpdate(pokemon) {
-			if (pokemon.status === 'brn') {
+			if (pokemon.status === "brn") {
 				pokemon.eatItem();
 			}
 		},
 		onEat(pokemon) {
-			if (pokemon.status === 'brn') {
+			if (pokemon.status === "brn") {
 				pokemon.cureStatus();
 			}
 		},
@@ -7473,12 +8121,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Water",
 		},
 		onUpdate(pokemon) {
-			if (pokemon.status === 'slp') {
+			if (pokemon.status === "slp") {
 				pokemon.eatItem();
 			}
 		},
 		onEat(pokemon) {
-			if (pokemon.status === 'slp') {
+			if (pokemon.status === "slp") {
 				pokemon.cureStatus();
 			}
 		},
@@ -7495,13 +8143,13 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Flying",
 		},
 		onUpdate(pokemon) {
-			if (pokemon.status || pokemon.volatiles['confusion']) {
+			if (pokemon.status || pokemon.volatiles["confusion"]) {
 				pokemon.eatItem();
 			}
 		},
 		onEat(pokemon) {
 			pokemon.cureStatus();
-			pokemon.removeVolatile('confusion');
+			pokemon.removeVolatile("confusion");
 		},
 		num: 157,
 		gen: 2,
@@ -7517,18 +8165,19 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onUpdate(pokemon) {
 			if (!pokemon.hp) return;
-			const moveSlot = pokemon.lastMove && pokemon.getMoveData(pokemon.lastMove.id);
+			const moveSlot =
+				pokemon.lastMove && pokemon.getMoveData(pokemon.lastMove.id);
 			if (moveSlot && moveSlot.pp === 0) {
-				pokemon.addVolatile('leppaberry');
-				pokemon.volatiles['leppaberry'].moveSlot = moveSlot;
+				pokemon.addVolatile("leppaberry");
+				pokemon.volatiles["leppaberry"].moveSlot = moveSlot;
 				pokemon.eatItem();
 			}
 		},
 		onEat(pokemon) {
 			let moveSlot;
-			if (pokemon.volatiles['leppaberry']) {
-				moveSlot = pokemon.volatiles['leppaberry'].moveSlot;
-				pokemon.removeVolatile('leppaberry');
+			if (pokemon.volatiles["leppaberry"]) {
+				moveSlot = pokemon.volatiles["leppaberry"].moveSlot;
+				pokemon.removeVolatile("leppaberry");
 			} else {
 				let pp = 99;
 				for (const possibleMoveSlot of pokemon.moveSlots) {
@@ -7540,7 +8189,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			}
 			moveSlot.pp += 5;
 			if (moveSlot.pp > moveSlot.maxpp) moveSlot.pp = moveSlot.maxpp;
-			this.add('-activate', pokemon, 'item: Mystery Berry', moveSlot.move);
+			this.add("-activate", pokemon, "item: Mystery Berry", moveSlot.move);
 		},
 		num: 154,
 		gen: 2,
@@ -7550,7 +8199,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		name: "Pink Bow",
 		spritenum: 444,
 		onBasePower(basePower, user, target, move) {
-			if (move.type === 'Normal') {
+			if (move.type === "Normal") {
 				return basePower * 1.1;
 			}
 		},
@@ -7562,7 +8211,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		name: "Polkadot Bow",
 		spritenum: 444,
 		onBasePower(basePower, user, target, move) {
-			if (move.type === 'Normal') {
+			if (move.type === "Normal") {
 				return basePower * 1.1;
 			}
 		},
@@ -7579,12 +8228,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Fire",
 		},
 		onUpdate(pokemon) {
-			if (pokemon.status === 'par') {
+			if (pokemon.status === "par") {
 				pokemon.eatItem();
 			}
 		},
 		onEat(pokemon) {
-			if (pokemon.status === 'par') {
+			if (pokemon.status === "par") {
 				pokemon.cureStatus();
 			}
 		},
@@ -7601,12 +8250,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			type: "Electric",
 		},
 		onUpdate(pokemon) {
-			if (pokemon.status === 'psn' || pokemon.status === 'tox') {
+			if (pokemon.status === "psn" || pokemon.status === "tox") {
 				pokemon.eatItem();
 			}
 		},
 		onEat(pokemon) {
-			if (pokemon.status === 'psn' || pokemon.status === 'tox') {
+			if (pokemon.status === "psn" || pokemon.status === "tox") {
 				pokemon.cureStatus();
 			}
 		},
@@ -7639,12 +8288,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
-			if (user.baseSpecies.num === -66 && ['Poison', 'Flying'].includes(move.type)) {
+			if (
+				user.baseSpecies.num === -66 &&
+				["Poison", "Flying"].includes(move.type)
+			) {
 				return this.chainModify([4915, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
-			if (source?.baseSpecies.num === -66 || pokemon.baseSpecies.num === -66) {
+			if (
+				source?.baseSpecies.num === -66 ||
+				pokemon.baseSpecies.num === -66
+			) {
 				return false;
 			}
 			return true;
@@ -7656,18 +8311,114 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		isNonstandard: "CAP",
 	},
 
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*CUSTOM ITEMS*/
-lucarionitex: {
-		name: "Lucarionite X",
-		spritenum: 594,
-		megaStone: "Lucario-Mega",
-		megaEvolves: "Lucario",
-		itemUser: ["Lucario"],
-		onTakeItem(item, source) {
+ "lucarionitex":{"name":"Lucarionite X","spritenum":594,"megaStone":"Lucario-Mega","megaEvolves":"Lucario","itemUser":["Lucario"],"num":-1000,"gen":6,"isNonstandard":"Past"}
+, "shucklionitex":{"name":"Shucklionite X","itemUser":["Shuckle"],"megaEvolves":"Shuckle-Mega","num":-1003,"isNonstandard":"Unobtainable"}
+, "zoroarkium":{"name":"Zoroarkium","itemUser":["Zoroark"],"megaEvolves":"Mega Zoroark","num":-1003,"isNonstandard":"Unobtainable"}
+, "lucarionitey":{"name":"Lucarionite Y","itemUser":["Lucario"],"megaEvolves":"Mega Lucario Y","num":-1005,"isNonstandard":"Unobtainable"}
+
+};
+/*FUNCTIONS*/
+
+//lucarionitexstart
+Items["lucarionitex"].onTakeItem = function(item, source){
 			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
 			return true;
-		},
-		num: -1000,
-		gen: 6,
-		isNonstandard: "Past",
-	},};
+		}
+//lucarionitexend
+//shucklionitexstart
+Items["shucklionitex"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+//shucklionitexend//zoroarkiumstart
+
+Items["zoroarkium"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//zoroarkiumend//lucarioniteystart
+Items["lucarionitey"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+//lucarioniteyend
