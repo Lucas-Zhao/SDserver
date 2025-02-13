@@ -1,1 +1,1 @@
- "lucariomegax":{"tier":"Uber","natDexTier":"Uber"}
+ "lucariomegax":{"tier":"Legacy","natDexTier":"Legacy"}
