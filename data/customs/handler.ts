@@ -436,6 +436,7 @@ export class Handler {
 			opts.learnset = obj
 		}
 
+		if(opts.isMega) pokemon.forme = "Mega"
 		this.pokedex[this.toID(pokemon.name)] = pokemon;
 		this.convertToTxt("pokedex");
 		this.import("pokedex");
@@ -453,7 +454,6 @@ export class Handler {
 				shortDesc: `If held by a ${pokemon.name}, this item allows it to Mega Evolve in battle.`
 			};
 			this.addItem(data);
-			pokemon.forme = "Mega"
 		}
 		if (opts.learnset) {
 			let data = { learnset: opts.learnset as {} };

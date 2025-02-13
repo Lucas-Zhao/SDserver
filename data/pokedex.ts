@@ -20165,7 +20165,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	},
 
 /*CUSTOM POKEMONS*/
- "lucariomegax":{"name":"Lucario-Mega-X","types":["Normal","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":50,"atk":50,"def":80,"spa":160,"spd":80,"spe":160},"abilities":{"0":"Charisma","1":"Monsoon Surge","H":"Terrify"},"heightm":121,"weightkg":67,"prevo":"Lucario","evoType":"trade","requiredItem":"Lucarionite X","num":-1021}
+ "lucariomegax":{"name":"Lucario-Mega-X","types":["Normal","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":50,"atk":50,"def":80,"spa":160,"spd":80,"spe":160},"abilities":{"0":"Charisma","1":"Monsoon Surge","H":"Terrify"},"heightm":121,"weightkg":67,"prevo":"Lucario","evoType":"trade","requiredItem":"Lucarionite X","num":-1021,"forme":"Mega"}
 
 };
  
