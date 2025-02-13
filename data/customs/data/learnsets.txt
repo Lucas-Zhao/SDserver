@@ -1,1 +1,2 @@
  "shucklemega":{"learnset":{"tackle":["9L3"]}}
+, "serperiormega":{"learnset":["leafstorm","leafblade"]}

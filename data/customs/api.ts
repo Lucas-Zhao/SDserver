@@ -5,10 +5,25 @@ const URL = require("url");
 
 import Customs from "./handler";
 import path from "path";
+import { exec } from "child_process";
 
 // HTTP and HTTPS ports
 const HTTP_PORT = 3000;
 const HTTPS_PORT = 3443;
+
+function update(what) {
+	exec(
+		`node "${path.join(
+			path.resolve(),
+			"/tools/build-customs.js"
+		)}" update${what}`,
+		(error, stdout, stderr) => {
+			if (error) return console.error(`Error: ${error.message}`);
+			if (stderr) return console.error(`Stderr: ${stderr}`);
+			console.log(`Output: ${stdout}`);
+		}
+	);
+}
 
 // Helper to parse request body (for JSON payloads)
 const parseRequestBody = async (req: IncomingMessage): Promise<any> => {
@@ -34,48 +49,47 @@ function serveStatic(req, res, file) {
 
 	// Map URLs to files
 	let filePath = path.join(basePath, file ? file : req.url);
-  
+
 	// Determine content type
 	const ext = path.extname(filePath);
 	let contentType = "text/html";
 	switch (ext) {
-	  case ".css":
-		contentType = "text/css";
-		break;
-	  case ".js":
-		contentType = "application/javascript";
-		break;
-	  case ".png":
-		contentType = "image/png";
-		break;
-	  case ".jpg":
-		contentType = "image/jpeg";
-		break;
-	  case ".ico":
-		contentType = "image/x-icon";
-		break;
+		case ".css":
+			contentType = "text/css";
+			break;
+		case ".js":
+			contentType = "application/javascript";
+			break;
+		case ".png":
+			contentType = "image/png";
+			break;
+		case ".jpg":
+			contentType = "image/jpeg";
+			break;
+		case ".ico":
+			contentType = "image/x-icon";
+			break;
 	}
-  console.log(filePath)
+	console.log(filePath);
 	// Read and serve the file
 	fs.readFile(filePath, (err, content) => {
-	  if (err) {
-		if (err.code === "ENOENT") {
-		  // File not found
-		  res.writeHead(404, { "Content-Type": "text/plain" });
-		  res.end("404 Not Found");
+		if (err) {
+			if (err.code === "ENOENT") {
+				// File not found
+				res.writeHead(404, { "Content-Type": "text/plain" });
+				res.end("404 Not Found");
+			} else {
+				// Other server errors
+				res.writeHead(500, { "Content-Type": "text/plain" });
+				res.end("500 Server Error");
+			}
 		} else {
-		  // Other server errors
-		  res.writeHead(500, { "Content-Type": "text/plain" });
-		  res.end("500 Server Error");
+			// Serve the file
+			res.writeHead(200, { "Content-Type": contentType });
+			res.end(content, "utf-8");
 		}
-	  } else {
-		// Serve the file
-		res.writeHead(200, { "Content-Type": contentType });
-		res.end(content, "utf-8");
-	  }
 	});
 }
-
 
 const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 	const { method, url } = req;
@@ -91,16 +105,12 @@ const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 			res.end(JSON.stringify({ message: "Invalid session" }));
 			return;
 		}
-		serveStatic(req,res,"index.html");
-	}
-	else if (url === "/index.css") {
-		serveStatic(req,res,"index.css")
-	}
-	else if (url === "/index.js") {
-		serveStatic(req,res,"index.js")
-	}
-
-	else if (url === "/" && method === "GET") {
+		serveStatic(req, res, "index.html");
+	} else if (url === "/index.css") {
+		serveStatic(req, res, "index.css");
+	} else if (url === "/index.js") {
+		serveStatic(req, res, "index.js");
+	} else if (url === "/" && method === "GET") {
 		// Home route
 		res.writeHead(200, { "Content-Type": "application/json" });
 		res.end(JSON.stringify({ message: "Welcome to the API!" }));
@@ -148,10 +158,13 @@ const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 			// Parse the request body
 			const body = await parseRequestBody(req);
 			let oid = fs
-			.readFileSync(path.join(path.resolve(), "/data/customs/session.txt"))
-			.toString();
-			console.log(body)
-			if (!body.sessionID || body.sessionId !== oid) {
+				.readFileSync(
+					path.join(path.resolve(), "/data/customs/session.txt")
+				)
+				.toString();
+				console.log(oid == body.sessionId)
+			console.log(body);
+			if (!body.sessionId || body.sessionId != oid) {
 				res.writeHead(401, { "Content-Type": "application/json" });
 				res.end(JSON.stringify({ message: "Invalid session" }));
 				return;
@@ -185,6 +198,30 @@ const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 			}
 			res.writeHead(201, { "Content-Type": "application/json" });
 			res.end(JSON.stringify({ message: "Pokemon created", user: body }));
+		} catch (error) {
+			// Handle JSON parse errors or other issues
+			res.writeHead(400, { "Content-Type": "application/json" });
+			res.end(JSON.stringify({ message: error.message }));
+		}
+	} else if (url === "/update" && method === "POST") {
+		try {
+			// Parse the request body
+			const body = await parseRequestBody(req);
+			let oid = fs
+				.readFileSync(
+					path.join(path.resolve(), "/data/customs/session.txt")
+				)
+				.toString();
+			console.log(body);
+			if (!body.sessionID || body.sessionId !== oid) {
+				res.writeHead(401, { "Content-Type": "application/json" });
+				res.end(JSON.stringify({ message: "Invalid session" }));
+				return;
+			}
+			update(body.update)
+			res.writeHead(201, { "Content-Type": "application/json" });
+				res.end(JSON.stringify({ message: "Done" }));
+				return;
 		} catch (error) {
 			// Handle JSON parse errors or other issues
 			res.writeHead(400, { "Content-Type": "application/json" });

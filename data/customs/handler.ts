@@ -64,6 +64,7 @@ interface Item {
 	itemUser?: string;
 	isNonstandard?: string;
 	megaEvolves?: string[];
+	gen?: number
 }
 
 interface Ability {
@@ -383,6 +384,7 @@ export class Handler {
 			megaEvolves: data.megaEvolves || undefined,
 			num: -(Object.keys(this.items as {}).length + 1001),
 			isNonstandard: "Unobtainable",
+			gen: data.gen ? data.gen : 0
 		};
 		this.convertToTxt("items");
 		this.addText("items",{name:data.name,shortDesc:data.shortDesc})

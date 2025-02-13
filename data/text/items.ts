@@ -2442,9 +2442,7 @@ export const ItemsText: {[id: IDEntry]: ItemText} = {
 	},
 
 /*CUSTOM TEXTS*/
-lucarionitey: {
-		name: "Lucarionite Y",
-		shortDesc: "If held by a Lucario, this item allows it to Mega Evolve in battle.",
-	}
+ "serperionite":{"name":"Serperionite"}
+
 };
  

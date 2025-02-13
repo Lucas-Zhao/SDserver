@@ -1,1 +1,2 @@
  "luca":{"name":"Luca"}
+, "serperiormega":{"name":"Serperior-Mega"}

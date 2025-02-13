@@ -297,9 +297,17 @@ let importCustomData = () => {
 };
 
 let updateRepo = (msg) => {
-	execSync("git add .",{cwd : MAIN_PATH + "/pokemon-showdown"})
-	execSync(`git commit -m "[Automated Push] ${msg}"`,{cwd : MAIN_PATH + "/pokemon-showdown"})
-	execSync(`git push origin2`,{cwd : MAIN_PATH + "/pokemon-showdown"})
+	console.log("\n[UPDATING SERVER REPO]")
+	console.log(execSync("git add .",{cwd : MAIN_PATH + "/pokemon-showdown"}).toString())
+	console.log(execSync(`git commit -m "[Automated Push] ${msg}"`,{cwd : MAIN_PATH + "/pokemon-showdown"}).toString())
+	console.log(execSync(`git push origin2`,{cwd : MAIN_PATH + "/pokemon-showdown"}).toString())
+	console.log("\n[FINISHED]")
+}
+
+let updateClient = (msg) => {
+	console.log("\n[UPDATING CLIENT]")
+	console.log(execSync("npm run build-full",{cwd : MAIN_PATH + "/pokemon-showdown-client"}).toString())
+	console.log("\n[FINISHED]")
 }
 
 exports.importTextData = importTextData;
@@ -313,7 +321,7 @@ exports.importCustomData = importCustomData;
 if (args.length) {
 	args.forEach((arg) => {
 		//console.log(this)
-
+try {
 		switch (arg) {
 			case "pokedex":
 				importPokedexData();
@@ -344,6 +352,9 @@ if (args.length) {
 			default:
 				importCustomData();
 		}
+	} catch(e) {
+		console.log(e);
+	}
 	});
 	return;
 }

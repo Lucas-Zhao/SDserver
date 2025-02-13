@@ -4,3 +4,4 @@
 , "lucarionitey":{"name":"Lucarionite Y","itemUser":["Lucario"],"megaEvolves":"Lucario-Mega-Y","num":-1005,"isNonstandard":"Unobtainable"}
 , "hydreigonite":{"name":"Hydreigonite","itemUser":["Hydreigon"],"megaEvolves":"Hydreigon-Mega","num":-1006,"isNonstandard":"Unobtainable"}
 , "hydreigonitey":{"name":"Hydreigonite Y","itemUser":["Hydreigon"],"megaEvolves":"Hydreigon-Mega-Y","num":-1006,"isNonstandard":"Unobtainable"}
+, "serperionite":{"name":"Serperionite","itemUser":["Serperior"],"megaEvolves":"Serperior-Mega","num":-1007,"isNonstandard":"Unobtainable","gen":0}
