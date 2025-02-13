@@ -449,6 +449,7 @@ export class Handler {
 				megaEvolves: pokemon.name,
 				itemUser: [pokemon.prevo],
 				functions: [{ name: "onTakeItem", body: func.toString() }],
+				shortDesc: `If held by a ${pokemon.name}, this item allows it to Mega Evolve in battle.`
 			};
 			this.addItem(data);
 		}
