@@ -299,6 +299,7 @@ let importCustomData = () => {
 	this.importLearnsetsData();
 	this.importAbilitiesData();
 	this.importItemsData();
+	this.importFormatsData();
 };
 
 let updateRepo = (msg) => {

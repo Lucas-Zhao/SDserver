@@ -1,1 +1,1 @@
- "lucariomegax":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
+ "lucariomegax":{"isNonstandard":"Past","tier":"Legacy","natDexTier":"Legacy"}
