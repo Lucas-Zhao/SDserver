@@ -49,6 +49,7 @@ interface Pokemon {
 	otherFormes?: Array<string>;
 	formeOrder?: Array<string>;
 	requiredItem: string;
+	forme?: string
 }
 
 interface FormatsData {
@@ -452,6 +453,7 @@ export class Handler {
 				shortDesc: `If held by a ${pokemon.name}, this item allows it to Mega Evolve in battle.`
 			};
 			this.addItem(data);
+			pokemon.forme = "Mega"
 		}
 		if (opts.learnset) {
 			let data = { learnset: opts.learnset as {} };

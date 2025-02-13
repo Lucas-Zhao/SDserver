@@ -6038,14 +6038,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 
 /*CUSTOM FORMATS*/
- "shucklemega":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
-, "megalucariox":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
-, "megalucarioy":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
-, "megazoroark":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
-, "lucariomegay":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
-, "hydreigonmega":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
-, "hydreigonmegay":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
-, "serperiormega":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
-, "zerapium":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
+ "lucariomegax":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
 
 };
