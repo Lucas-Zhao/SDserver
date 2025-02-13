@@ -329,9 +329,10 @@ exports.abilities = {
 	"soulharvest": {
 		onSourceAfterFaint: function(length, target, source, effect) {
 			if (effect && effect.effectType === 'Move') {
-				this.heal(source.baseMaxhp / 4)
-				this.add('-heal', source, source.getHealth, '[silent]');
-
+				console.log(source)
+				source.heal(source.baseMaxhp / 4)
+				this.add('-ability', source, 'Soul Harvest');
+				this.add('-heal', source, source.getHealth, 'ability: Soul Harvest');
 			}
 		},
 		flags: {},
