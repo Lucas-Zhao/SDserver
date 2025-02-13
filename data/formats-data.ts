@@ -6046,5 +6046,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "hydreigonmega":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
 , "hydreigonmegay":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
 , "serperiormega":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
+, "zerapium":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
 
 };
