@@ -5811,6 +5811,23 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 
 
 
+	"soulharvest": {
+		onSourceAfterFaint: function(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				this.heal(source.baseMaxhp / 4)
+				this.add('-heal', source, source.getHealth, '[silent]');
+
+			}
+		},
+		flags: {},
+		name: "Soul Harvest",
+		rating: 4,
+		num: -1025,
+	},
+
+
+
+
 
 
 

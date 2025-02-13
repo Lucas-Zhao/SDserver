@@ -47,7 +47,7 @@
                 <div class="form-column">
                     <div class="form-group">
                         <label>Name</label>
-                        <input type="text" id="name" placeholder="Lucario-Mega-X">
+                        <input onkeyup="updateSprite()" type="text" id="name" placeholder="Lucario-Mega-X">
                     </div>
 
                     <div class="form-group">
@@ -161,9 +161,18 @@
                 
 
                     <!-- Additional Information -->
+                   
                     <div class="form-group">
-                        <label>Battle Sprite</label>
-                        <input type="text" placeholder="Image URL or ID" disabled>
+                        <label>Moveset</label>
+                        <textarea id="moveset" placeholder="Aura Sphere, Close Combat, Fire Punch "style="height: 150px;"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Battle Sprites</label>
+                        <img id="bsprite" src="" alt="Sprites not found">  <img id="bsprite2" src="" >
+                        
+                        <img id="bsprites" src="" >  <img id="bsprites2" src="" >
+
                     </div>
 
                     <div class="form-group">
@@ -171,10 +180,6 @@
                         <input type="text" placeholder="Image URL or ID" disabled>
                     </div>
 
-                    <div class="form-group">
-                        <label>Moveset</label>
-                        <textarea id="moveset" placeholder="Aura Sphere, Close Combat, Fire Punch "style="height: 150px;"></textarea>
-                    </div>
                 </div>
             </div>
 

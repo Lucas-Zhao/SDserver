@@ -60,6 +60,18 @@ function capitalizeWords(str) {
     .join("-");
 }
 
+function updateSprite() {
+	let name = toID(getVal("name"))
+	console.log(name)
+	let baseLink = "https://raw.githubusercontent.com/ISenseAura/files/refs/heads/main/" + name;
+	document.getElementById("bsprite").src = baseLink + ".png"
+	document.getElementById("bsprite2").src = baseLink + "-back.png"
+	document.getElementById("bsprites").src = baseLink + "-shiny.png"
+	document.getElementById("bsprites2").src = baseLink + "-shiny-back.png"
+
+
+}
+
 function validatePokemon(body) {
   // Name validation
   if (!body.pokemon.name) {

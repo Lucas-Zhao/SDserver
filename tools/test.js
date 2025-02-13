@@ -165,7 +165,7 @@ exports.abilities = {
 		num: -1013,
 	},
 
-	arcanemight: {
+	"arcanemight": {
 		onModifySpAPriority: 5,
 		onModifySpA: function(spa) {
 			return this.chainModify(2);
@@ -176,7 +176,7 @@ exports.abilities = {
 		num: -1014,
 	},
 	
-	terrify: {
+	"terrify": {
 		onStart: function(pokemon) {
 			let activated = false;
 			for (const target of pokemon.adjacentFoes()) {
@@ -197,7 +197,7 @@ exports.abilities = {
 		num: -1015,
 	},
 
-	charisma: {
+	"charisma": {
 		onSourceAfterFaint: function(length, target, source, effect) {
 			if (effect && effect.effectType === 'Move') {
 				this.boost({spa: length}, source);
@@ -209,7 +209,7 @@ exports.abilities = {
 		num: -1016,
 	},
 
-	mentalfortitue: {
+	"mentalfortitue": {
 		onDamagingHit: function(damage, target, source, effect) {
 			this.boost({spd: 1});
 		},
@@ -219,7 +219,7 @@ exports.abilities = {
 		num: -1017,
 	},
 
-	accelerationofruin: {
+	"accelerationofruin": {
 		onStart: function(pokemon) {
 			if (this.suppressingAbility(pokemon)) return;
 			this.add('-ability', pokemon, 'Acceleration of Ruin');
@@ -238,7 +238,7 @@ exports.abilities = {
 		num: -1018,
 	},
 
-	prismaticaura: {
+	"prismaticaura": {
 		onDamagingHitOrder: 1,
 		onDamagingHit: function(damage, target, source, move) {
 			if (move.basePower > 0 && !this.checkMoveMakesContact(move, source, target, true)) {
@@ -251,7 +251,7 @@ exports.abilities = {
 		num: -1019,
 	},
 
-	adaptivemastery: {
+	"adaptivemastery": {
 		onModifyAtkPriority: 5,
 		onModifyAtk: function(atk, attacker, defender, move) {
 			if (true) {
@@ -271,5 +271,73 @@ exports.abilities = {
 		rating: 3.5,
 		num: -1020,
 	},
+
+	"stormbloom": {
+		onStart: function(pokemon) {
+			this.field.setWeather('raindance');
+			this.field.weatherState.duration = 8;
+
+			this.field.setTerrain('grassyterrain');
+			this.field.terrainState.duration = 8;
+		},
+		flags: {},
+		name: "Stormbloom",
+		rating: 4,
+		num: -1021,
+	},
+
 	
-}
+	"solarmist": {
+		onStart: function(pokemon) {
+			this.field.setWeather('sunnyday');
+			this.field.weatherState.duration = 8;
+
+			this.field.setTerrain('mistyterrain');
+			this.field.terrainState.duration = 8;
+		},
+		flags: {},
+		name: "Solar Mist",
+		rating: 4,
+		num: -1022,
+	},
+	"desertmind": {
+		onStart: function(pokemon) {
+			this.field.setWeather('sandstorm');
+			this.field.weatherState.duration = 8;
+
+			this.field.setTerrain('psychicterrain');
+			this.field.terrainState.duration = 8;
+		},
+		flags: {},
+		name: "Desert Mind",
+		rating: 4,
+		num: -1023,
+	},
+	"frostvolt": {
+		onStart: function(pokemon) {
+			this.field.setWeather('snow');
+			this.field.weatherState.duration = 8;
+
+			this.field.setTerrain('electricterrain');
+			this.field.terrainState.duration = 8;
+		},
+		flags: {},
+		name: "Frostvolt",
+		rating: 4,
+		num: -1024,
+	},
+	"soulharvest": {
+		onSourceAfterFaint: function(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				this.heal(source.baseMaxhp / 4)
+				this.add('-heal', source, source.getHealth, '[silent]');
+
+			}
+		},
+		flags: {},
+		name: "Soul Harvest",
+		rating: 4,
+		num: -1025,
+	},
+
+} 
