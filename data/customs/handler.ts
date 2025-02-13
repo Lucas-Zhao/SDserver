@@ -424,6 +424,9 @@ export class Handler {
 	addPokemon(pokemon: Pokemon, opts: Dict<string>) {
 		console.log(Object.keys(this.pokedex));
 		pokemon.num = -(Object.keys(this.abilities as {}).length + 1000);
+		if(pokemon.abilities["1"] == null || pokemon.abilities["1"] == "null") delete pokemon.abilities["1"];
+		if(pokemon.abilities["H"] == null || pokemon.abilities["H"] == "null") delete pokemon.abilities["1"];
+
 		this.pokedex[this.toID(pokemon.name)] = pokemon;
 		this.convertToTxt("pokedex");
 		this.import("pokedex");

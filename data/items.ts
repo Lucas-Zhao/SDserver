@@ -8415,6 +8415,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "lucarionitex":{"name":"Lucarionite X","spritenum":594,"megaStone":"Lucario-Mega","megaEvolves":"Lucario","itemUser":["Lucario"],"num":-1000,"gen":6,"isNonstandard":"Past"}
 , "shucklionitex":{"name":"Shucklionite X","itemUser":["Shuckle"],"megaEvolves":"Shuckle-Mega","num":-1003,"isNonstandard":"Unobtainable"}
@@ -8422,7 +8426,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "lucarionitey":{"name":"Lucarionite Y","itemUser":["Lucario"],"megaEvolves":"Lucario-Mega-Y","num":-1005,"isNonstandard":"Unobtainable"}
 , "hydreigonite":{"name":"Hydreigonite","itemUser":["Hydreigon"],"megaEvolves":"Hydreigon-Mega","num":-1006,"isNonstandard":"Unobtainable"}
 , "hydreigonitey":{"name":"Hydreigonite Y","itemUser":["Hydreigon"],"megaEvolves":"Hydreigon-Mega-Y","num":-1006,"isNonstandard":"Unobtainable"}
-, "serperionite":{"name":"Serperionite","itemUser":["Serperior"],"megaEvolves":"Serperior-Mega","num":-1007,"isNonstandard":"Unobtainable","gen":0}
+, "serperionite":{"name":"Serperionite","itemUser":["Serperior"],"megaEvolves":"Serperior-Mega","num":-1008,"isNonstandard":"Unobtainable","gen":0}
 };
 /*FUNCTIONS*/
 undefined
