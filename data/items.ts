@@ -8419,6 +8419,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
 /*CUSTOM ITEMS*/
  "lucarionitex":{"name":"Lucarionite X","spritenum":594,"megaStone":"Lucario-Mega","megaEvolves":"Lucario","itemUser":["Lucario"],"num":-1000,"gen":6,"isNonstandard":"Past"}
 , "shucklionitex":{"name":"Shucklionite X","itemUser":["Shuckle"],"megaEvolves":"Shuckle-Mega","num":-1003,"isNonstandard":"Unobtainable"}
