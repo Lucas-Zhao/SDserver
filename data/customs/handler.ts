@@ -50,6 +50,7 @@ interface Pokemon {
 	formeOrder?: Array<string>;
 	requiredItem: string;
 	forme?: string
+	baseSpecies?:string
 }
 
 interface FormatsData {
@@ -448,8 +449,8 @@ export class Handler {
 			};
 			let data = {
 				name: pokemon.requiredItem,
-				megaEvolves: pokemon.name,
-				itemUser: [pokemon.prevo],
+				megaEvolves:[ pokemon.baseSpecies],
+				itemUser: [pokemon.baseSpecies],
 				functions: [{ name: "onTakeItem", body: func.toString() }],
 				shortDesc: `If held by a ${pokemon.name}, this item allows it to Mega Evolve in battle.`
 			};
