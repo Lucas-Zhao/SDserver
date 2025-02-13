@@ -20178,9 +20178,14 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	let toChangePokemon = [{"name":"lucario","evotype":"trade","from":"Lucario-Mega-X"}];
 	toChangePokemon.forEach((val) => {
 		//val = JSON.parse(val)
+		if(val.from.includes("-Mega")) {
+		if(!Pokedex[(val.name)].otherFormes) Pokedex[(val.name)].otherFormes = [];
+		Pokedex[(val.name)].otherFormes.push(val.from)
+		} else {
 		if (Pokedex[(val.name)].evos)
 			Pokedex[(val.name)]?.evos?.push(val.from);
 		if (!Pokedex[(val.name)].evos)
 			Pokedex[(val.name)]?.evos?.push(val.from);
+	}
 	});
 })();
