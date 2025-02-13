@@ -1,2 +1,3 @@
  "lucariomegax":{"name":"Lucario-Mega-X"}
 , "luca":{"name":"Luca"}
+, "zerapium":{"name":"Zerapium"}

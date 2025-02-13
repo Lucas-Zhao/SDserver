@@ -141,6 +141,7 @@ function addPokemon() {
 	if(body.isMega) {
 		delete body.pokemon.prevo;
 		body.pokemon.baseSpecies = getVal("prevo")
+		body.pokemon.forme = "Mega"
 	}
     // Make API request
     makePostRequest(apiUrl + "/addpokemon", body).then((response) => {

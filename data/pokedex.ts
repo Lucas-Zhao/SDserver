@@ -20166,6 +20166,27 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 
 /*CUSTOM POKEMONS*/
  "lucariomegax":{"name":"Lucario-Mega-X","types":["Normal","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":50,"atk":140,"def":80,"spa":140,"spd":70,"spe":140},"abilities":{"0":"Charisma","H":"Terrify"},"heightm":121,"weightkg":67,"evoType":"trade","requiredItem":"Lucarionite X","baseSpecies":"Lucario","num":-1021,"gen":9,"forme":"Mega"}
+, "zerapium":{"name":"Zerapium","types":["Normal","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":50,"atk":140,"def":80,"spa":140,"spd":70,"spe":140},"abilities":{"0":"Charisma","1":"Monsoon Surge","H":"Terrify"},"heightm":121,"weightkg":67,"evoType":"trade","num":-1021}
 
 };
  
+	/*
+	 function to add custom evolutions to existing pokemon,
+	 this is basically done to let existing pokemon have 
+	 the eviolite bonus if a custom pokemon is added as its evolution
+	*/ 
+			(() => {
+	let toChangePokemon = [{"name":"lucario","evotype":"trade","from":"Lucario-Mega-X"}];
+	toChangePokemon.forEach((val) => {
+		//val = JSON.parse(val)
+		if(val.from.includes("-Mega")) {
+		if(!Pokedex[(val.name)].otherFormes) Pokedex[(val.name)].otherFormes = [];
+		Pokedex[(val.name)].otherFormes.push(val.from)
+		} else {
+		if (Pokedex[(val.name)].evos)
+			Pokedex[(val.name)]?.evos?.push(val.from);
+		if (!Pokedex[(val.name)].evos)
+			Pokedex[(val.name)]?.evos?.push(val.from);
+	}
+	});
+})();

@@ -43,12 +43,12 @@ interface Pokemon {
 	heightm: number;
 	weightkg: number;
 	color?: string;
-	prevo: string;
+	prevo?: string;
 	evoLevel?: number;
 	eggGroups: Array<string>;
 	otherFormes?: Array<string>;
 	formeOrder?: Array<string>;
-	requiredItem: string;
+	requiredItem?: string;
 	forme?: string
 	baseSpecies?:string
 }
@@ -428,6 +428,9 @@ export class Handler {
 		pokemon.num = -(Object.keys(this.abilities as {}).length + 1000);
 		if(pokemon.abilities["1"] == null || pokemon.abilities["1"] == "null") delete pokemon.abilities["1"];
 		if(pokemon.abilities["H"] == null || pokemon.abilities["H"] == "null") delete pokemon.abilities["1"];
+		if(pokemon.prevo == null || pokemon.prevo == "null") delete pokemon.prevo
+		if(pokemon.requiredItem == null || pokemon.requiredItem == "null") delete pokemon.requiredItem
+
 
 		if(Array.isArray(opts.learnset)) {
 			let obj: Dict<string[]> = {}

@@ -40,10 +40,10 @@ function getPrevoPokemon(txt) {
 	let evos = [];
 	let jsonObj = JSON.parse("{" + txt + "}");
 	Object.values(jsonObj).forEach((val) => {
-		if (val.prevo)
+		if (val.prevo || val.baseSpecies)
 			evos.push(
 				JSON.stringify({
-					name: toID(val.prevo),
+					name: toID(val.prevo) || toID(val.baseSpecies),
 					evotype: val.evoType,
 					from: val.name,
 				})
