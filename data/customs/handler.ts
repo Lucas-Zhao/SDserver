@@ -427,6 +427,14 @@ export class Handler {
 		if(pokemon.abilities["1"] == null || pokemon.abilities["1"] == "null") delete pokemon.abilities["1"];
 		if(pokemon.abilities["H"] == null || pokemon.abilities["H"] == "null") delete pokemon.abilities["1"];
 
+		if(Array.isArray(opts.learnset)) {
+			let obj: Dict<string[]> = {}
+			opts.learnset.forEach((id:string) => {
+				obj[id] = ["9L4", "9L3"];
+			})
+			opts.learnset = obj
+		}
+
 		this.pokedex[this.toID(pokemon.name)] = pokemon;
 		this.convertToTxt("pokedex");
 		this.import("pokedex");

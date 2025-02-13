@@ -99716,5 +99716,5 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 
 /*CUSTOM LEARNSETS*/
  "shucklemega":{"learnset":{"tackle":["9L3"]}}
-, "serperiormega":{"learnset":["leafstorm","leafblade"]}
+, "serperiormega":{"learnset":{"leafstorm":["9L4","9L3"],"leafblade":["9L4","9L3"]}}
 };
