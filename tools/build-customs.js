@@ -80,10 +80,15 @@ let importPokedexData = () => {
 	let toChangePokemon = [${existingChanges}];
 	toChangePokemon.forEach((val) => {
 		//val = JSON.parse(val)
+		if(val.from.includes("-Mega")) {
+		if(!Pokedex[(val.name)].otherFormes) Pokedex[(val.name)].otherFormes = [];
+		Pokedex[(val.name)].otherFormes.push(val.from)
+		} else {
 		if (Pokedex[(val.name)].evos)
 			Pokedex[(val.name)]?.evos?.push(val.from);
 		if (!Pokedex[(val.name)].evos)
 			Pokedex[(val.name)]?.evos?.push(val.from);
+	}
 	});
 })();`;
 
