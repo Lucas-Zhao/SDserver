@@ -33,7 +33,8 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			"Max Level = 100",
 			"Default Level = 100",
 			"Obtainable Moves",
-			"Obtainable Abilities"
+			"Obtainable Abilities",
+			"Terastal Clause"
 		],
 	},
 
