@@ -371,7 +371,7 @@ let h = new handler();
 h.loadFiles();
 h.addText("pokedex", { name: "Luca" });
 h.addLearnset({ learnset: { tackle: ["9L3"] } }, "shucklemega");
-
+/*
 let abs = require("./test.js").abilities;
 Object.keys(abs).forEach((key) => {
 	let ability = abs[key]
@@ -390,5 +390,5 @@ Object.keys(abs).forEach((key) => {
 	h.addAbility(ability )
 
 })
-	
+	*/
 //console.log(h)
