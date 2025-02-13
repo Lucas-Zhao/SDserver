@@ -5667,33 +5667,59 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*CUSTOM ABILITIES*/
- "monsoonsurge":{"name":"Monsoon Surge","flags":{},"num":-1022,"rating":4}
-, "blizzardveil":{"name":"Blizzard Veil","flags":{},"num":-1022,"rating":4}
-, "sandstormrage":{"name":"Sandstorm Rage","flags":{},"num":-1022,"rating":4}
-, "solarflare":{"name":"Solar Flare","flags":{},"num":-1022,"rating":4}
-, "eerieresonance":{"name":"Eerie Resonance","flags":{},"num":-1022,"rating":4}
-, "mindscapedomain":{"name":"Mindscape Domain","flags":{},"num":-1022,"rating":4}
-, "verdantbloom":{"name":"Verdant Bloom","flags":{},"num":-1022,"rating":4}
-, "mystichaze":{"name":"Mystic Haze","flags":{},"num":-1022,"rating":4}
-, "tundrecore":{"name":"Tundre Core","flags":{},"num":-1022,"rating":4}
-, "desertheart":{"name":"Desert Heart","flags":{},"num":-1022,"rating":4}
-, "aquacircuit":{"name":"Aqua Circuit","flags":{},"num":-1022,"rating":4}
-, "psychicpulse":{"name":"Psychic Pulse","flags":{},"num":-1022,"rating":4}
-, "mysticaura":{"name":"Mystic Aura","flags":{},"num":-1022,"rating":4}
-, "overgrowthengine":{"name":"Overgrowth Engine","flags":{},"num":-1022,"rating":4}
-, "arcanemight":{"name":"Arcane Might","flags":{},"num":-1022,"rating":5}
-, "terrify":{"name":"Terrify","flags":{},"num":-1022,"rating":3.5}
-, "charisma":{"name":"Charisma","flags":{},"num":-1022,"rating":3}
-, "mentalfortitude":{"name":"Mental Fortitude","flags":{},"num":-1022,"rating":4}
-, "accelerationofruin":{"name":"Acceleration of Ruin","flags":{},"num":-1022,"rating":4.5}
-, "prismaticaura":{"name":"Prismatic Aura","flags":{},"num":-1022,"rating":2.5}
-, "adaptivemastery":{"name":"Adaptive Mastery","flags":{},"num":-1022,"rating":3.5}
-, "stormbloom":{"name":"Stormbloom","flags":{},"num":-1022,"rating":4}
-, "solarmist":{"name":"Solar Mist","flags":{},"num":-1023,"rating":4}
-, "desertmind":{"name":"Desert Mind","flags":{},"num":-1024,"rating":4}
-, "frostvolt":{"name":"Frostvolt","flags":{},"num":-1025,"rating":4}
-, "soulharvest":{"name":"Soul Harvest","flags":{},"num":-1026,"rating":4}
+ "monsoonsurge":{"name":"Monsoon Surge","flags":{},"num":-1027,"rating":4}
+, "blizzardveil":{"name":"Blizzard Veil","flags":{},"num":-1027,"rating":4}
+, "sandstormrage":{"name":"Sandstorm Rage","flags":{},"num":-1027,"rating":4}
+, "solarflare":{"name":"Solar Flare","flags":{},"num":-1027,"rating":4}
+, "eerieresonance":{"name":"Eerie Resonance","flags":{},"num":-1027,"rating":4}
+, "mindscapedomain":{"name":"Mindscape Domain","flags":{},"num":-1027,"rating":4}
+, "verdantbloom":{"name":"Verdant Bloom","flags":{},"num":-1027,"rating":4}
+, "mystichaze":{"name":"Mystic Haze","flags":{},"num":-1027,"rating":4}
+, "tundrecore":{"name":"Tundre Core","flags":{},"num":-1027,"rating":4}
+, "desertheart":{"name":"Desert Heart","flags":{},"num":-1027,"rating":4}
+, "aquacircuit":{"name":"Aqua Circuit","flags":{},"num":-1027,"rating":4}
+, "psychicpulse":{"name":"Psychic Pulse","flags":{},"num":-1027,"rating":4}
+, "mysticaura":{"name":"Mystic Aura","flags":{},"num":-1027,"rating":4}
+, "overgrowthengine":{"name":"Overgrowth Engine","flags":{},"num":-1027,"rating":4}
+, "arcanemight":{"name":"Arcane Might","flags":{},"num":-1027,"rating":5}
+, "terrify":{"name":"Terrify","flags":{},"num":-1027,"rating":3.5}
+, "charisma":{"name":"Charisma","flags":{},"num":-1027,"rating":3}
+, "mentalfortitude":{"name":"Mental Fortitude","flags":{},"num":-1027,"rating":4}
+, "accelerationofruin":{"name":"Acceleration of Ruin","flags":{},"num":-1027,"rating":4.5}
+, "prismaticaura":{"name":"Prismatic Aura","flags":{},"num":-1027,"rating":2.5}
+, "adaptivemastery":{"name":"Adaptive Mastery","flags":{},"num":-1027,"rating":3.5}
+, "stormbloom":{"name":"Stormbloom","flags":{},"num":-1027,"rating":4}
+, "solarmist":{"name":"Solar Mist","flags":{},"num":-1027,"rating":4}
+, "desertmind":{"name":"Desert Mind","flags":{},"num":-1027,"rating":4}
+, "frostvolt":{"name":"Frostvolt","flags":{},"num":-1027,"rating":4}
+, "soulharvest":{"name":"Soul Harvest","flags":{},"num":-1027,"rating":4}
 
 };
 /*FUNCTIONS*/
@@ -5861,24 +5887,7 @@ Abilities["adaptivemastery"].onModifyAtk = function(atk, attacker, defender, mov
 				return this.chainModify(1.5);
 			}
 		}
-//adaptivemasterystart
-
-Abilities["adaptivemastery"].onModifySpA = function(atk, attacker, defender, move) {
-			if (true) {
-				this.debug('Adaptive Mastery boost');
-				return this.chainModify(1.5);
-			}
-		}
-
-Abilities["adaptivemastery"].onModifyAtk = function(atk, attacker, defender, move) {
-			if (true) {
-				this.debug('Adaptive Mastery boost');
-				return this.chainModify(1.5);
-			}
-		}
-
 //adaptivemasteryend//stormbloomstart
-
 Abilities["stormbloom"].onStart = function(pokemon) {
 			this.field.setWeather('raindance');
 			this.field.weatherState.duration = 8;
@@ -5886,9 +5895,7 @@ Abilities["stormbloom"].onStart = function(pokemon) {
 			this.field.setTerrain('grassyterrain');
 			this.field.terrainState.duration = 8;
 		}
-
 //stormbloomend//solarmiststart
-
 Abilities["solarmist"].onStart = function(pokemon) {
 			this.field.setWeather('sunnyday');
 			this.field.weatherState.duration = 8;
@@ -5896,9 +5903,7 @@ Abilities["solarmist"].onStart = function(pokemon) {
 			this.field.setTerrain('mistyterrain');
 			this.field.terrainState.duration = 8;
 		}
-
 //solarmistend//desertmindstart
-
 Abilities["desertmind"].onStart = function(pokemon) {
 			this.field.setWeather('sandstorm');
 			this.field.weatherState.duration = 8;
@@ -5906,9 +5911,7 @@ Abilities["desertmind"].onStart = function(pokemon) {
 			this.field.setTerrain('psychicterrain');
 			this.field.terrainState.duration = 8;
 		}
-
 //desertmindend//frostvoltstart
-
 Abilities["frostvolt"].onStart = function(pokemon) {
 			this.field.setWeather('snow');
 			this.field.weatherState.duration = 8;
@@ -5916,9 +5919,7 @@ Abilities["frostvolt"].onStart = function(pokemon) {
 			this.field.setTerrain('electricterrain');
 			this.field.terrainState.duration = 8;
 		}
-
 //frostvoltend//soulharveststart
-
 Abilities["soulharvest"].onSourceAfterFaint = function(length, target, source, effect) {
 			if (effect && effect.effectType === 'Move') {
 				console.log(source)
@@ -5927,5 +5928,4 @@ Abilities["soulharvest"].onSourceAfterFaint = function(length, target, source, e
 				this.add('-heal', source, source.getHealth, 'ability: Soul Harvest');
 			}
 		}
-
 //soulharvestend

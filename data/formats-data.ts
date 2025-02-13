@@ -6035,5 +6035,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 /*CUSTOM FORMATS*/
  "lucariomegax":{"tier":"Legacy","natDexTier":"Legacy"}
 , "zerapium":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
+, "rizaxe":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
 
 };
