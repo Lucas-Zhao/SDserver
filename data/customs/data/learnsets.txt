@@ -1,7 +1,1 @@
- "zerapium":{"learnset":{"tailwhip":["9L4","7L4","6L4","5L4"]}}
-, "shucklemega":{"learnset":{"tackle":["9L3"]}}
-, "megalucariox":{"learnset":{"aurasphere":["9L4"],"closecombat":["9L4"]}}
-, "megalucarioy":{"learnset":{"aurasphere":["9L4"]}}
-, "megazoroark":{"learnset":{"aurasphere":["9L4"],"closecombat":["9L4"]}}
-, "lucariomegay":{"learnset":{"aurasphere":["9L4"]}}
-, "hydreigonmega":{"learnset":{"aurasphere":["9L4"],"closecombat":["9L4"],"machpunch":["9L4"],"raindance":["9L4"]}}
+ "shucklemega":{"learnset":{"tackle":["9L3"]}}

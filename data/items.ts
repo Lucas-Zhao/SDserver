@@ -8391,12 +8391,26 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*CUSTOM ITEMS*/
  "lucarionitex":{"name":"Lucarionite X","spritenum":594,"megaStone":"Lucario-Mega","megaEvolves":"Lucario","itemUser":["Lucario"],"num":-1000,"gen":6,"isNonstandard":"Past"}
 , "shucklionitex":{"name":"Shucklionite X","itemUser":["Shuckle"],"megaEvolves":"Shuckle-Mega","num":-1003,"isNonstandard":"Unobtainable"}
 , "zoroarkium":{"name":"Zoroarkium","itemUser":["Zoroark"],"megaEvolves":"Mega Zoroark","num":-1003,"isNonstandard":"Unobtainable"}
 , "lucarionitey":{"name":"Lucarionite Y","itemUser":["Lucario"],"megaEvolves":"Lucario-Mega-Y","num":-1005,"isNonstandard":"Unobtainable"}
 , "hydreigonite":{"name":"Hydreigonite","itemUser":["Hydreigon"],"megaEvolves":"Hydreigon-Mega","num":-1006,"isNonstandard":"Unobtainable"}
+, "hydreigonitey":{"name":"Hydreigonite Y","itemUser":["Hydreigon"],"megaEvolves":"Hydreigon-Mega-Y","num":-1006,"isNonstandard":"Unobtainable"}
 };
 /*FUNCTIONS*/
 undefined

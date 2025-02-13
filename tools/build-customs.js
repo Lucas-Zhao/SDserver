@@ -4,29 +4,30 @@ const path = require("path");
 const customPath = path.join(path.resolve(), "/data/customs/data");
 const dataPath = path.join(path.resolve(), "/data");
 
-const { execSync,fork } = require("child_process");
+const { execSync, fork } = require("child_process");
 const { toID } = require("../sim/dex-data");
 
 const { spawn } = require("child_process");
 
-if(!fs.existsSync(path.join(path.resolve(), "/data/customs/"))) {
-	console.log("[WARNING] Customs direcotry does not exist, this is either a mistake or an indication that this is a client project\nAborting importing custom pokemon data.. ");
+const MAIN_PATH = path.join(path.resolve(), "..");
+
+if (!fs.existsSync(path.join(path.resolve(), "/data/customs/"))) {
+	console.log(
+		"[WARNING] Customs direcotry does not exist, this is either a mistake or an indication that this is a client project\nAborting importing custom pokemon data.. "
+	);
 	return;
 }
 
 function startApi() {
-// Path to the API script
-const apiScript = "./dist/data/customs/api.js"; // Replace with your API script path
+	// Path to the API script
+	const apiScript = "./dist/data/customs/api.js"; // Replace with your API script path
 
-const child = fork(apiScript);
+	const child = fork(apiScript);
 
-child.on("message", (message) => {
-  console.log("Message from child:", message);
-});
-
-
+	child.on("message", (message) => {
+		console.log("Message from child:", message);
+	});
 }
-
 
 function getCustomPath(file) {
 	return customPath + "/" + file + ".txt";
@@ -52,7 +53,6 @@ function getPrevoPokemon(txt) {
 }
 
 const args = process.argv.slice(2);
-
 
 let importPokedexData = () => {
 	let customdexFilePath = getCustomPath("pokedex");
@@ -111,6 +111,41 @@ let importPokedexData = () => {
 	}
 };
 
+let importTextData = () => {
+	let txtFiles = ["pokedex", "abilities", "items"];
+	txtFiles.forEach((file) => {
+		let customdexFilePath = getCustomPath("text/" + file);
+		let pokedexFilePath = (sourceFilePath = getDataPath("text/" + file));
+		try {
+			console.log(`Importing custom ${file} text data...`);
+			const customFileContent = fs.readFileSync(customdexFilePath, "utf-8");
+			const pokedexFileContent = fs.readFileSync(sourceFilePath, "utf-8");
+
+			const newEntries = customFileContent;
+			const oldEntries = pokedexFileContent.split("/*CUSTOM TEXTS*/");
+
+			let bufFunc = ``;
+
+			if (oldEntries[1]) {
+				oldEntries[0] += `/*CUSTOM TEXTS*/\n${newEntries}\n};\n ${bufFunc}`;
+				fs.writeFileSync(pokedexFilePath, oldEntries[0], "utf-8");
+				console.log(`Custom ${file} text imported succesfully!`);
+				return;
+			}
+			const updatedContent = pokedexFileContent.replace(
+				/};\s*$/,
+				`\n/*CUSTOM TEXTS*/\n${newEntries}\n};\n`
+			);
+
+			fs.writeFileSync(pokedexFilePath, updatedContent, "utf-8");
+
+			console.log("New entries appended successfully!");
+		} catch (error) {
+			console.error("Error appending new entries:", error);
+		}
+	});
+};
+
 let importFormatsData = () => {
 	let customdexFilePath = getCustomPath("formats-data");
 	let pokedexFilePath = (sourceFilePath = getDataPath("formats-data"));
@@ -141,7 +176,6 @@ let importFormatsData = () => {
 	}
 };
 
-
 let importAbilitiesData = () => {
 	let customdexFilePath = getCustomPath("abilities");
 	let pokedexFilePath = (sourceFilePath = getDataPath("abilities"));
@@ -157,7 +191,7 @@ let importAbilitiesData = () => {
 
 		if (oldEntries[1]) {
 			oldEntries[0] += `\n/*CUSTOM ABILITIES*/\n${newEntries[0]}};`;
-			oldEntries[0] += `\n/*FUNCTIONS*/\n${newEntries[1]}` 
+			oldEntries[0] += `\n/*FUNCTIONS*/\n${newEntries[1]}`;
 			const updatedContent = pokedexFileContent.replace(
 				/};\s*$/,
 				`\n/*CUSTOM ABILITIES*/\n${newEntries}};\n`
@@ -196,7 +230,7 @@ let importItemsData = () => {
 
 		if (oldEntries[1]) {
 			oldEntries[0] += `\n/*CUSTOM ITEMS*/\n${newEntries[0]}};`;
-			oldEntries[0] += `\n/*FUNCTIONS*/\n${newEntries[1]}`
+			oldEntries[0] += `\n/*FUNCTIONS*/\n${newEntries[1]}`;
 			const updatedContent = pokedexFileContent.replace(
 				/};\s*$/,
 				`\n/*CUSTOM ITEMS*/\n${newEntries}};\n`
@@ -255,12 +289,20 @@ let importLearnsetsData = () => {
 };
 
 let importCustomData = () => {
+	this.importTextData();
 	this.importPokedexData();
-	this.importLearnsetsData()
+	this.importLearnsetsData();
 	this.importAbilitiesData();
 	this.importItemsData();
 };
 
+let updateRepo = (msg) => {
+	execSync("git add .",{cwd : MAIN_PATH + "/pokemon-showdown"})
+	execSync(`git commit -m "[Automated Push] ${msg}"`,{cwd : MAIN_PATH + "/pokemon-showdown"})
+	execSync(`git push origin2`,{cwd : MAIN_PATH + "/pokemon-showdown"})
+}
+
+exports.importTextData = importTextData;
 exports.importPokedexData = importPokedexData;
 exports.importFormatsData = importFormatsData;
 exports.importAbilitiesData = importAbilitiesData;
@@ -268,36 +310,50 @@ exports.importItemsData = importItemsData;
 exports.importLearnsetsData = importLearnsetsData;
 exports.importCustomData = importCustomData;
 
-
-if(args.length) {
+if (args.length) {
 	args.forEach((arg) => {
 		//console.log(this)
 
-		switch(arg) {
-			case "pokedex": importPokedexData();
-			break;
-			case "abilities": importAbilitiesData();
-			break;
-			case "items": importItemsData();
-			break;
-			case "learnsets": importLearnsetsData();
-			break;
-			case "formats-data": importFormatsData();
-			break;
-			case "apistart": startApi();
-			break;
-			default: importCustomData();
+		switch (arg) {
+			case "pokedex":
+				importPokedexData();
+				break;
+			case "abilities":
+				importAbilitiesData();
+				break;
+			case "items":
+				importItemsData();
+				break;
+			case "learnsets":
+				importLearnsetsData();
+				break;
+			case "formats-data":
+				importFormatsData();
+				break;
+			case "text/pokedex":
+				importTextData();
+				break;
+			case "apistart":
+				startApi();
+				break;
+			case "updaterepo":
+				updateRepo();
+				break;
+			case "updateclient":
+				updateClient();
+			default:
+				importCustomData();
 		}
-	})
+	});
 	return;
 }
 /* TEST FUNCTIONS, SHOULD BE REMOVED AFTER USE */
 
-let handler = require("../dist/data/customs/handler").Handler
-let h = new handler()
-h.loadFiles()
-
-h.addLearnset({learnset:{"tackle": ["9L3"]}},"shucklemega")
+let handler = require("../dist/data/customs/handler").Handler;
+let h = new handler();
+h.loadFiles();
+h.addText("pokedex", { name: "Luca" });
+h.addLearnset({ learnset: { tackle: ["9L3"] } }, "shucklemega");
 /*
 let abs = require("./test.js").abilities;
 Object.keys(abs).forEach((key) => {

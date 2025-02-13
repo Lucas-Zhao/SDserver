@@ -2268,4 +2268,8 @@ export const AbilitiesText: {[id: IDEntry]: AbilityText} = {
 
 		activate: "  [POKEMON] extends [MOVE] by 2 turns!",
 	},
+
+/*CUSTOM TEXTS*/
+
 };
+ 

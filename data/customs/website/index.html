@@ -47,7 +47,7 @@
                 <div class="form-column">
                     <div class="form-group">
                         <label>Name</label>
-                        <input type="text" id="name" placeholder="Mega-Lucario-X">
+                        <input type="text" id="name" placeholder="Lucario-Mega-X">
                     </div>
 
                     <div class="form-group">
@@ -84,8 +84,16 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Abilities</label>
-                        <input type="text" id="ability" placeholder="Levitate, Wonder Guard">
+                        <label>Ability 1</label>
+                        <input type="text" id="ability1" placeholder="Levitate, Wonder Guard">
+                    </div>
+                    <div class="form-group">
+                        <label>Ability 2</label>
+                        <input type="text" id="ability2" placeholder="Levitate, Wonder Guard">
+                    </div>
+                    <div class="form-group">
+                        <label>Hidden Ability</label>
+                        <input type="text" id="hiddenAbility" placeholder="Levitate, Wonder Guard">
                     </div>
                 </div>
 
@@ -176,5 +184,13 @@
 
    
 </body>
+<script>
+    	const form = document.getElementById('myForm');
+    form.addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent the default form submission behavior
+      console.log('Form submission prevented.');
+      // Handle form data here, e.g., validate or send with fetch
+    });
+</script>
 <script src='index.js'></script>
 </html>

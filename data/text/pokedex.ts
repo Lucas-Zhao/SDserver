@@ -3769,5 +3769,10 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 	},
 	zerapium: {
 		name: "Zerapium"
-	}
+	},
+
+/*CUSTOM TEXTS*/
+ "luca":{"name":"Luca"}
+
 };
+ 

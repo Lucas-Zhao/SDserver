@@ -2440,4 +2440,11 @@ export const ItemsText: {[id: IDEntry]: ItemText} = {
 		name: "Vile Vial",
 		shortDesc: "If held by a Venomicon, its Poison- and Flying-type attacks have 1.2x power.",
 	},
+
+/*CUSTOM TEXTS*/
+lucarionitey: {
+		name: "Lucarionite Y",
+		shortDesc: "If held by a Lucario, this item allows it to Mega Evolve in battle.",
+	}
 };
+ 

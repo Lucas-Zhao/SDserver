@@ -5719,6 +5719,18 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /*CUSTOM ABILITIES*/
  "monsoonsurge":{"flags":{},"name":"Monsoon Surge","rating":4,"num":2}
 , "blizzardveil":{"name":"Blizzard Veil","flags":{},"num":-2,"rating":4}

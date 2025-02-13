@@ -6044,5 +6044,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "megazoroark":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
 , "lucariomegay":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
 , "hydreigonmega":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
+, "hydreigonmegay":{"isNonstandard":"Unobtainable","tier":"Legacy","natDexTier":"Legacy"}
 
 };

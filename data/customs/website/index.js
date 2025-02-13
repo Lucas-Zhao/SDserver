@@ -1,3 +1,5 @@
+const {url} = require("inspector");
+
 (function() {
 	window.toID = function(text){
 		if (typeof text !== "string") {
@@ -13,12 +15,7 @@
 		return;
 	}
 	window.sessionId = sessionId;
-	const form = document.getElementById('myForm');
-    form.addEventListener('submit', function (event) {
-      event.preventDefault(); // Prevent the default form submission behavior
-      console.log('Form submission prevented.');
-      // Handle form data here, e.g., validate or send with fetch
-    });
+
 })()
 const apiUrl = "http://localhost:3000";
 
@@ -46,41 +43,102 @@ const makePostRequest = async (url, body) => {
   };
 
   function getVal(id) {
-	return document.getElementById(id).value;
+	return document.getElementById(id).value.trim(); // Trim to remove unnecessary spaces
   }
-
-function addPokemon() {
+  
+  function capitalizeWords(str) {
+	return str
+	  .split("-")
+	  .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+	  .join("-");
+  }
+  
+  function validatePokemon(body) {
+	// Name validation
+	if (!body.pokemon.name) {
+	  throw new Error("The Pokémon name is required.");
+	}
+	if (body.pokemon.name.startsWith("Mega")) {
+	  throw new Error("The Pokémon name cannot start with 'Mega'.");
+	}
+	if (body.pokemon.name.includes(" ")) {
+	  throw new Error("The Pokémon name should not include spaces. Use '-' instead.");
+	}
+  
+	// Base stats validation
+	if (
+	  !body.pokemon.baseStats ||
+	  Object.values(body.pokemon.baseStats).some((stat) => isNaN(stat) || stat <= 0)
+	) {
+	  throw new Error("Base stats are required and must all be positive numbers.");
+	}
+  
+	// Abilities validation
+	if (!body.pokemon.abilities || Object.keys(body.pokemon.abilities).length === 0) {
+	  throw new Error("At least one ability is required.");
+	}
+  
+	// Mega Pokémon validation
+	if (body.isMega && !body.pokemon.requiredItem) {
+	  throw new Error("A Mega Pokémon must have a required item.");
+	}
+  
+	// Moveset validation
+	if (!body.learnset || Object.keys(body.learnset).length === 0) {
+	  throw new Error("A moveset is required for the Pokémon.");
+	}
+  }
+  
+  
+  function addPokemon() {
 	try {
-	console.log("test")
-	let body =	{
+	  console.log("test");
+  
+	  let nameInput = getVal("name");
+	  let formattedName = capitalizeWords(nameInput);
+  
+	  let body = {
 		pokemon: {
-		  name: getVal("name"),
-		  types: getVal("type2") == getVal("type1") ? [getVal("type1")] : [getVal("type2"),getVal("type1")],
+		  name: formattedName,
+		  types:
+			getVal("type2") === getVal("type1")
+			  ? [getVal("type1")]
+			  : [getVal("type1"), getVal("type2")],
 		  genderRatio: { M: 0.875, F: 0.125 },
-		  baseStats: { hp: parseInt(getVal("hp")), atk: parseInt(getVal("atk")), def: parseInt(getVal("def")), spa: parseInt(getVal("spa")), spd: parseInt(getVal("spd")), spe: parseInt(getVal("spe")) },
-		  abilities: {},
-		  heightm: getVal("weight"),
-		  weightkg: getVal("height"),
-		 // color: "Blue",
-		  prevo: getVal("prevo"),
+		  baseStats: {
+			hp: parseInt(getVal("hp")),
+			atk: parseInt(getVal("atk")),
+			def: parseInt(getVal("def")),
+			spa: parseInt(getVal("spa")),
+			spd: parseInt(getVal("spd")),
+			spe: parseInt(getVal("spe")),
+		  },
+		  abilities: {
+			primary: getVal("ability1"),
+			secondary: getVal("ability2") || null,
+			hidden: getVal("hiddenAbility") || null,
+		  },
+		  heightm: parseFloat(getVal("height")),
+		  weightkg: parseFloat(getVal("weight")),
+		  prevo: getVal("prevo") || null,
 		  evoType: "trade",
-		  requiredItem: getVal("requiredItem")
-		 // evoCondition: "during the day",
+		  requiredItem: getVal("requiredItem") || null,
 		},
-		
-		  isMega: getVal("ismega") === "yes",
-		  learnset: {},
-		}
+		isMega: getVal("ismega").toLowerCase() === "yes",
+		learnset: {},
+	  };
+  
+	  // Validate Pokémon data
+		validatePokemon(body);
 
-	if(getVal("requiredItem").length > 2) body.pokemon.requiredItem = getVal("requiredItem")
-		getVal("moveset").split(",").forEach((move) => {
-			body.learnset[toID(move)] = ["9L4"]
-		})
-		getVal("ability").split(",").forEach((ab,i) => {
-			body.pokemon.abilities[i] = ab;
-		})
-	  
-	  
-	makePostRequest(apiUrl + "/addpokemon", body);
-	} catch(e) { console.log(e) }
-}
+		makePostRequest(url + "/addpokemon",body)
+	  // Log or process the Pokémon data
+	  console.log("Pokémon added successfully:", body);
+  
+	  // Add further processing (e.g., sending it to a server)
+	} catch (error) {
+	  console.error("Error adding Pokémon:", error.message);
+	  alert(error.message); // Provide feedback to the user
+	}
+  }
+  

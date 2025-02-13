@@ -83,6 +83,7 @@ export class Handler {
 	abilities: Dict<Ability>;
 	learnsets: Dict<Learnset>;
 	formatsdata: Dict<FormatsData>;
+	texts: Dict<Dict<string>>
 
 	pokedexIds?: Array<string>;
 	itemsIds?: Array<string>;
@@ -99,6 +100,11 @@ export class Handler {
 		this.learnsets = {};
 		this.formatsdata = {};
 		this.funcTxt = ["abilities", "items", "moves"];
+		this.texts = {
+			pokedex:{},
+			abilities:{},
+			items:{}
+		}
 		this.loadFiles();
 	}
 
@@ -149,11 +155,49 @@ export class Handler {
 		if (file == "abilities") this.abilities = parsedJson;
 		if (file == "formats-data") this.formatsdata = parsedJson;
 	}
+	loadText(file: DataFile): void {
+		let fileTypes = Object.keys(this.texts);
+		if (!fileTypes.includes(file)) return 
+		let filePath: string = this.getDir("text/" + file);
+		if (!fsSync.existsSync(filePath))
+			return console.log(
+				"Data file is a valid file but does not exist.. aborting.."
+			);
+
+		let content = fsSync
+			.readFileSync(filePath)
+			.toString()
+			.split("/*FUNCTIONS*/")[0];
+		console.log("Loading text data from " + file + "..");
+		let json = "{" + content + "}";
+		let parsedJson;
+		try {
+			parsedJson = JSON.parse(json);
+		} catch (e) {
+			throw new Error(
+				"Error: could not parse json content, please make sure the file follows the json syntax, aborting... (file: " +
+					file +
+					")"
+			);
+		}
+
+		let keys = Object.keys(parsedJson);
+
+		if (file == "pokedex") this.texts.pokedex = parsedJson;
+		if (file == "items") this.texts.items = parsedJson;
+		//if(file == "moves") this.moves = keys
+		//if (file == "learnsets") this.learnsets = parsedJson;
+		if (file == "abilities") this.texts.abilities = parsedJson;
+		//if (file == "formats-data") this.formatsdata = parsedJson;
+		console.log(this.texts)
+	}
+
 
 	loadFiles() {
 		try {
 			fileTypes.forEach((file) => {
 				this.load(file);
+				this.loadText(file)
 			});
 		} catch (e) {
 			this.print("Error loading files: " + e.message);
@@ -341,6 +385,7 @@ export class Handler {
 			isNonstandard: "Unobtainable",
 		};
 		this.convertToTxt("items");
+		this.addText("items",{name:data.name,shortDesc:data.shortDesc})
 
 		this.import("items");
 		return true;
@@ -398,6 +443,7 @@ export class Handler {
 			let data = { learnset: opts.learnset as {} };
 			this.addLearnset(data, pokemon.name);
 		}
+		this.addText("pokedex",{name:pokemon.name})
 		this.addFormatData(
 			{
 				isNonstandard: "Unobtainable",
@@ -424,16 +470,32 @@ export class Handler {
 		this.import("learnsets");
 	}
 
-	convertToTxt(file: DataFile): string {
+	addText(type:DataFile,data:any) {
+		let json = JSON.stringify(data);
+		if(type == "pokedex") this.texts.pokedex[this.toID(data.name)] = data;
+		if(type == "abilities") this.texts.abilities[this.toID(data.name)] = data;
+		if(type == "items") this.texts.items[this.toID(data.name)] = data;
+		this.convertToTxt(type,true);
+		this.import(type,true)
+	}
+
+	convertToTxt(file: DataFile, txtFile:boolean = false): string {
 		console.log("converting...");
 		if (!file) return "";
-		let filePath = this.getDir(file);
+		let filePath = this.getDir(txtFile ? "text/" + file : file);
 		let fileid = this.toID(file);
 		let buffer = ``;
+		if(!txtFile) {
 		Object.keys(this[fileid]).forEach((id, i) => {
 			let data = this[fileid][id];
 			buffer += `${i ? "," : ""} "${id}":${JSON.stringify(data)}\n`;
 		});
+	} else {
+		Object.keys(this.texts[fileid]).forEach((id, i) => {
+			let data = this.texts[fileid][id];
+			buffer += `${i ? "," : ""} "${id}":${JSON.stringify(data)}\n`;
+		});
+	}
 		if (this.funcTxt.includes(file)) {
 			let content = fsSync
 				.readFileSync(filePath)
@@ -447,12 +509,12 @@ export class Handler {
 		return buffer;
 	}
 
-	import(file: DataFile) {
+	import(file: DataFile,txt:boolean = false) {
 		exec(
 			`node "${path.join(
 				path.resolve(),
 				"/tools/build-customs.js"
-			)}" ${file}`,
+			)}" ${txt ? "text/" + file : file}`,
 			(error, stdout, stderr) => {
 				if (error) return console.error(`Error: ${error.message}`);
 				if (stderr) return console.error(`Stderr: ${stderr}`);
