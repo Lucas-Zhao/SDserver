@@ -366,11 +366,6 @@ try {
 }
 /* TEST FUNCTIONS, SHOULD BE REMOVED AFTER USE */
 
-let handler = require("../dist/data/customs/handler").Handler;
-let h = new handler();
-h.loadFiles();
-h.addText("pokedex", { name: "Luca" });
-h.addLearnset({ learnset: { tackle: ["9L3"] } }, "shucklemega");
 /*
 let abs = require("./test.js").abilities;
 Object.keys(abs).forEach((key) => {

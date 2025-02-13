@@ -124,7 +124,7 @@ export class Handler {
 		let filePath: string = this.getDir(file);
 		if (!fsSync.existsSync(filePath))
 			return console.log(
-				"Data file is a valid file but does not exist.. aborting.."
+				"Data file is a valid file but does not exist.. aborting.. (" + file + ")"
 			);
 
 		let content = fsSync
@@ -164,7 +164,7 @@ export class Handler {
 		let filePath: string = this.getDir("text/" + file);
 		if (!fsSync.existsSync(filePath))
 			return console.log(
-				"Data file is a valid file but does not exist.. aborting.."
+				"Data file is a valid file but does not exist.. aborting..(" + file + ")"
 			);
 
 		let content = fsSync
@@ -192,7 +192,7 @@ export class Handler {
 		//if (file == "learnsets") this.learnsets = parsedJson;
 		if (file == "abilities") this.texts.abilities = parsedJson;
 		//if (file == "formats-data") this.formatsdata = parsedJson;
-		console.log(this.texts)
+		//console.log(this.texts)
 	}
 
 
@@ -311,7 +311,7 @@ export class Handler {
 	getFunctions(content: string, name: string) {
 		const regex = new RegExp(`//${name}start([\\s\\S]*?)//${name}end`, "g");
 		const match = content.match(regex);
-		console.log(match);
+		//console.log(match);
 		if (match)
 			return match[0]
 				.replace(`//${name}start`, "")
@@ -353,7 +353,7 @@ export class Handler {
 				: new Function(...func.params, func.body);
 
 			//buffer += this.getFunctions(content,this.toID(ability.name))
-			console.log(buffer);
+			//console.log(buffer);
 			buffer += `\nAbilities["${this.toID(ability.name)}"].${
 				func.name
 			} = ${funcc.toString()}\n`;
@@ -406,7 +406,7 @@ export class Handler {
 				: new Function(...func.params, func.body);
 
 			//buffer += this.getFunctions(content,this.toID(ability.name))
-			console.log(buffer);
+			//console.log(buffer);
 			buffer += `\nItems["${this.toID(item.name)}"].${
 				func.name
 			} = ${funcc.toString()}\n`;
@@ -424,7 +424,7 @@ export class Handler {
 	}
 
 	addPokemon(pokemon: Pokemon, opts: Dict<string>) {
-		console.log(Object.keys(this.pokedex));
+		//console.log(Object.keys(this.pokedex));
 		pokemon.num = -(Object.keys(this.abilities as {}).length + 1000);
 		if(pokemon.abilities["1"] == null || pokemon.abilities["1"] == "null") delete pokemon.abilities["1"];
 		if(pokemon.abilities["H"] == null || pokemon.abilities["H"] == "null") delete pokemon.abilities["1"];
@@ -475,7 +475,7 @@ export class Handler {
 	}
 
 	addFormatData(data: FormatsData, name: string) {
-		console.log(Object.keys(this.formatsdata));
+		//console.log(Object.keys(this.formatsdata));
 		//pokemon.num = -(Object.keys(this.abilities as {}).length + 1000)
 		this.formatsdata[this.toID(name)] = data;
 		this.convertToTxt("formats-data");
@@ -483,7 +483,7 @@ export class Handler {
 	}
 
 	addLearnset(data: Learnset, name: string) {
-		console.log(Object.keys(this.learnsets));
+		//console.log(Object.keys(this.learnsets));
 		//pokemon.num = -(Object.keys(this.abilities as {}).length + 1000)
 		this.learnsets[this.toID(name)] = data;
 		this.convertToTxt("learnsets");
