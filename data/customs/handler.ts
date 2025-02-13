@@ -436,7 +436,7 @@ export class Handler {
 			opts.learnset = obj
 		}
 
-		if(opts.isMega) pokemon.forme = "Mega"
+	
 		this.pokedex[this.toID(pokemon.name)] = pokemon;
 		this.convertToTxt("pokedex");
 		this.import("pokedex");

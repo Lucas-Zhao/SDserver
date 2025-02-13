@@ -138,6 +138,10 @@ function addPokemon() {
     // Validate Pokémon data
     validatePokemon(body);
 
+	if(body.isMega) {
+		delete body.pokemon.prevo;
+		body.pokemon.baseSpecies = getVal("prevo")
+	}
     // Make API request
     makePostRequest(apiUrl + "/addpokemon", body).then((response) => {
       console.log("Response from server:", response);
