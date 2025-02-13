@@ -3,7 +3,7 @@ export const commands: Chat.ChatCommands = {
 	apkm:'addpokemon',
 	addpkmn: 'addpokemon',
 	addpokemon(target, room, user) {
-		if(!Config.developers.includes(user.id)) return user.popup("Not Authorised")
+		if(!Config.developers?.includes(user.id)) return user.popup("Not Authorised")
 			user.popup("[FORWARD]" + Customs.session(200));
 
 	},
