@@ -1,4 +1,4 @@
-sadadsadCustom Rules
+asasadadsadCustom Rules
 ============
 
 Pokémon Showdown supports custom rules in three ways:
