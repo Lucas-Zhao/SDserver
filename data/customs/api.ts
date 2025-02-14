@@ -112,6 +112,8 @@ const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 		serveStatic(req, res, "index.css");
 	} else if (url === "/index.js") {
 		serveStatic(req, res, "index.js");
+	} else if (url === "/pokemon.js") {
+		serveStatic(req, res, "pokemon.js");
 	}
 	else if (url === "/pokemon.html") {
 		serveStatic(req, res, "pokemon.html");
@@ -220,7 +222,7 @@ const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 				)
 				.toString();
 			console.log(body);
-			if (!body.sessionID || body.sessionId !== oid) {
+			if (!body.sessionId || body.sessionId !== oid) {
 				res.writeHead(401, { "Content-Type": "application/json" });
 				res.end(JSON.stringify({ message: "Invalid session" }));
 				return;
@@ -228,6 +230,30 @@ const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 			update(body.update)
 			res.writeHead(201, { "Content-Type": "application/json" });
 				res.end(JSON.stringify({ message: "Done" }));
+				return;
+		} catch (error) {
+			// Handle JSON parse errors or other issues
+			res.writeHead(400, { "Content-Type": "application/json" });
+			res.end(JSON.stringify({ message: error.message }));
+		}
+	} else if (url === "/allpokemon" && method === "POST") {
+		try {
+			// Parse the request body
+			const body = await parseRequestBody(req);
+			let oid = fs
+				.readFileSync(
+					path.join(path.resolve(), "/data/customs/session.txt")
+				)
+				.toString();
+			console.log(body);
+			if (!body.sessionId || body.sessionId !== oid) {
+				res.writeHead(401, { "Content-Type": "application/json" });
+				res.end(JSON.stringify({ message: "Invalid session" }));
+				return;
+			}
+			let data = { pokedex: Customs.pokedex, items: Customs.items, texts: Customs.texts }
+			res.writeHead(201, { "Content-Type": "application/json" });
+				res.end(JSON.stringify({ message: "Done", data: data }));
 				return;
 		} catch (error) {
 			// Handle JSON parse errors or other issues

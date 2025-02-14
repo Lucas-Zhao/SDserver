@@ -192,7 +192,6 @@ export class Handler {
 		//if (file == "learnsets") this.learnsets = parsedJson;
 		if (file == "abilities") this.texts.abilities = parsedJson;
 		//if (file == "formats-data") this.formatsdata = parsedJson;
-		console.log(this.texts)
 	}
 
 
