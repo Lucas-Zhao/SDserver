@@ -477,6 +477,23 @@ export class Handler {
 		);
 	}
 
+	deletePokemon(name:string) {
+		let id = this.toID(name);
+		delete this.pokedex[id];
+		delete this.formatsdata[id];
+		delete this.learnsets[id];
+		delete this.texts.pokedex[id];
+		delete this.texts.learnsets[id];
+		delete this.texts.formatsdata[id];
+		this.convertToTxt("pokedex")
+		this.convertToTxt("learnsets")
+		this.convertToTxt("formats-data")
+		this.convertToTxt("pokedex",true)
+		this.convertToTxt("learnsets",true)
+		this.convertToTxt("formats-data",true)
+		this.importAll();
+	}
+
 	addFormatData(data: FormatsData, name: string) {
 		console.log(Object.keys(this.formatsdata));
 		//pokemon.num = -(Object.keys(this.abilities as {}).length + 1000)
@@ -554,6 +571,13 @@ export class Handler {
 				console.log(`Output: ${stdout}`);
 			}
 		);
+	}
+
+	importAll() {
+		fileTypes.forEach((file) => {
+			this.import(file);
+			if(this.texts[this.toID(file)]) this.import(file,true)
+		})
 	}
 
 	updateFile(file: DataFile) {
