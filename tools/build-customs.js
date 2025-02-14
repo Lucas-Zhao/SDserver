@@ -10,6 +10,9 @@ const { toID } = require("../sim/dex-data");
 const { spawn } = require("child_process");
 
 const MAIN_PATH = path.join(path.resolve(), "..");
+const SERVER_FOLDER_NAME = "pokemon-showdown";
+const CLIENT_FOLDER_NAME = "pokemon-showdown-client";
+
 
 if (!fs.existsSync(path.join(path.resolve(), "/data/customs/"))) {
 	console.log(
@@ -302,17 +305,17 @@ let importCustomData = () => {
 	this.importFormatsData();
 };
 
-let updateRepo = (msg) => {
+let updateRepo = (msg = "Data Update") => {
 	console.log("\n[UPDATING SERVER REPO]")
-	console.log(execSync("git add .",{cwd : MAIN_PATH + "/pokemon-showdown"}).toString())
-	console.log(execSync(`git commit -m "[Automated Push] ${msg}"`,{cwd : MAIN_PATH + "/pokemon-showdown"}).toString())
-	console.log(execSync(`git push origin2`,{cwd : MAIN_PATH + "/pokemon-showdown"}).toString())
+	console.log(execSync("git add .",{cwd : MAIN_PATH + "/" + SERVER_FOLDER_NAME}).toString())
+	console.log(execSync(`git commit -m "[Automated Push] ${msg}"`,{cwd : MAIN_PATH + "/" + SERVER_FOLDER_NAME}).toString())
+	console.log(execSync(`git push origin2`,{cwd : MAIN_PATH + "/" + SERVER_FOLDER_NAME}).toString())
 	console.log("\n[FINISHED]")
 }
 
 let updateClient = (msg) => {
 	console.log("\n[UPDATING CLIENT]")
-	console.log(execSync("npm run build-full",{cwd : MAIN_PATH + "/pokemon-showdown-client"}).toString())
+	console.log(execSync("npm run build-full",{cwd : MAIN_PATH + "/" + CLIENT_FOLDER_NAME}).toString())
 	console.log("\n[FINISHED]")
 }
 
