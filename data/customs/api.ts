@@ -110,7 +110,12 @@ const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 		serveStatic(req, res, "index.css");
 	} else if (url === "/index.js") {
 		serveStatic(req, res, "index.js");
-	} else if (url === "/" && method === "GET") {
+	}
+	else if (url === "/pokemon.html") {
+		serveStatic(req, res, "pokemon.html");
+	} else if (url === "/pokemon.css") {
+		serveStatic(req, res, "pokemon.css");
+	}   else if (url === "/" && method === "GET") {
 		// Home route
 		res.writeHead(200, { "Content-Type": "application/json" });
 		res.end(JSON.stringify({ message: "Welcome to the API!" }));

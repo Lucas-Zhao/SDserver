@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Form</title>
+    <link rel="stylesheet" href="pokemon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <header class="topbar">
+        <h1 class="logo">Tool Name & Logo</h1>
+        <div class="search-container">
+            <input type="text" class="search-box" placeholder="Search...">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="topbar-icons">
+            <i class="fa-solid fa-bell"></i>
+            <span class="user-profile">Mayur H.</span>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a onclick="showSection('server-section')">Dashboard</a></li>
+                <li><a onclick="showSection('pokemon-section')"> Pokemon  Feature</a></li>
+                <li><a onclick="showSection('incident')">Pokemon</a></li>
+                <li><a href="#">Abilities</a></li>
+                <li><a href="#">Moves</a></li>
+                <li><a href="#">Usage Stats</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        
+        <!-- Server Section -->
+        <section id="server-section" class="o section" >
+            <h2 class="fist">Server Name</h2>
+            <div class="server-container">
+                <!-- News Section -->
+                <div class="news-section">
+                    <h3>News</h3>
+                    <textarea cols="50" rows="6" class="news-content"> We are glad to announce the Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+
+                    </textarea>
+                    <button class="update-btn">Update News</button>
+                </div>
+
+                <!-- Metrics Section -->
+                <div class="metrics-section">
+                    <h3>Server Metrics</h3>
+                    <p><strong>CPU Usage:</strong> 56%</p>
+                    <p><strong>Memory Usage:</strong> 67%</p>
+                    <p><strong>Storage:</strong> 56%</p>
+
+                    <button class="restart-server">Restart Server</button>
+                    <button class="restart-client">Restart Client</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pokemon Form Section -->
+
+        <section id="pokemon-section" class=" p section">
+            <form class="pokemon-form">
+                <h2>Add a Pokemon</h2>
+
+                <!-- Form Container with Two Columns -->
+                <div class="form-container">
+                    <!-- Left Column -->
+                    <div class="form-column">
+                        <div class="form-group">
+                            
+                            <label>Name</label>
+                            <input type="text" placeholder="Mega-Lucario-X">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Prevolution</label>
+                            <input type="text" placeholder="Lucario">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Weight</label>
+                            <input type="text" placeholder="67.8 kg">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Height</label>
+                            <input type="text" placeholder="127m">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Type 1</label>
+                            <select>
+                                <option>Normal</option>
+                                <option>Fire</option>
+                                <option>Water</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Type 2</label>
+                            <select>
+                                <option>None</option>
+                                <option>Fighting</option>
+                                <option>Electric</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Abilities</label>
+                            <input type="text" placeholder="Levitate, Wonder Guard">
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="form-column">
+                        <!-- Stats Section -->
+                        <div class="mega-container">
+                            <div class="mega-item">
+                                <label>Is Mega</label>
+                                <select>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+
+                            <div class="mega-item">
+                                <label>Required Item</label>
+                                <input type="text" placeholder="Enter item">
+                            </div>
+
+                            <div class="mega-item">
+                                <label>Pokedex Number</label>
+                                <input type="number" placeholder="Enter number">
+                            </div>
+                        </div>
+
+                        <div class="stats-container">
+                            <div class="stat-item">
+                                <label>HP</label>
+                                <input type="number" placeholder="70">
+                            </div>
+
+                            <div class="stat-item">
+                                <label>ATK</label>
+                                <input type="number" placeholder="110">
+                            </div>
+
+                            <div class="stat-item">
+                                <label>DEF</label>
+                                <input type="number" placeholder="70">
+                            </div>
+
+                            <div class="stat-item">
+                                <label>SPA</label>
+                                <input type="number" placeholder="115">
+                            </div>
+
+                            <div class="stat-item">
+                                <label>SPD</label>
+                                <input type="number" placeholder="70">
+                            </div>
+
+                            <div class="stat-item">
+                                <label>SPE</label>
+                                <input type="number" placeholder="90">
+                            </div>
+
+                            <div class="stat-item">
+                                <label>BST</label>
+                                <input type="number" placeholder="525">
+                            </div>
+                        </div>
+
+                        <!-- Additional Information -->
+                        <div class="form-group">
+                            <label>Battle Sprite</label>
+                            <input type="text" placeholder="Image URL or ID">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Party Icon</label>
+                            <input type="text" placeholder="Image URL or ID">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Moveset</label>
+                            <textarea placeholder="Aura Sphere, Close Combat, Fire Punch " style="height: 150px;"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </section>
+
+ <!-- Incident Section -->
+
+ <div id="incident" class=" g section " >
+ 
+    <h2 class="u">Custom Pokemon</h2>
+
+    <div class="section1">
+    
+    </div>
+    <section class="section2">
+      <div class="sear">
+        <input type="text" class="search-box" placeholder="Search...">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div class="filters">
+        <select id="category">
+          <option value="">Category</option>
+          <option value="Hardware">Hardware</option>
+          <option value="Software">Software</option>
+        </select>
+        <select id="severity">
+          <option value="">Severity</option>
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+        </select>
+        <input type="date" id="date">
+        <select id="status">
+          <option value="">Status</option>
+          <option value="Open">Open</option>
+          <option value="Closed">Closed</option>
+        </select>
+        <select id="priority">
+          <option value="">Priority</option>
+          <option value="Critical">Critical</option>
+          <option value="High">High</option>
+        </select>
+    
+      </section>
+          <!-- Incident Table -->
+<div class="incident-table" style="max-height: 500px; overflow-y: auto; ;">
+    <table id="incidentTable" style="width: 100%; border-collapse: collapse;">
+      <thead>
+        <tr>
+          <th><input type="checkbox"></th> <!-- New column for checkboxes -->
+          <th>Incident ID</th>
+          <th>Title</th>
+          <th>Category</th>
+          <th>Severity</th>
+          <th>Priority</th>
+          <th>Status</th>
+          <th>Last Update</th>
+        </tr>
+      </thead>
+   
+      <tbody>
+        <tbody>
+          <tr  >
+
+            <td><input type="checkbox" class="row-checkbox"></td>
+            <td>1</td>
+            <td onclick="openIncident(event)" 
+            data-title="Denial of Service Vulnerability in Linux Kernel"
+                  data-source="hackernews"
+                  data-severity="HIGH"
+                  data-priority="2"
+                  data-date="Jan 27, 2025"
+                  data-description="A vulnerability has been reported in the Linux kernel that could allow a local attacker to cause denial of service conditions on a targeted system."
+                  data-fix-link="https://github.com/patch-link">System Crash</td>
+            <td>Hardware</td>
+            <td>High</td>
+            <td>Critical</td>
+            <td>Open</td>
+            <td>2025-01-27</td>
+          </tr>
+          
+        <tr data-incident='{"id":"2", "title":"Login Failure", "category":"Software", "severity":"Medium", "priority":"High", "status":"Closed", "date":"2025-01-25", "description":"User unable to log in due to incorrect authentication"}'>
+            <td><input type="checkbox" class="row-checkbox"></td>
+            <td>2</td>
+            <td onclick="openIncident(event)" 
+            data-title="Denial of Service Vulnerability in Linux Kernel"
+                  data-source="hackernews"
+                  data-severity="HIGH"
+                  data-priority="2"
+                  data-date="Jan 27, 2025"
+                  data-description="A vulnerability has been reported in the Linux kernel that could allow a local attacker to cause denial of service conditions on a targeted system."
+                  data-fix-link="https://github.com/patch-link">Login Failure</td>
+            <td>Software</td>
+            <td>Medium</td>
+            <td>High</td>
+            <td>Closed</td>
+            <td>2025-01-25</td>
+        </tr>
+        <tr data-incident='{"id":"3", "title":"Network Outage", "category":"Software", "severity":"Medium", "priority":"High", "status":"Closed", "date":"2025-01-25", "description":"A major network outage has been reported, affecting connectivity across multiple departments. The cause is suspected to be a faulty router or ISP issues."}'>
+          <td><input type="checkbox" class="row-checkbox"></td>
+          <td>3</td>
+          <td onclick="openIncident(event)" 
+          data-title="Denial of Service Vulnerability in Linux Kernel"
+                data-source="hackernews"
+                data-severity="HIGH"
+                data-priority="2"
+                data-date="Jan 27, 2025"
+                data-description="A vulnerability has been reported in the Linux kernel that could allow a local attacker to cause denial of service conditions on a targeted system."
+                data-fix-link="https://github.com/patch-link">Network Outage</td>
+          <td>Software</td>
+          <td>Medium</td>
+          <td>High</td>
+          <td>Closed</td>
+          <td>2025-01-25</td>
+      </tr>
+      
+      <tr data-incident='{"id":"4", "title":"Data Breach Attempt", "category":"Software", "severity":"Medium", "priority":"High", "status":"Closed", "date":"2025-01-25", "description":"Unusual login attempts detected from multiple locations. Possible security breach, requiring an urgent investigation to secure user accounts."}'>
+          <td><input type="checkbox" class="row-checkbox"></td>
+          <td>4</td>
+          <td onclick="openIncident(event)" 
+          data-title="Denial of Service Vulnerability in Linux Kernel"
+                data-source="hackernews"
+                data-severity="HIGH"
+                data-priority="2"
+                data-date="Jan 27, 2025"
+                data-description="A vulnerability has been reported in the Linux kernel that could allow a local attacker to cause denial of service conditions on a targeted system."
+                data-fix-link="https://github.com/patch-link">Data Breach Attempt</td>
+          <td>Software</td>
+          <td>Medium</td>
+          <td>High</td>
+          <td>Closed</td>
+          <td>2025-01-25</td>
+      </tr>
+      
+      <tr data-incident='{"id":"5", "title":"Software Bug", "category":"Software", "severity":"Medium", "priority":"High", "status":"Closed", "date":"2025-01-25", "description":"An application error is preventing users from submitting forms. The issue is linked to a recent software update that introduced a validation bug."}'>
+          <td><input type="checkbox" class="row-checkbox"></td>
+          <td>5</td>
+          <td onclick="openIncident(event)" 
+          data-title="Denial of Service Vulnerability in Linux Kernel"
+                data-source="hackernews"
+                data-severity="HIGH"
+                data-priority="2"
+                data-date="Jan 27, 2025"
+                data-description="A vulnerability has been reported in the Linux kernel that could allow a local attacker to cause denial of service conditions on a targeted system."
+                data-fix-link="https://github.com/patch-link">Software Bug</td>
+          <td>Software</td>
+          <td>Medium</td>
+          <td>High</td>
+          <td>Closed</td>
+          <td>2025-01-25</td>
+      </tr>
+      
+ 
+      <tr data-incident='{"id":"6", "title":"Login Failure", "category":"Software", "severity":"Medium", "priority":"High", "status":"Closed", "date":"2025-01-25", "description":"User unable to log in due to incorrect authentication"}'>
+        <td><input type="checkbox" class="row-checkbox"></td>
+        <td>6</td>
+        <td onclick="openIncident(event)" 
+        data-title="Denial of Service Vulnerability in Linux Kernel"
+              data-source="hackernews"
+              data-severity="HIGH"
+              data-priority="2"
+              data-date="Jan 27, 2025"
+              data-description="A vulnerability has been reported in the Linux kernel that could allow a local attacker to cause denial of service conditions on a targeted system."
+              data-fix-link="https://github.com/patch-link">Login Failure</td>
+        <td>Software</td>
+        <td>Medium</td>
+        <td>High</td>
+        <td>Closed</td>
+        <td>2025-01-25</td>
+    </tr>
+              <tr data-incident-id="7">
+                <td><input type="checkbox" class="row-checkbox" "></td>
+                <td>2</td>
+                <td>Login Failure</td>
+                <td>Software</td>
+                <td>Medium</td>
+                <td>High</td>
+                <td>Closed</td>
+                <td>2025-01-25</td>
+              </tr>
+              <tr data-incident-id="8">
+                <td><input type="checkbox" class="row-checkbox" "></td>
+                <td>2</td>
+                <td>Login Failure</td>
+                <td>Software</td>
+                <td>Medium</td>
+                <td>High</td>
+                <td>Closed</td>
+                <td>2025-01-25</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="row-checkbox" "></td>
+                <td>3</td>
+                <td>Login Failure</td>
+                <td>Software</td>
+                <td>Medium</td>
+                <td>High</td>
+                <td>Closed</td>
+                <td>2025-01-25</td>
+              </tr>
+              <tr>
+             
+             
+              
+    
+         
+    </table>
+  
+ 
+    </main>
+
+    <script>
+        function showSection(sectionId) {
+            console.log("Switching to section:", sectionId); // Debugging
+
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.style.display = 'block';
+            }
+        }
+
+        // Hide all sections on page load except the first one
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show the first section by default (Pokemon section)
+            document.getElementById('server-section').style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>

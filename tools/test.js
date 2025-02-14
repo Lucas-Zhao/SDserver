@@ -79,7 +79,7 @@ exports.abilities = {
 		rating: 4,
 		num: -1007,
 	},
-	"tundracore": {
+	"tundrecore": {
 		onStart: function(pokemon) {
 			this.singleEvent('WeatherChange', this.effect, this.effectState, pokemon);
 		},

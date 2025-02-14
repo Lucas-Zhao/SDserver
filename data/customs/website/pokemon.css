@@ -1,0 +1,407 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #E7F3FF;
+}
+
+
+.topbar-icons {
+    display: flex;
+    align-items: center;
+    color: #060606;
+    margin-right: 5%;
+  }
+  
+  .topbar-icons .icon {
+    margin-right: 10px;
+  
+  }
+  
+  .topbar-icons .user-profile {
+    margin-right: 10px;
+  }
+  .p{
+    color: #13222E;
+  }
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    padding: 12px 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #34495e;
+}
+.search-container {
+    position: relative;
+    width: 250px;
+}
+
+.search-box {
+    width: 100%;
+    padding: 10px 35px 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    outline: none;
+    background-color: #E7F3FF;
+
+}
+
+.search-container i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+    cursor: pointer;
+    margin-right: -15%;
+}
+
+  
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* Adjust height as needed */
+    background-color: #ffffff; /* Example background color */
+    color: rgb(15, 14, 14);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000; /* Ensures topbar is above other elements */
+}
+
+.sidebar {
+    position: fixed;
+    top: 60px; /* Pushes it below the topbar */
+    left: 0;
+    width: 250px; /* Adjust width as needed */
+    height: calc(100vh - 60px); /* Sidebar fills remaining height */
+    background-color: #13222E;
+    color: white;
+    padding-top: 20px;
+    z-index: 500; /* Lower than topbar */
+}
+
+.main-content {
+    margin-left: 260px; /* Adjust according to sidebar width */
+    margin-top: 70px; /* Ensures content doesn't go under the topbar */
+    padding: 20px;
+    margin-right: 5px;
+
+}
+
+
+/* Form */
+.pokemon-form {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 130%;
+    justify-content: center;
+    margin-top: -2%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: -3%;
+    margin-left: 5%;
+}
+
+/* Two Columns */
+.form-container {
+    display: flex;
+    gap: 30px;
+}
+
+/* Form Column */
+.form-column {
+    width: 100%;
+}
+
+/* Form Input */
+.form-group {
+    margin-bottom: 15px;
+    
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+
+}
+
+.form-group input,
+
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 30%;
+}
+.form-group select{
+    width: 103%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 30%;
+}
+/* Submit Button */
+.submit-btn {
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 10%;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #27ae60;
+}
+
+.stats-container, .mega-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.stat-item, .mega-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-item label, .mega-item label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stat-item input{
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+ .mega-item input{
+    width: 80px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.mega-item select {
+    width: 80px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+/* Server Section */
+.server-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adds space between sections */
+    margin-top:9%;
+    margin-right: 40px;
+    margin-bottom: 10%;
+
+    
+}
+.o{
+    background-color: #ffffff; /* Example background color */
+    width:100%;
+    height: 90vh;
+    margin-right: 40px;
+    margin-top: 1%;
+}
+
+.news-section {
+   
+    border-radius: 10px;
+    flex: 1; /* Makes them flexible and equal width */
+    margin-left: 40px;
+    margin-top: -10%;
+
+}
+.metrics-section{
+    padding: 10px;
+    border-radius: 10px;
+    flex: 1; /* Makes them flexible and equal width */
+    margin-left: 40px;
+ 
+    border: #060606 dotted 2px;
+    
+    margin-top: -11%;
+}
+
+.news-content {
+    background: #e0dcdc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.update-btn, .restart-server, .restart-client {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width:30%;
+}
+
+.update-btn {
+    background: #28a745;
+    color: white;
+}
+
+.restart-server {
+    background: #28a745;
+    color: white;
+}
+
+.restart-client {
+    background: #ffc107;
+    color: black;
+}
+.fist{
+    padding: 2%;
+    margin: 1%;
+}
+
+
+
+
+
+.u{
+    text-align: center;
+    background-color: #E7F3FF;
+    padding: 3%;
+}
+/* Section Styling */
+.g {
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width:140%;
+    border-radius: 8px;
+    margin-top: -1%;
+}
+
+.section1 h2 {
+    font-size: 24px;
+    text-align: left;
+    color: #333;
+}
+
+/* Search Box */
+.sear {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+}
+
+.search-box {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 200px;
+}
+
+.sear i {
+    margin-left: -25px;
+    color: #777;
+    cursor: pointer;
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filters select,
+.filters input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 150px;
+    background-color: #fff;
+}
+
+/* Incident Table */
+.incident-table {
+    max-height: 500px;
+    overflow-y: auto;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #26282b;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Checkbox Styling */
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .filters {
+        flex-direction: column;
+    }
+    
+    .search-box {
+        width: 100%;
+    }
+}
