@@ -501,6 +501,15 @@ export class Handler {
 		this.import(type,true)
 	}
 
+	addSprite(name:string, link?:string) {
+		let filePath = path.join(CUSTOM_DIR,"config/config.js");
+		let content = fsSync.readFileSync(filePath).toString();
+		let json = content.replace("exports.CustomPokemonIcons = ","");
+		let obj = JSON.parse(json);
+		obj[this.toID(name)] = link || true;
+		fsSync.writeFileSync(filePath,"exports.CustomPokemonIcons = " + JSON.stringify(obj))
+	}
+
 	convertToTxt(file: DataFile, txtFile:boolean = false): string {
 		console.log("converting...");
 		if (!file) return "";
@@ -530,6 +539,7 @@ export class Handler {
 
 		return buffer;
 	}
+
 
 	import(file: DataFile,txt:boolean = false) {
 		exec(
