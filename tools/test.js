@@ -127,7 +127,7 @@ exports.abilities = {
 			}
 		},
 		onModifyDefPriority: 5,
-		onModifyDef: function(atk, attacker, defender, move) {
+		onModifyDef: function(def, attacker, defender, move) {
 			if(!this.field.isWeather("raindance")) return;
 			const bestStat = defender.getBestStat(true, true);
 			if (bestStat === "def") {
@@ -153,11 +153,7 @@ exports.abilities = {
 				return this.chainModify(1.5);
 			}
 		},
-		onModifyDef: function(attacker) {
-			if(!this.field.isWeather("raindance")) return;
-			const bestStat = attacker.getBestStat(true, true);
-			this.boost({[bestStat]: 1.5}, attacker);
-		},
+
 		flags: {},
 		name: "Aqua Circuit",
 		rating: 4,

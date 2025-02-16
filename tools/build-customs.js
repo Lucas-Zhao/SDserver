@@ -380,6 +380,9 @@ Object.keys(abs).forEach((key) => {
 	if(ability.onModifySpA) functions.push({name:"onModifySpA",body:ability.onModifySpA.toString()})
 	if(ability.onModifyAtk) functions.push({name:"onModifyAtk",body:ability.onModifyAtk.toString()})
 	if(ability.onModifyDef) functions.push({name:"onModifyDef",body:ability.onModifyDef.toString()})
+	if(ability.onModifySpD) functions.push({name:"onModifySpD",body:ability.onModifySpD.toString()})
+	if(ability.onModifySpe) functions.push({name:"onModifySpe",body:ability.onModifySpe.toString()})
+		
 	if(ability.onTerrainChange) functions.push({name:"onTerrainChange",body:ability.onTerrainChange.toString()})
 	if(ability.onWeatherChange) functions.push({name:"onWeatherChange",body:ability.onWeatherChange.toString()})
 	if(ability.onDamagingHit) functions.push({name:"onDamagingHit",body:ability.onDamagingHit.toString()})

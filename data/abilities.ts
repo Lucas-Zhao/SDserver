@@ -5892,6 +5892,116 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*CUSTOM ABILITIES*/
  "monsoonsurge":{"name":"Monsoon Surge","flags":{},"num":-1029,"rating":4}
 , "blizzardveil":{"name":"Blizzard Veil","flags":{},"num":-1029,"rating":4}
@@ -6004,10 +6114,31 @@ Abilities["aquacircuit"].onModifyAtk = function(atk, attacker, defender, move) {
 			}
 		}
 
-Abilities["aquacircuit"].onModifyDef = function(attacker) {
+Abilities["aquacircuit"].onModifyDef = function(def, attacker, defender, move) {
+			if(!this.field.isWeather("raindance")) return;
+			const bestStat = defender.getBestStat(true, true);
+			if (bestStat === "def") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
+		}
+
+Abilities["aquacircuit"].onModifySpD = function(atk, attacker, defender, move) {
+			if(!this.field.isWeather("raindance")) return;
+			const bestStat = defender.getBestStat(true, true);
+			if (bestStat === "spd") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
+		}
+
+Abilities["aquacircuit"].onModifySpe = function(atk, attacker, defender, move) {
 			if(!this.field.isWeather("raindance")) return;
 			const bestStat = attacker.getBestStat(true, true);
-			this.boost({[bestStat]: 1.5}, attacker);
+			if (bestStat === "spe") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
 		}
 //aquacircuitend//psychicpulsestart
 Abilities["psychicpulse"].onModifySpA = function(atk, attacker, defender, move) {
@@ -6032,6 +6163,24 @@ Abilities["psychicpulse"].onModifyDef = function(atk, attacker, defender, move) 
 			if(!this.field.isTerrain("psychicterrain")) return;
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "def") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
+		}
+
+Abilities["psychicpulse"].onModifySpD = function(atk, attacker, defender, move) {
+			if(!this.field.isTerrain("psychicterrain")) return;
+			const bestStat = attacker.getBestStat(true, true);
+			if (bestStat === "spd") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
+		}
+
+Abilities["psychicpulse"].onModifySpe = function(atk, attacker, defender, move) {
+			if(!this.field.isTerrain("psychicterrain")) return;
+			const bestStat = attacker.getBestStat(true, true);
+			if (bestStat === "spe") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
 			}
@@ -6063,6 +6212,24 @@ Abilities["mysticaura"].onModifyDef = function(atk, attacker, defender, move) {
 				return this.chainModify(1.5);
 			}
 		}
+
+Abilities["mysticaura"].onModifySpD = function(atk, attacker, defender, move) {
+			if(!this.field.isTerrain("mistyterrain")) return;
+			const bestStat = attacker.getBestStat(true, true);
+			if (bestStat === "spd") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
+		}
+
+Abilities["mysticaura"].onModifySpe = function(atk, attacker, defender, move) {
+			if(!this.field.isTerrain("mistyterrain")) return;
+			const bestStat = attacker.getBestStat(true, true);
+			if (bestStat === "spe") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
+		}
 //mysticauraend//overgrowthenginestart
 Abilities["overgrowthengine"].onModifySpA = function(atk, attacker, defender, move) {
 			if(!this.field.isTerrain("grassyterrain")) return;
@@ -6086,6 +6253,24 @@ Abilities["overgrowthengine"].onModifyDef = function(atk, attacker, defender, mo
 			if(!this.field.isTerrain("grassyterrain")) return;
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "def") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
+		}
+
+Abilities["overgrowthengine"].onModifySpD = function(atk, attacker, defender, move) {
+			if(!this.field.isTerrain("grassyterrain")) return;
+			const bestStat = attacker.getBestStat(true, true);
+			if (bestStat === "spd") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
+		}
+
+Abilities["overgrowthengine"].onModifySpe = function(atk, attacker, defender, move) {
+			if(!this.field.isTerrain("grassyterrain")) return;
+			const bestStat = attacker.getBestStat(true, true);
+			if (bestStat === "spe") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
 			}
