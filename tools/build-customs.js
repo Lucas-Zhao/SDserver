@@ -367,9 +367,11 @@ try {
 	});
 	return;
 }
+
 /* TEST FUNCTIONS, SHOULD BE REMOVED AFTER USE */
 
 /*
+const h = require("../dist/data/customs/handler.js").default
 let abs = require("./test.js").abilities;
 Object.keys(abs).forEach((key) => {
 	let ability = abs[key]

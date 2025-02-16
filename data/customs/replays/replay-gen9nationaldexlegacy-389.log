@@ -1,0 +1,48 @@
+|j|☆vergerg
+|j|☆Aurastic
+|t:|1739631517
+|gametype|singles
+|player|p1|vergerg|266|
+|player|p2|Aurastic|2|
+|teamsize|p1|1
+|teamsize|p2|6
+|gen|9
+|tier|[Gen 9] National Dex Legacy
+|rule|Terastal Clause: You cannot Terastallize
+|bigerror|Warning: One player isn't adhering to a 510 EV limit, and the other player is.
+|clearpoke
+|poke|p1|Lucario, M|
+|poke|p2|Zerapium, M|
+|poke|p2|Meditite, F|
+|poke|p2|Caterpie, M|
+|poke|p2|Caterpie, M|
+|poke|p2|Caterpie, F|
+|poke|p2|Rizaxe, M|
+|teampreview
+|
+|t:|1739631526
+|start
+|switch|p1a: Lucario|Lucario, M|281/281
+|switch|p2a: Zerapium|Zerapium, M|304/304
+|-weather|RainDance|[from] ability: Monsoon Surge|[of] p2a: Zerapium
+|turn|1
+|
+|t:|1739631532
+|move|p2a: Zerapium|Tackle|p1a: Lucario
+|-resisted|p1a: Lucario
+|-damage|p1a: Lucario|227/281
+|move|p1a: Lucario|Brick Break|p2a: Zerapium
+|-supereffective|p2a: Zerapium
+|-damage|p2a: Zerapium|52/304
+|
+|-weather|RainDance|[upkeep]
+|upkeep
+|turn|2
+|
+|t:|1739631539
+|move|p2a: Zerapium|Aura Sphere|p1a: Lucario
+|-supereffective|p1a: Lucario
+|-damage|p1a: Lucario|0 fnt
+|faint|p1a: Lucario
+|
+|win|Aurastic

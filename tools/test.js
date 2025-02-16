@@ -108,10 +108,52 @@ exports.abilities = {
 		num: -1009,
 	},
 	"aquacircuit": {
-		onStart: function(pokemon) {
-			this.singleEvent('WeatherChange', this.effect, this.effectState, pokemon);
+		onModifyAtkPriority: 5,
+		onModifyAtk: function(atk, attacker, defender, move) {
+			if(!this.field.isWeather("raindance")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			if (bestStat === "atk") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
 		},
-		onWeatherChange: function(pokemon) {
+		onModifySpAPriority: 5,
+		onModifySpA: function(atk, attacker, defender, move) {
+			if(!this.field.isWeather("raindance")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			if (bestStat === "spa") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifyDefPriority: 5,
+		onModifyDef: function(atk, attacker, defender, move) {
+			if(!this.field.isWeather("raindance")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			if (bestStat === "def") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpDPriority: 5,
+		onModifySpD: function(atk, attacker, defender, move) {
+			if(!this.field.isWeather("raindance")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			if (bestStat === "spd") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpePriority: 5,
+		onModifySpe: function(atk, attacker, defender, move) {
+			if(!this.field.isWeather("raindance")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			if (bestStat === "spe") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifyDef: function(pokemon) {
 			if(!this.field.isWeather("raindance")) return;
 			const bestStat = pokemon.getBestStat(true, true);
 			this.boost({[bestStat]: 1.5}, pokemon);
@@ -121,12 +163,53 @@ exports.abilities = {
 		rating: 4,
 		num: -1010,
 	},
-
 	"psychicpulse": {
-		onStart: function(pokemon) {
-			this.singleEvent('TerrainChange', this.effect, this.effectState, pokemon);
+		onModifyAtkPriority: 5,
+		onModifyAtk: function(atk, attacker, defender, move) {
+			if(!this.field.isTerrain("psychicterrain")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			if (bestStat === "atk") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
 		},
-		onTerrainChange: function(pokemon, source){
+		onModifySpAPriority: 5,
+		onModifySpA: function(atk, attacker, defender, move) {
+			if(!this.field.isTerrain("psychicterrain")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			if (bestStat === "spa") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifyDefPriority: 5,
+		onModifyDef: function(atk, attacker, defender, move) {
+			if(!this.field.isTerrain("psychicterrain")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			if (bestStat === "def") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpDPriority: 5,
+		onModifySpD: function(atk, attacker, defender, move) {
+			if(!this.field.isTerrain("psychicterrain")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			if (bestStat === "spd") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpePriority: 5,
+		onModifySpe: function(atk, attacker, defender, move) {
+			if(!this.field.isTerrain("psychicterrain")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			if (bestStat === "spe") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifyDef: function(pokemon) {
 			if(!this.field.isTerrain("psychicterrain")) return;
 			const bestStat = pokemon.getBestStat(true, true);
 			this.boost({[bestStat]: 1.5}, pokemon);
@@ -136,11 +219,54 @@ exports.abilities = {
 		rating: 4,
 		num: -1011,
 	},
+
 	"mysticaura": {
-		onStart: function(pokemon) {
-			this.singleEvent('TerrainChange', this.effect, this.effectState, pokemon);
+		onModifyAtkPriority: 5,
+		onModifyAtk: function(atk, attacker, defender, move) {
+			if(!this.field.isTerrain("mistyterrain")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			if (bestStat === "atk") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
 		},
-		onTerrainChange: function(pokemon, source){
+		onModifySpAPriority: 5,
+		onModifySpA: function(atk, attacker, defender, move) {
+			if(!this.field.isTerrain("mistyterrain")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			if (bestStat === "spa") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifyDefPriority: 5,
+		onModifyDef: function(atk, attacker, defender, move) {
+			if(!this.field.isTerrain("mistyterrain")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			if (bestStat === "def") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpDPriority: 5,
+		onModifySpD: function(atk, attacker, defender, move) {
+			if(!this.field.isTerrain("mistyterrain")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			if (bestStat === "spd") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpePriority: 5,
+		onModifySpe: function(atk, attacker, defender, move) {
+			if(!this.field.isTerrain("mistyterrain")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			if (bestStat === "spe") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifyDef: function(pokemon) {
 			if(!this.field.isTerrain("mistyterrain")) return;
 			const bestStat = pokemon.getBestStat(true, true);
 			this.boost({[bestStat]: 1.5}, pokemon);
@@ -150,11 +276,54 @@ exports.abilities = {
 		rating: 4,
 		num: -1012,
 	},
+
 	"overgrowthengine": {
-		onStart: function(pokemon) {
-			this.singleEvent('TerrainChange', this.effect, this.effectState, pokemon);
+		onModifyAtkPriority: 5,
+		onModifyAtk: function(atk, attacker, defender, move) {
+			if(!this.field.isTerrain("grassyterrain")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			if (bestStat === "atk") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
 		},
-		onTerrainChange: function(pokemon, source){
+		onModifySpAPriority: 5,
+		onModifySpA: function(atk, attacker, defender, move) {
+			if(!this.field.isTerrain("grassyterrain")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			if (bestStat === "spa") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifyDefPriority: 5,
+		onModifyDef: function(atk, attacker, defender, move) {
+			if(!this.field.isTerrain("grassyterrain")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			if (bestStat === "def") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpDPriority: 5,
+		onModifySpD: function(atk, attacker, defender, move) {
+			if(!this.field.isTerrain("grassyterrain")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			if (bestStat === "spd") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpePriority: 5,
+		onModifySpe: function(atk, attacker, defender, move) {
+			if(!this.field.isTerrain("grassyterrain")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			if (bestStat === "spe") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifyDef: function(pokemon) {
 			if(!this.field.isTerrain("grassyterrain")) return;
 			const bestStat = pokemon.getBestStat(true, true);
 			this.boost({[bestStat]: 1.5}, pokemon);
@@ -219,21 +388,21 @@ exports.abilities = {
 		num: -1017,
 	},
 
-	"accelerationofruin": {
+	"bootsofruin": {
 		onStart: function(pokemon) {
 			if (this.suppressingAbility(pokemon)) return;
-			this.add('-ability', pokemon, 'Acceleration of Ruin');
+			this.add('-ability', pokemon, 'Boots of Ruin');
 		},
 		onAnyModifySpe: function(spe, target) {
 			const abilityHolder = this.effectState.target;
-			if (target.hasAbility('Acceleration of Ruin')) return;
+			if (target.hasAbility('Boots of Ruin')) return;
 		//	if (!move.ruinedSpe?.hasAbility('Sword of Ruin')) move.ruinedDef = abilityHolder;
 		//	if (move.ruinedDef !== abilityHolder) return;
-			this.debug('Acceleration of Ruin Spe drop');
+			this.debug('Boots of Ruin Spe drop');
 			return this.chainModify(0.75);
 		},
 		flags: {},
-		name: "Acceleration of Ruin",
+		name: "Boots of Ruin",
 		rating: 4.5,
 		num: -1018,
 	},
@@ -339,6 +508,29 @@ exports.abilities = {
 		name: "Soul Harvest",
 		rating: 4,
 		num: -1025,
+	},
+
+
+	"entomize": {
+		onModifyTypePriority: -1,
+		onModifyType: function(move, pokemon) {
+			const noModifyType = [
+				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
+				!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+				move.type = 'Bug';
+				move.typeChangerBoosted = this.effect;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower: function(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
+		},
+		flags: {},
+		name: "Entomize",
+		rating: 4,
+		num: -1026,
 	},
 
 } 

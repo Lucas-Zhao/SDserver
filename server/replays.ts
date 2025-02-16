@@ -93,6 +93,7 @@ export const Replays = new class {
 	}
 
 	async add(replay: Replay) {
+		console.log(replay)
 		// obviously upsert exists but this is the easiest way when multiple things need to be changed
 		const replayData = this.toReplayRow(replay);
 		try {

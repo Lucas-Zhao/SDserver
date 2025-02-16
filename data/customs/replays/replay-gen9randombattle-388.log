@@ -1,0 +1,59 @@
+|j|☆Aurastic
+|j|☆dfgreg33
+|t:|1739630224
+|gametype|singles
+|player|p1|Aurastic|2|
+|player|p2|dfgreg33|1|
+|teamsize|p1|6
+|teamsize|p2|6
+|gen|9
+|tier|[Gen 9] Random Battle
+|rule|Species Clause: Limit one of each Pokémon
+|rule|HP Percentage Mod: HP is shown in percentages
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|rule|Illusion Level Mod: Illusion disguises the Pokémon's true level
+|
+|t:|1739630224
+|start
+|switch|p1a: Skuntank|Skuntank, L84, M|100/100
+|switch|p2a: Garganacl|Garganacl, L80, F|100/100
+|turn|1
+|
+|t:|1739630230
+|switch|p1a: Heatran|Heatran, L79, M|100/100
+|-item|p1a: Heatran|Air Balloon
+|move|p2a: Garganacl|Body Press|p1a: Heatran
+|-supereffective|p1a: Heatran
+|-damage|p1a: Heatran|55/100
+|-enditem|p1a: Heatran|Air Balloon
+|
+|upkeep
+|turn|2
+|
+|t:|1739630241
+|move|p1a: Heatran|Earth Power|p2a: Garganacl
+|-supereffective|p2a: Garganacl
+|-damage|p2a: Garganacl|53/100
+|move|p2a: Garganacl|Salt Cure|p1a: Heatran
+|-damage|p1a: Heatran|40/100
+|-start|p1a: Heatran|Salt Cure
+|
+|-heal|p2a: Garganacl|59/100|[from] item: Leftovers
+|-damage|p1a: Heatran|16/100|[from] Salt Cure
+|upkeep
+|turn|3
+|
+|t:|1739630248
+|move|p1a: Heatran|Earth Power|p2a: Garganacl
+|-supereffective|p2a: Garganacl
+|-damage|p2a: Garganacl|8/100
+|move|p2a: Garganacl|Stealth Rock|p1a: Heatran
+|-sidestart|p1: Aurastic|move: Stealth Rock
+|
+|-heal|p2a: Garganacl|14/100|[from] item: Leftovers
+|-damage|p1a: Heatran|0 fnt|[from] Salt Cure
+|faint|p1a: Heatran
+|upkeep
+|-message|Aurastic forfeited.
+|
+|win|dfgreg33

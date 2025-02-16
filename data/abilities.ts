@@ -5768,6 +5768,57 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*CUSTOM ABILITIES*/
  "monsoonsurge":{"name":"Monsoon Surge","flags":{},"num":-1027,"rating":4}
 , "blizzardveil":{"name":"Blizzard Veil","flags":{},"num":-1027,"rating":4}
@@ -5788,13 +5839,15 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 , "charisma":{"name":"Charisma","flags":{},"num":-1027,"rating":3}
 , "mentalfortitude":{"name":"Mental Fortitude","flags":{},"num":-1027,"rating":4}
 , "accelerationofruin":{"name":"Acceleration of Ruin","flags":{},"num":-1027,"rating":4.5}
-, "prismaticaura":{"name":"Prismatic Aura","flags":{},"num":-1027,"rating":2.5}
-, "adaptivemastery":{"name":"Adaptive Mastery","flags":{},"num":-1027,"rating":3.5}
-, "stormbloom":{"name":"Stormbloom","flags":{},"num":-1027,"rating":4}
-, "solarmist":{"name":"Solar Mist","flags":{},"num":-1027,"rating":4}
-, "desertmind":{"name":"Desert Mind","flags":{},"num":-1027,"rating":4}
-, "frostvolt":{"name":"Frostvolt","flags":{},"num":-1027,"rating":4}
-, "soulharvest":{"name":"Soul Harvest","flags":{},"num":-1027,"rating":4}
+, "prismaticaura":{"name":"Prismatic Aura","flags":{},"num":-1028,"rating":2.5}
+, "adaptivemastery":{"name":"Adaptive Mastery","flags":{},"num":-1028,"rating":3.5}
+, "stormbloom":{"name":"Stormbloom","flags":{},"num":-1028,"rating":4}
+, "solarmist":{"name":"Solar Mist","flags":{},"num":-1028,"rating":4}
+, "desertmind":{"name":"Desert Mind","flags":{},"num":-1028,"rating":4}
+, "frostvolt":{"name":"Frostvolt","flags":{},"num":-1028,"rating":4}
+, "soulharvest":{"name":"Soul Harvest","flags":{},"num":-1028,"rating":4}
+, "bootsofruin":{"name":"Boots of Ruin","flags":{},"num":-1027,"rating":4.5}
+, "entomize":{"name":"Entomize","flags":{},"num":-1028,"rating":4}
 
 };
 /*FUNCTIONS*/
@@ -5860,41 +5913,97 @@ Abilities["desertheart"].onWeatherChange = function(pokemon) {
 			this.boost({[bestStat]: 1.5}, pokemon);
 		}
 //desertheartend//aquacircuitstart
-Abilities["aquacircuit"].onStart = function(pokemon) {
-			this.singleEvent('WeatherChange', this.effect, this.effectState, pokemon);
+Abilities["aquacircuit"].onModifySpA = function(atk, attacker, defender, move) {
+			if(!this.field.isWeather("raindance")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			if (bestStat === "spa") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
 		}
 
-Abilities["aquacircuit"].onWeatherChange = function(pokemon) {
+Abilities["aquacircuit"].onModifyAtk = function(atk, attacker, defender, move) {
+			if(!this.field.isWeather("raindance")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			if (bestStat === "atk") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
+		}
+
+Abilities["aquacircuit"].onModifyDef = function(pokemon) {
 			if(!this.field.isWeather("raindance")) return;
 			const bestStat = pokemon.getBestStat(true, true);
 			this.boost({[bestStat]: 1.5}, pokemon);
 		}
 //aquacircuitend//psychicpulsestart
-Abilities["psychicpulse"].onStart = function(pokemon) {
-			this.singleEvent('TerrainChange', this.effect, this.effectState, pokemon);
+Abilities["psychicpulse"].onModifySpA = function(atk, attacker, defender, move) {
+			if(!this.field.isTerrain("psychicterrain")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			if (bestStat === "spa") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
 		}
 
-Abilities["psychicpulse"].onTerrainChange = function(pokemon, source){
+Abilities["psychicpulse"].onModifyAtk = function(atk, attacker, defender, move) {
+			if(!this.field.isTerrain("psychicterrain")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			if (bestStat === "atk") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
+		}
+
+Abilities["psychicpulse"].onModifyDef = function(pokemon) {
 			if(!this.field.isTerrain("psychicterrain")) return;
 			const bestStat = pokemon.getBestStat(true, true);
 			this.boost({[bestStat]: 1.5}, pokemon);
 		}
 //psychicpulseend//mysticaurastart
-Abilities["mysticaura"].onStart = function(pokemon) {
-			this.singleEvent('TerrainChange', this.effect, this.effectState, pokemon);
+Abilities["mysticaura"].onModifySpA = function(atk, attacker, defender, move) {
+			if(!this.field.isTerrain("mistyterrain")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			if (bestStat === "spa") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
 		}
 
-Abilities["mysticaura"].onTerrainChange = function(pokemon, source){
+Abilities["mysticaura"].onModifyAtk = function(atk, attacker, defender, move) {
+			if(!this.field.isTerrain("mistyterrain")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			if (bestStat === "atk") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
+		}
+
+Abilities["mysticaura"].onModifyDef = function(pokemon) {
 			if(!this.field.isTerrain("mistyterrain")) return;
 			const bestStat = pokemon.getBestStat(true, true);
 			this.boost({[bestStat]: 1.5}, pokemon);
 		}
 //mysticauraend//overgrowthenginestart
-Abilities["overgrowthengine"].onStart = function(pokemon) {
-			this.singleEvent('TerrainChange', this.effect, this.effectState, pokemon);
+Abilities["overgrowthengine"].onModifySpA = function(atk, attacker, defender, move) {
+			if(!this.field.isTerrain("grassyterrain")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			if (bestStat === "spa") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
 		}
 
-Abilities["overgrowthengine"].onTerrainChange = function(pokemon, source){
+Abilities["overgrowthengine"].onModifyAtk = function(atk, attacker, defender, move) {
+			if(!this.field.isTerrain("grassyterrain")) return;
+			const bestStat = pokemon.getBestStat(true, true);
+			if (bestStat === "atk") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
+		}
+
+Abilities["overgrowthengine"].onModifyDef = function(pokemon) {
 			if(!this.field.isTerrain("grassyterrain")) return;
 			const bestStat = pokemon.getBestStat(true, true);
 			this.boost({[bestStat]: 1.5}, pokemon);
@@ -6003,4 +6112,22 @@ Abilities["soulharvest"].onSourceAfterFaint = function(length, target, source, e
 				this.add('-heal', source, source.getHealth, 'ability: Soul Harvest');
 			}
 		}
-//soulharvestend
+//soulharvestend//bootsofruinstart
+
+Abilities["bootsofruin"].onStart = function(pokemon) {
+			if (this.suppressingAbility(pokemon)) return;
+			this.add('-ability', pokemon, 'Boots of Ruin');
+		}
+
+Abilities["bootsofruin"].onAnyModifySpe = function(spe, target) {
+			const abilityHolder = this.effectState.target;
+			if (target.hasAbility('Boots of Ruin')) return;
+		//	if (!move.ruinedSpe?.hasAbility('Sword of Ruin')) move.ruinedDef = abilityHolder;
+		//	if (move.ruinedDef !== abilityHolder) return;
+			this.debug('Boots of Ruin Spe drop');
+			return this.chainModify(0.75);
+		}
+
+//bootsofruinend//entomizestart
+
+//entomizeend

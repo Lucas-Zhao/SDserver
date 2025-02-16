@@ -1,0 +1,38 @@
+|j|☆Aurastic
+|j|☆dfbdgberg
+|t:|1739628142
+|gametype|singles
+|player|p1|Aurastic|2|
+|player|p2|dfbdgberg|170|
+|teamsize|p1|6
+|teamsize|p2|1
+|gen|9
+|tier|[Gen 9] National Dex Legacy
+|rule|Terastal Clause: You cannot Terastallize
+|bigerror|Warning: One player isn't adhering to a 510 EV limit, and the other player is.
+|clearpoke
+|poke|p1|Zerapium, F|
+|poke|p1|Meditite, M|
+|poke|p1|Caterpie, M|
+|poke|p1|Caterpie, F|
+|poke|p1|Caterpie, F|
+|poke|p1|Rizaxe, F|
+|poke|p2|Lucario, F|
+|teampreview
+|
+|t:|1739628147
+|start
+|switch|p1a: Caterpie|Caterpie, M|294/294
+|switch|p2a: Lucario|Lucario, F|281/281
+|turn|1
+|
+|t:|1739628161
+|switch|p1a: Rizaxe|Rizaxe, F|301/301
+|move|p2a: Lucario|Body Slam|p1a: Rizaxe
+|-damage|p1a: Rizaxe|171/301
+|
+|upkeep
+|turn|2
+|-message|Aurastic forfeited.
+|
+|win|dfbdgberg

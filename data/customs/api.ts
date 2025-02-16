@@ -98,6 +98,17 @@ const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 	const parsedUrl = URL.parse(req.url, true);
 	const query = parsedUrl.query;
 
+	res.setHeader('Access-Control-Allow-Origin', '*'); // Allow any origin
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
+    // Handle preflight requests
+    if (req.method === 'OPTIONS') {
+        res.writeHead(204);
+        res.end();
+        return;
+    }
+
 	if (query.sessionId && method === "GET") {
 		let oid = fs
 			.readFileSync(path.join(path.resolve(), "/data/customs/session.txt"))
@@ -254,6 +265,35 @@ const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 			let data = { pokedex: Customs.pokedex, items: Customs.items, texts: Customs.texts }
 			res.writeHead(201, { "Content-Type": "application/json" });
 				res.end(JSON.stringify({ message: "Done", data: data }));
+				return;
+		} catch (error) {
+			// Handle JSON parse errors or other issues
+			res.writeHead(400, { "Content-Type": "application/json" });
+			res.end(JSON.stringify({ message: error.message }));
+		}
+	} else if (url === "/getreplay" && method === "POST") {
+		try {
+			// Parse the request body
+			const body = await parseRequestBody(req);
+			console.log(body);
+
+			if (!body.replayid) {
+				res.writeHead(400, { "Content-Type": "application/json" });
+				res.end(JSON.stringify({ message: "Provide replay id" }));
+				return;
+			}
+			let filePath = path.join(path.resolve(), "/data/customs/replays/" + body.replayid + ".log")
+			if(!fs.existsSync(filePath)) {
+				res.writeHead(404, { "Content-Type": "application/json" });
+				res.end("Replay does not exist");
+				return;
+			}
+			let replay = fs.readFileSync(filePath).toString();
+			let replayData = fs.readFileSync(path.join(path.resolve(),"/data/customs/replays.json")).toString()
+
+			let data = { log: replay, replay: replayData }
+			res.writeHead(200, { "Content-Type": "application/json" });
+				res.end(JSON.stringify(data));
 				return;
 		} catch (error) {
 			// Handle JSON parse errors or other issues
