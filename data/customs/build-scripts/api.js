@@ -5,10 +5,11 @@
  * contain logic for API but to start/stop the API this script is used
  */
 const {fork} = require("child_process")
+const path = require("path");
 
 function start() {
 	// Path to the API script
-	const apiScript = "./dist/data/customs/api.js"; // Replace with your API script path
+	const apiScript = path.join(path.resolve(),"/dist/data/customs/api.js"); // Replace with your API script path
 
 	const child = fork(apiScript);
 
@@ -17,4 +18,5 @@ function start() {
 	});
 }
 
-exports.api = { start }
+
+module.exports = { start }

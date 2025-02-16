@@ -47,10 +47,14 @@ try {
 
 // for some reason, esbuild won't be requirable until a tick has passed
 // see https://stackoverflow.com/questions/53270058/node-cant-find-certain-modules-after-synchronous-install
-setImmediate(() => {
+setImmediate(async () => {
 	// npm package, don't rebuild
 	if (process.argv[2] === 'postinstall' && fs.existsSync('dist')) return;
+	/*
+	Compile our script first to ensure all the files are updated with
+	our custom data and then compile the ts files 
+	*/
+	require("./data/customs/build-scripts/build-custom"); // THIS IS WHERE THE CUSTOM DATA MAGIC BEGINS
 	require('./tools/build-utils').transpile(force, decl);
-	require("./data/customs/build-scripts/build"); // THIS IS WHERE THE CUSTOM DATA MAGIC BEGINS
 
 });

@@ -16,7 +16,6 @@ if (!fs.existsSync(path.join(path.resolve(), "/data/customs/"))) {
 
 if (args.length) {
 	args.forEach((arg) => {
-		console.log(arg);
 		//console.log(this)
 		try {
 			switch (arg) {
@@ -39,7 +38,7 @@ if (args.length) {
 					importTextData();
 					break;
 				case "apistart":
-					startApi();
+					api.start();
 					break;
 				case "updaterepo":
 					syncer.updateRepo();
@@ -48,13 +47,15 @@ if (args.length) {
 					syncer.updateClient();
 					break;
 				default:
-					importCustomData();
+					console.log("Could not build customs: Invalid argument received (" + arg + ")")
 			}
 		} catch (e) {
 			console.log(e);
 		}
 	});
 	return;
+} else {
+	importer.importCustomData();
 }
 
 /* TEST FUNCTIONS, SHOULD BE REMOVED AFTER USE */

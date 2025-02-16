@@ -5641,10 +5641,6 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: -4,
 	},
 
-
-
-
-
 /*CUSTOM ABILITIES*/
  "entomize":{"name":"Entomize","flags":{},"num":-1029,"rating":4}
 , "monsoonsurge":{"name":"Monsoon Surge","flags":{},"num":-1029,"rating":4}

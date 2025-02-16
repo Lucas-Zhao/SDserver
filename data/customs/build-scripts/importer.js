@@ -11,6 +11,11 @@
 const fs = require("fs");
 const path = require("path");
 
+const customPath = path.join(path.resolve(), "/data/customs/data");
+const dataPath = path.join(path.resolve(), "/data");
+
+const { toID } = require("../../../sim/dex-data.js");
+
 
 function getCustomPath(file) {
 	return customPath + "/" + file + ".txt";
@@ -190,7 +195,7 @@ let importAbilitiesData = () => {
 		}
 		const updatedContent = pokedexFileContent.replace(
 			/};\s*$/,
-			`\n/*CUSTOM ABILITIES*/\n${newEntries}};\n`
+			`\n/*CUSTOM ABILITIES*/\n${newEntries[0]}};\n/*FUNCTIONS*/\n${newEntries[1]}`
 		);
 
 		fs.writeFileSync(pokedexFilePath, updatedContent, "utf-8");
