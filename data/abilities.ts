@@ -5836,6 +5836,62 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*CUSTOM ABILITIES*/
  "monsoonsurge":{"name":"Monsoon Surge","flags":{},"num":-1029,"rating":4}
 , "blizzardveil":{"name":"Blizzard Veil","flags":{},"num":-1029,"rating":4}
@@ -5857,14 +5913,14 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 , "mentalfortitude":{"name":"Mental Fortitude","flags":{},"num":-1029,"rating":4}
 , "accelerationofruin":{"name":"Acceleration of Ruin","flags":{},"num":-1027,"rating":4.5}
 , "prismaticaura":{"name":"Prismatic Aura","flags":{},"num":-1029,"rating":2.5}
-, "adaptivemastery":{"name":"Adaptive Mastery","flags":{},"num":-1028,"rating":3.5}
-, "stormbloom":{"name":"Stormbloom","flags":{},"num":-1028,"rating":4}
-, "solarmist":{"name":"Solar Mist","flags":{},"num":-1028,"rating":4}
-, "desertmind":{"name":"Desert Mind","flags":{},"num":-1028,"rating":4}
-, "frostvolt":{"name":"Frostvolt","flags":{},"num":-1028,"rating":4}
-, "soulharvest":{"name":"Soul Harvest","flags":{},"num":-1028,"rating":4}
+, "adaptivemastery":{"name":"Adaptive Mastery","flags":{},"num":-1029,"rating":3.5}
+, "stormbloom":{"name":"Stormbloom","flags":{},"num":-1029,"rating":4}
+, "solarmist":{"name":"Solar Mist","flags":{},"num":-1029,"rating":4}
+, "desertmind":{"name":"Desert Mind","flags":{},"num":-1029,"rating":4}
+, "frostvolt":{"name":"Frostvolt","flags":{},"num":-1029,"rating":4}
+, "soulharvest":{"name":"Soul Harvest","flags":{},"num":-1029,"rating":4}
 , "bootsofruin":{"name":"Boots of Ruin","flags":{},"num":-1029,"rating":4.5}
-, "entomize":{"name":"Entomize","flags":{},"num":-1028,"rating":4}
+, "entomize":{"name":"Entomize","flags":{},"num":-1029,"rating":4}
 
 };
 /*FUNCTIONS*/

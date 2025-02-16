@@ -129,7 +129,7 @@ exports.abilities = {
 		onModifyDefPriority: 5,
 		onModifyDef: function(atk, attacker, defender, move) {
 			if(!this.field.isWeather("raindance")) return;
-			const bestStat = attacker.getBestStat(true, true);
+			const bestStat = defender.getBestStat(true, true);
 			if (bestStat === "def") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
@@ -138,7 +138,7 @@ exports.abilities = {
 		onModifySpDPriority: 5,
 		onModifySpD: function(atk, attacker, defender, move) {
 			if(!this.field.isWeather("raindance")) return;
-			const bestStat = attacker.getBestStat(true, true);
+			const bestStat = defender.getBestStat(true, true);
 			if (bestStat === "spd") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
