@@ -2,6 +2,10 @@ const fs = require("fs");
 const path = require("path");
 
 const args = process.argv.slice(2);
+const api = require("./api.js")
+const importer = require("./importer.js")
+const syncer = require("./syncer.js")
+
 
 if (!fs.existsSync(path.join(path.resolve(), "/data/customs/"))) {
 	console.log(
@@ -38,7 +42,7 @@ if (args.length) {
 					startApi();
 					break;
 				case "updaterepo":
-					updateRepo();
+					syncer.updateRepo();
 					break;
 				case "updateclient":
 					updateClient();

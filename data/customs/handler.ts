@@ -49,8 +49,8 @@ interface Pokemon {
 	otherFormes?: Array<string>;
 	formeOrder?: Array<string>;
 	requiredItem?: string;
-	forme?: string
-	baseSpecies?:string
+	forme?: string;
+	baseSpecies?: string;
 }
 
 interface FormatsData {
@@ -66,7 +66,7 @@ interface Item {
 	itemUser?: string;
 	isNonstandard?: string;
 	megaEvolves?: string[];
-	gen?: number
+	gen?: number;
 }
 
 interface Ability {
@@ -86,7 +86,7 @@ export class Handler {
 	abilities: Dict<Ability>;
 	learnsets: Dict<Learnset>;
 	formatsdata: Dict<FormatsData>;
-	texts: Dict<Dict<string>>
+	texts: Dict<Dict<string>>;
 
 	pokedexIds?: Array<string>;
 	itemsIds?: Array<string>;
@@ -104,10 +104,10 @@ export class Handler {
 		this.formatsdata = {};
 		this.funcTxt = ["abilities", "items", "moves"];
 		this.texts = {
-			pokedex:{},
-			abilities:{},
-			items:{}
-		}
+			pokedex: {},
+			abilities: {},
+			items: {},
+		};
 		this.loadFiles();
 	}
 
@@ -160,7 +160,7 @@ export class Handler {
 	}
 	loadText(file: DataFile): void {
 		let fileTypes = Object.keys(this.texts);
-		if (!fileTypes.includes(file)) return 
+		if (!fileTypes.includes(file)) return;
 		let filePath: string = this.getDir("text/" + file);
 		if (!fsSync.existsSync(filePath))
 			return console.log(
@@ -194,12 +194,11 @@ export class Handler {
 		//if (file == "formats-data") this.formatsdata = parsedJson;
 	}
 
-
 	loadFiles() {
 		try {
 			fileTypes.forEach((file) => {
 				this.load(file);
-				this.loadText(file)
+				this.loadText(file);
 			});
 		} catch (e) {
 			this.print("Error loading files: " + e.message);
@@ -315,7 +314,17 @@ export class Handler {
 			return match[0]
 				.replace(`//${name}start`, "")
 				.replace(`//${name}end`, "");
+
 		return "";
+	}
+
+	replaceFunctions(content: string, name: string, buffer: string) {
+		const regex = new RegExp(`//${name}start([\\s\\S]*?)//${name}end`, "g");
+		const match = content.match(regex);
+		console.log(match);
+		let newContent = `//${name}start \n${buffer} \n//${name}end`;
+		if (match) content.replace(match[0], buffer);
+		return content;
 	}
 
 	/* main functions */
@@ -352,19 +361,22 @@ export class Handler {
 				: new Function(...func.params, func.body);
 
 			//buffer += this.getFunctions(content,this.toID(ability.name))
-			console.log(buffer);
+			//	console.log(buffer);
 			buffer += `\nAbilities["${this.toID(ability.name)}"].${
 				func.name
 			} = ${funcc.toString()}\n`;
 		});
 
-		if (this.functionsExist(content, this.toID(ability.name)))
-			content = content.replace(
-				this.getFunctions(content, this.toID(ability.name)),
+		if (this.functionsExist(content, this.toID(ability.name))) {
+			content = this.replaceFunctions(
+				content,
+				this.toID(ability.name),
 				buffer
 			);
+			//	console.log("found: " + this.getFunctions(content,this.toID(ability.name)));
+		}
 		if (!this.functionsExist(content, this.toID(ability.name)))
-			content += `//${id}start\n${buffer}\n//${id}end`;
+			content += `\n//${id}start\n${buffer}\n//${id}end`;
 
 		fsSync.writeFileSync(filePath, content);
 	}
@@ -385,10 +397,10 @@ export class Handler {
 			megaEvolves: data.megaEvolves || undefined,
 			num: -(Object.keys(this.items as {}).length + 1001),
 			isNonstandard: "Unobtainable",
-			gen: data.gen ? data.gen : 0
+			gen: data.gen ? data.gen : 0,
 		};
 		this.convertToTxt("items");
-		this.addText("items",{name:data.name,shortDesc:data.shortDesc})
+		this.addText("items", { name: data.name, shortDesc: data.shortDesc });
 
 		this.import("items");
 		return true;
@@ -425,22 +437,23 @@ export class Handler {
 	addPokemon(pokemon: Pokemon, opts: Dict<string>) {
 		console.log(Object.keys(this.pokedex));
 		pokemon.num = -(Object.keys(this.abilities as {}).length + 1000);
-		if(pokemon.abilities["1"] == null || pokemon.abilities["1"] == "null") delete pokemon.abilities["1"];
-		if(pokemon.abilities["H"] == null || pokemon.abilities["H"] == "null") delete pokemon.abilities["1"];
-		if(pokemon.prevo == null || pokemon.prevo == "null") delete pokemon.prevo
-		if(pokemon.requiredItem == null || pokemon.requiredItem == "null") delete pokemon.requiredItem
+		if (pokemon.abilities["1"] == null || pokemon.abilities["1"] == "null")
+			delete pokemon.abilities["1"];
+		if (pokemon.abilities["H"] == null || pokemon.abilities["H"] == "null")
+			delete pokemon.abilities["1"];
+		if (pokemon.prevo == null || pokemon.prevo == "null")
+			delete pokemon.prevo;
+		if (pokemon.requiredItem == null || pokemon.requiredItem == "null")
+			delete pokemon.requiredItem;
 
-	
-
-		if(Array.isArray(opts.learnset)) {
-			let obj: Dict<string[]> = {}
-			opts.learnset.forEach((id:string) => {
+		if (Array.isArray(opts.learnset)) {
+			let obj: Dict<string[]> = {};
+			opts.learnset.forEach((id: string) => {
 				obj[id] = ["9L4", "9L3"];
-			})
-			opts.learnset = obj
+			});
+			opts.learnset = obj;
 		}
 
-	
 		this.pokedex[this.toID(pokemon.name)] = pokemon;
 		this.convertToTxt("pokedex");
 		this.import("pokedex");
@@ -453,11 +466,11 @@ export class Handler {
 			};
 			let data = {
 				name: pokemon.requiredItem,
-				megaEvolves:[ pokemon.baseSpecies],
+				megaEvolves: [pokemon.baseSpecies],
 				megaStone: pokemon.name,
 				itemUser: [pokemon.baseSpecies],
 				functions: [{ name: "onTakeItem", body: func.toString() }],
-				shortDesc: `If held by a ${pokemon.name}, this item allows it to Mega Evolve in battle.`
+				shortDesc: `If held by a ${pokemon.name}, this item allows it to Mega Evolve in battle.`,
 			};
 			this.addItem(data);
 		}
@@ -465,7 +478,7 @@ export class Handler {
 			let data = { learnset: opts.learnset as {} };
 			this.addLearnset(data, pokemon.name);
 		}
-		this.addText("pokedex",{name:pokemon.name})
+		this.addText("pokedex", { name: pokemon.name });
 		this.addFormatData(
 			{
 				isNonstandard: "Unobtainable",
@@ -476,7 +489,7 @@ export class Handler {
 		);
 	}
 
-	deletePokemon(name:string) {
+	deletePokemon(name: string) {
 		let id = this.toID(name);
 		delete this.pokedex[id];
 		delete this.formatsdata[id];
@@ -484,12 +497,12 @@ export class Handler {
 		delete this.texts.pokedex[id];
 		delete this.texts.learnsets[id];
 		delete this.texts.formatsdata[id];
-		this.convertToTxt("pokedex")
-		this.convertToTxt("learnsets")
-		this.convertToTxt("formats-data")
-		this.convertToTxt("pokedex",true)
-		this.convertToTxt("learnsets",true)
-		this.convertToTxt("formats-data",true)
+		this.convertToTxt("pokedex");
+		this.convertToTxt("learnsets");
+		this.convertToTxt("formats-data");
+		this.convertToTxt("pokedex", true);
+		this.convertToTxt("learnsets", true);
+		this.convertToTxt("formats-data", true);
 		this.importAll();
 	}
 
@@ -509,41 +522,45 @@ export class Handler {
 		this.import("learnsets");
 	}
 
-	addText(type:DataFile,data:any) {
+	addText(type: DataFile, data: any) {
 		let json = JSON.stringify(data);
-		if(type == "pokedex") this.texts.pokedex[this.toID(data.name)] = data;
-		if(type == "abilities") this.texts.abilities[this.toID(data.name)] = data;
-		if(type == "items") this.texts.items[this.toID(data.name)] = data;
-		this.convertToTxt(type,true);
-		this.import(type,true)
+		if (type == "pokedex") this.texts.pokedex[this.toID(data.name)] = data;
+		if (type == "abilities")
+			this.texts.abilities[this.toID(data.name)] = data;
+		if (type == "items") this.texts.items[this.toID(data.name)] = data;
+		this.convertToTxt(type, true);
+		this.import(type, true);
 	}
 
-	addSprite(name:string, link?:string) {
-		let filePath = path.join(CUSTOM_DIR,"config/config.js");
+	addSprite(name: string, link?: string) {
+		let filePath = path.join(CUSTOM_DIR, "config/config.js");
 		let content = fsSync.readFileSync(filePath).toString();
-		let json = content.replace("exports.CustomPokemonIcons = ","");
+		let json = content.replace("exports.CustomPokemonIcons = ", "");
 		let obj = JSON.parse(json);
 		obj[this.toID(name)] = link || true;
-		fsSync.writeFileSync(filePath,"exports.CustomPokemonIcons = " + JSON.stringify(obj))
+		fsSync.writeFileSync(
+			filePath,
+			"exports.CustomPokemonIcons = " + JSON.stringify(obj)
+		);
 	}
 
-	convertToTxt(file: DataFile, txtFile:boolean = false): string {
+	convertToTxt(file: DataFile, txtFile: boolean = false): string {
 		console.log("converting...");
 		if (!file) return "";
 		let filePath = this.getDir(txtFile ? "text/" + file : file);
 		let fileid = this.toID(file);
 		let buffer = ``;
-		if(!txtFile) {
-		Object.keys(this[fileid]).forEach((id, i) => {
-			let data = this[fileid][id];
-			buffer += `${i ? "," : ""} "${id}":${JSON.stringify(data)}\n`;
-		});
-	} else {
-		Object.keys(this.texts[fileid]).forEach((id, i) => {
-			let data = this.texts[fileid][id];
-			buffer += `${i ? "," : ""} "${id}":${JSON.stringify(data)}\n`;
-		});
-	}
+		if (!txtFile) {
+			Object.keys(this[fileid]).forEach((id, i) => {
+				let data = this[fileid][id];
+				buffer += `${i ? "," : ""} "${id}":${JSON.stringify(data)}\n`;
+			});
+		} else {
+			Object.keys(this.texts[fileid]).forEach((id, i) => {
+				let data = this.texts[fileid][id];
+				buffer += `${i ? "," : ""} "${id}":${JSON.stringify(data)}\n`;
+			});
+		}
 		if (this.funcTxt.includes(file)) {
 			let content = fsSync
 				.readFileSync(filePath)
@@ -557,13 +574,11 @@ export class Handler {
 		return buffer;
 	}
 
-
-	import(file: DataFile,txt:boolean = false) {
+	import(file: DataFile, txt: boolean = false) {
 		exec(
-			`node "${path.join(
-				path.resolve(),
-				"/tools/build-customs.js"
-			)}" ${txt ? "text/" + file : file}`,
+			`node "${path.join(path.resolve(), "/tools/build-customs.js")}" ${
+				txt ? "text/" + file : file
+			}`,
 			(error, stdout, stderr) => {
 				if (error) return console.error(`Error: ${error.message}`);
 				if (stderr) return console.error(`Stderr: ${stderr}`);
@@ -575,8 +590,8 @@ export class Handler {
 	importAll() {
 		fileTypes.forEach((file) => {
 			this.import(file);
-			if(this.texts[this.toID(file)]) this.import(file,true)
-		})
+			if (this.texts[this.toID(file)]) this.import(file, true);
+		});
 	}
 
 	updateFile(file: DataFile) {

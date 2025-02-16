@@ -524,9 +524,9 @@ exports.abilities = {
 		num: -1025,
 	},
 
-	entomize: {
+	"entomize": {
 		onModifyTypePriority: -1,
-		onModifyType: function (move, pokemon) {
+		onModifyType: function(move, pokemon) {
 			const noModifyType = [
 				"judgment",
 				"multiattack",
@@ -547,12 +547,44 @@ exports.abilities = {
 			}
 		},
 		onBasePowerPriority: 23,
-		onBasePower: function (basePower, pokemon, target, move) {
-			if (move.type == "bug")
+		onBasePower: function(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect)
 				return this.chainModify([4915, 4096]);
 		},
 		flags: {},
 		name: "Entomize",
+		rating: 4,
+		num: -1026,
+	},
+	"antomize": {
+		onModifyTypePriority: -1,
+		onModifyType: function(move, pokemon) {
+			const noModifyType = [
+				"judgment",
+				"multiattack",
+				"naturalgift",
+				"revelationdance",
+				"technoblast",
+				"terrainpulse",
+				"weatherball",
+			];
+			if (
+				move.type === "Normal" &&
+				!noModifyType.includes(move.id) &&
+				!(move.isZ && move.category !== "Status") &&
+				!(move.name === "Tera Blast" && pokemon.terastallized)
+			) {
+				move.type = "Bug";
+				move.typeChangerBoosted = this.effect;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower: function(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect)
+				return this.chainModify([4915, 4096]);
+		},
+		flags: {},
+		name: "Antomize",
 		rating: 4,
 		num: -1026,
 	},
