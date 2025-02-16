@@ -6002,6 +6002,41 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*CUSTOM ABILITIES*/
  "monsoonsurge":{"name":"Monsoon Surge","flags":{},"num":-1029,"rating":4}
 , "blizzardveil":{"name":"Blizzard Veil","flags":{},"num":-1029,"rating":4}
@@ -6036,273 +6071,296 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 /*FUNCTIONS*/
 
 //monsoonsurgestart
-Abilities["monsoonsurge"].onStart = function(source) {
-			this.field.setWeather('raindance');
+Abilities["monsoonsurge"].onStart = function (source) {
+			if (this.field.getWeather().id == "raindance") return;
+			this.field.setWeather("raindance");
 			this.field.weatherState.duration = 10;
 		}
 //monsoonsurgeend//blizzardveilstart
-Abilities["blizzardveil"].onStart = function(source) {
-			this.field.setWeather('snow');
+Abilities["blizzardveil"].onStart = function (source) {
+			if (this.field.getWeather().id == "snow") return;
+
+			this.field.setWeather("snow");
 			this.field.weatherState.duration = 10;
 		}
 //blizzardveilend//sandstormragestart
-Abilities["sandstormrage"].onStart = function(source) {
-			this.field.setWeather('sandstorm');
+Abilities["sandstormrage"].onStart = function (source) {
+			if (this.field.getWeather().id == "sandstorm") return;
+
+			this.field.setWeather("sandstorm");
 			this.field.weatherState.duration = 10;
 		}
 //sandstormrageend//solarflarestart
-Abilities["solarflare"].onStart = function(source) {
-			this.field.setWeather('sunnyday');
+Abilities["solarflare"].onStart = function (source) {
+			if (this.field.getWeather().id == "sunnyday") return;
+
+			this.field.setWeather("sunnyday");
 			this.field.weatherState.duration = 10;
 		}
 //solarflareend//eerieresonancestart
-Abilities["eerieresonance"].onStart = function(source) {
-			this.field.setTerrain('electricterrain');
+Abilities["eerieresonance"].onStart = function (source) {
+			if (this.field.getTerrain().id == "electricterrain") return;
+
+			this.field.setTerrain("electricterrain");
 			this.field.terrainState.duration = 10;
 		}
 //eerieresonanceend//mindscapedomainstart
-Abilities["mindscapedomain"].onStart = function(source) {
-			this.field.setTerrain('psychicterrain');
+Abilities["mindscapedomain"].onStart = function (source) {
+			if (this.field.getTerrain().id == "psychicterrain") return;
+
+			this.field.setTerrain("psychicterrain");
 			this.field.terrainState.duration = 10;
 		}
 //mindscapedomainend//verdantbloomstart
-Abilities["verdantbloom"].onStart = function(source) {
-			this.field.setTerrain('grassyterrain');
+Abilities["verdantbloom"].onStart = function (source) {
+			if (this.field.getTerrain().id == "grassyterrain") return;
+
+			this.field.setTerrain("grassyterrain");
 			this.field.terrainState.duration = 10;
 		}
 //verdantbloomend//mystichazestart
-Abilities["mystichaze"].onStart = function(source) {
-			this.field.setTerrain('mistyterrain');
+Abilities["mystichaze"].onStart = function (source) {
+			this.field.setTerrain("mistyterrain");
 			this.field.terrainState.duration = 10;
 		}
 //mystichazeend//tundrecorestart
-Abilities["tundrecore"].onStart = function(pokemon) {
-			this.singleEvent('WeatherChange', this.effect, this.effectState, pokemon);
+Abilities["tundrecore"].onStart = function (pokemon) {
+			this.singleEvent(
+				"WeatherChange",
+				this.effect,
+				this.effectState,
+				pokemon
+			);
 		}
 
-Abilities["tundrecore"].onWeatherChange = function(pokemon) {
-			if(!this.field.isWeather("snow")) return;
+Abilities["tundrecore"].onWeatherChange = function (pokemon) {
+			if (!this.field.isWeather("snow")) return;
 			const bestStat = pokemon.getBestStat(true, true);
-			this.boost({[bestStat]: 1.5}, pokemon);
+			this.boost({ [bestStat]: 1.5 }, pokemon);
 		}
 //tundrecoreend//desertheartstart
-Abilities["desertheart"].onStart = function(pokemon) {
-			this.singleEvent('WeatherChange', this.effect, this.effectState, pokemon);
+Abilities["desertheart"].onStart = function (pokemon) {
+			this.singleEvent(
+				"WeatherChange",
+				this.effect,
+				this.effectState,
+				pokemon
+			);
 		}
 
-Abilities["desertheart"].onWeatherChange = function(pokemon) {
-			if(!this.field.isWeather("sandstorm")) return;
+Abilities["desertheart"].onWeatherChange = function (pokemon) {
+			if (!this.field.isWeather("sandstorm")) return;
 			const bestStat = pokemon.getBestStat(true, true);
-			this.boost({[bestStat]: 1.5}, pokemon);
+			this.boost({ [bestStat]: 1.5 }, pokemon);
 		}
 //desertheartend//aquacircuitstart
-Abilities["aquacircuit"].onModifySpA = function(atk, attacker, defender, move) {
-			if(!this.field.isWeather("raindance")) return;
+Abilities["aquacircuit"].onModifySpA = function (atk, attacker, defender, move) {
+			if (!this.field.isWeather("raindance")) return;
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spa") {
-				this.debug('Weather boost');
+				this.debug("Weather boost");
 				return this.chainModify(1.5);
 			}
 		}
 
-Abilities["aquacircuit"].onModifyAtk = function(atk, attacker, defender, move) {
-			if(!this.field.isWeather("raindance")) return;
+Abilities["aquacircuit"].onModifyAtk = function (atk, attacker, defender, move) {
+			if (!this.field.isWeather("raindance")) return;
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "atk") {
-				this.debug('Weather boost');
+				this.debug("Weather boost");
 				return this.chainModify(1.5);
 			}
 		}
 
-Abilities["aquacircuit"].onModifyDef = function(def, attacker, defender, move) {
-			if(!this.field.isWeather("raindance")) return;
+Abilities["aquacircuit"].onModifyDef = function (def, attacker, defender, move) {
+			if (!this.field.isWeather("raindance")) return;
 			const bestStat = defender.getBestStat(true, true);
 			if (bestStat === "def") {
-				this.debug('Weather boost');
+				this.debug("Weather boost");
 				return this.chainModify(1.5);
 			}
 		}
 
-Abilities["aquacircuit"].onModifySpD = function(atk, attacker, defender, move) {
-			if(!this.field.isWeather("raindance")) return;
+Abilities["aquacircuit"].onModifySpD = function (atk, attacker, defender, move) {
+			if (!this.field.isWeather("raindance")) return;
 			const bestStat = defender.getBestStat(true, true);
 			if (bestStat === "spd") {
-				this.debug('Weather boost');
+				this.debug("Weather boost");
 				return this.chainModify(1.5);
 			}
 		}
 
-Abilities["aquacircuit"].onModifySpe = function(atk, attacker, defender, move) {
-			if(!this.field.isWeather("raindance")) return;
+Abilities["aquacircuit"].onModifySpe = function (atk, attacker, defender, move) {
+			if (!this.field.isWeather("raindance")) return;
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spe") {
-				this.debug('Weather boost');
+				this.debug("Weather boost");
 				return this.chainModify(1.5);
 			}
 		}
 //aquacircuitend//psychicpulsestart
-Abilities["psychicpulse"].onModifySpA = function(atk, attacker, defender, move) {
-			if(!this.field.isTerrain("psychicterrain")) return;
+Abilities["psychicpulse"].onModifySpA = function (atk, attacker, defender, move) {
+			if (!this.field.isTerrain("psychicterrain")) return;
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spa") {
-				this.debug('Weather boost');
+				this.debug("Weather boost");
 				return this.chainModify(1.5);
 			}
 		}
 
-Abilities["psychicpulse"].onModifyAtk = function(atk, attacker, defender, move) {
-			if(!this.field.isTerrain("psychicterrain")) return;
+Abilities["psychicpulse"].onModifyAtk = function (atk, attacker, defender, move) {
+			if (!this.field.isTerrain("psychicterrain")) return;
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "atk") {
-				this.debug('Weather boost');
+				this.debug("Weather boost");
 				return this.chainModify(1.5);
 			}
 		}
 
-Abilities["psychicpulse"].onModifyDef = function(atk, attacker, defender, move) {
-			if(!this.field.isTerrain("psychicterrain")) return;
+Abilities["psychicpulse"].onModifyDef = function (atk, attacker, defender, move) {
+			if (!this.field.isTerrain("psychicterrain")) return;
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "def") {
-				this.debug('Weather boost');
+				this.debug("Weather boost");
 				return this.chainModify(1.5);
 			}
 		}
 
-Abilities["psychicpulse"].onModifySpD = function(atk, attacker, defender, move) {
-			if(!this.field.isTerrain("psychicterrain")) return;
+Abilities["psychicpulse"].onModifySpD = function (atk, attacker, defender, move) {
+			if (!this.field.isTerrain("psychicterrain")) return;
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spd") {
-				this.debug('Weather boost');
+				this.debug("Weather boost");
 				return this.chainModify(1.5);
 			}
 		}
 
-Abilities["psychicpulse"].onModifySpe = function(atk, attacker, defender, move) {
-			if(!this.field.isTerrain("psychicterrain")) return;
+Abilities["psychicpulse"].onModifySpe = function (atk, attacker, defender, move) {
+			if (!this.field.isTerrain("psychicterrain")) return;
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spe") {
-				this.debug('Weather boost');
+				this.debug("Weather boost");
 				return this.chainModify(1.5);
 			}
 		}
 //psychicpulseend//mysticaurastart
-Abilities["mysticaura"].onModifySpA = function(atk, attacker, defender, move) {
-			if(!this.field.isTerrain("mistyterrain")) return;
+Abilities["mysticaura"].onModifySpA = function (atk, attacker, defender, move) {
+			if (!this.field.isTerrain("mistyterrain")) return;
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spa") {
-				this.debug('Weather boost');
+				this.debug("Weather boost");
 				return this.chainModify(1.5);
 			}
 		}
 
-Abilities["mysticaura"].onModifyAtk = function(atk, attacker, defender, move) {
-			if(!this.field.isTerrain("mistyterrain")) return;
+Abilities["mysticaura"].onModifyAtk = function (atk, attacker, defender, move) {
+			if (!this.field.isTerrain("mistyterrain")) return;
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "atk") {
-				this.debug('Weather boost');
+				this.debug("Weather boost");
 				return this.chainModify(1.5);
 			}
 		}
 
-Abilities["mysticaura"].onModifyDef = function(atk, attacker, defender, move) {
-			if(!this.field.isTerrain("mistyterrain")) return;
+Abilities["mysticaura"].onModifyDef = function (atk, attacker, defender, move) {
+			if (!this.field.isTerrain("mistyterrain")) return;
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "def") {
-				this.debug('Weather boost');
+				this.debug("Weather boost");
 				return this.chainModify(1.5);
 			}
 		}
 
-Abilities["mysticaura"].onModifySpD = function(atk, attacker, defender, move) {
-			if(!this.field.isTerrain("mistyterrain")) return;
+Abilities["mysticaura"].onModifySpD = function (atk, attacker, defender, move) {
+			if (!this.field.isTerrain("mistyterrain")) return;
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spd") {
-				this.debug('Weather boost');
+				this.debug("Weather boost");
 				return this.chainModify(1.5);
 			}
 		}
 
-Abilities["mysticaura"].onModifySpe = function(atk, attacker, defender, move) {
-			if(!this.field.isTerrain("mistyterrain")) return;
+Abilities["mysticaura"].onModifySpe = function (atk, attacker, defender, move) {
+			if (!this.field.isTerrain("mistyterrain")) return;
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spe") {
-				this.debug('Weather boost');
+				this.debug("Weather boost");
 				return this.chainModify(1.5);
 			}
 		}
 //mysticauraend//overgrowthenginestart
-Abilities["overgrowthengine"].onModifySpA = function(atk, attacker, defender, move) {
-			if(!this.field.isTerrain("grassyterrain")) return;
+Abilities["overgrowthengine"].onModifySpA = function (atk, attacker, defender, move) {
+			if (!this.field.isTerrain("grassyterrain")) return;
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spa") {
-				this.debug('Weather boost');
+				this.debug("Weather boost");
 				return this.chainModify(1.5);
 			}
 		}
 
-Abilities["overgrowthengine"].onModifyAtk = function(atk, attacker, defender, move) {
-			if(!this.field.isTerrain("grassyterrain")) return;
+Abilities["overgrowthengine"].onModifyAtk = function (atk, attacker, defender, move) {
+			if (!this.field.isTerrain("grassyterrain")) return;
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "atk") {
-				this.debug('Weather boost');
+				this.debug("Weather boost");
 				return this.chainModify(1.5);
 			}
 		}
 
-Abilities["overgrowthengine"].onModifyDef = function(atk, attacker, defender, move) {
-			if(!this.field.isTerrain("grassyterrain")) return;
+Abilities["overgrowthengine"].onModifyDef = function (atk, attacker, defender, move) {
+			if (!this.field.isTerrain("grassyterrain")) return;
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "def") {
-				this.debug('Weather boost');
+				this.debug("Weather boost");
 				return this.chainModify(1.5);
 			}
 		}
 
-Abilities["overgrowthengine"].onModifySpD = function(atk, attacker, defender, move) {
-			if(!this.field.isTerrain("grassyterrain")) return;
+Abilities["overgrowthengine"].onModifySpD = function (atk, attacker, defender, move) {
+			if (!this.field.isTerrain("grassyterrain")) return;
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spd") {
-				this.debug('Weather boost');
+				this.debug("Weather boost");
 				return this.chainModify(1.5);
 			}
 		}
 
-Abilities["overgrowthengine"].onModifySpe = function(atk, attacker, defender, move) {
-			if(!this.field.isTerrain("grassyterrain")) return;
+Abilities["overgrowthengine"].onModifySpe = function (atk, attacker, defender, move) {
+			if (!this.field.isTerrain("grassyterrain")) return;
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spe") {
-				this.debug('Weather boost');
+				this.debug("Weather boost");
 				return this.chainModify(1.5);
 			}
 		}
 //overgrowthengineend//arcanemightstart
-Abilities["arcanemight"].onModifySpA = function(spa) {
+Abilities["arcanemight"].onModifySpA = function (spa) {
 			return this.chainModify(2);
 		}
 //arcanemightend//terrifystart
-Abilities["terrify"].onStart = function(pokemon) {
+Abilities["terrify"].onStart = function (pokemon) {
 			let activated = false;
 			for (const target of pokemon.adjacentFoes()) {
 				if (!activated) {
-					this.add('-ability', pokemon, 'Terrify', 'boost');
+					this.add("-ability", pokemon, "Terrify", "boost");
 					activated = true;
 				}
-				if (target.volatiles['substitute']) {
-					this.add('-immune', target);
+				if (target.volatiles["substitute"]) {
+					this.add("-immune", target);
 				} else {
-					this.boost({spa: -1}, target, pokemon, null, true);
+					this.boost({ spa: -1 }, target, pokemon, null, true);
 				}
 			}
 		}
 //terrifyend//charismastart
-Abilities["charisma"].onSourceAfterFaint = function(length, target, source, effect) {
-			if (effect && effect.effectType === 'Move') {
-				this.boost({spa: length}, source);
+Abilities["charisma"].onSourceAfterFaint = function (length, target, source, effect) {
+			if (effect && effect.effectType === "Move") {
+				this.boost({ spa: length }, source);
 			}
 		}
 //charismaend//mentalfortitudestart
-Abilities["mentalfortitude"].onDamagingHit = function(damage, target, source, effect) {
-			this.boost({spd: 1});
+Abilities["mentalfortitude"].onDamagingHit = function (damage, target, source, effect) {
+			this.boost({ spd: 1 });
 		}
 //mentalfortitudeend//accelerationofruinstart
 Abilities["accelerationofruin"].onStart = function(pokemon) {
@@ -6319,78 +6377,86 @@ Abilities["accelerationofruin"].onAnyModifySpe = function(spe, target) {
 			return this.chainModify(0.75);
 		}
 //accelerationofruinend//prismaticaurastart
-Abilities["prismaticaura"].onDamagingHit = function(damage, target, source, move) {
-			if (move.basePower > 0 && !this.checkMoveMakesContact(move, source, target, true)) {
+Abilities["prismaticaura"].onDamagingHit = function (damage, target, source, move) {
+			if (
+				move.basePower > 0 &&
+				!this.checkMoveMakesContact(move, source, target, true)
+			) {
 				this.damage(source.baseMaxhp / 8, source, target);
 			}
 		}
 //prismaticauraend//adaptivemasterystart
-Abilities["adaptivemastery"].onModifySpA = function(atk, attacker, defender, move) {
+Abilities["adaptivemastery"].onModifySpA = function (atk, attacker, defender, move) {
 			if (true) {
-				this.debug('Adaptive Mastery boost');
+				this.debug("Adaptive Mastery boost");
 				return this.chainModify(1.5);
 			}
 		}
 
-Abilities["adaptivemastery"].onModifyAtk = function(atk, attacker, defender, move) {
+Abilities["adaptivemastery"].onModifyAtk = function (atk, attacker, defender, move) {
 			if (true) {
-				this.debug('Adaptive Mastery boost');
+				this.debug("Adaptive Mastery boost");
 				return this.chainModify(1.5);
 			}
 		}
 //adaptivemasteryend//stormbloomstart
-Abilities["stormbloom"].onStart = function(pokemon) {
-			this.field.setWeather('raindance');
+Abilities["stormbloom"].onStart = function (pokemon) {
+			this.field.setWeather("raindance");
 			this.field.weatherState.duration = 8;
 
-			this.field.setTerrain('grassyterrain');
+			this.field.setTerrain("grassyterrain");
 			this.field.terrainState.duration = 8;
 		}
 //stormbloomend//solarmiststart
-Abilities["solarmist"].onStart = function(pokemon) {
-			this.field.setWeather('sunnyday');
+Abilities["solarmist"].onStart = function (pokemon) {
+			this.field.setWeather("sunnyday");
 			this.field.weatherState.duration = 8;
 
-			this.field.setTerrain('mistyterrain');
+			this.field.setTerrain("mistyterrain");
 			this.field.terrainState.duration = 8;
 		}
 //solarmistend//desertmindstart
-Abilities["desertmind"].onStart = function(pokemon) {
-			this.field.setWeather('sandstorm');
+Abilities["desertmind"].onStart = function (pokemon) {
+			this.field.setWeather("sandstorm");
 			this.field.weatherState.duration = 8;
 
-			this.field.setTerrain('psychicterrain');
+			this.field.setTerrain("psychicterrain");
 			this.field.terrainState.duration = 8;
 		}
 //desertmindend//frostvoltstart
-Abilities["frostvolt"].onStart = function(pokemon) {
-			this.field.setWeather('snow');
+Abilities["frostvolt"].onStart = function (pokemon) {
+			this.field.setWeather("snow");
 			this.field.weatherState.duration = 8;
 
-			this.field.setTerrain('electricterrain');
+			this.field.setTerrain("electricterrain");
 			this.field.terrainState.duration = 8;
 		}
 //frostvoltend//soulharveststart
-Abilities["soulharvest"].onSourceAfterFaint = function(length, target, source, effect) {
-			if (effect && effect.effectType === 'Move') {
-				console.log(source)
-				source.heal(source.baseMaxhp / 4)
-				this.add('-ability', source, 'Soul Harvest');
-				this.add('-heal', source, source.getHealth, 'ability: Soul Harvest');
+Abilities["soulharvest"].onSourceAfterFaint = function (length, target, source, effect) {
+			if (effect && effect.effectType === "Move") {
+				console.log(source);
+				source.heal(source.baseMaxhp / 4);
+				this.add("-ability", source, "Soul Harvest");
+				this.add(
+					"-heal",
+					source,
+					source.getHealth,
+					"ability: Soul Harvest"
+				);
 			}
 		}
 //soulharvestend//bootsofruinstart
-Abilities["bootsofruin"].onStart = function(pokemon) {
+Abilities["bootsofruin"].onStart = function (pokemon) {
 			if (this.suppressingAbility(pokemon)) return;
-			this.add('-ability', pokemon, 'Boots of Ruin');
+			this.add("-ability", pokemon, "Boots of Ruin");
 		}
 
-Abilities["bootsofruin"].onAnyModifySpe = function(spe, target) {
+Abilities["bootsofruin"].onAnyModifySpe = function (spe, target) {
 			const abilityHolder = this.effectState.target;
-			if (target.hasAbility('Boots of Ruin')) return;
-		//	if (!move.ruinedSpe?.hasAbility('Sword of Ruin')) move.ruinedDef = abilityHolder;
-		//	if (move.ruinedDef !== abilityHolder) return;
-			this.debug('Boots of Ruin Spe drop');
+			if (target.hasAbility("Boots of Ruin")) return;
+			//	if (!move.ruinedSpe?.hasAbility('Sword of Ruin')) move.ruinedDef = abilityHolder;
+			//	if (move.ruinedDef !== abilityHolder) return;
+			this.debug("Boots of Ruin Spe drop");
 			return this.chainModify(0.75);
 		}
 //bootsofruinend//entomizestart
