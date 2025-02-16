@@ -46,6 +46,7 @@ if (args.length) {
 					break;
 				case "updateclient":
 					syncer.updateClient();
+					break;
 				default:
 					importCustomData();
 			}
