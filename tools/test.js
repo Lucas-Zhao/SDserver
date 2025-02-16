@@ -548,7 +548,7 @@ exports.abilities = {
 		},
 		onBasePowerPriority: 23,
 		onBasePower: function (basePower, pokemon, target, move) {
-			if (move.typeChangerBoosted === this.effect)
+			if (move.type == "bug")
 				return this.chainModify([4915, 4096]);
 		},
 		flags: {},
