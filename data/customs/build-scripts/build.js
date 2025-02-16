@@ -45,7 +45,7 @@ if (args.length) {
 					syncer.updateRepo();
 					break;
 				case "updateclient":
-					updateClient();
+					syncer.updateClient();
 				default:
 					importCustomData();
 			}
