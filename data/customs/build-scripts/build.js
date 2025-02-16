@@ -58,7 +58,8 @@ if (args.length) {
 
 /* TEST FUNCTIONS, SHOULD BE REMOVED AFTER USE */
 
-const h = require("../dist/data/customs/handler.js").default;
+/*
+const h = require("").default;
 let abs = require("./test.js").abilities;
 
 Object.keys(abs).forEach((key) => {
@@ -133,4 +134,4 @@ Object.keys(abs).forEach((key) => {
 	h.addAbility(ability);
 });
 
-//console.log(h)
+//console.log(h)*/
