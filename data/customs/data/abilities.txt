@@ -1,31 +1,31 @@
- "monsoonsurge":{"name":"Monsoon Surge","flags":{},"num":-1027,"rating":4}
-, "blizzardveil":{"name":"Blizzard Veil","flags":{},"num":-1027,"rating":4}
-, "sandstormrage":{"name":"Sandstorm Rage","flags":{},"num":-1027,"rating":4}
-, "solarflare":{"name":"Solar Flare","flags":{},"num":-1027,"rating":4}
-, "eerieresonance":{"name":"Eerie Resonance","flags":{},"num":-1027,"rating":4}
-, "mindscapedomain":{"name":"Mindscape Domain","flags":{},"num":-1027,"rating":4}
-, "verdantbloom":{"name":"Verdant Bloom","flags":{},"num":-1027,"rating":4}
-, "mystichaze":{"name":"Mystic Haze","flags":{},"num":-1027,"rating":4}
-, "tundrecore":{"name":"Tundre Core","flags":{},"num":-1027,"rating":4}
-, "desertheart":{"name":"Desert Heart","flags":{},"num":-1027,"rating":4}
-, "aquacircuit":{"name":"Aqua Circuit","flags":{},"num":-1027,"rating":4}
-, "psychicpulse":{"name":"Psychic Pulse","flags":{},"num":-1027,"rating":4}
-, "mysticaura":{"name":"Mystic Aura","flags":{},"num":-1027,"rating":4}
-, "overgrowthengine":{"name":"Overgrowth Engine","flags":{},"num":-1027,"rating":4}
-, "arcanemight":{"name":"Arcane Might","flags":{},"num":-1027,"rating":5}
-, "terrify":{"name":"Terrify","flags":{},"num":-1027,"rating":3.5}
-, "charisma":{"name":"Charisma","flags":{},"num":-1027,"rating":3}
-, "mentalfortitude":{"name":"Mental Fortitude","flags":{},"num":-1027,"rating":4}
+ "monsoonsurge":{"name":"Monsoon Surge","flags":{},"num":-1029,"rating":4}
+, "blizzardveil":{"name":"Blizzard Veil","flags":{},"num":-1029,"rating":4}
+, "sandstormrage":{"name":"Sandstorm Rage","flags":{},"num":-1029,"rating":4}
+, "solarflare":{"name":"Solar Flare","flags":{},"num":-1029,"rating":4}
+, "eerieresonance":{"name":"Eerie Resonance","flags":{},"num":-1029,"rating":4}
+, "mindscapedomain":{"name":"Mindscape Domain","flags":{},"num":-1029,"rating":4}
+, "verdantbloom":{"name":"Verdant Bloom","flags":{},"num":-1029,"rating":4}
+, "mystichaze":{"name":"Mystic Haze","flags":{},"num":-1029,"rating":4}
+, "tundrecore":{"name":"Tundre Core","flags":{},"num":-1029,"rating":4}
+, "desertheart":{"name":"Desert Heart","flags":{},"num":-1029,"rating":4}
+, "aquacircuit":{"name":"Aqua Circuit","flags":{},"num":-1029,"rating":4}
+, "psychicpulse":{"name":"Psychic Pulse","flags":{},"num":-1029,"rating":4}
+, "mysticaura":{"name":"Mystic Aura","flags":{},"num":-1029,"rating":4}
+, "overgrowthengine":{"name":"Overgrowth Engine","flags":{},"num":-1029,"rating":4}
+, "arcanemight":{"name":"Arcane Might","flags":{},"num":-1029,"rating":5}
+, "terrify":{"name":"Terrify","flags":{},"num":-1029,"rating":3.5}
+, "charisma":{"name":"Charisma","flags":{},"num":-1029,"rating":3}
+, "mentalfortitude":{"name":"Mental Fortitude","flags":{},"num":-1029,"rating":4}
 , "accelerationofruin":{"name":"Acceleration of Ruin","flags":{},"num":-1027,"rating":4.5}
-, "prismaticaura":{"name":"Prismatic Aura","flags":{},"num":-1028,"rating":2.5}
-, "adaptivemastery":{"name":"Adaptive Mastery","flags":{},"num":-1028,"rating":3.5}
-, "stormbloom":{"name":"Stormbloom","flags":{},"num":-1028,"rating":4}
-, "solarmist":{"name":"Solar Mist","flags":{},"num":-1028,"rating":4}
-, "desertmind":{"name":"Desert Mind","flags":{},"num":-1028,"rating":4}
-, "frostvolt":{"name":"Frostvolt","flags":{},"num":-1028,"rating":4}
-, "soulharvest":{"name":"Soul Harvest","flags":{},"num":-1028,"rating":4}
-, "bootsofruin":{"name":"Boots of Ruin","flags":{},"num":-1027,"rating":4.5}
-, "entomize":{"name":"Entomize","flags":{},"num":-1028,"rating":4}
+, "prismaticaura":{"name":"Prismatic Aura","flags":{},"num":-1029,"rating":2.5}
+, "adaptivemastery":{"name":"Adaptive Mastery","flags":{},"num":-1029,"rating":3.5}
+, "stormbloom":{"name":"Stormbloom","flags":{},"num":-1029,"rating":4}
+, "solarmist":{"name":"Solar Mist","flags":{},"num":-1029,"rating":4}
+, "desertmind":{"name":"Desert Mind","flags":{},"num":-1029,"rating":4}
+, "frostvolt":{"name":"Frostvolt","flags":{},"num":-1029,"rating":4}
+, "soulharvest":{"name":"Soul Harvest","flags":{},"num":-1029,"rating":4}
+, "bootsofruin":{"name":"Boots of Ruin","flags":{},"num":-1029,"rating":4.5}
+, "entomize":{"name":"Entomize","flags":{},"num":-1029,"rating":4}
 
 /*FUNCTIONS*/
 //monsoonsurgestart
@@ -91,7 +91,7 @@ Abilities["desertheart"].onWeatherChange = function(pokemon) {
 //desertheartend//aquacircuitstart
 Abilities["aquacircuit"].onModifySpA = function(atk, attacker, defender, move) {
 			if(!this.field.isWeather("raindance")) return;
-			const bestStat = pokemon.getBestStat(true, true);
+			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spa") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
@@ -100,22 +100,22 @@ Abilities["aquacircuit"].onModifySpA = function(atk, attacker, defender, move) {
 
 Abilities["aquacircuit"].onModifyAtk = function(atk, attacker, defender, move) {
 			if(!this.field.isWeather("raindance")) return;
-			const bestStat = pokemon.getBestStat(true, true);
+			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "atk") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
 			}
 		}
 
-Abilities["aquacircuit"].onModifyDef = function(pokemon) {
+Abilities["aquacircuit"].onModifyDef = function(attacker) {
 			if(!this.field.isWeather("raindance")) return;
-			const bestStat = pokemon.getBestStat(true, true);
-			this.boost({[bestStat]: 1.5}, pokemon);
+			const bestStat = attacker.getBestStat(true, true);
+			this.boost({[bestStat]: 1.5}, attacker);
 		}
 //aquacircuitend//psychicpulsestart
 Abilities["psychicpulse"].onModifySpA = function(atk, attacker, defender, move) {
 			if(!this.field.isTerrain("psychicterrain")) return;
-			const bestStat = pokemon.getBestStat(true, true);
+			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spa") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
@@ -124,22 +124,25 @@ Abilities["psychicpulse"].onModifySpA = function(atk, attacker, defender, move) 
 
 Abilities["psychicpulse"].onModifyAtk = function(atk, attacker, defender, move) {
 			if(!this.field.isTerrain("psychicterrain")) return;
-			const bestStat = pokemon.getBestStat(true, true);
+			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "atk") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
 			}
 		}
 
-Abilities["psychicpulse"].onModifyDef = function(pokemon) {
+Abilities["psychicpulse"].onModifyDef = function(atk, attacker, defender, move) {
 			if(!this.field.isTerrain("psychicterrain")) return;
-			const bestStat = pokemon.getBestStat(true, true);
-			this.boost({[bestStat]: 1.5}, pokemon);
+			const bestStat = attacker.getBestStat(true, true);
+			if (bestStat === "def") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
 		}
 //psychicpulseend//mysticaurastart
 Abilities["mysticaura"].onModifySpA = function(atk, attacker, defender, move) {
 			if(!this.field.isTerrain("mistyterrain")) return;
-			const bestStat = pokemon.getBestStat(true, true);
+			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spa") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
@@ -148,22 +151,25 @@ Abilities["mysticaura"].onModifySpA = function(atk, attacker, defender, move) {
 
 Abilities["mysticaura"].onModifyAtk = function(atk, attacker, defender, move) {
 			if(!this.field.isTerrain("mistyterrain")) return;
-			const bestStat = pokemon.getBestStat(true, true);
+			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "atk") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
 			}
 		}
 
-Abilities["mysticaura"].onModifyDef = function(pokemon) {
+Abilities["mysticaura"].onModifyDef = function(atk, attacker, defender, move) {
 			if(!this.field.isTerrain("mistyterrain")) return;
-			const bestStat = pokemon.getBestStat(true, true);
-			this.boost({[bestStat]: 1.5}, pokemon);
+			const bestStat = attacker.getBestStat(true, true);
+			if (bestStat === "def") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
 		}
 //mysticauraend//overgrowthenginestart
 Abilities["overgrowthengine"].onModifySpA = function(atk, attacker, defender, move) {
 			if(!this.field.isTerrain("grassyterrain")) return;
-			const bestStat = pokemon.getBestStat(true, true);
+			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spa") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
@@ -172,17 +178,20 @@ Abilities["overgrowthengine"].onModifySpA = function(atk, attacker, defender, mo
 
 Abilities["overgrowthengine"].onModifyAtk = function(atk, attacker, defender, move) {
 			if(!this.field.isTerrain("grassyterrain")) return;
-			const bestStat = pokemon.getBestStat(true, true);
+			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "atk") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
 			}
 		}
 
-Abilities["overgrowthengine"].onModifyDef = function(pokemon) {
+Abilities["overgrowthengine"].onModifyDef = function(atk, attacker, defender, move) {
 			if(!this.field.isTerrain("grassyterrain")) return;
-			const bestStat = pokemon.getBestStat(true, true);
-			this.boost({[bestStat]: 1.5}, pokemon);
+			const bestStat = attacker.getBestStat(true, true);
+			if (bestStat === "def") {
+				this.debug('Weather boost');
+				return this.chainModify(1.5);
+			}
 		}
 //overgrowthengineend//arcanemightstart
 Abilities["arcanemight"].onModifySpA = function(spa) {
@@ -289,7 +298,6 @@ Abilities["soulharvest"].onSourceAfterFaint = function(length, target, source, e
 			}
 		}
 //soulharvestend//bootsofruinstart
-
 Abilities["bootsofruin"].onStart = function(pokemon) {
 			if (this.suppressingAbility(pokemon)) return;
 			this.add('-ability', pokemon, 'Boots of Ruin');
@@ -303,7 +311,6 @@ Abilities["bootsofruin"].onAnyModifySpe = function(spe, target) {
 			this.debug('Boots of Ruin Spe drop');
 			return this.chainModify(0.75);
 		}
-
 //bootsofruinend//entomizestart
 
 //entomizeend

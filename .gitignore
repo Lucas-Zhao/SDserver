@@ -1,4 +1,6 @@
 /config/*
+/data/customs/replays/*
+/data/customs/replays.json
 !/config/formats.ts
 /logs/**/*
 /test/modlogs

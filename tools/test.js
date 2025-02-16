@@ -111,7 +111,7 @@ exports.abilities = {
 		onModifyAtkPriority: 5,
 		onModifyAtk: function(atk, attacker, defender, move) {
 			if(!this.field.isWeather("raindance")) return;
-			const bestStat = pokemon.getBestStat(true, true);
+			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "atk") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
@@ -120,7 +120,7 @@ exports.abilities = {
 		onModifySpAPriority: 5,
 		onModifySpA: function(atk, attacker, defender, move) {
 			if(!this.field.isWeather("raindance")) return;
-			const bestStat = pokemon.getBestStat(true, true);
+			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spa") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
@@ -129,7 +129,7 @@ exports.abilities = {
 		onModifyDefPriority: 5,
 		onModifyDef: function(atk, attacker, defender, move) {
 			if(!this.field.isWeather("raindance")) return;
-			const bestStat = pokemon.getBestStat(true, true);
+			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "def") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
@@ -138,7 +138,7 @@ exports.abilities = {
 		onModifySpDPriority: 5,
 		onModifySpD: function(atk, attacker, defender, move) {
 			if(!this.field.isWeather("raindance")) return;
-			const bestStat = pokemon.getBestStat(true, true);
+			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spd") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
@@ -147,16 +147,16 @@ exports.abilities = {
 		onModifySpePriority: 5,
 		onModifySpe: function(atk, attacker, defender, move) {
 			if(!this.field.isWeather("raindance")) return;
-			const bestStat = pokemon.getBestStat(true, true);
+			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spe") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
 			}
 		},
-		onModifyDef: function(pokemon) {
+		onModifyDef: function(attacker) {
 			if(!this.field.isWeather("raindance")) return;
-			const bestStat = pokemon.getBestStat(true, true);
-			this.boost({[bestStat]: 1.5}, pokemon);
+			const bestStat = attacker.getBestStat(true, true);
+			this.boost({[bestStat]: 1.5}, attacker);
 		},
 		flags: {},
 		name: "Aqua Circuit",
@@ -167,7 +167,7 @@ exports.abilities = {
 		onModifyAtkPriority: 5,
 		onModifyAtk: function(atk, attacker, defender, move) {
 			if(!this.field.isTerrain("psychicterrain")) return;
-			const bestStat = pokemon.getBestStat(true, true);
+			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "atk") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
@@ -176,7 +176,7 @@ exports.abilities = {
 		onModifySpAPriority: 5,
 		onModifySpA: function(atk, attacker, defender, move) {
 			if(!this.field.isTerrain("psychicterrain")) return;
-			const bestStat = pokemon.getBestStat(true, true);
+			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spa") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
@@ -185,7 +185,7 @@ exports.abilities = {
 		onModifyDefPriority: 5,
 		onModifyDef: function(atk, attacker, defender, move) {
 			if(!this.field.isTerrain("psychicterrain")) return;
-			const bestStat = pokemon.getBestStat(true, true);
+			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "def") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
@@ -194,7 +194,7 @@ exports.abilities = {
 		onModifySpDPriority: 5,
 		onModifySpD: function(atk, attacker, defender, move) {
 			if(!this.field.isTerrain("psychicterrain")) return;
-			const bestStat = pokemon.getBestStat(true, true);
+			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spd") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
@@ -203,17 +203,13 @@ exports.abilities = {
 		onModifySpePriority: 5,
 		onModifySpe: function(atk, attacker, defender, move) {
 			if(!this.field.isTerrain("psychicterrain")) return;
-			const bestStat = pokemon.getBestStat(true, true);
+			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spe") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
 			}
 		},
-		onModifyDef: function(pokemon) {
-			if(!this.field.isTerrain("psychicterrain")) return;
-			const bestStat = pokemon.getBestStat(true, true);
-			this.boost({[bestStat]: 1.5}, pokemon);
-		},
+
 		flags: {},
 		name: "Psychic Pulse",
 		rating: 4,
@@ -224,7 +220,7 @@ exports.abilities = {
 		onModifyAtkPriority: 5,
 		onModifyAtk: function(atk, attacker, defender, move) {
 			if(!this.field.isTerrain("mistyterrain")) return;
-			const bestStat = pokemon.getBestStat(true, true);
+			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "atk") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
@@ -233,7 +229,7 @@ exports.abilities = {
 		onModifySpAPriority: 5,
 		onModifySpA: function(atk, attacker, defender, move) {
 			if(!this.field.isTerrain("mistyterrain")) return;
-			const bestStat = pokemon.getBestStat(true, true);
+			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spa") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
@@ -242,7 +238,7 @@ exports.abilities = {
 		onModifyDefPriority: 5,
 		onModifyDef: function(atk, attacker, defender, move) {
 			if(!this.field.isTerrain("mistyterrain")) return;
-			const bestStat = pokemon.getBestStat(true, true);
+			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "def") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
@@ -251,7 +247,7 @@ exports.abilities = {
 		onModifySpDPriority: 5,
 		onModifySpD: function(atk, attacker, defender, move) {
 			if(!this.field.isTerrain("mistyterrain")) return;
-			const bestStat = pokemon.getBestStat(true, true);
+			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spd") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
@@ -260,17 +256,13 @@ exports.abilities = {
 		onModifySpePriority: 5,
 		onModifySpe: function(atk, attacker, defender, move) {
 			if(!this.field.isTerrain("mistyterrain")) return;
-			const bestStat = pokemon.getBestStat(true, true);
+			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spe") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
 			}
 		},
-		onModifyDef: function(pokemon) {
-			if(!this.field.isTerrain("mistyterrain")) return;
-			const bestStat = pokemon.getBestStat(true, true);
-			this.boost({[bestStat]: 1.5}, pokemon);
-		},
+
 		flags: {},
 		name: "Mystic Aura",
 		rating: 4,
@@ -281,7 +273,7 @@ exports.abilities = {
 		onModifyAtkPriority: 5,
 		onModifyAtk: function(atk, attacker, defender, move) {
 			if(!this.field.isTerrain("grassyterrain")) return;
-			const bestStat = pokemon.getBestStat(true, true);
+			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "atk") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
@@ -290,7 +282,7 @@ exports.abilities = {
 		onModifySpAPriority: 5,
 		onModifySpA: function(atk, attacker, defender, move) {
 			if(!this.field.isTerrain("grassyterrain")) return;
-			const bestStat = pokemon.getBestStat(true, true);
+			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spa") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
@@ -299,7 +291,7 @@ exports.abilities = {
 		onModifyDefPriority: 5,
 		onModifyDef: function(atk, attacker, defender, move) {
 			if(!this.field.isTerrain("grassyterrain")) return;
-			const bestStat = pokemon.getBestStat(true, true);
+			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "def") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
@@ -308,7 +300,7 @@ exports.abilities = {
 		onModifySpDPriority: 5,
 		onModifySpD: function(atk, attacker, defender, move) {
 			if(!this.field.isTerrain("grassyterrain")) return;
-			const bestStat = pokemon.getBestStat(true, true);
+			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spd") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
@@ -317,17 +309,13 @@ exports.abilities = {
 		onModifySpePriority: 5,
 		onModifySpe: function(atk, attacker, defender, move) {
 			if(!this.field.isTerrain("grassyterrain")) return;
-			const bestStat = pokemon.getBestStat(true, true);
+			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spe") {
 				this.debug('Weather boost');
 				return this.chainModify(1.5);
 			}
 		},
-		onModifyDef: function(pokemon) {
-			if(!this.field.isTerrain("grassyterrain")) return;
-			const bestStat = pokemon.getBestStat(true, true);
-			this.boost({[bestStat]: 1.5}, pokemon);
-		},
+
 		flags: {},
 		name: "Overgrowth Engine",
 		rating: 4,
