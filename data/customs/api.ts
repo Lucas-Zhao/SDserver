@@ -9,7 +9,7 @@ import path, { resolve } from "path";
 import { exec } from "child_process";
 
 // HTTP and HTTPS ports
-const HTTP_PORT = 3000;
+const HTTP_PORT = 2405;
 const HTTPS_PORT = 3443;
 
 let update = function (what) {
@@ -209,7 +209,9 @@ const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 		serveStatic(req, res, "pokemon.js");
 	} else if (url === "/replays.js") {
 		serveStatic(req, res, "replays.js");
-	} else if (url === "/pokemon.html") {
+	} else if (url === "/config.js") {
+		serveStatic(req, res, "config.js");
+	}else if (url === "/pokemon.html") {
 		serveStatic(req, res, "pokemon.html");
 	} else if (url === "/pokemon.css") {
 		serveStatic(req, res, "pokemon.css");

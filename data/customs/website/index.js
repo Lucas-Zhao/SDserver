@@ -23,7 +23,6 @@ const client = url = "http://localhost:5501";
 })();
 
 // API URL
-const apiUrl = "http://localhost:3000";
 
 // Make POST request function
 const makePostRequest = async (url, body) => {

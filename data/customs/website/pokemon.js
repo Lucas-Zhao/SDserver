@@ -1,4 +1,4 @@
-let url = "http://localhost:3000/allpokemon"
+let url = "http://localhost:2405/allpokemon"
 
 
 sessionId = window.location.href.split("sessionId=")[1].replace("#","");
