@@ -221,10 +221,7 @@ window.onload = function() {
                 <li onclick="openLink('index.html')"><a href="#">Dashboard</a></li>
                 <li onclick="openLink('pokemon.html')"><a href="#">Pokemon</a></li>
                 <li onclick="openLink('replays.html')"><a href="#">Replays</a></li>
-                <li><a href="#">Abilities</a></li>
-                <li><a href="#">Moves</a></li>
-                <li><a href="#">Usage Stats</a></li>
-                <li><a href="#">Settings</a></li>
+               
             </ul>
         </nav>`
 }
