@@ -20168,7 +20168,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
  "lucariomegax":{"name":"Lucario-Mega-X","types":["Normal","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":50,"atk":140,"def":80,"spa":140,"spd":70,"spe":140},"abilities":{"0":"Charisma","H":"Terrify"},"heightm":121,"weightkg":67,"evoType":"trade","requiredItem":"Lucarionite X","baseSpecies":"Lucario","num":-1021,"gen":9,"forme":"Mega-X"}
 , "zerapium":{"name":"Zerapium","types":["Normal","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":50,"atk":140,"def":80,"spa":140,"spd":70,"spe":140},"abilities":{"0":"Charisma","1":"Monsoon Surge","H":"Aqua Circuit"},"heightm":121,"weightkg":67,"evoType":"trade","num":-1021}
 , "rizaxe":{"name":"Rizaxe","types":["Water","Electric"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":80,"atk":110,"def":80,"spa":110,"spd":80,"spe":110},"abilities":{"0":"Frostvolt","1":"Adaptive Mystery","H":"Arcane Might"},"heightm":160,"weightkg":67,"evoType":"trade","num":-1021}
-, "shucklemega":{"name":"Shuckle-Mega","types":["Fire","Normal"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":60,"atk":20,"def":290,"spa":20,"spd":290,"spe":20},"abilities":{"0":"Frostvolt","H":"Arcane Might"},"heightm":121,"weightkg":67,"evoType":"trade","requiredItem":"Shuckleonite","baseSpecies":"Shuckle","forme":"Mega","num":-1028}
 , "serperiormega":{"name":"Serperior-Mega","types":["Normal"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":50,"atk":50,"def":40,"spa":300,"spd":300,"spe":20},"abilities":{"0":"Charisma","H":"Terrify"},"heightm":121,"weightkg":67,"evoType":"trade","requiredItem":"Serperionite","baseSpecies":"Lucario","forme":"Mega","num":-1047}
 
 };
@@ -20179,7 +20178,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	 the eviolite bonus if a custom pokemon is added as its evolution
 	*/ 
 			(() => {
-	let toChangePokemon = [{"name":"lucario","evotype":"trade","from":"Lucario-Mega-X"},{"name":"shuckle","evotype":"trade","from":"Shuckle-Mega"},{"name":"lucario","evotype":"trade","from":"Serperior-Mega"}];
+	let toChangePokemon = [{"name":"lucario","evotype":"trade","from":"Lucario-Mega-X"},{"name":"lucario","evotype":"trade","from":"Serperior-Mega"}];
 	toChangePokemon.forEach((val) => {
 		//val = JSON.parse(val)
 		if(val.from.includes("-Mega")) {

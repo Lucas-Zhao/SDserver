@@ -42,10 +42,11 @@ const fetchData = async (url) => {
 		let stats = ``;
 		let bst = 0;
 		Object.keys(replay.baseStats).forEach((stat) => {
-			stats += `${stat.toUpperCase()}: <b>${replay.baseStats[stat]}</b> `
+			stats += `<sup>${stat.toUpperCase()}</sup> <b>${replay.baseStats[stat]}</b> `
 			bst += replay.baseStats[stat]
 		})
 		html += `    <tr>
+		<td> <button style="background:red;color:white;padding:5px;border:1px solid white;border-radius:4px;font-weight:600;" onclick="deletePokemon('${replay.name}')"> DELETE </button> </td>
             <td>${i + 1}</td>
             <td onclick="" 
             data-title="Denial of Service Vulnerability in Linux Kernel"
@@ -57,8 +58,18 @@ const fetchData = async (url) => {
                   data-fix-link="https://github.com/patch-link">${replay.name}</td>
             <td>${replay.prevo ? replay.prevo : replay.baseSpecies || "NA"}</td>
             <td>${replay.evos ? replay.evos.join(",") : "NA"}</td>
-            <td>${stats} BST: <b> ${bst} </b></td>
+            <td>${stats} <sup> BST </sup> <b> ${bst} </b></td>
           </tr>`
 	})
 	document.getElementById("pokemon-table").innerHTML = html;
+}
+
+function deletePokemon(name) {
+	let areyousure = confirm("Are you sure you want delete " + name + " ?");
+	if(!areyousure) return;
+
+	makePostRequest(apiUrl + "/deletepokemon",{ pokemon : name}).then((data) => {
+		if(data.message === "Done") return loadPokemon(Object.values(data.data.pokedex));
+		alert(data.message)
+	})
 }

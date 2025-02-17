@@ -54,22 +54,7 @@
       <button class="update-btn" onclick="openLink('addpokemon.html')" style="width:130px;font-size: small;font-weight: 600;">Add a Pokemon</button>
 
       <div class="filters">
-        <select id="category">
-          <option value="">Category</option>
-          <option value="Hardware">Hardware</option>
-          <option value="Software">Software</option>
-        </select>
-        <select id="severity">
-          <option value="">Severity</option>
-          <option value="High">High</option>
-          <option value="Medium">Medium</option>
-        </select>
-        <input type="date" id="date">
-        <select id="status">
-          <option value="">Status</option>
-          <option value="Open">Open</option>
-          <option value="Closed">Closed</option>
-        </select>
+   
         <select id="priority">
           <option value="">Priority</option>
           <option value="Critical">Critical</option>
@@ -82,6 +67,7 @@
     <table id="incidentTable" style="width: 90%; border-collapse: collapse;">
       <thead>
         <tr>
+          <th></th>
           <th>No.</th>
           <th>Name</th>
           <th>Evolves From</th>

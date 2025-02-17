@@ -68,30 +68,35 @@ let getStats = function () {
 };
 
 const checkPM2 = () => {
-    return new Promise((resolve) => {
-        exec('pm2 -v', (error) => {
-            if (error) {
-                console.log('PM2 is not installed. Exiting.');
-                resolve(false);
-            } else {
-                resolve(true);
-            }
-        });
-    });
+	return new Promise((resolve) => {
+		exec("pm2 -v", (error) => {
+			if (error) {
+				console.log("PM2 is not installed. Exiting.");
+				resolve(false);
+			} else {
+				resolve(true);
+			}
+		});
+	});
 };
 
 const restart = (processNameOrId) => {
-	return new Promise((resolve,reject) => {
-    exec(`pm2 restart ${processNameOrId}`, (error, stdout, stderr) => {
-        if (error) {
-            reject(`Error restarting PM2 process "${processNameOrId}":` + stderr.trim());
-        } else {
-            resolve(`PM2 process "${processNameOrId}" restarted successfully:\n` +  stdout);
-        }
-    });
-})
+	return new Promise((resolve, reject) => {
+		exec(`pm2 restart ${processNameOrId}`, (error, stdout, stderr) => {
+			if (error) {
+				reject(
+					`Error restarting PM2 process "${processNameOrId}":` +
+						stderr.trim()
+				);
+			} else {
+				resolve(
+					`PM2 process "${processNameOrId}" restarted successfully:\n` +
+						stdout
+				);
+			}
+		});
+	});
 };
-
 
 Customs.session(170);
 
@@ -305,7 +310,7 @@ const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 		try {
 			// Parse the request body
 			const body = await parseRequestBody(req);
-			
+
 			let oid = fs
 				.readFileSync(
 					path.join(path.resolve(), "/data/customs/session.txt")
@@ -316,7 +321,7 @@ const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 				res.writeHead(400, { "Content-Type": "application/json" });
 				res.end(JSON.stringify({ message: "Invalid session" }));
 				return;
-			} 
+			}
 			update(body.update)
 				.then((data: any) => {
 					res.writeHead(200, { "Content-Type": "application/json" });
@@ -337,11 +342,11 @@ const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 			res.writeHead(400, { "Content-Type": "application/json" });
 			res.end(JSON.stringify({ message: error.message }));
 		}
-	}else if (url === "/restart" && method === "POST") {
+	} else if (url === "/restart" && method === "POST") {
 		try {
 			// Parse the request body
 			const body = await parseRequestBody(req);
-			
+
 			let oid = fs
 				.readFileSync(
 					path.join(path.resolve(), "/data/customs/session.txt")
@@ -352,28 +357,29 @@ const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 				res.writeHead(400, { "Content-Type": "application/json" });
 				res.end(JSON.stringify({ message: "Invalid session" }));
 				return;
-			} 
+			}
 			checkPM2().then((does) => {
-				if(!does) {
+				if (!does) {
 					res.writeHead(200, { "Content-Type": "application/json" });
 					res.end(
-						JSON.stringify({ message: "PM2 is not configured, please restart the server manually" })
+						JSON.stringify({
+							message:
+								"PM2 is not configured, please restart the server manually",
+						})
 					);
-					return
+					return;
 				} else {
-					restart("SDserver").then((data) => {
-						res.writeHead(200, { "Content-Type": "application/json" });
-					res.end(
-						JSON.stringify({ message: data })
-					);
-					}).catch((e) => {
-						res.writeHead(200, { "Content-Type": "application/json" });
-					res.end(
-						JSON.stringify({ message: e})
-					);
-					})
+					restart("SDserver")
+						.then((data) => {
+							res.writeHead(200, { "Content-Type": "application/json" });
+							res.end(JSON.stringify({ message: data }));
+						})
+						.catch((e) => {
+							res.writeHead(200, { "Content-Type": "application/json" });
+							res.end(JSON.stringify({ message: e }));
+						});
 				}
-			})
+			});
 
 			return;
 		} catch (error) {
@@ -394,6 +400,47 @@ const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 			if (!body.sessionId || body.sessionId !== oid) {
 				res.writeHead(401, { "Content-Type": "application/json" });
 				res.end(JSON.stringify({ message: "Invalid session" }));
+				return;
+			}
+			let data = {
+				pokedex: Customs.pokedex,
+				items: Customs.items,
+				texts: Customs.texts,
+			};
+			res.writeHead(201, { "Content-Type": "application/json" });
+			res.end(JSON.stringify({ message: "Done", data: data }));
+			return;
+		} catch (error) {
+			// Handle JSON parse errors or other issues
+			res.writeHead(400, { "Content-Type": "application/json" });
+			res.end(JSON.stringify({ message: error.message }));
+		}
+	} else if (url === "/deletepokemon" && method === "POST") {
+		try {
+			// Parse the request body
+			const body = await parseRequestBody(req);
+			let oid = fs
+				.readFileSync(
+					path.join(path.resolve(), "/data/customs/session.txt")
+				)
+				.toString();
+			console.log(body);
+			if (!body.sessionId || body.sessionId !== oid) {
+				res.writeHead(401, { "Content-Type": "application/json" });
+				res.end(JSON.stringify({ message: "Invalid session" }));
+				return;
+			}
+
+			try {
+				Customs.deletePokemon(body.pokemon);
+			} catch (e) {
+				console.log(e);
+				res.writeHead(200, { "Content-Type": "application/json" });
+				res.end(
+					JSON.stringify({
+						message: "Error deleting pokemon: " + e.message,
+					})
+				);
 				return;
 			}
 			let data = {

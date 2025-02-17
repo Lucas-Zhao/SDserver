@@ -495,14 +495,10 @@ export class Handler {
 		delete this.formatsdata[id];
 		delete this.learnsets[id];
 		delete this.texts.pokedex[id];
-		delete this.texts.learnsets[id];
-		delete this.texts.formatsdata[id];
 		this.convertToTxt("pokedex");
 		this.convertToTxt("learnsets");
 		this.convertToTxt("formats-data");
 		this.convertToTxt("pokedex", true);
-		this.convertToTxt("learnsets", true);
-		this.convertToTxt("formats-data", true);
 		this.importAll();
 	}
 
