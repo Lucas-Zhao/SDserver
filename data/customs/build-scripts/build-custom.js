@@ -47,6 +47,10 @@ if (args.length) {
 				case "updateclient":
 					syncer.updateClient();
 					break;
+				case "syncclient":
+					syncer.updateRepo();
+					syncer.updateClient();
+					break;
 				default:
 					console.log("Could not build customs: Invalid argument received (" + arg + ")")
 			}

@@ -4,25 +4,27 @@ import fs from "fs";
 const URL = require("url");
 
 import Customs from "./handler";
-import path from "path";
+import path, { resolve } from "path";
 import { exec } from "child_process";
 
 // HTTP and HTTPS ports
 const HTTP_PORT = 3000;
 const HTTPS_PORT = 3443;
 
-function update(what) {
-	exec(
-		`node "${path.join(
-			path.resolve(),
-			"/tools/build-customs.js"
-		)}" update${what}`,
-		(error, stdout, stderr) => {
-			if (error) return console.error(`Error: ${error.message}`);
-			if (stderr) return console.error(`Stderr: ${stderr}`);
-			console.log(`Output: ${stdout}`);
-		}
-	);
+let update = function(what) {
+	return new Promise((resolve, reject) => {
+		exec(
+			`node "${path.join(
+				path.resolve(),
+				"/tools/build-customs.js"
+			)}" update${what}`,
+			(error, stdout, stderr) => {
+				if (error) return reject(`Error: ${error.message}`);
+				if (stderr) return reject(`Stderr: ${stderr}`);
+				resolve(stdout);
+			}
+		);
+	})
 }
 
 Customs.session(170);
@@ -237,6 +239,7 @@ const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 		try {
 			// Parse the request body
 			const body = await parseRequestBody(req);
+			/*
 			let oid = fs
 				.readFileSync(
 					path.join(path.resolve(), "/data/customs/session.txt")
@@ -244,13 +247,19 @@ const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 				.toString();
 			console.log(body);
 			if (!body.sessionId || body.sessionId !== oid) {
-				res.writeHead(401, { "Content-Type": "application/json" });
+				res.writeHead(400, { "Content-Type": "application/json" });
 				res.end(JSON.stringify({ message: "Invalid session" }));
 				return;
-			}
-			update(body.update);
-			res.writeHead(201, { "Content-Type": "application/json" });
-			res.end(JSON.stringify({ message: "Done" }));
+			} */
+			update(body.update).then((data) => {
+				res.writeHead(200, { "Content-Type": "application/json" });
+				res.end(JSON.stringify({ message: data }));
+			}).catch((e) => {
+				res.writeHead(400, { "Content-Type": "application/json" });
+				res.end(JSON.stringify({ message: e.message }));
+				return;
+			})
+			
 			return;
 		} catch (error) {
 			// Handle JSON parse errors or other issues
