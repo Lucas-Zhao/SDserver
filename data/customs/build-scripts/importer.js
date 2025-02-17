@@ -16,7 +16,6 @@ const dataPath = path.join(path.resolve(), "/data");
 
 const { toID } = require("../../../sim/dex-data.js");
 
-
 function getCustomPath(file) {
 	return customPath + "/" + file + ".txt";
 }
@@ -70,10 +69,8 @@ let importPokedexData = () => {
 		if(!Pokedex[(val.name)].otherFormes) Pokedex[(val.name)].otherFormes = [];
 		Pokedex[(val.name)].otherFormes.push(val.from)
 		} else {
-		if (Pokedex[(val.name)].evos)
-			Pokedex[(val.name)]?.evos?.push(val.from);
-		if (!Pokedex[(val.name)].evos)
-			Pokedex[(val.name)]?.evos?.push(val.from);
+		if (!Pokedex[(val.name)].evos) Pokedex[(val.name)].evos = [];
+		Pokedex[(val.name)]?.evos?.push(val.from);
 	}
 	});
 })();`;
@@ -289,37 +286,92 @@ let importCustomData = async () => {
 };
 
 let importSamples = (name = "abilities") => {
-	const h = require(path.join(path.resolve(),"/dist/data/customs/handler")).default
-let abs = require(path.join(path.resolve(),"/data/customs/data/samples/abilities")).abilities;
+	const h = require(path.join(
+		path.resolve(),
+		"/dist/data/customs/handler"
+	)).default;
+	let abs = require(path.join(
+		path.resolve(),
+		"/data/customs/data/samples/abilities"
+	)).abilities;
 
-Object.keys(abs).forEach((key) => {
-	let ability = abs[key]
-	let functions = [];
-	if(ability.onStart) functions.push({name:"onStart",body:ability.onStart.toString()})
-	if(ability.onModifySpA) functions.push({name:"onModifySpA",body:ability.onModifySpA.toString()})
-	if(ability.onModifyAtk) functions.push({name:"onModifyAtk",body:ability.onModifyAtk.toString()})
-	if(ability.onModifyDef) functions.push({name:"onModifyDef",body:ability.onModifyDef.toString()})
-	if(ability.onModifySpD) functions.push({name:"onModifySpD",body:ability.onModifySpD.toString()})
-	if(ability.onModifySpe) functions.push({name:"onModifySpe",body:ability.onModifySpe.toString()})
-	if(ability.onModifyPriority) functions.push({name:"onModifyPriority",body:ability.onModifyPriority.toString()})
+	Object.keys(abs).forEach((key) => {
+		let ability = abs[key];
+		let functions = [];
+		if (ability.onStart)
+			functions.push({ name: "onStart", body: ability.onStart.toString() });
+		if (ability.onModifySpA)
+			functions.push({
+				name: "onModifySpA",
+				body: ability.onModifySpA.toString(),
+			});
+		if (ability.onModifyAtk)
+			functions.push({
+				name: "onModifyAtk",
+				body: ability.onModifyAtk.toString(),
+			});
+		if (ability.onModifyDef)
+			functions.push({
+				name: "onModifyDef",
+				body: ability.onModifyDef.toString(),
+			});
+		if (ability.onModifySpD)
+			functions.push({
+				name: "onModifySpD",
+				body: ability.onModifySpD.toString(),
+			});
+		if (ability.onModifySpe)
+			functions.push({
+				name: "onModifySpe",
+				body: ability.onModifySpe.toString(),
+			});
+		if (ability.onModifyPriority)
+			functions.push({
+				name: "onModifyPriority",
+				body: ability.onModifyPriority.toString(),
+			});
 
-		
-	if(ability.onTerrainChange) functions.push({name:"onTerrainChange",body:ability.onTerrainChange.toString()})
-	if(ability.onWeatherChange) functions.push({name:"onWeatherChange",body:ability.onWeatherChange.toString()})
-	if(ability.onDamagingHit) functions.push({name:"onDamagingHit",body:ability.onDamagingHit.toString()})
-	if(ability.onAnyModifySpe) functions.push({name:"onAnyModifySpe",body:ability.onAnyModifySpe.toString()})
-	if(ability.onSourceAfterFaint) functions.push({name:"onSourceAfterFaint",body:ability.onSourceAfterFaint.toString()})
-		
-	if(ability.onModifyType) functions.push({name:"onModifyType",body:ability.onModifyType.toString()})
-	if(ability.onBasePower) functions.push({name:"onBasePower",body:ability.onBasePower.toString()})
+		if (ability.onTerrainChange)
+			functions.push({
+				name: "onTerrainChange",
+				body: ability.onTerrainChange.toString(),
+			});
+		if (ability.onWeatherChange)
+			functions.push({
+				name: "onWeatherChange",
+				body: ability.onWeatherChange.toString(),
+			});
+		if (ability.onDamagingHit)
+			functions.push({
+				name: "onDamagingHit",
+				body: ability.onDamagingHit.toString(),
+			});
+		if (ability.onAnyModifySpe)
+			functions.push({
+				name: "onAnyModifySpe",
+				body: ability.onAnyModifySpe.toString(),
+			});
+		if (ability.onSourceAfterFaint)
+			functions.push({
+				name: "onSourceAfterFaint",
+				body: ability.onSourceAfterFaint.toString(),
+			});
 
+		if (ability.onModifyType)
+			functions.push({
+				name: "onModifyType",
+				body: ability.onModifyType.toString(),
+			});
+		if (ability.onBasePower)
+			functions.push({
+				name: "onBasePower",
+				body: ability.onBasePower.toString(),
+			});
 
-
-	ability.functions = functions
-	h.addAbility(ability )
-
-})
-}
+		ability.functions = functions;
+		h.addAbility(ability);
+	});
+};
 
 exports.importTextData = importTextData;
 exports.importPokedexData = importPokedexData;
@@ -329,4 +381,3 @@ exports.importItemsData = importItemsData;
 exports.importLearnsetsData = importLearnsetsData;
 exports.importCustomData = importCustomData;
 exports.importSamples = importSamples;
-
