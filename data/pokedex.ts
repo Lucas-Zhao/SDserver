@@ -20165,10 +20165,8 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	},
 
 /*CUSTOM POKEMONS*/
- "lucariomegax":{"name":"Lucario-Mega-X","types":["Fighting","Psychic"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":110,"atk":110,"def":110,"spa":110,"spd":110,"spe":180},"abilities":{"0":"Mindscape Domain","H":"Arcane Might"},"heightm":121,"weightkg":67,"evoType":"trade","requiredItem":"Lucarionite X","baseSpecies":"Lucario","forme":"Mega-X","num":-1047}
-, "zerapium":{"name":"Zerapium","types":["Normal","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":50,"atk":140,"def":80,"spa":140,"spd":70,"spe":140},"abilities":{"0":"Charisma","1":"Monsoon Surge","H":"Aqua Circuit"},"heightm":121,"weightkg":67,"evoType":"trade","num":-1021}
-, "rizaxe":{"name":"Rizaxe","types":["Water","Electric"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":80,"atk":110,"def":80,"spa":110,"spd":80,"spe":110},"abilities":{"0":"Frostvolt","1":"Adaptive Mystery","H":"Arcane Might"},"heightm":160,"weightkg":67,"evoType":"trade","num":-1021}
-, "serperiormega":{"name":"Serperior-Mega","types":["Normal"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":50,"atk":50,"def":40,"spa":300,"spd":300,"spe":20},"abilities":{"0":"Charisma","H":"Terrify"},"heightm":121,"weightkg":67,"evoType":"trade","requiredItem":"Serperionite","baseSpecies":"Lucario","forme":"Mega","num":-1047}
+ "serperiormega":{"name":"Serperior-Mega","types":["Normal"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":50,"atk":50,"def":40,"spa":300,"spd":300,"spe":20},"abilities":{"0":"Charisma","H":"Terrify"},"heightm":121,"weightkg":67,"evoType":"trade","requiredItem":"Serperionite","baseSpecies":"Lucario","forme":"Mega","num":-1047}
+, "lucariomegax":{"name":"Lucario-Mega-X","types":["Psychic","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":110,"atk":110,"def":110,"spa":110,"spd":110,"spe":110},"abilities":{"0":"Mindscape Domain","H":null},"heightm":121,"weightkg":67,"evoType":"trade","requiredItem":"Lucarionite X","baseSpecies":"Lucario","forme":"Mega-X","num":-1047}
 
 };
  
@@ -20178,15 +20176,17 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	 the eviolite bonus if a custom pokemon is added as its evolution
 	*/ 
 			(() => {
-	let toChangePokemon = [{"name":"lucario","evotype":"trade","from":"Lucario-Mega-X"},{"name":"lucario","evotype":"trade","from":"Serperior-Mega"}];
+	let toChangePokemon = [{"name":"lucario","evotype":"trade","from":"Serperior-Mega"},{"name":"lucario","evotype":"trade","from":"Lucario-Mega-X"}];
 	toChangePokemon.forEach((val) => {
 		//val = JSON.parse(val)
 		if(val.from.includes("-Mega")) {
 		if(!Pokedex[(val.name)].otherFormes) Pokedex[(val.name)].otherFormes = [];
 		Pokedex[(val.name)].otherFormes.push(val.from)
 		} else {
-		if (!Pokedex[(val.name)].evos) Pokedex[(val.name)].evos = [];
-		Pokedex[(val.name)]?.evos?.push(val.from);
+		if (Pokedex[(val.name)].evos)
+			Pokedex[(val.name)]?.evos?.push(val.from);
+		if (!Pokedex[(val.name)].evos)
+			Pokedex[(val.name)]?.evos?.push(val.from);
 	}
 	});
 })();
