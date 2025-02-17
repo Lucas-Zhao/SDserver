@@ -21,7 +21,7 @@ if (args.length) {
 		try {
 			switch (arg) {
 				case "pokedex":
-					importPokedexData();
+					importer.importPokedexData();
 					break;
 				case "abilities":
 					importAbilitiesData();
