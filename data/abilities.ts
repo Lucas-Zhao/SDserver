@@ -6177,7 +6177,7 @@ Abilities["antomize"].onModifyType = function(move, pokemon) {
 				move.type = "Bug";
 				move.typeChangerBoosted = this.effect;
 			}
-		}
+		
 
 Abilities["antomize"].onBasePower = function(basePower, pokemon, target, move) {
 			if (move.typeChangerBoosted === this.effect)
