@@ -34,3 +34,31 @@ const fetchData = async (url) => {
   fetchData(url).then((data) => {
 	console.log(data)
   })
+
+
+  function loadPokemon(replays = []) {
+	let html = ``;
+	replays.reverse().forEach((replay,i) => {
+		let stats = ``;
+		let bst = 0;
+		Object.keys(replay.baseStats).forEach((stat) => {
+			stats += `${stat.toUpperCase()}: <b>${replay.baseStats[stat]}</b> `
+			bst += replay.baseStats[stat]
+		})
+		html += `    <tr>
+            <td>${i + 1}</td>
+            <td onclick="" 
+            data-title="Denial of Service Vulnerability in Linux Kernel"
+                  data-source="hackernews"
+                  data-severity="HIGH"
+                  data-priority="2"
+                  data-date="Jan 27, 2025"
+                  data-description="A vulnerability has been reported in the Linux kernel that could allow a local attacker to cause denial of service conditions on a targeted system."
+                  data-fix-link="https://github.com/patch-link">${replay.name}</td>
+            <td>${replay.prevo ? replay.prevo : replay.baseSpecies || "NA"}</td>
+            <td>${replay.evos ? replay.evos.join(",") : "NA"}</td>
+            <td>${stats} BST: <b> ${bst} </b></td>
+          </tr>`
+	})
+	document.getElementById("pokemon-table").innerHTML = html;
+}

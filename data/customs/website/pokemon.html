@@ -51,12 +51,8 @@
     
     </div>
     <section class="section2">
-      <button class="update-btn" onclick="openLink('addpokemon')" style="width:130px;font-size: small;font-weight: 600;">Add a Pokemon</button>
+      <button class="update-btn" onclick="openLink('addpokemon.html')" style="width:130px;font-size: small;font-weight: 600;">Add a Pokemon</button>
 
-      <div class="sear">
-        <input type="text" class="search-box" placeholder="Search...">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </div>
       <div class="filters">
         <select id="category">
           <option value="">Category</option>
@@ -83,22 +79,19 @@
       </section>
           <!-- Incident Table -->
 <div class="incident-table" style="max-height: 500px; overflow-y: auto; ;">
-    <table id="incidentTable" style="width: 100%; border-collapse: collapse;">
+    <table id="incidentTable" style="width: 90%; border-collapse: collapse;">
       <thead>
         <tr>
-          <th><input type="checkbox"></th> <!-- New column for checkboxes -->
-          <th>Incident ID</th>
-          <th>Title</th>
-          <th>Category</th>
-          <th>Severity</th>
-          <th>Priority</th>
-          <th>Status</th>
-          <th>Last Update</th>
+          <th>No.</th>
+          <th>Name</th>
+          <th>Evolves From</th>
+          <th>Evolves Into</th>
+          <th>Stats</th>
         </tr>
       </thead>
    
       <tbody>
-        <tbody>
+        <tbody id="pokemon-table">
           <tr  >
 
             <td><input type="checkbox" class="row-checkbox"></td>
@@ -251,6 +244,11 @@
  
         <script src="index.js"></script>
     <script src="pokemon.js"></script>
+    <script> 
 
+      fetchData(url).then((data) => {
+        loadPokemon(Object.values(data.data.pokedex))
+      })
+      </script>
 </body>
 </html>

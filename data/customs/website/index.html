@@ -1,121 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokemon Form</title>
-    <link rel="stylesheet" href="pokemon.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pokemon Form</title>
+		<link rel="stylesheet" href="pokemon.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+		/>
+	</head>
+	<body>
+		<!-- Top Bar -->
+		<header class="topbar">
+			<h1 class="logo"></h1>
+			<div class="search-container">
+				<input type="text" class="search-box" placeholder="Search..." />
+				<i class="fa-solid fa-magnifying-glass"></i>
+			</div>
+			<div class="topbar-icons">
+				<span class="user-profile"></span>
+			</div>
+		</header>
 
-    <!-- Top Bar -->
-    <header class="topbar">
-        <h1 class="logo"></h1>
-        <div class="search-container">
-            <input type="text" class="search-box" placeholder="Search...">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
-        <div class="topbar-icons">
-            <span class="user-profile"></span>
-        </div>
-    </header>
+		<!-- Sidebar -->
+		<aside class="sidebar" id="sidebar">
+			<nav>
+				<ul>
+					<li onclick="openLink('index.html')">
+						<a href="#">Dashboard</a>
+					</li>
+					<li onclick="openLink('pokemon.html')">
+						<a href="#">Pokemon</a>
+					</li>
+					<li onclick="openLink('pokemon.html')">
+						<a href="#">Replays</a>
+					</li>
+					<li><a href="#">Abilities</a></li>
+					<li><a href="#">Moves</a></li>
+					<li><a href="#">Usage Stats</a></li>
+					<li><a href="#">Settings</a></li>
+				</ul>
+			</nav>
+		</aside>
 
-    <!-- Sidebar -->
-    <aside class="sidebar" id="sidebar">
-        <nav>
-            <ul>
-                <li onclick="openLink('index.html')"><a href="#">Dashboard</a></li>
-                <li onclick="openLink('pokemon.html')"><a href="#">Pokemon</a></li>
-                <li onclick="openLink('pokemon.html')"><a href="#">Replays</a></li>
-                <li><a href="#">Abilities</a></li>
-                <li><a href="#">Moves</a></li>
-                <li><a href="#">Usage Stats</a></li>
-                <li><a href="#">Settings</a></li>
-            </ul>
-        </nav>
-    </aside>
+		<!-- Main Content -->
+		<main class="main-content" style="width: 100%">
+			<!-- Server Section -->
+			<section id="server-section" style="width: 100%" class="o section">
+				<h2 class="fist">Server Name</h2>
+				<button onclick="showSection('incident')"></button>
+				<div class="server-container">
+					<!-- News Section -->
+					<div class="news-section">
+						<h3>News</h3>
+						<textarea cols="50" rows="6" class="news-content">
+ We are glad to announce the Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
 
-    <!-- Main Content -->
-    <main class="main-content" style="width: 100%;">
-        
-        <!-- Server Section -->
-        <section id="server-section" style="width:100%;" class="o section" >
-            <h2 class="fist">Server Name</h2>
-            <button onclick="showSection('incident')"></button>
-            <div class="server-container">
-                <!-- News Section -->
-                <div class="news-section">
-                    <h3>News</h3>
-                    <textarea cols="50" rows="6" class="news-content"> We are glad to announce the Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                    </textarea
+						>
+						<button class="update-btn">Update News</button>
+					</div>
 
-                    </textarea>
-                    <button class="update-btn">Update News</button>
-                </div>
+					<!-- Metrics Section -->
+					<div class="metrics-section">
+						<h3>Server Metrics</h3>
+						<p><strong>CPU Usage:</strong> <span id="cpuusage"></span></p>
+						<p>
+							<strong>Memory Usage:</strong> <span id="memusage"></span>
+						</p>
+						<p><strong>Storage:</strong> 56%</p>
 
-                <!-- Metrics Section -->
-                <div class="metrics-section">
-                    <h3>Server Metrics</h3>
-                    <p><strong>CPU Usage:</strong> <span id="cpuusage"></span></p>
-                    <p><strong>Memory Usage:</strong> <span id="memusage"></span></p>
-                    <p><strong>Storage:</strong> 56%</p>
+						<button class="restart-server" onclick="updateServer('repo')">
+							Update Server
+						</button>
+						<button
+							class="restart-client"
+							onclick="updateServer('client')"
+						>
+							Update Client
+						</button>
+						<button class="restart-client" onclick="updateServer('data')">
+							Import Custom Data
+						</button>
+					</div>
+				</div>
 
-                    <button class="restart-server" onclick="updateServer('repo')">Update Server</button>
-                    <button class="restart-client" onclick="updateServer('client')">Update Client</button>
-                    <button class="restart-client" onclick="updateServer('data')">Import Custom Data</button>
+				<center>
+					<label style="margin: 3px; font-weight: 600" id="updateprogress">
+					</label>
+				</center>
+				<br />
+				<table border="1">
+					<tr>
+						<th style="text-align: center">Logs</th>
+						<th style="text-align: center">Info</th>
+					</tr>
+					<tr>
+						<td id="logs">
+							Main logs will appear here, please look for ERRORs in it.
+						</td>
+						<td id="errors">Additional logs appear here</td>
+					</tr>
+				</table>
+			</section>
+		</main>
 
-                </div>
-            </div>
-          
-            <center>            <label style="margin:3px;font-weight: 600;" id="updateprogress"> </label> 
-            </center>
-            <br>
-            <table border="1"><tr>
-                <th style="text-align: center;"> Logs </th>
-                <th style="text-align: center;"> Info </th>
-            </tr>
-            <tr>
-                <td id="logs"> Main logs will appear here, please look for ERRORs in it. </td>
-                <td id="errors"> Additional logs appear here </td>
-            </tr>
-             
+		<script>
+			function showSection(sectionId) {
+				console.log("Switching to section:", sectionId); // Debugging
 
-            </table>   
-        </section>
+				// Hide all sections
+				document.querySelectorAll(".section").forEach((section) => {
+					section.style.display = "none";
+				});
 
-  
-  
- 
-    </main>
+				// Show the selected section
+				const targetSection = document.getElementById(sectionId);
+				if (targetSection) {
+					targetSection.style.display = "block";
+				}
+			}
 
-    <script>
-        function showSection(sectionId) {
-            console.log("Switching to section:", sectionId); // Debugging
+			// Hide all sections on page load except the first one
+			document.addEventListener("DOMContentLoaded", function () {
+				document.querySelectorAll(".section").forEach((section) => {
+					section.style.display = "none";
+				});
 
-            // Hide all sections
-            document.querySelectorAll('.section').forEach(section => {
-                section.style.display = 'none';
-            });
-
-            // Show the selected section
-            const targetSection = document.getElementById(sectionId);
-            if (targetSection) {
-                targetSection.style.display = 'block';
-            }
-        }
-
-        // Hide all sections on page load except the first one
-        document.addEventListener("DOMContentLoaded", function() {
-            document.querySelectorAll('.section').forEach(section => {
-                section.style.display = 'none';
-            });
-
-            // Show the first section by default (Pokemon section)
-            document.getElementById('server-section').style.display = 'block';
-        });
-    </script>
-        <script src="index.js"></script>
-    <script src="pokemon.js"></script>
-
-</body>
+				// Show the first section by default (Pokemon section)
+				document.getElementById("server-section").style.display = "block";
+			});
+		</script>
+		<script src="index.js"></script>
+		<script src="pokemon.js"></script>
+		<script>
+			setInterval(loadStats, 4000);
+		</script>
+	</body>
 </html>

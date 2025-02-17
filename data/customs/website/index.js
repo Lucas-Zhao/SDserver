@@ -200,7 +200,7 @@ function loadStats() {
   })
 }
 
-setInterval(loadStats,4000)
+
 
 window.onload = function() {
   loadStats();
