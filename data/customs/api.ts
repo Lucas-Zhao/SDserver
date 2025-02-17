@@ -1,6 +1,7 @@
 import http, { IncomingMessage, ServerResponse } from "http";
 import https from "https";
 import fs from "fs";
+
 const URL = require("url");
 
 import Customs from "./handler";
@@ -43,6 +44,25 @@ let update = function(what) {
 		});
 		//resolve(logs)
 	})
+}
+
+let getStats =  function() {
+	return new Promise( (resolve, reject) => {
+	let data = ''
+	let child = exec(
+		`node "${path.join(
+			path.resolve(),
+			"data/customs/build-scripts/build-custom"
+		)}" stats`,
+		);
+		child?.stdout?.on("data",(chunk) => {
+			data += chunk;
+		})
+		child.on("error", (data) => {
+			reject(data)
+		})
+		child.on("exit",() => { resolve(data) })
+	});
 }
 
 Customs.session(170);
@@ -378,7 +398,26 @@ const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 			res.writeHead(400, { "Content-Type": "application/json" });
 			res.end(JSON.stringify({ message: error.message }));
 		}
-	} else {
+	} else if (url === "/stats" && method === "POST") {
+		try {
+			// Parse the request body
+			const body = await parseRequestBody(req);
+			console.log(body);
+			getStats().then((d) => {
+				console.log(d)
+				let data = { stats: d };
+				res.writeHead(200, { "Content-Type": "application/json" });
+				res.end
+				(JSON.stringify(data));
+				return;
+			})
+		
+		} catch (error) {
+			// Handle JSON parse errors or other issues
+			res.writeHead(400, { "Content-Type": "application/json" });
+			res.end(JSON.stringify({ message: error.message }));
+		}
+	}else {
 		// Route not found
 		res.writeHead(404, { "Content-Type": "application/json" });
 		res.end(JSON.stringify({ message: "Not Found" }));

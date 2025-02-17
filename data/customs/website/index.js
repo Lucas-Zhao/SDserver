@@ -191,7 +191,19 @@ function updateServer(what) {
   })
 }
 
+function loadStats() {
+  makePostRequest(apiUrl + "/stats", {}).then((data) => {
+    let stats = JSON.parse(data.stats.replaceAll("\n",""));
+    document.getElementById("cpuusage").innerHTML = stats.cpuUsage;
+    document.getElementById("memusage").innerHTML = `${stats.ramUsage.usage} (${stats.ramUsage.used}/${stats.ramUsage.total} USED)`;
+
+  })
+}
+
+setInterval(loadStats,4000)
+
 window.onload = function() {
+  loadStats();
   document.getElementById("sidebar").innerHTML = `<nav>
             <ul>
                 <li onclick="openLink('index.html')"><a href="#">Dashboard</a></li>

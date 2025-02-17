@@ -6,6 +6,8 @@ const api = require("./api.js")
 const importer = require("./importer.js")
 const syncer = require("./syncer.js")
 
+const stats = require("../utils/os.js")
+
 
 if (!fs.existsSync(path.join(path.resolve(), "/data/customs/"))) {
 	console.log(
@@ -52,6 +54,11 @@ if (args.length) {
 					break;
 				case "updatedata":
 					importer.importCustomData();
+					break;
+				case "stats":
+					stats.getSystemStatsAsync().then((data) => {
+						console.log(JSON.stringify(data))
+					})
 					break;
 				default:
 					console.log("Could not build customs: Invalid argument received (" + arg + ")")

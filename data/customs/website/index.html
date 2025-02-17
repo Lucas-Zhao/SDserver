@@ -56,8 +56,8 @@
                 <!-- Metrics Section -->
                 <div class="metrics-section">
                     <h3>Server Metrics</h3>
-                    <p><strong>CPU Usage:</strong> 56%</p>
-                    <p><strong>Memory Usage:</strong> 67%</p>
+                    <p><strong>CPU Usage:</strong> <span id="cpuusage"></span></p>
+                    <p><strong>Memory Usage:</strong> <span id="memusage"></span></p>
                     <p><strong>Storage:</strong> 56%</p>
 
                     <button class="restart-server" onclick="updateServer('repo')">Update Server</button>
@@ -75,8 +75,8 @@
                 <th style="text-align: center;"> Info </th>
             </tr>
             <tr>
-                <td id="logs"> Hello </td>
-                <td id="errors"> Hello </td>
+                <td id="logs"> Main logs will appear here, please look for ERRORs in it. </td>
+                <td id="errors"> Additional logs appear here </td>
             </tr>
              
 
