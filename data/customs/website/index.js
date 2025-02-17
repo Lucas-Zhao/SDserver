@@ -45,6 +45,7 @@ const makePostRequest = async (url, body) => {
     console.log("Response Data:", data);
     return data;
   } catch (error) {
+    throw error;
     console.error("Error making POST request:", error);
   }
 };
@@ -176,6 +177,16 @@ function addPokemon() {
 
 function openLink(file) {
   window.location.href = "/" + file + "?sessionId=" + window.sessionId;
+}
+
+function updateClient() {
+  let body = { update : "repo"}
+  makePostRequest(apiUrl + "/update",body).then((data) => {
+    console.log(data)
+    document.getElementById("logs").innerHTML = data.message
+    document.getElementById("errors").innerHTML = data.errors
+
+  })
 }
 
 window.onload = function() {

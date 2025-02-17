@@ -40,7 +40,7 @@
     <main class="main-content">
         
         <!-- Server Section -->
-        <section id="server-section" class="o section" >
+        <section id="server-section" style="width:100%;" class="o section" >
             <h2 class="fist">Server Name</h2>
             <button onclick="showSection('incident')"></button>
             <div class="server-container">
@@ -60,10 +60,24 @@
                     <p><strong>Memory Usage:</strong> 67%</p>
                     <p><strong>Storage:</strong> 56%</p>
 
-                    <button class="restart-server">Restart Server</button>
-                    <button class="restart-client">Restart Client</button>
+                    <button class="restart-server">Update Server</button>
+                    <button class="restart-client" onclick="updateClient()">Update Client</button>
+                    <button class="restart-client">Sync Server</button>
+
                 </div>
             </div>
+            <br>
+            <table><tr>
+                <th> Logs </th>
+                <th> Errors </th>
+            </tr>
+            <tr>
+                <td id="logs"> Hello </td>
+                <td id="errors"> Hello </td>
+            </tr>
+             
+
+            </table>   
         </section>
 
   
