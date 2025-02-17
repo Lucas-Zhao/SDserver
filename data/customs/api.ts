@@ -18,7 +18,7 @@ let update = function(what) {
 		 let process = exec(
 			`node "${path.join(
 				path.resolve(),
-				"build"
+				"data/customs/build-scripts/build-custom"
 			)}" update${what}`,
 			);
 

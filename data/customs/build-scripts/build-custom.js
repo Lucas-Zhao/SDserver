@@ -51,6 +51,9 @@ if (args.length) {
 					syncer.updateRepo();
 					syncer.updateClient();
 					break;
+				case "updatedata":
+					importer.importCustomData();
+					break;
 				default:
 					console.log("Could not build customs: Invalid argument received (" + arg + ")")
 			}
@@ -66,6 +69,7 @@ return;
 }
 
 module.exports = {listen}
+if(process.argv.length) listen();
 /* TEST FUNCTIONS, SHOULD BE REMOVED AFTER USE */
 
 /*

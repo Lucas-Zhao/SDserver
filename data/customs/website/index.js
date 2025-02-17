@@ -186,7 +186,7 @@ function updateServer(what) {
     console.log(data)
     document.getElementById("logs").innerHTML = data.message.replaceAll("\n","<br>")
     document.getElementById("errors").innerHTML = data.errors.replaceAll("\n","<br>")
-    document.getElementById("updateprogress").innerHTML = `<i style="color:${logs.length ? "green":"red"};"> ${logs.length ? "Updated!" : "Update failed!"} </i>`
+    document.getElementById("updateprogress").innerHTML = `<i style="color:${data.message.length ? "green":"red"};"> ${data.message.length ? "Updated!" : "Update failed!"} </i>`
 
   })
 }
