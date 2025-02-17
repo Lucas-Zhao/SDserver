@@ -12,18 +12,27 @@ const HTTP_PORT = 3000;
 const HTTPS_PORT = 3443;
 
 let update = function(what) {
-	return new Promise((resolve, reject) => {
-		exec(
+	return new Promise(async (resolve, reject) => {
+		let logs = ``
+		let errLogs = ``
+		 let process = exec(
 			`node "${path.join(
 				path.resolve(),
 				"/tools/build-customs.js"
 			)}" update${what}`,
-			(error, stdout, stderr) => {
-				if (error) return reject(`Error: ${error.message}`);
-				if (stderr) return resolve(`Stderr: ${stderr}`);
-				resolve(stdout);
-			}
-		);
+			);
+
+		process?.stdout?.on("data", (data) => {
+			logs += data;
+		});
+
+		process?.stderr?.on("data", (data) => {
+			errLogs += data;
+		});
+		process.on("exit", () => {
+			resolve({logs:logs.trim(), errLogs}); 
+		});
+		//resolve(logs)
 	})
 }
 
@@ -251,9 +260,9 @@ const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 				res.end(JSON.stringify({ message: "Invalid session" }));
 				return;
 			} */
-			update(body.update).then((data) => {
+			update(body.update).then((data:any) => {
 				res.writeHead(200, { "Content-Type": "application/json" });
-				res.end(JSON.stringify({ message: data }));
+				res.end(JSON.stringify({ message: data.logs, errors:data.errLogs}));
 			}).catch((e) => {
 				console.log(e)
 				res.writeHead(400, { "Content-Type": "application/json" });
