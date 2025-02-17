@@ -190,6 +190,18 @@ function updateServer(what) {
 
   })
 }
+function restartServer() {
+  document.getElementById("updateprogress").innerHTML = `<i style="color:black;"> Restarting Server... please wait </i>`
+  let body = {}
+  makePostRequest(apiUrl + "/restart",body).then((data) => {
+    console.log(data)
+    document.getElementById("logs").innerHTML = data.message.replaceAll("\n","<br>")
+    //document.getElementById("errors").innerHTML = data.errors.replaceAll("\n","<br>")
+    document.getElementById("updateprogress").innerHTML = `<i style="color:${data.message.length ? "green":"red"};"> ${data.message.length ? "Updated!" : "Update failed!"} </i>`
+
+  })
+}
+
 
 function loadStats() {
   makePostRequest(apiUrl + "/stats", {}).then((data) => {

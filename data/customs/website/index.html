@@ -75,12 +75,18 @@
 							Update Server
 						</button>
 						<button
-							class="restart-client"
+							class="restart-server"
 							onclick="updateServer('client')"
 						>
 							Update Client
 						</button>
-						<button class="restart-client" onclick="updateServer('data')">
+                        <button
+                        class="restart-server"
+                        onclick="restartServer()"
+                    >
+                        Restart Server
+                    </button>
+						<button class="restart-server" onclick="updateServer('data')">
 							Import Custom Data
 						</button>
 					</div>

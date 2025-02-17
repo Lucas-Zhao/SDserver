@@ -12,26 +12,26 @@ import { exec } from "child_process";
 const HTTP_PORT = 3000;
 const HTTPS_PORT = 3443;
 
-let update = function(what) {
+let update = function (what) {
 	return new Promise(async (resolve, reject) => {
-		let logs = ``
-		let errLogs = ``
-		 let process = what === "data" ? exec(
-			`node "${path.join(
-				path.resolve(),
-				"data/customs/build-scripts/build-custom"
-			)}" update${what}`,
-			) : exec(
-				`node "${path.join(
-					path.resolve(),
-					"build"
-				)}" update${what}`,
-				);
+		let logs = ``;
+		let errLogs = ``;
+		let process =
+			what === "data"
+				? exec(
+						`node "${path.join(
+							path.resolve(),
+							"data/customs/build-scripts/build-custom"
+						)}" update${what}`
+				  )
+				: exec(
+						`node "${path.join(path.resolve(), "build")}" update${what}`
+				  );
 
-			process.on("error", (data) => {
-				console.log(data);
-				reject(data)
-			})
+		process.on("error", (data) => {
+			console.log(data);
+			reject(data);
+		});
 		process?.stdout?.on("data", (data) => {
 			logs += data;
 		});
@@ -40,30 +40,58 @@ let update = function(what) {
 			errLogs += data;
 		});
 		process.on("exit", () => {
-			resolve({logs:logs.trim(), errLogs}); 
+			resolve({ logs: logs.trim(), errLogs });
 		});
 		//resolve(logs)
-	})
-}
-
-let getStats =  function() {
-	return new Promise( (resolve, reject) => {
-	let data = ''
-	let child = exec(
-		`node "${path.join(
-			path.resolve(),
-			"data/customs/build-scripts/build-custom"
-		)}" stats`,
-		);
-		child?.stdout?.on("data",(chunk) => {
-			data += chunk;
-		})
-		child.on("error", (data) => {
-			reject(data)
-		})
-		child.on("exit",() => { resolve(data) })
 	});
-}
+};
+
+let getStats = function () {
+	return new Promise((resolve, reject) => {
+		let data = "";
+		let child = exec(
+			`node "${path.join(
+				path.resolve(),
+				"data/customs/build-scripts/build-custom"
+			)}" stats`
+		);
+		child?.stdout?.on("data", (chunk) => {
+			data += chunk;
+		});
+		child.on("error", (data) => {
+			reject(data);
+		});
+		child.on("exit", () => {
+			resolve(data);
+		});
+	});
+};
+
+const checkPM2 = () => {
+    return new Promise((resolve) => {
+        exec('pm2 -v', (error) => {
+            if (error) {
+                console.log('PM2 is not installed. Exiting.');
+                resolve(false);
+            } else {
+                resolve(true);
+            }
+        });
+    });
+};
+
+const restart = (processNameOrId) => {
+	return new Promise((resolve,reject) => {
+    exec(`pm2 restart ${processNameOrId}`, (error, stdout, stderr) => {
+        if (error) {
+            reject(`Error restarting PM2 process "${processNameOrId}":` + stderr.trim());
+        } else {
+            resolve(`PM2 process "${processNameOrId}" restarted successfully:\n` +  stdout);
+        }
+    });
+})
+};
+
 
 Customs.session(170);
 
@@ -277,7 +305,7 @@ const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 		try {
 			// Parse the request body
 			const body = await parseRequestBody(req);
-			/*
+			
 			let oid = fs
 				.readFileSync(
 					path.join(path.resolve(), "/data/customs/session.txt")
@@ -288,17 +316,65 @@ const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 				res.writeHead(400, { "Content-Type": "application/json" });
 				res.end(JSON.stringify({ message: "Invalid session" }));
 				return;
-			} */
-			update(body.update).then((data:any) => {
-				res.writeHead(200, { "Content-Type": "application/json" });
-				res.end(JSON.stringify({ message: data.logs, errors:data.errLogs}));
-			}).catch((e) => {
-				console.log(e)
-				res.writeHead(400, { "Content-Type": "application/json" });
-				res.end(JSON.stringify({ message: e.message }));
-				return;
-			})
+			} 
+			update(body.update)
+				.then((data: any) => {
+					res.writeHead(200, { "Content-Type": "application/json" });
+					res.end(
+						JSON.stringify({ message: data.logs, errors: data.errLogs })
+					);
+				})
+				.catch((e) => {
+					console.log(e);
+					res.writeHead(400, { "Content-Type": "application/json" });
+					res.end(JSON.stringify({ message: e.message }));
+					return;
+				});
+
+			return;
+		} catch (error) {
+			// Handle JSON parse errors or other issues
+			res.writeHead(400, { "Content-Type": "application/json" });
+			res.end(JSON.stringify({ message: error.message }));
+		}
+	}else if (url === "/restart" && method === "POST") {
+		try {
+			// Parse the request body
+			const body = await parseRequestBody(req);
 			
+			let oid = fs
+				.readFileSync(
+					path.join(path.resolve(), "/data/customs/session.txt")
+				)
+				.toString();
+			console.log(body);
+			if (!body.sessionId || body.sessionId !== oid) {
+				res.writeHead(400, { "Content-Type": "application/json" });
+				res.end(JSON.stringify({ message: "Invalid session" }));
+				return;
+			} 
+			checkPM2().then((does) => {
+				if(!does) {
+					res.writeHead(200, { "Content-Type": "application/json" });
+					res.end(
+						JSON.stringify({ message: "PM2 is not configured, please restart the server manually" })
+					);
+					return
+				} else {
+					restart("SDserver").then((data) => {
+						res.writeHead(200, { "Content-Type": "application/json" });
+					res.end(
+						JSON.stringify({ message: data })
+					);
+					}).catch((e) => {
+						res.writeHead(200, { "Content-Type": "application/json" });
+					res.end(
+						JSON.stringify({ message: e})
+					);
+					})
+				}
+			})
+
 			return;
 		} catch (error) {
 			// Handle JSON parse errors or other issues
@@ -402,22 +478,19 @@ const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 		try {
 			// Parse the request body
 			const body = await parseRequestBody(req);
-			console.log(body);
 			getStats().then((d) => {
-				console.log(d)
+				console.log(d);
 				let data = { stats: d };
 				res.writeHead(200, { "Content-Type": "application/json" });
-				res.end
-				(JSON.stringify(data));
+				res.end(JSON.stringify(data));
 				return;
-			})
-		
+			});
 		} catch (error) {
 			// Handle JSON parse errors or other issues
 			res.writeHead(400, { "Content-Type": "application/json" });
 			res.end(JSON.stringify({ message: error.message }));
 		}
-	}else {
+	} else {
 		// Route not found
 		res.writeHead(404, { "Content-Type": "application/json" });
 		res.end(JSON.stringify({ message: "Not Found" }));
