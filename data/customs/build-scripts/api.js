@@ -1,6 +1,7 @@
 /*
  * api.js
  * Author - Pokem9n | https://github.com/ISenseAura
+ * 
  * This file handles operations related to API this file itself does not
  * contain logic for API but to start/stop the API process this script is used
  */

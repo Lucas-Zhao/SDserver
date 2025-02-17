@@ -457,7 +457,7 @@ export class Handler {
 		this.pokedex[this.toID(pokemon.name)] = pokemon;
 		this.convertToTxt("pokedex");
 		this.import("pokedex");
-		this.addSprite(toID(pokemon.name));
+		this.addSprite(this.toID(pokemon.name));
 		if (opts.isMega) {
 			let func = function (item, source) {
 				if (item.megaEvolves === source.baseSpecies.baseSpecies)
