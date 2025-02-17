@@ -20169,7 +20169,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "zerapium":{"name":"Zerapium","types":["Normal","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":50,"atk":140,"def":80,"spa":140,"spd":70,"spe":140},"abilities":{"0":"Charisma","1":"Monsoon Surge","H":"Aqua Circuit"},"heightm":121,"weightkg":67,"evoType":"trade","num":-1021}
 , "rizaxe":{"name":"Rizaxe","types":["Water","Electric"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":80,"atk":110,"def":80,"spa":110,"spd":80,"spe":110},"abilities":{"0":"Frostvolt","1":"Adaptive Mystery","H":"Arcane Might"},"heightm":160,"weightkg":67,"evoType":"trade","num":-1021}
 , "serperiormega":{"name":"Serperior-Mega","types":["Normal"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":50,"atk":50,"def":40,"spa":300,"spd":300,"spe":20},"abilities":{"0":"Charisma","H":"Terrify"},"heightm":121,"weightkg":67,"evoType":"trade","requiredItem":"Serperionite","baseSpecies":"Lucario","forme":"Mega","num":-1047}
-, "shucklman":{"name":"Shucklman","types":["Fire","Normal"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":40,"atk":1,"def":300,"spa":1,"spd":300,"spe":1},"abilities":{"0":"Mindscape Domain","H":null},"heightm":121,"weightkg":67,"prevo":"Shuckle","evoType":"trade","num":-1047}
 
 };
  
@@ -20179,17 +20178,15 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	 the eviolite bonus if a custom pokemon is added as its evolution
 	*/ 
 			(() => {
-	let toChangePokemon = [{"name":"lucario","evotype":"trade","from":"Lucario-Mega-X"},{"name":"lucario","evotype":"trade","from":"Serperior-Mega"},{"name":"shuckle","evotype":"trade","from":"Shucklman"}];
+	let toChangePokemon = [{"name":"lucario","evotype":"trade","from":"Lucario-Mega-X"},{"name":"lucario","evotype":"trade","from":"Serperior-Mega"}];
 	toChangePokemon.forEach((val) => {
 		//val = JSON.parse(val)
 		if(val.from.includes("-Mega")) {
 		if(!Pokedex[(val.name)].otherFormes) Pokedex[(val.name)].otherFormes = [];
 		Pokedex[(val.name)].otherFormes.push(val.from)
 		} else {
-		if (Pokedex[(val.name)].evos)
-			Pokedex[(val.name)]?.evos?.push(val.from);
-		if (!Pokedex[(val.name)].evos)
-			Pokedex[(val.name)]?.evos?.push(val.from);
+		if (!Pokedex[(val.name)].evos) Pokedex[(val.name)].evos = [];
+		Pokedex[(val.name)]?.evos?.push(val.from);
 	}
 	});
 })();

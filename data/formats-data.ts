@@ -6037,6 +6037,5 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "zerapium":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "rizaxe":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "serperiormega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
-, "shucklman":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
