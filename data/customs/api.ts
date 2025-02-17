@@ -15,12 +15,17 @@ let update = function(what) {
 	return new Promise(async (resolve, reject) => {
 		let logs = ``
 		let errLogs = ``
-		 let process = exec(
+		 let process = what === "data" ? exec(
 			`node "${path.join(
 				path.resolve(),
 				"data/customs/build-scripts/build-custom"
 			)}" update${what}`,
-			);
+			) : exec(
+				`node "${path.join(
+					path.resolve(),
+					"build"
+				)}" update${what}`,
+				);
 
 			process.on("error", (data) => {
 				console.log(data);
