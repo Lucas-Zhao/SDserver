@@ -27,6 +27,7 @@ let updateRepo = (msg = "Data Update") => {
 	console.log("\n[FINISHED]")
 }
 
+
 let updateClient = (msg) => {
 	console.log("\n-----[UPDATING CLIENT]------- \n")
 	console.log(execSync("npm run build-full",{cwd : MAIN_PATH + "/" + CLIENT_FOLDER_NAME}).toString())
