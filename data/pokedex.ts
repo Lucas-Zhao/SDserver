@@ -20165,8 +20165,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	},
 
 /*CUSTOM POKEMONS*/
- "serperiormega":{"name":"Serperior-Mega","types":["Normal"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":50,"atk":50,"def":40,"spa":300,"spd":300,"spe":20},"abilities":{"0":"Charisma","H":"Terrify"},"heightm":121,"weightkg":67,"evoType":"trade","requiredItem":"Serperionite","baseSpecies":"Lucario","forme":"Mega","num":-1047}
-, "lucariomegax":{"name":"Lucario-Mega-X","types":["Psychic","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":110,"atk":110,"def":110,"spa":110,"spd":110,"spe":110},"abilities":{"0":"Mindscape Domain","H":null},"heightm":121,"weightkg":67,"evoType":"trade","requiredItem":"Lucarionite X","baseSpecies":"Lucario","forme":"Mega-X","num":-1047}
+ "lucariomegax":{"name":"Lucario-Mega-X","types":["Psychic","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":110,"atk":110,"def":110,"spa":110,"spd":110,"spe":110},"abilities":{"0":"Mindscape Domain","H":null},"heightm":121,"weightkg":67,"evoType":"trade","requiredItem":"Lucarionite X","baseSpecies":"Lucario","forme":"Mega-X","num":-1047}
 
 };
  
@@ -20176,7 +20175,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	 the eviolite bonus if a custom pokemon is added as its evolution
 	*/ 
 			(() => {
-	let toChangePokemon = [{"name":"lucario","evotype":"trade","from":"Serperior-Mega"},{"name":"lucario","evotype":"trade","from":"Lucario-Mega-X"}];
+	let toChangePokemon = [{"name":"lucario","evotype":"trade","from":"Lucario-Mega-X"}];
 	toChangePokemon.forEach((val) => {
 		//val = JSON.parse(val)
 		if(val.from.includes("-Mega")) {
