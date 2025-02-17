@@ -55,6 +55,9 @@ if (args.length) {
 				case "updatedata":
 					importer.importCustomData();
 					break;
+				case "samples":
+					importer.importSamples();
+					break;
 				case "stats":
 					stats.getSystemStatsAsync().then((data) => {
 						console.log(JSON.stringify(data))
