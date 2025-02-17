@@ -99715,7 +99715,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 	},
 
 /*CUSTOM LEARNSETS*/
- "lucariomegax":{"learnset":{"aurasphere":["9L4","9L3"],"tackle":["9L4","9L3"]}}
+ "lucariomegax":{"learnset":{"aurasphere":["9L4","9L3"]}}
 , "zerapium":{"learnset":{"aurasphere":["9L4","9L3"],"tackle":["9L4","9L3"]}}
 , "rizaxe":{"learnset":{"aurasphere":["9L4","9L3"],"tackle":["9L4","9L3"],"machpunch":["9L4","9L3"],"solarbeam":["9L4","9L3"],"blizzard":["9L4","9L3"]}}
 , "serperiormega":{"learnset":{"leafstorm":["9L4","9L3"]}}
