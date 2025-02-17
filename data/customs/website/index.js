@@ -183,8 +183,8 @@ function updateClient() {
   let body = { update : "repo"}
   makePostRequest(apiUrl + "/update",body).then((data) => {
     console.log(data)
-    document.getElementById("logs").innerHTML = data.message
-    document.getElementById("errors").innerHTML = data.errors
+    document.getElementById("logs").innerHTML = data.message.replace("\n","<br>")
+    document.getElementById("errors").innerHTML = data.errors.replace("\n","<br>")
 
   })
 }
