@@ -20,7 +20,7 @@ let update = function(what) {
 			)}" update${what}`,
 			(error, stdout, stderr) => {
 				if (error) return reject(`Error: ${error.message}`);
-				if (stderr) return reject(`Stderr: ${stderr}`);
+				if (stderr) return resolve(`Stderr: ${stderr}`);
 				resolve(stdout);
 			}
 		);
