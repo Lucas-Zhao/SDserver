@@ -255,6 +255,7 @@ const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 				res.writeHead(200, { "Content-Type": "application/json" });
 				res.end(JSON.stringify({ message: data }));
 			}).catch((e) => {
+				console.log(e)
 				res.writeHead(400, { "Content-Type": "application/json" });
 				res.end(JSON.stringify({ message: e.message }));
 				return;
