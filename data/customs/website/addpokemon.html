@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Form</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <header class="topbar">
+        <h1 class="logo"></h1>
+        <div class="search-container">
+            <input type="text" class="search-box" placeholder="Search...">
+      <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="topbar-icons">
+            <span class="user-profile"></span>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <nav>
+            <ul>
+                <li onclick="openLink('index.html')"><a href="#">Dashboard</a></li>
+                <li onclick="openLink('pokemon.html')"><a href="#">Pokemon</a></li>
+                <li onclick="openLink('replays.html')"><a href="#">Replays</a></li>
+                <li><a href="#">Abilities</a></li>
+                <li><a href="#">Moves</a></li>
+                <li><a href="#">Usage Stats</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <form class="pokemon-form" id="myForm">
+            <h2>Add a Pokemon</h2>
+
+            <!-- Form Container with Two Columns -->
+            <div class="form-container">
+                <!-- Left Column -->
+                <div class="form-column">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input onkeyup="updateSprite()" type="text" id="name" placeholder="Lucario-Mega-X">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Prevolution</label>
+                        <input type="text" id="prevo" placeholder="Lucario">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Weight</label>
+                        <input type="text" id="weight" placeholder="67.8 kg">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Height</label>
+                        <input type="text" id="height" placeholder="127m">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Type 1</label>
+                        <select id="type1">
+                            <option>Normal</option>
+                            <option>Fire</option>
+                            <option>Water</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Type 2</label>
+                        <select id="type2">
+                            <option>Normal</option>
+                            <option>Fighting</option>
+                            <option>Electric</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Ability 1</label>
+                        <input type="text" id="ability1" placeholder="Levitate, Wonder Guard">
+                    </div>
+                    <div class="form-group">
+                        <label>Ability 2</label>
+                        <input type="text" id="ability2" placeholder="Levitate, Wonder Guard">
+                    </div>
+                    <div class="form-group">
+                        <label>Hidden Ability</label>
+                        <input type="text" id="hiddenAbility" placeholder="Levitate, Wonder Guard">
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="form-column">
+                    <!-- Stats Section --><div class="mega-container">
+                        <div class="mega-item">
+                            <label>Is Mega</label>
+                            <select id="ismega">
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+
+                        <div class="mega-item">
+                            <label>Required Item</label>
+                            <input id="requiredItem" type="text" placeholder="Enter item">
+                        </div>
+
+                        <div class="mega-item">
+                            <label>Pokedex Number</label>
+                            <input type="number" placeholder="Auto assigned" disabled>
+                        </div>
+                    </div>
+
+                    <div class="stats-container">
+
+                       
+                        <div class="stat-item">
+                            <label>HP</label>
+                            <input id="hp" type="number" placeholder="70">
+                        </div>
+
+                        <div class="stat-item">
+                            <label>ATK</label>
+                            <input id="atk" type="number" placeholder="110">
+                        </div>
+
+                        <div class="stat-item">
+                            <label>DEF</label>
+                            <input id="def" type="number" placeholder="70">
+                        </div>
+
+                        <div class="stat-item">
+                            <label>SPA</label>
+                            <input id="spa" type="number" placeholder="115">
+                        </div>
+
+                        <div class="stat-item">
+                            <label>SPD</label>
+                            <input id="spd" type="number" placeholder="70">
+                        </div>
+
+                        <div class="stat-item">
+                            <label>SPE</label>
+                            <input id="spe" type="number" placeholder="90">
+                        </div>
+
+                        <div class="stat-item">
+                            <label>BST</label>
+                            <input id="bst" type="number" placeholder="525" disabled>
+                        </div>
+                    </div>
+
+                
+
+                    <!-- Additional Information -->
+                   
+                    <div class="form-group">
+                        <label>Moveset</label>
+                        <textarea id="moveset" placeholder="Aura Sphere, Close Combat, Fire Punch "style="height: 150px;"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Battle Sprites</label>
+                        <img id="bsprite" src="" alt="Sprites not found">  <img id="bsprite2" src="" >
+                        
+                        <img id="bsprites" src="" >  <img id="bsprites2" src="" >
+
+                    </div>
+
+                    <div class="form-group">
+                        <label>Party Icon</label>
+                        <input type="text" placeholder="Image URL or ID" disabled>
+                    </div>
+
+                </div>
+            </div>
+
+            <button  onclick="addPokemon()" class="submit-btn">Submit</button>
+        </form>
+    </main>
+
+   
+</body>
+<script>
+    	const form = document.getElementById('myForm');
+    form.addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent the default form submission behavior
+      console.log('Form submission prevented.');
+      // Handle form data here, e.g., validate or send with fetch
+    });
+</script>
+<script src='index.js'></script>
+<script src='pokemon.js'></script>
+
+</html>

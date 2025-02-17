@@ -20,7 +20,7 @@ The column value will be ignored for repeat sections.
 export const Formats: import('../sim/dex-formats').FormatList = [
 	{ section: "Exclusive" },
 	{
-		name: "[Gen 9] National Dex Legacy",
+		name: "[Gen 9] HELL Draft League",
 		mod: "gen9",
 		debug: true,
 		battle: {},

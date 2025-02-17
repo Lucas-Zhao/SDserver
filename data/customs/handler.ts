@@ -482,8 +482,8 @@ export class Handler {
 		this.addFormatData(
 			{
 				isNonstandard: "Unobtainable",
-				tier: "Legacy",
-				natDexTier: "Legacy",
+				tier: "HELL",
+				natDexTier: "HELL",
 			},
 			this.toID(pokemon.name)
 		);

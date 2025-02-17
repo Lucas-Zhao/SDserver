@@ -27,7 +27,7 @@
             <ul>
                 <li onclick="openLink('index.html')"><a href="#">Dashboard</a></li>
                 <li onclick="openLink('pokemon.html')"><a href="#">Pokemon</a></li>
-                <li onclick="openLink('replays.html')"><a href="#">Replays</a></li>
+                <li onclick="openLink('pokemon.html')"><a href="#">Replays</a></li>
                 <li><a href="#">Abilities</a></li>
                 <li><a href="#">Moves</a></li>
                 <li><a href="#">Usage Stats</a></li>
@@ -45,13 +45,12 @@
 
  <div id="incident" class=" g section " >
  
-    <h2 class="u">Custom Pokemon</h2>
+    <h2 class="u">Replays</h2>
 
     <div class="section1">
     
     </div>
     <section class="section2">
-      <button class="update-btn" onclick="openLink('addpokemon')" style="width:130px;font-size: small;font-weight: 600;">Add a Pokemon</button>
 
       <div class="sear">
         <input type="text" class="search-box" placeholder="Search...">
@@ -87,19 +86,17 @@
       <thead>
         <tr>
           <th><input type="checkbox"></th> <!-- New column for checkboxes -->
-          <th>Incident ID</th>
+          <th>No.</th>
           <th>Title</th>
-          <th>Category</th>
-          <th>Severity</th>
-          <th>Priority</th>
-          <th>Status</th>
-          <th>Last Update</th>
+          <th>Format</th>
+          <th>Uploaded By</th>
+          <th>Uploaded On</th>
         </tr>
       </thead>
    
       <tbody>
-        <tbody>
-          <tr  >
+        <tbody id="replays-table">
+          <tr>
 
             <td><input type="checkbox" class="row-checkbox"></td>
             <td>1</td>
@@ -114,8 +111,7 @@
             <td>Hardware</td>
             <td>High</td>
             <td>Critical</td>
-            <td>Open</td>
-            <td>2025-01-27</td>
+            <td><a style="padding: 5px;border:1px solid blue;text-decoration: none;border-radius: 5px;" href="http://localhost:5501/replay.html?id=">Watch!</a></td>
           </tr>
           
         <tr data-incident='{"id":"2", "title":"Login Failure", "category":"Software", "severity":"Medium", "priority":"High", "status":"Closed", "date":"2025-01-25", "description":"User unable to log in due to incorrect authentication"}'>
@@ -250,7 +246,14 @@
 
  
         <script src="index.js"></script>
-    <script src="pokemon.js"></script>
+		<script src="replays.js"></script>
+
+	<script> 
+
+	fetchData(url).then((data) => {
+		loadReplays(Object.values(data.replays))
+	})
+	</script>
 
 </body>
 </html>

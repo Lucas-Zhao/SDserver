@@ -23,7 +23,8 @@ export const commands: Chat.ChatCommands = {
 			id: "",
 			title: "",
 			uploadTime: Date.now(),
-			file: ""
+			file: "",
+			url:""
 		};
 		room.battle.players.forEach((player) => {
 			data.users.push(player.name)
@@ -33,13 +34,14 @@ export const commands: Chat.ChatCommands = {
 		data.title = room.title;
 		//data.uploadTime = new Date();
 		//data.file = toID(data.id);
+		let url = (Config.client ?  Config.client : "") +"/replay.html?id=" + data.id;
 		let loc = path.join(path.resolve(),"/data/customs")
 		let replays = JSON.parse(fs.readFileSync(loc + "/replays.json").toString());
+		data.url = url;
 		replays[data.id] = data;
 
 		fs.writeFileSync(loc + "/replays.json", JSON.stringify(replays))
 		fs.writeFileSync(loc + "/replays/" + data.id + ".log",room.getLog())
-		let url = (Config.client ?  Config.client : "") +"/replay.html?id=" + data.id;
 		
 		user.popup(
 			`|html|<p>Your replay has been uploaded! It's available at:</p><p> ` +

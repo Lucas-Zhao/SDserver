@@ -1,6 +1,7 @@
 
 // Immediately Invoked Function Expression (IIFE) to handle `sessionId` and helper functions
 let sessionId; // Declare sessionId globally
+const client = url = "http://localhost:5501";
 (function () {
   window.toID = function (text) {
     if (typeof text !== "string") {
@@ -171,4 +172,22 @@ function addPokemon() {
     console.error("Error adding Pokémon:", error.message);
     alert(error.message); // Provide feedback to the user
   }
+}
+
+function openLink(file) {
+  window.location.href = "/" + file + "?sessionId=" + window.sessionId;
+}
+
+window.onload = function() {
+  document.getElementById("sidebar").innerHTML = `<nav>
+            <ul>
+                <li onclick="openLink('index.html')"><a href="#">Dashboard</a></li>
+                <li onclick="openLink('pokemon.html')"><a href="#">Pokemon</a></li>
+                <li onclick="openLink('replays.html')"><a href="#">Replays</a></li>
+                <li><a href="#">Abilities</a></li>
+                <li><a href="#">Moves</a></li>
+                <li><a href="#">Usage Stats</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>`
 }

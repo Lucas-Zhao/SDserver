@@ -72,7 +72,6 @@ function serveStatic(req, res, file) {
 			contentType = "image/x-icon";
 			break;
 	}
-	console.log(filePath);
 	// Read and serve the file
 	fs.readFile(filePath, (err, content) => {
 		if (err) {
@@ -98,18 +97,22 @@ const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 	const parsedUrl = URL.parse(req.url, true);
 	const query = parsedUrl.query;
 
-	res.setHeader('Access-Control-Allow-Origin', '*'); // Allow any origin
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+	res.setHeader("Access-Control-Allow-Origin", "*"); // Allow any origin
+	res.setHeader(
+		"Access-Control-Allow-Methods",
+		"GET, POST, PUT, DELETE, OPTIONS"
+	);
+	res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
 
-    // Handle preflight requests
-    if (req.method === 'OPTIONS') {
-        res.writeHead(204);
-        res.end();
-        return;
-    }
+	// Handle preflight requests
+	if (req.method === "OPTIONS") {
+		res.writeHead(204);
+		res.end();
+		return;
+	}
 
 	if (query.sessionId && method === "GET") {
+		console.log(url);
 		let oid = fs
 			.readFileSync(path.join(path.resolve(), "/data/customs/session.txt"))
 			.toString();
@@ -118,6 +121,12 @@ const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 			res.end(JSON.stringify({ message: "Invalid session" }));
 			return;
 		}
+		if (url?.startsWith("/pokemon.html"))
+			return serveStatic(req, res, "pokemon.html");
+		if (url?.startsWith("/addpokemon.html"))
+			return serveStatic(req, res, "addpokemon.html");
+		if (url?.startsWith("/replays.html"))
+			return serveStatic(req, res, "replays.html");
 		serveStatic(req, res, "index.html");
 	} else if (url === "/index.css") {
 		serveStatic(req, res, "index.css");
@@ -125,12 +134,13 @@ const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 		serveStatic(req, res, "index.js");
 	} else if (url === "/pokemon.js") {
 		serveStatic(req, res, "pokemon.js");
-	}
-	else if (url === "/pokemon.html") {
+	} else if (url === "/replays.js") {
+		serveStatic(req, res, "replays.js");
+	} else if (url === "/pokemon.html") {
 		serveStatic(req, res, "pokemon.html");
 	} else if (url === "/pokemon.css") {
 		serveStatic(req, res, "pokemon.css");
-	}   else if (url === "/" && method === "GET") {
+	} else if (url === "/" && method === "GET") {
 		// Home route
 		res.writeHead(200, { "Content-Type": "application/json" });
 		res.end(JSON.stringify({ message: "Welcome to the API!" }));
@@ -182,7 +192,7 @@ const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 					path.join(path.resolve(), "/data/customs/session.txt")
 				)
 				.toString();
-				console.log(oid == body.sessionId)
+			console.log(oid == body.sessionId);
 			console.log(body);
 			if (!body.sessionId || body.sessionId != oid) {
 				res.writeHead(401, { "Content-Type": "application/json" });
@@ -238,10 +248,10 @@ const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 				res.end(JSON.stringify({ message: "Invalid session" }));
 				return;
 			}
-			update(body.update)
+			update(body.update);
 			res.writeHead(201, { "Content-Type": "application/json" });
-				res.end(JSON.stringify({ message: "Done" }));
-				return;
+			res.end(JSON.stringify({ message: "Done" }));
+			return;
 		} catch (error) {
 			// Handle JSON parse errors or other issues
 			res.writeHead(400, { "Content-Type": "application/json" });
@@ -262,10 +272,14 @@ const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 				res.end(JSON.stringify({ message: "Invalid session" }));
 				return;
 			}
-			let data = { pokedex: Customs.pokedex, items: Customs.items, texts: Customs.texts }
+			let data = {
+				pokedex: Customs.pokedex,
+				items: Customs.items,
+				texts: Customs.texts,
+			};
 			res.writeHead(201, { "Content-Type": "application/json" });
-				res.end(JSON.stringify({ message: "Done", data: data }));
-				return;
+			res.end(JSON.stringify({ message: "Done", data: data }));
+			return;
 		} catch (error) {
 			// Handle JSON parse errors or other issues
 			res.writeHead(400, { "Content-Type": "application/json" });
@@ -282,19 +296,55 @@ const requestHandler = async (req: IncomingMessage, res: ServerResponse) => {
 				res.end(JSON.stringify({ message: "Provide replay id" }));
 				return;
 			}
-			let filePath = path.join(path.resolve(), "/data/customs/replays/" + body.replayid + ".log")
-			if(!fs.existsSync(filePath)) {
+			let filePath = path.join(
+				path.resolve(),
+				"/data/customs/replays/" + body.replayid + ".log"
+			);
+			if (!fs.existsSync(filePath)) {
 				res.writeHead(404, { "Content-Type": "application/json" });
 				res.end("Replay does not exist");
 				return;
 			}
 			let replay = fs.readFileSync(filePath).toString();
-			let replayData = fs.readFileSync(path.join(path.resolve(),"/data/customs/replays.json")).toString()
+			let replayData = JSON.parse(
+				fs
+					.readFileSync(
+						path.join(path.resolve(), "/data/customs/replays.json")
+					)
+					.toString()
+			)[body.replayid];
 
-			let data = { log: replay, replay: replayData }
+			let data = { log: replay, replay: replayData };
 			res.writeHead(200, { "Content-Type": "application/json" });
-				res.end(JSON.stringify(data));
+			res.end(JSON.stringify(data));
+			return;
+		} catch (error) {
+			// Handle JSON parse errors or other issues
+			res.writeHead(400, { "Content-Type": "application/json" });
+			res.end(JSON.stringify({ message: error.message }));
+		}
+	} else if (url === "/replays" && method === "POST") {
+		try {
+			// Parse the request body
+			const body = await parseRequestBody(req);
+			console.log(body);
+
+			let filePath = path.join(path.resolve(), "/data/customs/replays.json");
+			if (!fs.existsSync(filePath)) {
+				res.writeHead(404, { "Content-Type": "application/json" });
+				res.end("Replay does not exist");
 				return;
+			}
+			let replayData = fs
+				.readFileSync(
+					path.join(path.resolve(), "/data/customs/replays.json")
+				)
+				.toString();
+
+			let data = { replays: JSON.parse(replayData) };
+			res.writeHead(200, { "Content-Type": "application/json" });
+			res.end(JSON.stringify(data));
+			return;
 		} catch (error) {
 			// Handle JSON parse errors or other issues
 			res.writeHead(400, { "Content-Type": "application/json" });
