@@ -14,7 +14,6 @@ if (!fs.existsSync(path.join(path.resolve(), "/data/customs/"))) {
 	return;
 }
 
-function listen() {
 if (args.length) {
 	args.forEach((arg) => {
 		//console.log(this)
@@ -61,15 +60,15 @@ if (args.length) {
 			console.log(e);
 		}
 	});
-	return;
-} else {
-	importer.importCustomData();
-}
-return;
 }
 
-module.exports = {listen}
-if(process.argv.length) listen();
+
+function importData() {
+	importer.importCustomData();
+	return;
+}
+
+module.exports = {importData}
 /* TEST FUNCTIONS, SHOULD BE REMOVED AFTER USE */
 
 /*

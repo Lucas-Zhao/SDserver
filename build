@@ -54,9 +54,9 @@ setImmediate(async () => {
 	Compile our script first to ensure all the files are updated with
 	our custom data and then compile the ts files 
 	*/
-	require("./data/customs/build-scripts/build-custom"); // THIS IS WHERE THE CUSTOM DATA MAGIC BEGINS
+	require("./data/customs/build-scripts/build-custom").importData(); // THIS IS WHERE THE CUSTOM DATA MAGIC BEGINS
 	require('./tools/build-utils').transpile(force, decl);
-	if(process.argv.length) require("./data/customs/build-scripts/build-custom").listen(); // THIS IS WHERE THE CUSTOM DATA MAGIC BEGINS
+	if(process.argv.length) require("./data/customs/build-scripts/build-custom"); // THIS IS WHERE THE CUSTOM DATA MAGIC BEGINS
 
 
 });
