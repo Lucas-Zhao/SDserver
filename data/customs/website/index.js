@@ -185,6 +185,7 @@ function updateClient() {
     console.log(data)
     document.getElementById("logs").innerHTML = data.message.replaceAll("\n","<br>")
     document.getElementById("errors").innerHTML = data.errors.replaceAll("\n","<br>")
+    document.getElementById("updateprogress").innerHTML = `<i style="color:green;"> Updating... please wait </i>`
 
   })
 }
