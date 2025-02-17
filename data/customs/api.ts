@@ -22,6 +22,10 @@ let update = function(what) {
 			)}" update${what}`,
 			);
 
+			process.on("error", (data) => {
+				console.log(data);
+				reject(data)
+			})
 		process?.stdout?.on("data", (data) => {
 			logs += data;
 		});
