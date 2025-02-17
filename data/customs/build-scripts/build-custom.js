@@ -1,3 +1,15 @@
+/*
+ * build-custom.js
+ * Author - Pokem9n | https://github.com/ISenseAura
+ * 
+ * This is the main file for Custom Pokemon Server. This file
+ * mainly acts as a command line tool to perform tasks that
+ * should be independent of PS' processes.
+ * PS' "build" file uses this file to import the custom 
+ * data from the text files
+ */
+
+
 const fs = require("fs");
 const path = require("path");
 
@@ -15,6 +27,8 @@ if (!fs.existsSync(path.join(path.resolve(), "/data/customs/"))) {
 	);
 	return;
 }
+
+
 
 if (args.length) {
 	args.forEach((arg) => {
