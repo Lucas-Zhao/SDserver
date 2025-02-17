@@ -179,9 +179,9 @@ function openLink(file) {
   window.location.href = "/" + file + "?sessionId=" + window.sessionId;
 }
 
-function updateClient(what) {
+function updateServer(what) {
   document.getElementById("updateprogress").innerHTML = `<i style="color:black;"> Updating ${what ? what : "Client"}... please wait </i>`
-  let body = { update : "repo"}
+  let body = { update : what ? what : "client"}
   makePostRequest(apiUrl + "/update",body).then((data) => {
     console.log(data)
     document.getElementById("logs").innerHTML = data.message.replaceAll("\n","<br>")
