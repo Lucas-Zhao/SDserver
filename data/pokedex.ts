@@ -20182,10 +20182,8 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		if(!Pokedex[(val.name)].otherFormes) Pokedex[(val.name)].otherFormes = [];
 		Pokedex[(val.name)].otherFormes.push(val.from)
 		} else {
-		if (Pokedex[(val.name)].evos)
-			Pokedex[(val.name)]?.evos?.push(val.from);
-		if (!Pokedex[(val.name)].evos)
-			Pokedex[(val.name)]?.evos?.push(val.from);
+		if (!Pokedex[(val.name)].evos) Pokedex[(val.name)].evos = [];
+		Pokedex[(val.name)]?.evos?.push(val.from);
 	}
 	});
 })();
