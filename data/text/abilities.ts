@@ -2541,7 +2541,99 @@ export const AbilitiesText: {[id: IDEntry]: AbilityText} = {
     "name": "Tidal Surge",
     "desc": "This Pokémon's Water-type moves gain +1 priority when HP is full.",
     "shortDesc": "Water moves get +1 priority at full HP."
+  },
+  "hiveinstinct": {
+    "name": "Hive Instinct",
+    "desc": "This Pokémon's Bug-type attacks gain the STAB bonus.",
+    "shortDesc": "Bug-type attacks gain STAB."
+  },
+  "shadowborn": {
+    "name": "Shadowborn",
+    "desc": "This Pokémon's Dark-type attacks gain the STAB bonus.",
+    "shortDesc": "Dark-type attacks gain STAB."
+  },
+  "draconicessence": {
+    "name": "Draconic Essence",
+    "desc": "This Pokémon's Dragon-type attacks gain the STAB bonus.",
+    "shortDesc": "Dragon-type attacks gain STAB."
+  },
+  "chargedcore": {
+    "name": "Charged Core",
+    "desc": "This Pokémon's Electric-type attacks gain the STAB bonus.",
+    "shortDesc": "Electric-type attacks gain STAB."
+  },
+  "enchantedforce": {
+    "name": "Enchanted Force",
+    "desc": "This Pokémon's Fairy-type attacks gain the STAB bonus.",
+    "shortDesc": "Fairy-type attacks gain STAB."
+  },
+  "warriorswill": {
+    "name": "Warrior's Will",
+    "desc": "This Pokémon's Fighting-type attacks gain the STAB bonus.",
+    "shortDesc": "Fighting-type attacks gain STAB."
+  },
+  "infernalsurge": {
+    "name": "Infernal Surge",
+    "desc": "This Pokémon's Fire-type attacks gain the STAB bonus.",
+    "shortDesc": "Fire-type attacks gain STAB."
+  },
+  "skyborn": {
+    "name": "Skyborn",
+    "desc": "This Pokémon's Flying-type attacks gain the STAB bonus.",
+    "shortDesc": "Flying-type attacks gain STAB."
+  },
+  "etherealpresence": {
+    "name": "Ethereal Presence",
+    "desc": "This Pokémon's Ghost-type attacks gain the STAB bonus.",
+    "shortDesc": "Ghost-type attacks gain STAB."
+  },
+  "verdantblessing": {
+    "name": "Verdant Blessing",
+    "desc": "This Pokémon's Grass-type attacks gain the STAB bonus.",
+    "shortDesc": "Grass-type attacks gain STAB."
+  },
+  "earthenpower": {
+    "name": "Earthen Power",
+    "desc": "This Pokémon's Ground-type attacks gain the STAB bonus.",
+    "shortDesc": "Ground-type attacks gain STAB."
+  },
+  "glacialheritage": {
+    "name": "Glacial Heritage",
+    "desc": "This Pokémon's Ice-type attacks gain the STAB bonus.",
+    "shortDesc": "Ice-type attacks gain STAB."
+  },
+  "fundamentalforce": {
+    "name": "Fundamental Force",
+    "desc": "This Pokémon's Normal-type attacks gain the STAB bonus.",
+    "shortDesc": "Normal-type attacks gain STAB."
+  },
+  "toxicveins": {
+    "name": "Toxic Veins",
+    "desc": "This Pokémon's Poison-type attacks gain the STAB bonus.",
+    "shortDesc": "Poison-type attacks gain STAB."
+  },
+  "mindforce": {
+    "name": "Mindforce",
+    "desc": "This Pokémon's Psychic-type attacks gain the STAB bonus.",
+    "shortDesc": "Psychic-type attacks gain STAB."
+  },
+  "stoneborn": {
+    "name": "Stoneborn",
+    "desc": "This Pokémon's Rock-type attacks gain the STAB bonus.",
+    "shortDesc": "Rock-type attacks gain STAB."
+  },
+  "metallicsoul": {
+    "name": "Metallic Soul",
+    "desc": "This Pokémon's Steel-type attacks gain the STAB bonus.",
+    "shortDesc": "Steel-type attacks gain STAB."
+  },
+  "aquaflow": {
+    "name": "Aqua Flow",
+    "desc": "This Pokémon's Water-type attacks gain the STAB bonus.",
+    "shortDesc": "Water-type attacks gain STAB."
   }
+
+
 
 };
  

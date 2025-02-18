@@ -1,7 +1,7 @@
 exports.abilities = {
 	monsoonsurge: {
 		onStart: function (source) {
-			if (this.field.getWeather().id == "raindance") return;
+			if (this.field.isWeather("raindance")) return;
 			this.field.setWeather("raindance");
 			this.field.weatherState.duration = 10;
 		},
@@ -12,7 +12,7 @@ exports.abilities = {
 	},
 	blizzardveil: {
 		onStart: function (source) {
-			if (this.field.getWeather().id == "snow") return;
+			if (this.field.isWeather("snow")) return;
 
 			this.field.setWeather("snow");
 			this.field.weatherState.duration = 10;
@@ -24,7 +24,7 @@ exports.abilities = {
 	},
 	sandstormrage: {
 		onStart: function (source) {
-			if (this.field.getWeather().id == "sandstorm") return;
+			if (this.field.isWeather("sandstorm")) return;
 
 			this.field.setWeather("sandstorm");
 			this.field.weatherState.duration = 10;
@@ -36,7 +36,7 @@ exports.abilities = {
 	},
 	solarflare: {
 		onStart: function (source) {
-			if (this.field.getWeather().id == "sunnyday") return;
+			if (this.field.isWeather("sunnyday")) return;
 
 			this.field.setWeather("sunnyday");
 			this.field.weatherState.duration = 10;
@@ -60,7 +60,7 @@ exports.abilities = {
 	},
 	mindscapedomain: {
 		onStart: function (source) {
-			if (this.field.getTerrain().id == "psychicterrain") return;
+			if (this.field.isTerrain("psychicterrain")) return;
 
 			this.field.setTerrain("psychicterrain");
 			this.field.terrainState.duration = 10;
@@ -72,7 +72,7 @@ exports.abilities = {
 	},
 	verdantbloom: {
 		onStart: function (source) {
-			if (this.field.getTerrain().id == "grassyterrain") return;
+			if (this.field.isTerrain("grassyterrain")) return;
 
 			this.field.setTerrain("grassyterrain");
 			this.field.terrainState.duration = 10;
@@ -84,6 +84,7 @@ exports.abilities = {
 	},
 	mystichaze: {
 		onStart: function (source) {
+			if(this.field.isTerrain("mistyterrain")) return;
 			this.field.setTerrain("mistyterrain");
 			this.field.terrainState.duration = 10;
 		},
@@ -188,7 +189,7 @@ exports.abilities = {
 			if (!this.field.isTerrain("psychicterrain")) return;
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "atk") {
-				this.debug("Weather boost");
+				this.debug("Terrain boost");
 				return this.chainModify(1.5);
 			}
 		},
@@ -197,7 +198,7 @@ exports.abilities = {
 			if (!this.field.isTerrain("psychicterrain")) return;
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spa") {
-				this.debug("Weather boost");
+				this.debug("Terrain boost");
 				return this.chainModify(1.5);
 			}
 		},
@@ -453,11 +454,14 @@ exports.abilities = {
 
 	stormbloom: {
 		onStart: function (pokemon) {
-			this.field.setWeather("raindance");
-			this.field.weatherState.duration = 8;
-
+			if(!this.field.isWeather("raindance")){
+				this.field.setWeather("raindance");
+				this.field.weatherState.duration = 8;
+			}
+			if(!this.field.isTerrain("grassyterrain")) {
 			this.field.setTerrain("grassyterrain");
 			this.field.terrainState.duration = 8;
+			}
 		},
 		flags: {},
 		name: "Stormbloom",
@@ -467,11 +471,14 @@ exports.abilities = {
 
 	solarmist: {
 		onStart: function (pokemon) {
-			this.field.setWeather("sunnyday");
-			this.field.weatherState.duration = 8;
-
+			if(!this.field.isWeather("sunnyday")){
+				this.field.setWeather("sunnyday");
+				this.field.weatherState.duration = 8;
+			}
+			if(!this.field.isTerrain("mistyterrain")) {
 			this.field.setTerrain("mistyterrain");
 			this.field.terrainState.duration = 8;
+			}
 		},
 		flags: {},
 		name: "Solar Mist",
@@ -480,11 +487,14 @@ exports.abilities = {
 	},
 	desertmind: {
 		onStart: function (pokemon) {
-			this.field.setWeather("sandstorm");
-			this.field.weatherState.duration = 8;
-
+			if(!this.field.isWeather("sandstorm")){
+				this.field.setWeather("sandstorm");
+				this.field.weatherState.duration = 8;
+			}
+			if(!this.field.isTerrain("psychicterrain")) {
 			this.field.setTerrain("psychicterrain");
 			this.field.terrainState.duration = 8;
+			}
 		},
 		flags: {},
 		name: "Desert Mind",
@@ -493,11 +503,15 @@ exports.abilities = {
 	},
 	frostvolt: {
 		onStart: function (pokemon) {
-			this.field.setWeather("snow");
-			this.field.weatherState.duration = 8;
-
+			if(!this.field.isWeather("snow")){
+				this.field.setWeather("snow");
+				this.field.weatherState.duration = 8;
+			}
+			if(!this.field.isTerrain("electricterrain")) {
 			this.field.setTerrain("electricterrain");
 			this.field.terrainState.duration = 8;
+			}
+
 		},
 		flags: {},
 		name: "Frostvolt",
@@ -555,7 +569,7 @@ exports.abilities = {
 	"umbralforce": {
 		onModifyTypePriority: -1,
 		onModifyType: function(move, pokemon) {
-			const noModifyType = [
+			noModifyType = [
 				"judgment", "multiattack", "naturalgift", "revelationdance",
 				"technoblast", "terrainpulse", "weatherball"
 			];
@@ -578,7 +592,7 @@ exports.abilities = {
 	"draconize": {
 		onModifyTypePriority: -1,
 		onModifyType: function(move, pokemon) {
-			const noModifyType = [
+			noModifyType = [
 				"judgment", "multiattack", "naturalgift", "revelationdance",
 				"technoblast", "terrainpulse", "weatherball"
 			];
@@ -601,7 +615,7 @@ exports.abilities = {
 	"combatboost": {
 		onModifyTypePriority: -1,
 		onModifyType: function(move, pokemon) {
-			const noModifyType = [
+			noModifyType = [
 				"judgment", "multiattack", "naturalgift", "revelationdance",
 				"technoblast", "terrainpulse", "weatherball"
 			];
@@ -624,7 +638,7 @@ exports.abilities = {
 	"infernalize": {
 		onModifyTypePriority: -1,
 		onModifyType: function(move, pokemon) {
-			const noModifyType = [
+			noModifyType = [
 				"judgment", "multiattack", "naturalgift", "revelationdance",
 				"technoblast", "terrainpulse", "weatherball"
 			];
@@ -643,7 +657,7 @@ exports.abilities = {
 		rating: 4,
 		num: -1030,
 	},
-	
+
 	"antennaboost": {
     onModifyPriority: function(priority, pokemon, target, move) {
         if (move?.type === 'Bug' && pokemon.hp === pokemon.maxhp) return priority + 1;
@@ -802,5 +816,366 @@ exports.abilities = {
     name: "Tidal Surge",
     rating: 1.5,
     num: -1047,
-}
-};
+},
+"hiveinstinct": {
+	  onModifyAtkPriority: 5,
+	  onModifyAtk: function(atk, attacker, defender, move) {
+		if (move.type === 'Bug') {
+		  this.debug('Hive Instinct boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  onModifySpAPriority: 5,
+	  onModifySpA: function(atk, attacker, defender, move) {
+		if (move.type === 'Bug') {
+		  this.debug('Hive Instinct boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  flags: {},
+	  name: "Hive Instinct",
+	  rating: 3.5,
+	  num: -1048,
+	},
+	"shadowborn": {
+	  onModifyAtkPriority: 5,
+	  onModifyAtk: function(atk, attacker, defender, move) {
+		if (move.type === 'Dark') {
+		  this.debug('Shadowborn boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  onModifySpAPriority: 5,
+	  onModifySpA: function(atk, attacker, defender, move) {
+		if (move.type === 'Dark') {
+		  this.debug('Shadowborn boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  flags: {},
+	  name: "Shadowborn",
+	  rating: 3.5,
+	  num: -1049,
+	},
+	"draconicessence": {
+	  onModifyAtkPriority: 5,
+	  onModifyAtk: function(atk, attacker, defender, move) {
+		if (move.type === 'Dragon') {
+		  this.debug('Draconic Essence boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  onModifySpAPriority: 5,
+	  onModifySpA: function(atk, attacker, defender, move) {
+		if (move.type === 'Dragon') {
+		  this.debug('Draconic Essence boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  flags: {},
+	  name: "Draconic Essence",
+	  rating: 3.5,
+	  num: -1050,
+	},
+	"chargedcore": {
+	  onModifyAtkPriority: 5,
+	  onModifyAtk: function(atk, attacker, defender, move) {
+		if (move.type === 'Electric') {
+		  this.debug('Charged Core boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  onModifySpAPriority: 5,
+	  onModifySpA: function(atk, attacker, defender, move) {
+		if (move.type === 'Electric') {
+		  this.debug('Charged Core boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  flags: {},
+	  name: "Charged Core",
+	  rating: 3.5,
+	  num: -1051,
+	},
+	"enchantedforce": {
+	  onModifyAtkPriority: 5,
+	  onModifyAtk: function(atk, attacker, defender, move) {
+		if (move.type === 'Fairy') {
+		  this.debug('Enchanted Force boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  onModifySpAPriority: 5,
+	  onModifySpA: function(atk, attacker, defender, move) {
+		if (move.type === 'Fairy') {
+		  this.debug('Enchanted Force boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  flags: {},
+	  name: "Enchanted Force",
+	  rating: 3.5,
+	  num: -1052,
+	},
+	"warriorswill": {
+	  onModifyAtkPriority: 5,
+	  onModifyAtk: function(atk, attacker, defender, move) {
+		if (move.type === 'Fighting') {
+		  this.debug('Warrior\'s Will boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  onModifySpAPriority: 5,
+	  onModifySpA: function(atk, attacker, defender, move) {
+		if (move.type === 'Fighting') {
+		  this.debug('Warrior\'s Will boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  flags: {},
+	  name: "Warrior's Will",
+	  rating: 3.5,
+	  num: -1053,
+	},
+	"infernalsurge": {
+	  onModifyAtkPriority: 5,
+	  onModifyAtk: function(atk, attacker, defender, move) {
+		if (move.type === 'Fire') {
+		  this.debug('Infernal Surge boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  onModifySpAPriority: 5,
+	  onModifySpA: function(atk, attacker, defender, move) {
+		if (move.type === 'Fire') {
+		  this.debug('Infernal Surge boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  flags: {},
+	  name: "Infernal Surge",
+	  rating: 3.5,
+	  num: -1054,
+	},
+	"skyborn": {
+	  onModifyAtkPriority: 5,
+	  onModifyAtk: function(atk, attacker, defender, move) {
+		if (move.type === 'Flying') {
+		  this.debug('Skyborn boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  onModifySpAPriority: 5,
+	  onModifySpA: function(atk, attacker, defender, move) {
+		if (move.type === 'Flying') {
+		  this.debug('Skyborn boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  flags: {},
+	  name: "Skyborn",
+	  rating: 3.5,
+	  num: -1055,
+	},
+	"etherealpresence": {
+	  onModifyAtkPriority: 5,
+	  onModifyAtk: function(atk, attacker, defender, move) {
+		if (move.type === 'Ghost') {
+		  this.debug('Ethereal Presence boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  onModifySpAPriority: 5,
+	  onModifySpA: function(atk, attacker, defender, move) {
+		if (move.type === 'Ghost') {
+		  this.debug('Ethereal Presence boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  flags: {},
+	  name: "Ethereal Presence",
+	  rating: 3.5,
+	  num: -1056,
+	},
+	"verdantblessing": {
+	  onModifyAtkPriority: 5,
+	  onModifyAtk: function(atk, attacker, defender, move) {
+		if (move.type === 'Grass') {
+		  this.debug('Verdant Blessing boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  onModifySpAPriority: 5,
+	  onModifySpA: function(atk, attacker, defender, move) {
+		if (move.type === 'Grass') {
+		  this.debug('Verdant Blessing boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  flags: {},
+	  name: "Verdant Blessing",
+	  rating: 3.5,
+	  num: -1057,
+	},
+	"earthenpower": {
+	  onModifyAtkPriority: 5,
+	  onModifyAtk: function(atk, attacker, defender, move) {
+		if (move.type === 'Ground') {
+		  this.debug('Earthen Power boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  onModifySpAPriority: 5,
+	  onModifySpA: function(atk, attacker, defender, move) {
+		if (move.type === 'Ground') {
+		  this.debug('Earthen Power boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  flags: {},
+	  name: "Earthen Power",
+	  rating: 3.5,
+	  num: -1058,
+	},
+	"glacialheritage": {
+	  onModifyAtkPriority: 5,
+	  onModifyAtk: function(atk, attacker, defender, move) {
+		if (move.type === 'Ice') {
+		  this.debug('Glacial Heritage boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  onModifySpAPriority: 5,
+	  onModifySpA: function(atk, attacker, defender, move) {
+		if (move.type === 'Ice') {
+		  this.debug('Glacial Heritage boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  flags: {},
+	  name: "Glacial Heritage",
+	  rating: 3.5,
+	  num: -1059,
+	},
+	"fundamentalforce": {
+	  onModifyAtkPriority: 5,
+	  onModifyAtk: function(atk, attacker, defender, move) {
+		if (move.type === 'Normal') {
+		  this.debug('Fundamental Force boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  onModifySpAPriority: 5,
+	  onModifySpA: function(atk, attacker, defender, move) {
+		if (move.type === 'Normal') {
+		  this.debug('Fundamental Force boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  flags: {},
+	  name: "Fundamental Force",
+	  rating: 3.5,
+	  num: -1060,
+	},
+	"toxicveins": {
+	  onModifyAtkPriority: 5,
+	  onModifyAtk: function(atk, attacker, defender, move) {
+		if (move.type === 'Poison') {
+		  this.debug('Toxic Veins boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  onModifySpAPriority: 5,
+	  onModifySpA: function(atk, attacker, defender, move) {
+		if (move.type === 'Poison') {
+		  this.debug('Toxic Veins boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  flags: {},
+	  name: "Toxic Veins",
+	  rating: 3.5,
+	  num: -1061,
+	},
+	"mindforce": {
+	  onModifyAtkPriority: 5,
+	  onModifyAtk: function(atk, attacker, defender, move) {
+		if (move.type === 'Psychic') {
+		  this.debug('Mindforce boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  onModifySpAPriority: 5,
+	  onModifySpA: function(atk, attacker, defender, move) {
+		if (move.type === 'Psychic') {
+		  this.debug('Mindforce boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  flags: {},
+	  name: "Mindforce",
+	  rating: 3.5,
+	  num: -1062,
+	},
+	"stoneborn": {
+	  onModifyAtkPriority: 5,
+	  onModifyAtk: function(atk, attacker, defender, move) {
+		if (move.type === 'Rock') {
+		  this.debug('Stoneborn boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  onModifySpAPriority: 5,
+	  onModifySpA: function(atk, attacker, defender, move) {
+		if (move.type === 'Rock') {
+		  this.debug('Stoneborn boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  flags: {},
+	  name: "Stoneborn",
+	  rating: 3.5,
+	  num: -1063,
+	},
+	"metallicsoul": {
+	  onModifyAtkPriority: 5,
+	  onModifyAtk: function(atk, attacker, defender, move) {
+		if (move.type === 'Steel') {
+		  this.debug('Metallic Soul boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  onModifySpAPriority: 5,
+	  onModifySpA: function(atk, attacker, defender, move) {
+		if (move.type === 'Steel') {
+		  this.debug('Metallic Soul boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  flags: {},
+	  name: "Metallic Soul",
+	  rating: 3.5,
+	  num: -1064,
+	},
+	"aquaflow": {
+	  onModifyAtkPriority: 5,
+	  onModifyAtk: function(atk, attacker, defender, move) {
+		if (move.type === 'Water') {
+		  this.debug('Aqua Flow boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  onModifySpAPriority: 5,
+	  onModifySpA: function(atk, attacker, defender, move) {
+		if (move.type === 'Water') {
+		  this.debug('Aqua Flow boost');
+		  return this.chainModify(1.5);
+		}
+	  },
+	  flags: {},
+	  name: "Aqua Flow",
+	  rating: 3.5,
+	  num: -1065,
+	}
+  }
+

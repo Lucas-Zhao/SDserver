@@ -27,6 +27,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		teraPreviewDefault: true,
 		ruleset: [
 			"Team Preview",
+			'Standard NatDex',
 			"Cancel Mod",
 			"Max Team Size = 6",
 			"Max Move Count = 4",
@@ -34,7 +35,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			"Default Level = 100",
 			"Obtainable Moves",
 			"Obtainable Abilities",
-			"Terastal Clause"
 		],
 	},
 

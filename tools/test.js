@@ -633,7 +633,7 @@ exports.abilities = {
 	},
 
 	"galewings": {
-		onModifyPriority(priority, pokemon, target, move) {
+		onModifyPriority: function(priority, pokemon, target, move) {
 			if (move?.type === 'Flying' && pokemon.hp === pokemon.maxhp) return priority + 1;
 		},
 		flags: {},
@@ -643,7 +643,7 @@ exports.abilities = {
 	},
 
 	"antennaboost": {
-    onModifyPriority(priority, pokemon, target, move) {
+    onModifyPriority: function(priority, pokemon, target, move) {
         if (move?.type === 'Bug' && pokemon.hp === pokemon.maxhp) return priority + 1;
     },
     flags: {},
@@ -653,7 +653,7 @@ exports.abilities = {
 },
 
 "shadowsprint": {
-    onModifyPriority(priority, pokemon, target, move) {
+    onModifyPriority: function(priority, pokemon, target, move) {
         if (move?.type === 'Dark' && pokemon.hp === pokemon.maxhp) return priority + 1;
     },
     flags: {},
@@ -663,7 +663,7 @@ exports.abilities = {
 },
 
 "wyvernwings": {
-    onModifyPriority(priority, pokemon, target, move) {
+    onModifyPriority: function(priority, pokemon, target, move) {
         if (move?.type === 'Dragon' && pokemon.hp === pokemon.maxhp) return priority + 1;
     },
     flags: {},
@@ -673,7 +673,7 @@ exports.abilities = {
 },
 
 "pixiedash": {
-    onModifyPriority(priority, pokemon, target, move) {
+    onModifyPriority: function(priority, pokemon, target, move) {
         if (move?.type === 'Fairy' && pokemon.hp === pokemon.maxhp) return priority + 1;
     },
     flags: {},
@@ -683,7 +683,7 @@ exports.abilities = {
 },
 
 "voltdash": {
-    onModifyPriority(priority, pokemon, target, move) {
+    onModifyPriority: function(priority, pokemon, target, move) {
         if (move?.type === 'Electric' && pokemon.hp === pokemon.maxhp) return priority + 1;
     },
     flags: {},
@@ -693,7 +693,7 @@ exports.abilities = {
 },
 
 "brawlersinstinct": {
-    onModifyPriority(priority, pokemon, target, move) {
+    onModifyPriority: function(priority, pokemon, target, move) {
         if (move?.type === 'Fighting' && pokemon.hp === pokemon.maxhp) return priority + 1;
     },
     flags: {},
@@ -703,7 +703,7 @@ exports.abilities = {
 },
 
 "blazerush": {
-    onModifyPriority(priority, pokemon, target, move) {
+    onModifyPriority: function(priority, pokemon, target, move) {
         if (move?.type === 'Fire' && pokemon.hp === pokemon.maxhp) return priority + 1;
     },
     flags: {},
@@ -713,7 +713,7 @@ exports.abilities = {
 },
 
 "phantomdash": {
-    onModifyPriority(priority, pokemon, target, move) {
+    onModifyPriority: function(priority, pokemon, target, move) {
         if (move?.type === 'Ghost' && pokemon.hp === pokemon.maxhp) return priority + 1;
     },
     flags: {},
@@ -723,7 +723,7 @@ exports.abilities = {
 },
 
 "verdantsurge": {
-    onModifyPriority(priority, pokemon, target, move) {
+    onModifyPriority: function(priority, pokemon, target, move) {
         if (move?.type === 'Grass' && pokemon.hp === pokemon.maxhp) return priority + 1;
     },
     flags: {},
@@ -733,7 +733,7 @@ exports.abilities = {
 },
 
 "earthengrace": {
-    onModifyPriority(priority, pokemon, target, move) {
+    onModifyPriority: function(priority, pokemon, target, move) {
         if (move?.type === 'Ground' && pokemon.hp === pokemon.maxhp) return priority + 1;
     },
     flags: {},
@@ -743,7 +743,7 @@ exports.abilities = {
 },
 
 "frostdash": {
-    onModifyPriority(priority, pokemon, target, move) {
+    onModifyPriority: function(priority, pokemon, target, move) {
         if (move?.type === 'Ice' && pokemon.hp === pokemon.maxhp) return priority + 1;
     },
     flags: {},
@@ -753,7 +753,7 @@ exports.abilities = {
 },
 
 "venomrush": {
-    onModifyPriority(priority, pokemon, target, move) {
+    onModifyPriority: function(priority, pokemon, target, move) {
         if (move?.type === 'Poison' && pokemon.hp === pokemon.maxhp) return priority + 1;
     },
     flags: {},
@@ -763,7 +763,7 @@ exports.abilities = {
 },
 
 "mindleap": {
-    onModifyPriority(priority, pokemon, target, move) {
+    onModifyPriority: function(priority, pokemon, target, move) {
         if (move?.type === 'Psychic' && pokemon.hp === pokemon.maxhp) return priority + 1;
     },
     flags: {},
@@ -773,7 +773,7 @@ exports.abilities = {
 },
 
 "stonemomentum": {
-    onModifyPriority(priority, pokemon, target, move) {
+    onModifyPriority: function(priority, pokemon, target, move) {
         if (move?.type === 'Rock' && pokemon.hp === pokemon.maxhp) return priority + 1;
     },
     flags: {},
@@ -783,7 +783,7 @@ exports.abilities = {
 },
 
 "metallicburst": {
-    onModifyPriority(priority, pokemon, target, move) {
+    onModifyPriority: function(priority, pokemon, target, move) {
         if (move?.type === 'Steel' && pokemon.hp === pokemon.maxhp) return priority + 1;
     },
     flags: {},
@@ -793,7 +793,7 @@ exports.abilities = {
 },
 
 "tidalsurge": {
-    onModifyPriority(priority, pokemon, target, move) {
+    onModifyPriority: function(priority, pokemon, target, move) {
         if (move?.type === 'Water' && pokemon.hp === pokemon.maxhp) return priority + 1;
     },
     flags: {},

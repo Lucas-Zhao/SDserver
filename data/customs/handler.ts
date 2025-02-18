@@ -434,24 +434,29 @@ export class Handler {
 		fsSync.writeFileSync(filePath, content);
 	}
 
+
 	addPokemon(pokemon: Pokemon, opts: Dict<string>) {
 		console.log(Object.keys(this.pokedex));
-		pokemon.num = -(Object.keys(this.abilities as {}).length + 1000);
+		pokemon.num = -(Object.keys(this.pokedex as {}).length + 1000);
 		if (pokemon.abilities["1"] == null || pokemon.abilities["1"] == "null")
 			delete pokemon.abilities["1"];
+		if (pokemon.abilities["0"] == null || pokemon.abilities["0"] == "null")
+			delete pokemon.abilities["0"];
 		if (pokemon.abilities["H"] == null || pokemon.abilities["H"] == "null")
-			delete pokemon.abilities["1"];
+			delete pokemon.abilities["H"];
 		if (pokemon.prevo == null || pokemon.prevo == "null")
 			delete pokemon.prevo;
 		if (pokemon.requiredItem == null || pokemon.requiredItem == "null")
 			delete pokemon.requiredItem;
 
+		let learnset = undefined;
 		if (Array.isArray(opts.learnset)) {
 			let obj: Dict<string[]> = {};
 			opts.learnset.forEach((id: string) => {
 				obj[id] = ["9L4", "9L3"];
 			});
 			opts.learnset = obj;
+			learnset = obj;
 		}
 
 		this.pokedex[this.toID(pokemon.name)] = pokemon;
@@ -474,7 +479,7 @@ export class Handler {
 			};
 			this.addItem(data);
 		}
-		if (opts.learnset) {
+		if (learnset) {
 			let data = { learnset: opts.learnset as {} };
 			this.addLearnset(data, pokemon.name);
 		}
