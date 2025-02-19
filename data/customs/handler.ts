@@ -473,11 +473,11 @@ export class Handler {
 			};
 			let data = {
 				name: pokemon.requiredItem,
-				megaEvolves: [pokemon.baseSpecies],
+				megaEvolves: pokemon.baseSpecies,
 				megaStone: pokemon.name,
 				itemUser: [pokemon.baseSpecies],
 				functions: [{ name: "onTakeItem", body: func.toString() }],
-				shortDesc: `If held by a ${pokemon.name}, this item allows it to Mega Evolve in battle.`,
+				shortDesc: `If held by a ${pokemon.baseSpecies}, this item allows it to Mega Evolve in battle.`,
 			};
 			this.addItem(data);
 		}

@@ -8329,8 +8329,17 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
+
+
+
+
+
 /*CUSTOM ITEMS*/
- "lucarionitex":{"name":"Lucarionite X","megaStone":"Lucario-Mega-X","itemUser":["Lucario"],"megaEvolves":["Lucario"],"num":-1003,"gen":9}
+ "lucarionitex":{"name":"Lucarionite X","megaStone":"Lucario-Mega-X","itemUser":["Lucario"],"megaEvolves":"Lucario","num":-1003,"gen":0,"isNonstandard":"Unobtainable"}
  };
 /*FUNCTIONS*/
 

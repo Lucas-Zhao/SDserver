@@ -81,6 +81,15 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 			'Min Source Gen = 9',
 		],
 	},
+
+	helldraftdex:{
+		effectType: 'ValidatorRule',
+		name: 'Standard NatDex',
+		desc: "The standard ruleset for all National Dex tiers",
+		ruleset: [
+			'Obtainable', '+Unobtainable', '+Past', 'Sketch Post-Gen 7 Moves', 'Team Preview', 'Nickname Clause', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause',
+		],
+	},
 	standardnatdex: {
 		effectType: 'ValidatorRule',
 		name: 'Standard NatDex',

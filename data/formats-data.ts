@@ -6033,6 +6033,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 
 /*CUSTOM FORMATS*/
- "lucariomegax":{"isNonstandard":"Past","tier":"HELL","natDexTier":"Illegal"}
+ "lucariomegax":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"Illegal"}
 
 };
