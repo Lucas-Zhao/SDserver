@@ -1,7 +1,9 @@
 /*
-This file includes all the necessary functions that handle editing custom
-data in data files
-Pokem9n
+ * build-custom.js
+ * Author - Pokem9n | https://github.com/ISenseAura
+ * 
+ * This file includes all the necessary functions that handle editing custom
+ * data in data files
 */
 import * as path from "path";
 import * as fsSync from "fs";

@@ -475,6 +475,7 @@ export class Format extends BasicEffect implements Readonly<BasicEffect> {
 		skipSets?: {[name: string]: {[key: string]: boolean}},
 	}) => string[] | void;
 	declare readonly section?: string;
+
 	declare readonly column?: number;
 
 	constructor(data: AnyObject) {
