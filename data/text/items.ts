@@ -2440,7 +2440,7 @@ export const ItemsText: {[id: IDEntry]: ItemText} = {
 
 /*CUSTOM TEXTS*/
  "lucarionitex":{"name":"Lucarionite X","shortDesc":"If held by a Lucario-Mega-X, this item allows it to Mega Evolve in battle."}
-, "serperionite":{"name":"Serperionite","shortDesc":"If held by a Serperior-Mega, this item allows it to Mega Evolve in battle."}
+, "serperionite":{"name":"Serperionite","shortDesc":"If held by a Serperior, this item allows it to Mega Evolve in battle."}
 
 };
  
