@@ -18,21 +18,17 @@ The column value will be ignored for repeat sections.
 */
 
 export const Formats: import('../sim/dex-formats').FormatList = [
-	{ section: "Exclusive" },
+	{ section: "National Dex" },
 	{
 		name: "[Gen 9] HELL Draft League",
 		mod: "gen9",
-		debug: true,
 		battle: {},
 		teraPreviewDefault: true,
 		unbanlist:["Lucario-Mega-X","Lucarionite X"],
 		ruleset: [
 			"Team Preview",
 			'Standard NatDex',
-			"Max Team Size = 6",
-			"Max Move Count = 4",
-			"Max Level = 100",
-			"Default Level = 100",
+		'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Sleep Clause Mod', 'Terastal Clause', '+Unobtainable', '+Past', '+Illegal'
 		],
 	},
 
