@@ -1,10 +1,10 @@
 /*
  * build-custom.js
  * Author - Pokem9n | https://github.com/ISenseAura
- * 
+ *
  * This file includes all the necessary functions that handle editing custom
  * data in data files
-*/
+ */
 import * as path from "path";
 import * as fsSync from "fs";
 import * as fs from "fs/promises";
@@ -30,6 +30,14 @@ let fileTypes: Array<DataFile> = [
 	"abilities",
 	"formats-data",
 ];
+
+interface CustomFormat {
+	name: string;
+	mod: string;
+	ruleset: Array<string>;
+	unbanlist?: Array<string>;
+	banlist?: Array<string>;
+}
 
 interface Dict<T> {
 	[key: string]: T;
@@ -96,6 +104,8 @@ export class Handler {
 	learnsetsIds?: Array<string>;
 	movesIds: Array<string>;
 
+	formats: Dict<CustomFormat>;
+
 	funcTxt: Array<string>;
 
 	constructor() {
@@ -110,6 +120,22 @@ export class Handler {
 			abilities: {},
 			items: {},
 		};
+
+		this.formats = {
+			gen9helldraftleague: {
+				name: "[Gen 9] HELL Draft League",
+				mod: "gen9",
+				ruleset: [
+					"Team Preview",
+					"Standard NatDex",
+					"Max Team Size = 6",
+					"Max Move Count = 4",
+					"Max Level = 100",
+					"Default Level = 100",
+				],
+			},
+		};
+
 		this.loadFiles();
 	}
 
@@ -331,6 +357,30 @@ export class Handler {
 
 	/* main functions */
 
+	addToFormat(data: Pokemon | Item, format: string = "gen9helldraftleague") {
+		if (!this.formats) this.formats = {};
+		if (!this.formats[this.toID(format)])
+			return console.log("Custom format does not exist: " + format);
+		let formatData = this.formats[this.toID(format)];
+		if (!formatData.unbanlist) formatData.unbanlist = [];
+		if (data.baseStats) {
+			formatData.unbanlist.push(data.name);
+		} else {
+			formatData.unbanlist.push(data.name);
+		}
+		this.formats[this.toID(format)] = formatData;
+		this.convertFormatsToText();
+	}
+
+	convertFormatsToText() {
+		console.log("converting formats...");
+		let form = this.formats["gen9helldraftleague"];
+		let func = `Formats[1].unbanlist = [${form.unbanlist?.map(el => `'${el}'`).join(", ")}];`;
+
+		fsSync.writeFileSync(path.join(path.resolve(),"/data/customs/data/formats.txt"),func);
+		this.import("formats" as DataFile);
+	}
+
 	addAbility(data: any): boolean {
 		let filePath: string = this.getDir("abilities");
 		let content = fsSync
@@ -436,7 +486,6 @@ export class Handler {
 		fsSync.writeFileSync(filePath, content);
 	}
 
-
 	addPokemon(pokemon: Pokemon, opts: Dict<string>) {
 		console.log(Object.keys(this.pokedex));
 		pokemon.num = -(Object.keys(this.pokedex as {}).length + 1000);
@@ -452,7 +501,7 @@ export class Handler {
 			delete pokemon.requiredItem;
 
 		let learnset = undefined;
-		if (Array.isArray(opts.learnset)) {
+		if (Array.isArray(opts.learnset) && opts.learnset.length) {
 			let obj: Dict<string[]> = {};
 			opts.learnset.forEach((id: string) => {
 				obj[id] = ["9L4", "9L3"];
@@ -579,7 +628,7 @@ export class Handler {
 
 	import(file: DataFile, txt: boolean = false) {
 		exec(
-			`node "${path.join(path.resolve(), "/tools/build-customs.js")}" ${
+			`node "${path.join(path.resolve(), "/data/customs/build-scripts/build-custom.js")}" ${
 				txt ? "text/" + file : file
 			}`,
 			(error, stdout, stderr) => {

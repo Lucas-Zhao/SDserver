@@ -25,7 +25,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		debug: true,
 		battle: {},
 		teraPreviewDefault: true,
-		unbanlist:["Lucario-Mega-X","Lucarionite X"],
+		unbanlist:["Lucario-Mega-X","Lucarionite X","Serperior-Mega","Serperiorite", "Emboar-Mega", "Emboariorite"],
 		ruleset: [
 			"Team Preview",
 			'Standard NatDex',
@@ -4395,3 +4395,5 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		ruleset: ['HP Percentage Mod', 'Cancel Mod', 'Desync Clause Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
 	},
 ];
+
+/*CUSTOM FORMATS*/

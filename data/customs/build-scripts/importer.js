@@ -133,6 +133,39 @@ let importTextData = () => {
 		}
 	});
 };
+let importFormats = () => {
+	
+		let customdexFilePath = getCustomPath("formats");
+		let pokedexFilePath = (sourceFilePath = path.join(path.resolve(),"/config/formats.ts"));
+		try {
+			console.log(`Importing custom ${file} data...`);
+			const customFileContent = fs.readFileSync(customdexFilePath, "utf-8");
+			const pokedexFileContent = fs.readFileSync(sourceFilePath, "utf-8");
+
+			const newEntries = customFileContent;
+			const oldEntries = pokedexFileContent.split("/*CUSTOM FORMATS*/");
+
+			let bufFunc = ``;
+
+			if (oldEntries[1]) {
+				oldEntries[0] += `/*CUSTOM FORMATS*/\n${newEntries}\n};\n ${bufFunc}`;
+				fs.writeFileSync(pokedexFilePath, oldEntries[0], "utf-8");
+				console.log(`Custom ${file} imported succesfully!`);
+				return;
+			}
+			const updatedContent = pokedexFileContent.replace(
+				/};\s*$/,
+				`\n/*CUSTOM FORMATS*/\n${newEntries}\n};\n`
+			);
+
+			fs.writeFileSync(pokedexFilePath, updatedContent, "utf-8");
+
+			console.log("New entries appended successfully!");
+		} catch (error) {
+			console.error("Error appending new entries:", error);
+		}
+	
+};
 
 let importFormatsData = () => {
 	let customdexFilePath = getCustomPath("formats-data");

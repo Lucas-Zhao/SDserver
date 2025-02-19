@@ -28,7 +28,9 @@ if (!fs.existsSync(path.join(path.resolve(), "/data/customs/"))) {
 	return;
 }
 
+const h = require(path.join(path.resolve(),"/dist/data/customs/handler.js")).default
 
+//h.addToFormat({name: "Test"},"gen9helldraftleague");
 
 if (args.length) {
 	args.forEach((arg) => {
@@ -50,6 +52,8 @@ if (args.length) {
 				case "formats-data":
 					importFormatsData();
 					break;
+				case "formats":
+					importer.importFormats()
 				case "text/pokedex":
 					importTextData();
 					break;
