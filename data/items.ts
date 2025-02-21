@@ -8406,11 +8406,18 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
+
+
+
 /*CUSTOM ITEMS*/
  "lucarionitex":{"name":"Lucarionite X","megaStone":"Lucario-Mega-X","itemUser":["Lucario"],"megaEvolves":"Lucario","num":-1003,"gen":0,"isNonstandard":"Unobtainable"}
 , "serperionite":{"name":"Serperionite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1003,"isNonstandard":"Unobtainable","gen":0}
 , "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1003,"isNonstandard":"Unobtainable","gen":0}
-, "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1004,"isNonstandard":"Unobtainable","gen":0}
+, "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -8436,11 +8443,9 @@ Items["serperiorite"].onTakeItem = function(item, source) {
       }
 
 //serperioriteend//emboaritestart
-
 Items["emboarite"].onTakeItem = function(item, source) {
         if (item.megaEvolves === source.baseSpecies.baseSpecies)
           return false;
         return true;
       }
-
 //emboariteend
