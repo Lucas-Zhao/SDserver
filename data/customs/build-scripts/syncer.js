@@ -22,7 +22,7 @@ let updateRepo = (msg = "Data Update") => {
 	console.log("\n[UPDATING SERVER REPO]")
 	console.log(execSync("git add .",{cwd : MAIN_PATH + "/" + SERVER_FOLDER_NAME}).toString())
 	console.log(execSync(`git commit -m "[Automated Push] ${msg}"`,{cwd : MAIN_PATH + "/" + SERVER_FOLDER_NAME}).toString())
-	console.log(execSync(`git push origin2`,{cwd : MAIN_PATH + "/" + SERVER_FOLDER_NAME}).toString())
+	console.log(execSync(`git push origin`,{cwd : MAIN_PATH + "/" + SERVER_FOLDER_NAME}).toString())
 	console.log("\n[FINISHED]")
 }
 
