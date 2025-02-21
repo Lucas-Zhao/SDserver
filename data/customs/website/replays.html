@@ -251,7 +251,7 @@
 
 	<script> 
 
-	fetchData(url).then((data) => {
+	fetchData(apiUrl + "/replays").then((data) => {
 		loadReplays(Object.values(data.replays))
 	})
 	</script>

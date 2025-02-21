@@ -20166,7 +20166,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 
 /*CUSTOM POKEMONS*/
  "lucariomegax":{"name":"Lucario-Mega-X","types":["Psychic","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":110,"atk":110,"def":110,"spa":110,"spd":110,"spe":110},"abilities":{"0":"Mindscape Domain"},"heightm":121,"weightkg":67,"evoType":"trade","requiredItem":"Lucarionite X","baseSpecies":"Lucario","forme":"Mega-X","num":-1047}
-, "serperiormega":{"name":"Serperior-Mega","types":["Dragon","Ice"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":80,"atk":120,"def":80,"spa":120,"spd":80,"spe":190},"abilities":{"0":"Frostvolt"},"heightm":121,"weightkg":67,"evoType":"trade","requiredItem":"Serperionite","baseSpecies":"Serperior","forme":"Mega","num":-1001}
+, "serperiormega":{"name":"Serperior-Mega","types":["Fairy","Normal"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":34,"atk":34,"def":34,"spa":34,"spd":34,"spe":34},"abilities":{"0":"Charisma"},"heightm":121,"weightkg":67,"evoType":"trade","requiredItem":"Serperionite","baseSpecies":"Serperior","forme":"Mega","num":-1001}
 
 };
  

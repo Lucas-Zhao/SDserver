@@ -138,7 +138,7 @@ let importFormats = () => {
 		let customdexFilePath = getCustomPath("formats");
 		let pokedexFilePath = (sourceFilePath = path.join(path.resolve(),"/config/formats.ts"));
 		try {
-			console.log(`Importing custom ${file} data...`);
+			console.log(`Importing custom ${'formats'} data...`);
 			const customFileContent = fs.readFileSync(customdexFilePath, "utf-8");
 			const pokedexFileContent = fs.readFileSync(sourceFilePath, "utf-8");
 
@@ -148,14 +148,14 @@ let importFormats = () => {
 			let bufFunc = ``;
 
 			if (oldEntries[1]) {
-				oldEntries[0] += `/*CUSTOM FORMATS*/\n${newEntries}\n};\n ${bufFunc}`;
+				oldEntries[0] += `/*CUSTOM FORMATS*/\n${newEntries}\n\n ${bufFunc}`;
 				fs.writeFileSync(pokedexFilePath, oldEntries[0], "utf-8");
 				console.log(`Custom ${file} imported succesfully!`);
 				return;
 			}
 			const updatedContent = pokedexFileContent.replace(
 				/};\s*$/,
-				`\n/*CUSTOM FORMATS*/\n${newEntries}\n};\n`
+				`\n/*CUSTOM FORMATS*/\n${newEntries}\n\n`
 			);
 
 			fs.writeFileSync(pokedexFilePath, updatedContent, "utf-8");

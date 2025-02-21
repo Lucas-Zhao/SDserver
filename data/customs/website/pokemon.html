@@ -233,7 +233,7 @@
     <script src="pokemon.js"></script>
     <script> 
 
-      fetchData(url).then((data) => {
+      fetchData(apiUrl + "/allpokemon").then((data) => {
         loadPokemon(Object.values(data.data.pokedex))
       })
       </script>

@@ -1,5 +1,4 @@
 
-let url = "http://localhost:2405/replays";
 
 
 const fetchData = async (url) => {

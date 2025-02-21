@@ -8368,9 +8368,31 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*CUSTOM ITEMS*/
  "lucarionitex":{"name":"Lucarionite X","megaStone":"Lucario-Mega-X","itemUser":["Lucario"],"megaEvolves":"Lucario","num":-1003,"gen":0,"isNonstandard":"Unobtainable"}
-, "serperionite":{"name":"Serperionite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1002,"isNonstandard":"Unobtainable","gen":0}
+, "serperionite":{"name":"Serperionite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1003,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -8382,11 +8404,9 @@ Items["lucarionitex"].onTakeItem = function(item, source) {
 		}
 //lucariomegaxend
 //serperionitestart
-
 Items["serperionite"].onTakeItem = function(item, source) {
         if (item.megaEvolves === source.baseSpecies.baseSpecies)
           return false;
         return true;
       }
-
 //serperioniteend

@@ -18,7 +18,7 @@ The column value will be ignored for repeat sections.
 */
 
 export const Formats: import('../sim/dex-formats').FormatList = [
-	{ section: "National Dex" },
+	{ section: "Exlusive" },
 	{
 		name: "[Gen 9] HELL Draft League",
 		mod: "gen9",
@@ -4393,3 +4393,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 ];
 
 /*CUSTOM FORMATS*/
+Formats[1].unbanlist = ['Lucario-Mega-X', 'Serperior-Mega', 'Lucarionite X', 'Serperionite'];
+
+ 

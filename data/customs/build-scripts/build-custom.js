@@ -28,9 +28,7 @@ if (!fs.existsSync(path.join(path.resolve(), "/data/customs/"))) {
 	return;
 }
 
-//const h = require(path.join(path.resolve(),"/dist/data/customs/handler.js")).default
 
-//h.addToFormat({name: "Test"},"gen9helldraftleague");
 
 if (args.length) {
 	args.forEach((arg) => {
@@ -41,21 +39,22 @@ if (args.length) {
 					importer.importPokedexData();
 					break;
 				case "abilities":
-					importAbilitiesData();
+					importer.importAbilitiesData();
 					break;
 				case "items":
-					importItemsData();
+					importer.importItemsData();
 					break;
 				case "learnsets":
-					importLearnsetsData();
+					importer.importLearnsetsData();
 					break;
 				case "formats-data":
-					importFormatsData();
+					importer.importFormatsData();
 					break;
 				case "formats":
-					importer.importFormats()
+					importer.importFormats();
+					break;
 				case "text/pokedex":
-					importTextData();
+					importer.importTextData();
 					break;
 				case "apistart":
 					api.start();

@@ -1,4 +1,3 @@
-let url = "http://localhost:2405/allpokemon"
 
 
 sessionId = window.location.href.split("sessionId=")[1].replace("#","");
@@ -31,7 +30,7 @@ const fetchData = async (url) => {
 	}
   };
 
-  fetchData(url).then((data) => {
+  fetchData(apiUrl + "/allpokemon").then((data) => {
 	console.log(data)
   })
 

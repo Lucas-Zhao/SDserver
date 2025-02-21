@@ -1,68 +1,75 @@
- "monsoonsurge":{"name":"Monsoon Surge","flags":{},"num":-1066,"rating":4}
-, "blizzardveil":{"name":"Blizzard Veil","flags":{},"num":-1066,"rating":4}
-, "sandstormrage":{"name":"Sandstorm Rage","flags":{},"num":-1066,"rating":4}
-, "solarflare":{"name":"Solar Flare","flags":{},"num":-1066,"rating":4}
-, "eerieresonance":{"name":"Eerie Resonance","flags":{},"num":-1066,"rating":4}
-, "mindscapedomain":{"name":"Mindscape Domain","flags":{},"num":-1066,"rating":4}
-, "verdantbloom":{"name":"Verdant Bloom","flags":{},"num":-1066,"rating":4}
-, "mystichaze":{"name":"Mystic Haze","flags":{},"num":-1066,"rating":4}
-, "tundrecore":{"name":"Tundre Core","flags":{},"num":-1066,"rating":4}
-, "desertheart":{"name":"Desert Heart","flags":{},"num":-1066,"rating":4}
-, "aquacircuit":{"name":"Aqua Circuit","flags":{},"num":-1066,"rating":4}
-, "psychicpulse":{"name":"Psychic Pulse","flags":{},"num":-1066,"rating":4}
-, "mysticaura":{"name":"Mystic Aura","flags":{},"num":-1066,"rating":4}
-, "overgrowthengine":{"name":"Overgrowth Engine","flags":{},"num":-1066,"rating":4}
-, "arcanemight":{"name":"Arcane Might","flags":{},"num":-1066,"rating":5}
-, "terrify":{"name":"Terrify","flags":{},"num":-1066,"rating":3.5}
-, "charisma":{"name":"Charisma","flags":{},"num":-1066,"rating":3}
-, "mentalfortitude":{"name":"Mental Fortitude","flags":{},"num":-1066,"rating":4}
-, "bootsofruin":{"name":"Boots of Ruin","flags":{},"num":-1066,"rating":4.5}
-, "prismaticaura":{"name":"Prismatic Aura","flags":{},"num":-1066,"rating":2.5}
-, "adaptivemastery":{"name":"Adaptive Mastery","flags":{},"num":-1066,"rating":3.5}
-, "stormbloom":{"name":"Stormbloom","flags":{},"num":-1066,"rating":4}
-, "solarmist":{"name":"Solar Mist","flags":{},"num":-1066,"rating":4}
-, "desertmind":{"name":"Desert Mind","flags":{},"num":-1066,"rating":4}
-, "frostvolt":{"name":"Frostvolt","flags":{},"num":-1066,"rating":4}
-, "soulharvest":{"name":"Soul Harvest","flags":{},"num":-1066,"rating":4}
-, "entomize":{"name":"Entomize","flags":{},"num":-1066,"rating":4}
-, "umbralforce":{"name":"Umbral Force","flags":{},"num":-1066,"rating":4}
-, "draconize":{"name":"Draconize","flags":{},"num":-1066,"rating":4}
-, "combatboost":{"name":"Combat Boost","flags":{},"num":-1066,"rating":4}
-, "infernalize":{"name":"Infernalize","flags":{},"num":-1066,"rating":4}
-, "antennaboost":{"name":"Antenna Boost","flags":{},"num":-1066,"rating":1.5}
-, "shadowsprint":{"name":"Shadow Sprint","flags":{},"num":-1066,"rating":1.5}
-, "wyvernwings":{"name":"Wyvern Wings","flags":{},"num":-1066,"rating":1.5}
-, "pixiedash":{"name":"Pixie Dash","flags":{},"num":-1066,"rating":1.5}
-, "voltdash":{"name":"Volt Dash","flags":{},"num":-1066,"rating":1.5}
-, "brawlersinstinct":{"name":"Brawler's Instinct","flags":{},"num":-1066,"rating":1.5}
-, "blazerush":{"name":"Blaze Rush","flags":{},"num":-1066,"rating":1.5}
-, "phantomdash":{"name":"Phantom Dash","flags":{},"num":-1066,"rating":1.5}
-, "verdantsurge":{"name":"Verdant Surge","flags":{},"num":-1066,"rating":1.5}
-, "earthengrace":{"name":"Earthen Grace","flags":{},"num":-1066,"rating":1.5}
-, "frostdash":{"name":"Frost Dash","flags":{},"num":-1066,"rating":1.5}
-, "venomrush":{"name":"Venom Rush","flags":{},"num":-1066,"rating":1.5}
-, "mindleap":{"name":"Mind Leap","flags":{},"num":-1066,"rating":1.5}
-, "stonemomentum":{"name":"Stone Momentum","flags":{},"num":-1066,"rating":1.5}
-, "metallicburst":{"name":"Metallic Burst","flags":{},"num":-1066,"rating":1.5}
-, "tidalsurge":{"name":"Tidal Surge","flags":{},"num":-1066,"rating":1.5}
-, "hiveinstinct":{"name":"Hive Instinct","flags":{},"num":-1066,"rating":3.5}
-, "shadowborn":{"name":"Shadowborn","flags":{},"num":-1066,"rating":3.5}
-, "draconicessence":{"name":"Draconic Essence","flags":{},"num":-1066,"rating":3.5}
-, "chargedcore":{"name":"Charged Core","flags":{},"num":-1066,"rating":3.5}
-, "enchantedforce":{"name":"Enchanted Force","flags":{},"num":-1066,"rating":3.5}
-, "warriorswill":{"name":"Warrior's Will","flags":{},"num":-1066,"rating":3.5}
-, "infernalsurge":{"name":"Infernal Surge","flags":{},"num":-1066,"rating":3.5}
-, "skyborn":{"name":"Skyborn","flags":{},"num":-1066,"rating":3.5}
-, "etherealpresence":{"name":"Ethereal Presence","flags":{},"num":-1066,"rating":3.5}
-, "verdantblessing":{"name":"Verdant Blessing","flags":{},"num":-1066,"rating":3.5}
-, "earthenpower":{"name":"Earthen Power","flags":{},"num":-1066,"rating":3.5}
-, "glacialheritage":{"name":"Glacial Heritage","flags":{},"num":-1066,"rating":3.5}
-, "fundamentalforce":{"name":"Fundamental Force","flags":{},"num":-1066,"rating":3.5}
-, "toxicveins":{"name":"Toxic Veins","flags":{},"num":-1066,"rating":3.5}
-, "mindforce":{"name":"Mindforce","flags":{},"num":-1066,"rating":3.5}
-, "stoneborn":{"name":"Stoneborn","flags":{},"num":-1066,"rating":3.5}
-, "metallicsoul":{"name":"Metallic Soul","flags":{},"num":-1066,"rating":3.5}
-, "aquaflow":{"name":"Aqua Flow","flags":{},"num":-1066,"rating":3.5}
+ "monsoonsurge":{"name":"Monsoon Surge","flags":{},"num":-1073,"rating":4}
+, "blizzardveil":{"name":"Blizzard Veil","flags":{},"num":-1073,"rating":4}
+, "sandstormrage":{"name":"Sandstorm Rage","flags":{},"num":-1073,"rating":4}
+, "solarflare":{"name":"Solar Flare","flags":{},"num":-1073,"rating":4}
+, "eerieresonance":{"name":"Eerie Resonance","flags":{},"num":-1073,"rating":4}
+, "mindscapedomain":{"name":"Mindscape Domain","flags":{},"num":-1073,"rating":4}
+, "verdantbloom":{"name":"Verdant Bloom","flags":{},"num":-1073,"rating":4}
+, "mystichaze":{"name":"Mystic Haze","flags":{},"num":-1073,"rating":4}
+, "tundrecore":{"name":"Tundre Core","flags":{},"num":-1073,"rating":4}
+, "desertheart":{"name":"Desert Heart","flags":{},"num":-1073,"rating":4}
+, "aquacircuit":{"name":"Aqua Circuit","flags":{},"num":-1073,"rating":4}
+, "psychicpulse":{"name":"Psychic Pulse","flags":{},"num":-1073,"rating":4}
+, "mysticaura":{"name":"Mystic Aura","flags":{},"num":-1073,"rating":4}
+, "overgrowthengine":{"name":"Overgrowth Engine","flags":{},"num":-1073,"rating":4}
+, "arcanemight":{"name":"Arcane Might","flags":{},"num":-1073,"rating":5}
+, "terrify":{"name":"Terrify","flags":{},"num":-1073,"rating":3.5}
+, "charisma":{"name":"Charisma","flags":{},"num":-1073,"rating":3}
+, "mentalfortitude":{"name":"Mental Fortitude","flags":{},"num":-1073,"rating":4}
+, "bootsofruin":{"name":"Boots of Ruin","flags":{},"num":-1073,"rating":4.5}
+, "prismaticaura":{"name":"Prismatic Aura","flags":{},"num":-1073,"rating":2.5}
+, "adaptivemastery":{"name":"Adaptive Mastery","flags":{},"num":-1073,"rating":3.5}
+, "stormbloom":{"name":"Stormbloom","flags":{},"num":-1073,"rating":4}
+, "solarmist":{"name":"Solar Mist","flags":{},"num":-1073,"rating":4}
+, "desertmind":{"name":"Desert Mind","flags":{},"num":-1073,"rating":4}
+, "frostvolt":{"name":"Frostvolt","flags":{},"num":-1073,"rating":4}
+, "soulharvest":{"name":"Soul Harvest","flags":{},"num":-1073,"rating":4}
+, "entomize":{"name":"Entomize","flags":{},"num":-1073,"rating":4}
+, "umbralforce":{"name":"Umbral Force","flags":{},"num":-1073,"rating":4}
+, "draconize":{"name":"Draconize","flags":{},"num":-1073,"rating":4}
+, "combatboost":{"name":"Combat Boost","flags":{},"num":-1073,"rating":4}
+, "infernalize":{"name":"Infernalize","flags":{},"num":-1073,"rating":4}
+, "antennaboost":{"name":"Antenna Boost","flags":{},"num":-1073,"rating":1.5}
+, "shadowsprint":{"name":"Shadow Sprint","flags":{},"num":-1073,"rating":1.5}
+, "wyvernwings":{"name":"Wyvern Wings","flags":{},"num":-1073,"rating":1.5}
+, "pixiedash":{"name":"Pixie Dash","flags":{},"num":-1073,"rating":1.5}
+, "voltdash":{"name":"Volt Dash","flags":{},"num":-1073,"rating":1.5}
+, "brawlersinstinct":{"name":"Brawler's Instinct","flags":{},"num":-1073,"rating":1.5}
+, "blazerush":{"name":"Blaze Rush","flags":{},"num":-1073,"rating":1.5}
+, "phantomdash":{"name":"Phantom Dash","flags":{},"num":-1073,"rating":1.5}
+, "verdantsurge":{"name":"Verdant Surge","flags":{},"num":-1073,"rating":1.5}
+, "earthengrace":{"name":"Earthen Grace","flags":{},"num":-1073,"rating":1.5}
+, "frostdash":{"name":"Frost Dash","flags":{},"num":-1073,"rating":1.5}
+, "venomrush":{"name":"Venom Rush","flags":{},"num":-1073,"rating":1.5}
+, "mindleap":{"name":"Mind Leap","flags":{},"num":-1073,"rating":1.5}
+, "stonemomentum":{"name":"Stone Momentum","flags":{},"num":-1073,"rating":1.5}
+, "metallicburst":{"name":"Metallic Burst","flags":{},"num":-1073,"rating":1.5}
+, "tidalsurge":{"name":"Tidal Surge","flags":{},"num":-1073,"rating":1.5}
+, "hiveinstinct":{"name":"Hive Instinct","flags":{},"num":-1073,"rating":3.5}
+, "shadowborn":{"name":"Shadowborn","flags":{},"num":-1073,"rating":3.5}
+, "draconicessence":{"name":"Draconic Essence","flags":{},"num":-1073,"rating":3.5}
+, "chargedcore":{"name":"Charged Core","flags":{},"num":-1073,"rating":3.5}
+, "enchantedforce":{"name":"Enchanted Force","flags":{},"num":-1073,"rating":3.5}
+, "warriorswill":{"name":"Warrior's Will","flags":{},"num":-1073,"rating":3.5}
+, "infernalsurge":{"name":"Infernal Surge","flags":{},"num":-1073,"rating":3.5}
+, "skyborn":{"name":"Skyborn","flags":{},"num":-1073,"rating":3.5}
+, "etherealpresence":{"name":"Ethereal Presence","flags":{},"num":-1073,"rating":3.5}
+, "verdantblessing":{"name":"Verdant Blessing","flags":{},"num":-1073,"rating":3.5}
+, "earthenpower":{"name":"Earthen Power","flags":{},"num":-1073,"rating":3.5}
+, "glacialheritage":{"name":"Glacial Heritage","flags":{},"num":-1073,"rating":3.5}
+, "fundamentalforce":{"name":"Fundamental Force","flags":{},"num":-1073,"rating":3.5}
+, "toxicveins":{"name":"Toxic Veins","flags":{},"num":-1073,"rating":3.5}
+, "mindforce":{"name":"Mindforce","flags":{},"num":-1073,"rating":3.5}
+, "stoneborn":{"name":"Stoneborn","flags":{},"num":-1073,"rating":3.5}
+, "metallicsoul":{"name":"Metallic Soul","flags":{},"num":-1073,"rating":3.5}
+, "aquaflow":{"name":"Aqua Flow","flags":{},"num":-1073,"rating":3.5}
+, "hauntify":{"name":"Hauntify","flags":{},"num":-1073,"rating":4}
+, "verdantforce":{"name":"Verdant Force","flags":{},"num":-1073,"rating":4}
+, "terranize":{"name":"Terranize","flags":{},"num":-1073,"rating":4}
+, "toxify":{"name":"Toxify","flags":{},"num":-1073,"rating":4}
+, "petrify":{"name":"Petrify","flags":{},"num":-1073,"rating":4}
+, "ferronize":{"name":"Ferronize","flags":{},"num":-1073,"rating":4}
+, "aquify":{"name":"Aquify","flags":{},"num":-1073,"rating":4}
 
 /*FUNCTIONS*/
 //monsoonsurgestart
@@ -1050,3 +1057,136 @@ Abilities["aquaflow"].onModifyAtk = function(atk, attacker, defender, move) {
 	  }
 
 //aquaflowend
+//hauntifystart
+
+Abilities["hauntify"].onModifyType = function(move, pokemon) {
+		noModifyType = [
+			"judgment", "multiattack", "naturalgift", "revelationdance",
+			"technoblast", "terrainpulse", "weatherball"
+		];
+		if (move.type === "Normal" && !noModifyType.includes(move.id)) {
+			move.type = "Ghost";
+			move.typeChangerBoosted = this.effect;
+		}
+	}
+
+Abilities["hauntify"].onBasePower = function(basePower, pokemon, target, move) {
+		if (move.typeChangerBoosted === this.effect)
+			return this.chainModify([4915, 4096]);
+	}
+
+//hauntifyend
+//verdantforcestart
+
+Abilities["verdantforce"].onModifyType = function(move, pokemon) {
+		noModifyType = [
+			"judgment", "multiattack", "naturalgift", "revelationdance",
+			"technoblast", "terrainpulse", "weatherball"
+		];
+		if (move.type === "Normal" && !noModifyType.includes(move.id)) {
+			move.type = "Grass";
+			move.typeChangerBoosted = this.effect;
+		}
+	}
+
+Abilities["verdantforce"].onBasePower = function(basePower, pokemon, target, move) {
+		if (move.typeChangerBoosted === this.effect)
+			return this.chainModify([4915, 4096]);
+	}
+
+//verdantforceend
+//terranizestart
+
+Abilities["terranize"].onModifyType = function(move, pokemon) {
+		noModifyType = [
+			"judgment", "multiattack", "naturalgift", "revelationdance",
+			"technoblast", "terrainpulse", "weatherball"
+		];
+		if (move.type === "Normal" && !noModifyType.includes(move.id)) {
+			move.type = "Ground";
+			move.typeChangerBoosted = this.effect;
+		}
+	}
+
+Abilities["terranize"].onBasePower = function(basePower, pokemon, target, move) {
+		if (move.typeChangerBoosted === this.effect)
+			return this.chainModify([4915, 4096]);
+	}
+
+//terranizeend
+//toxifystart
+
+Abilities["toxify"].onModifyType = function(move, pokemon) {
+		noModifyType = [
+			"judgment", "multiattack", "naturalgift", "revelationdance",
+			"technoblast", "terrainpulse", "weatherball"
+		];
+		if (move.type === "Normal" && !noModifyType.includes(move.id)) {
+			move.type = "Poison";
+			move.typeChangerBoosted = this.effect;
+		}
+	}
+
+Abilities["toxify"].onBasePower = function(basePower, pokemon, target, move) {
+		if (move.typeChangerBoosted === this.effect)
+			return this.chainModify([4915, 4096]);
+	}
+
+//toxifyend
+//petrifystart
+
+Abilities["petrify"].onModifyType = function(move, pokemon) {
+		noModifyType = [
+			"judgment", "multiattack", "naturalgift", "revelationdance",
+			"technoblast", "terrainpulse", "weatherball"
+		];
+		if (move.type === "Normal" && !noModifyType.includes(move.id)) {
+			move.type = "Rock";
+			move.typeChangerBoosted = this.effect;
+		}
+	}
+
+Abilities["petrify"].onBasePower = function(basePower, pokemon, target, move) {
+		if (move.typeChangerBoosted === this.effect)
+			return this.chainModify([4915, 4096]);
+	}
+
+//petrifyend
+//ferronizestart
+
+Abilities["ferronize"].onModifyType = function(move, pokemon) {
+		noModifyType = [
+			"judgment", "multiattack", "naturalgift", "revelationdance",
+			"technoblast", "terrainpulse", "weatherball"
+		];
+		if (move.type === "Normal" && !noModifyType.includes(move.id)) {
+			move.type = "Steel";
+			move.typeChangerBoosted = this.effect;
+		}
+	}
+
+Abilities["ferronize"].onBasePower = function(basePower, pokemon, target, move) {
+		if (move.typeChangerBoosted === this.effect)
+			return this.chainModify([4915, 4096]);
+	}
+
+//ferronizeend
+//aquifystart
+
+Abilities["aquify"].onModifyType = function(move, pokemon) {
+		noModifyType = [
+			"judgment", "multiattack", "naturalgift", "revelationdance",
+			"technoblast", "terrainpulse", "weatherball"
+		];
+		if (move.type === "Normal" && !noModifyType.includes(move.id)) {
+			move.type = "Water";
+			move.typeChangerBoosted = this.effect;
+		}
+	}
+
+Abilities["aquify"].onBasePower = function(basePower, pokemon, target, move) {
+		if (move.typeChangerBoosted === this.effect)
+			return this.chainModify([4915, 4096]);
+	}
+
+//aquifyend

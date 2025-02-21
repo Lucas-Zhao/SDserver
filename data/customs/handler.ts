@@ -371,13 +371,30 @@ export class Handler {
 		this.formats[this.toID(format)] = formatData;
 		this.convertFormatsToText();
 	}
+	updateFormat(format: string = "gen9helldraftleague") {
+		if (!this.formats[format]) return;
+		let unbanlist: string[] = [];
+		Object.values(this.pokedex).forEach((val) => {
+			if (!unbanlist.includes(val.name)) unbanlist.push(val.name);
+		});
+		Object.values(this.items).forEach((val) => {
+			if (!unbanlist.includes(val.name)) unbanlist.push(val.name);
+		});
+		this.formats[format].unbanlist = unbanlist;
+		this.convertFormatsToText();
+	}
 
 	convertFormatsToText() {
 		console.log("converting formats...");
 		let form = this.formats["gen9helldraftleague"];
-		let func = `Formats[1].unbanlist = [${form.unbanlist?.map(el => `'${el}'`).join(", ")}];`;
+		let func = `Formats[1].unbanlist = [${form.unbanlist
+			?.map((el) => `'${el}'`)
+			.join(", ")}];`;
 
-		fsSync.writeFileSync(path.join(path.resolve(),"/data/customs/data/formats.txt"),func);
+		fsSync.writeFileSync(
+			path.join(path.resolve(), "/data/customs/data/formats.txt"),
+			func
+		);
 		this.import("formats" as DataFile);
 	}
 
@@ -451,6 +468,8 @@ export class Handler {
 			isNonstandard: "Unobtainable",
 			gen: data.gen ? data.gen : 0,
 		};
+		this.updateFormat();
+		this.convertFormatsToText();
 		this.convertToTxt("items");
 		this.addText("items", { name: data.name, shortDesc: data.shortDesc });
 
@@ -513,6 +532,8 @@ export class Handler {
 		this.pokedex[this.toID(pokemon.name)] = pokemon;
 		this.convertToTxt("pokedex");
 		this.import("pokedex");
+		this.updateFormat();
+		this.convertFormatsToText();
 		this.addSprite(this.toID(pokemon.name));
 		if (opts.isMega) {
 			let func = function (item, source) {
@@ -628,9 +649,10 @@ export class Handler {
 
 	import(file: DataFile, txt: boolean = false) {
 		exec(
-			`node "${path.join(path.resolve(), "/data/customs/build-scripts/build-custom.js")}" ${
-				txt ? "text/" + file : file
-			}`,
+			`node "${path.join(
+				path.resolve(),
+				"/data/customs/build-scripts/build-custom.js"
+			)}" ${txt ? "text/" + file : file}`,
 			(error, stdout, stderr) => {
 				if (error) return console.error(`Error: ${error.message}`);
 				if (stderr) return console.error(`Stderr: ${stderr}`);

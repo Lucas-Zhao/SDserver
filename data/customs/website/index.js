@@ -1,7 +1,6 @@
 
 // Immediately Invoked Function Expression (IIFE) to handle `sessionId` and helper functions
 let sessionId; // Declare sessionId globally
-const client = url = "http://localhost:5501";
 (function () {
   window.toID = function (text) {
     if (typeof text !== "string") {
@@ -64,7 +63,7 @@ function capitalizeWords(str) {
 function updateSprite() {
 	let name = toID(getVal("name"))
 	console.log(name)
-	let baseLink = "https://raw.githubusercontent.com/ISenseAura/files/refs/heads/main/" + name;
+	let baseLink = spritesLink+ name;
 	document.getElementById("bsprite").src = baseLink + ".png"
 	document.getElementById("bsprite2").src = baseLink + "-back.png"
 	document.getElementById("bsprites").src = baseLink + "-shiny.png"
