@@ -17,7 +17,7 @@ const {execSync} = require("child_process")
 
 const MAIN_PATH = path.join(path.resolve(), "..");
 const {SERVER_FOLDER_NAME, 	CLIENT_FOLDER_NAME} = require("../../../config/config")
-
+console.log(SERVER_FOLDER_NAME)
 let updateRepo = (msg = "Data Update") => {
 	console.log("\n[UPDATING SERVER REPO]")
 	console.log(execSync("git add .",{cwd : MAIN_PATH + "/" + SERVER_FOLDER_NAME}).toString())
