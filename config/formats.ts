@@ -28,7 +28,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		ruleset: [
 			"Team Preview",
 			'Standard NatDex',
-		'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Sleep Clause Mod', 'Terastal Clause', '+Unobtainable', '+Past', '+Illegal'
+		'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Sleep Clause Mod', 'Terastal Clause'
 		],
 	},
 
