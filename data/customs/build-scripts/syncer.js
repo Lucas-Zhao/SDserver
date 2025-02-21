@@ -16,8 +16,7 @@ const path = require("path");
 const {execSync} = require("child_process")
 
 const MAIN_PATH = path.join(path.resolve(), "..");
-const SERVER_FOLDER_NAME = "pokemon-showdown";
-const CLIENT_FOLDER_NAME = "pokemon-showdown-client";
+const {SERVER_FOLDER_NAME, 	CLIENT_FOLDER_NAME} = require("../../../config/config")
 
 let updateRepo = (msg = "Data Update") => {
 	console.log("\n[UPDATING SERVER REPO]")
