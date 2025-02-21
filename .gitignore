@@ -1,6 +1,9 @@
 /config/*
+/data/customs/data/*.txt
+/data/customs/data/text/*.txt
 /data/customs/replays/*
 /data/customs/replays.json
+/data/customs/website/config.js
 !/config/formats.ts
 /logs/**/*
 /test/modlogs
