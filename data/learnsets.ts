@@ -99718,4 +99718,5 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
  "lucariomegax":{"learnset":{"aurasphere":["9L4","9L3"]}}
 , "serperiormega":{"learnset":{"energyball":["9L4","9L3"],"leafstorm":["9L4","9L3"]}}
 , "emboarmega":{"learnset":{"flareblitz":["9L4","9L3"],"scald":["9L4","9L3"]}}
+, "samurottmega":{"learnset":{"sacred sword":["9L4","9L3"],"aqua jet":["9L4","9L3"]}}
 };
