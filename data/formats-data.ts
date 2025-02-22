@@ -6035,5 +6035,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 /*CUSTOM FORMATS*/
  "lucariomegax":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"Illegal"}
 , "serperiormega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "emboarmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
