@@ -20166,7 +20166,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 
 /*CUSTOM POKEMONS*/
  "lucariomegax":{"name":"Lucario-Mega-X","types":["Psychic","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":110,"atk":110,"def":110,"spa":110,"spd":110,"spe":110},"abilities":{"0":"Mindscape Domain"},"heightm":121,"weightkg":67,"evoType":"trade","requiredItem":"Lucarionite X","baseSpecies":"Lucario","forme":"Mega-X","num":-1047}
-, "serperiormega":{"name":"Serperior-Mega","types":["Fairy","Normal"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":34,"atk":34,"def":34,"spa":34,"spd":34,"spe":34},"abilities":{"0":"Charisma"},"heightm":121,"weightkg":67,"evoType":"trade","requiredItem":"Serperionite","baseSpecies":"Serperior","forme":"Mega","num":-1001}
+, "serperiormega":{"name":"Serperior-Mega","types":["Grass","Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":76,"atk":95,"def":115,"spa":95,"spd":115,"spe":133},"abilities":{"0":"Queenly Majesty"},"heightm":2.5,"weightkg":160,"evoType":"trade","requiredItem":"Serperiorite","baseSpecies":"Serperior","forme":"Mega","num":-1001}
 
 };
  
