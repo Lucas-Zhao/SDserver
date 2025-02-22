@@ -1,1 +1,1 @@
-Formats[1].unbanlist = ['Lucario-Mega-X', 'Serperior-Mega', 'Emboar-Mega', 'Samurott-Mega', 'Lucarionite X', 'Serperionite', 'Serperiorite', 'Emboarite', 'Samurottite'];
+Formats[1].unbanlist = ['Lucario-Mega-X', 'Serperior-Mega', 'Emboar-Mega', 'Samurott-Mega', 'Dusknoir-Mega', 'Lucarionite X', 'Serperionite', 'Serperiorite', 'Emboarite', 'Samurottite', 'Dusknoirite'];

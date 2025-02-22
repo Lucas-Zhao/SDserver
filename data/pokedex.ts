@@ -20169,6 +20169,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "serperiormega":{"name":"Serperior-Mega","types":["Grass","Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":76,"atk":95,"def":115,"spa":95,"spd":115,"spe":133},"abilities":{"0":"Queenly Majesty"},"heightm":2.5,"weightkg":160,"evoType":"trade","requiredItem":"Serperiorite","baseSpecies":"Serperior","forme":"Mega","num":-1001}
 , "emboarmega":{"name":"Emboar-Mega","types":["Fire","Electric"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":110,"atk":163,"def":85,"spa":140,"spd":85,"spe":45},"abilities":{"0":"Rock Head"},"heightm":2,"weightkg":400,"evoType":"trade","requiredItem":"Emboarite","baseSpecies":"Emboar","forme":"Mega","num":-1002}
 , "samurottmega":{"name":"Samurott-Mega","types":["Water","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":95,"atk":145,"def":95,"spa":118,"spd":75,"spe":100},"abilities":{"0":"Sharpness"},"heightm":2.3,"weightkg":320,"evoType":"trade","requiredItem":"Samurottite","baseSpecies":"Samurott","forme":"Mega","num":-1003}
+, "dusknoirmega":{"name":"Dusknoir-Mega","types":["Ghost","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":45,"atk":150,"def":145,"spa":45,"spd":135,"spe":85},"abilities":{"0":"Soul Harvest"},"heightm":3,"weightkg":300,"evoType":"trade","requiredItem":"Dusknoirite","baseSpecies":"Dusknoir","forme":"Mega","num":-1004}
 
 };
  
@@ -20178,7 +20179,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	 the eviolite bonus if a custom pokemon is added as its evolution
 	*/ 
 			(() => {
-	let toChangePokemon = [{"name":"lucario","evotype":"trade","from":"Lucario-Mega-X"},{"name":"serperior","evotype":"trade","from":"Serperior-Mega"},{"name":"emboar","evotype":"trade","from":"Emboar-Mega"},{"name":"samurott","evotype":"trade","from":"Samurott-Mega"}];
+	let toChangePokemon = [{"name":"lucario","evotype":"trade","from":"Lucario-Mega-X"},{"name":"serperior","evotype":"trade","from":"Serperior-Mega"},{"name":"emboar","evotype":"trade","from":"Emboar-Mega"},{"name":"samurott","evotype":"trade","from":"Samurott-Mega"},{"name":"dusknoir","evotype":"trade","from":"Dusknoir-Mega"}];
 	toChangePokemon.forEach((val) => {
 		//val = JSON.parse(val)
 		if(val.from.includes("-Mega")) {
