@@ -24,7 +24,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: "gen9",
 		battle: {},
 		teraPreviewDefault: true,
-		unbanlist:["Lucario-Mega-X","Lucarionite X"],
 		ruleset: [
 			"Team Preview",
 			'Standard NatDex',
