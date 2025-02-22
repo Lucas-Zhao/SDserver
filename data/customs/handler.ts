@@ -505,6 +505,19 @@ export class Handler {
 		fsSync.writeFileSync(filePath, content);
 	}
 
+	deleteItem(item:Item) {
+		let buffer = ``;
+		let filePath = this.getDir("items");
+		let content = fsSync.readFileSync(filePath).toString();
+		let id = this.toID(item.name);
+		let funcs =  this.getFunctions(content,id);
+		buffer = `//${id}start\n${funcs}\n//${id}end`
+		content = content.replace(buffer,"");
+		fsSync.writeFileSync(filePath, content);
+		delete this.items[id]
+		this.convertToTxt("items")
+	}
+
 	addPokemon(pokemon: Pokemon, opts: Dict<string>) {
 		console.log(Object.keys(this.pokedex));
 		pokemon.num = -(Object.keys(this.pokedex as {}).length + 1000);
@@ -569,8 +582,7 @@ export class Handler {
 	deletePokemon(name: string) {
 		let id = this.toID(name);
 		if(this.pokedex[id].requiredItem) {
-			delete this.items[this.toID(this.pokedex[id].requiredItem)]
-			this.convertToTxt("items");
+			this.deleteItem(this.items[this.toID(this.pokedex[id].requiredItem)])
 		}
 		delete this.pokedex[id];
 		delete this.formatsdata[id];
