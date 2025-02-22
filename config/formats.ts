@@ -4393,6 +4393,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 ];
 
 /*CUSTOM FORMATS*/
-Formats[1].unbanlist = ['Lucario-Mega-X', 'Serperior-Mega', 'Emboar-Mega', 'Samurott-Mega', 'Dusknoir-Mega', 'Comfey-Mega', 'Lucarionite X', 'Serperionite', 'Serperiorite', 'Emboarite', 'Samurottite', 'Dusknoirite', 'Comfeyite'];
+Formats[1].unbanlist = ['Lucario-Mega-X', 'Serperior-Mega', 'Emboar-Mega', 'Samurott-Mega', 'Dusknoir-Mega', 'Comfey-Mega', 'Corviknight-Mega', 'Lucarionite X', 'Serperionite', 'Serperiorite', 'Emboarite', 'Samurottite', 'Dusknoirite', 'Comfeyite', 'Corviknightite'];
 
  

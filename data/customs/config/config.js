@@ -1,1 +1,1 @@
-exports.CustomPokemonIcons = {"lucariomegax":true,"zerapium":true,"test":true,"serperiormega":true,"shucklman":true,"emboarmega":true,"samurottmega":true,"dusknoirmega":true,"comfeymega":true}
+exports.CustomPokemonIcons = {"lucariomegax":true,"zerapium":true,"test":true,"serperiormega":true,"shucklman":true,"emboarmega":true,"samurottmega":true,"dusknoirmega":true,"comfeymega":true,"corviknightmega":true}
