@@ -8426,6 +8426,11 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
+
 /*CUSTOM ITEMS*/
  "lucarionitex":{"name":"Lucarionite X","megaStone":"Lucario-Mega-X","itemUser":["Lucario"],"megaEvolves":"Lucario","num":-1003,"gen":0,"isNonstandard":"Unobtainable"}
 , "serperionite":{"name":"Serperionite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1003,"isNonstandard":"Unobtainable","gen":0}
@@ -8433,6 +8438,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "samurottite":{"name":"Samurottite","megaStone":"Samurott-Mega","itemUser":["Samurott"],"megaEvolves":"Samurott","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "dusknoirite":{"name":"Dusknoirite","megaStone":"Dusknoir-Mega","itemUser":["Dusknoir"],"megaEvolves":"Dusknoir","num":-1006,"isNonstandard":"Unobtainable","gen":0}
+, "comfeyite":{"name":"Comfeyite","megaStone":"Comfey-Mega","itemUser":["Comfey"],"megaEvolves":"Comfey","num":-1007,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -8480,4 +8486,12 @@ Items["dusknoirite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//dusknoiriteend
+//dusknoiriteend//comfeyitestart
+
+Items["comfeyite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//comfeyiteend
