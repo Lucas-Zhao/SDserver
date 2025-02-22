@@ -580,7 +580,7 @@ export class Handler {
 		this.convertToTxt("learnsets");
 		this.convertToTxt("formats-data");
 		this.convertToTxt("pokedex", true);
-		this.updateFormat();
+		this.update();
 		this.importAll();
 	}
 
@@ -671,6 +671,9 @@ export class Handler {
 			this.import(file);
 			if (this.texts[this.toID(file)]) this.import(file, true);
 		});
+	}
+	update() {
+		this.updateFormat();
 	}
 
 	updateFile(file: DataFile) {
