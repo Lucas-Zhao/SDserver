@@ -568,11 +568,11 @@ export class Handler {
 
 	deletePokemon(name: string) {
 		let id = this.toID(name);
-		delete this.pokedex[id];
 		if(this.pokedex[id].requiredItem) {
 			delete this.items[this.toID(this.pokedex[id].requiredItem)]
 			this.convertToTxt("items");
 		}
+		delete this.pokedex[id];
 		delete this.formatsdata[id];
 		delete this.learnsets[id];
 		delete this.texts.pokedex[id];
