@@ -27,7 +27,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		ruleset: [
 			"Team Preview",
 			'Standard NatDex',
-		'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Sleep Clause Mod', 'Terastal Clause'
+		'OHKO Clause', 'Evasion Clause', 'Sleep Clause Mod'
 		],
 	},
 
@@ -4394,4 +4394,3 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 /*CUSTOM FORMATS*/
 Formats[1].unbanlist = ['Lucario-Mega-X', 'Serperior-Mega', 'Emboar-Mega', 'Samurott-Mega', 'Dusknoir-Mega', 'Comfey-Mega', 'Corviknight-Mega', 'Chandelurec', 'Lucarionite X', 'Serperionite', 'Serperiorite', 'Emboarite', 'Samurottite', 'Dusknoirite', 'Comfeyite', 'Corviknightite'];
 
- 
