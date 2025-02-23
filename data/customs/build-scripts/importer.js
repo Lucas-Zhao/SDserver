@@ -150,7 +150,7 @@ let importFormats = () => {
 			if (oldEntries[1]) {
 				oldEntries[0] += `/*CUSTOM FORMATS*/\n${newEntries}\n\n ${bufFunc}`;
 				fs.writeFileSync(pokedexFilePath, oldEntries[0], "utf-8");
-				console.log(`Custom ${file} imported succesfully!`);
+				console.log(`Custom ${"formats"} imported succesfully!`);
 				return;
 			}
 			const updatedContent = pokedexFileContent.replace(
@@ -316,6 +316,7 @@ let importCustomData = async () => {
 	this.importAbilitiesData();
 	this.importItemsData();
 	this.importFormatsData();
+	this.importFormats();
 };
 
 let importSamples = (name = "abilities") => {

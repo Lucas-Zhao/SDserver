@@ -56,7 +56,7 @@ setImmediate(() => {
 	*/
 	require("./data/customs/build-scripts/build-custom").importData(); // THIS IS WHERE THE CUSTOM DATA MAGIC BEGINS
 	require('./tools/build-utils').transpile(force, decl);
-	if(process.argv.length) require("./data/customs/build-scripts/build-custom"); // THIS IS WHERE THE CUSTOM DATA MAGIC BEGINS
+	if(process.argv.length) require("./data/customs/build-scripts/build-custom").listen(); // THIS IS WHERE THE CUSTOM DATA MAGIC BEGINS
 
 
 });

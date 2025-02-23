@@ -29,7 +29,7 @@ if (!fs.existsSync(path.join(path.resolve(), "/data/customs/"))) {
 }
 
 
-
+function listen() {
 if (args.length) {
 	args.forEach((arg) => {
 		//console.log(this)
@@ -88,14 +88,14 @@ if (args.length) {
 		}
 	});
 }
-
+}
 
 function importData() {
 	importer.importCustomData();
 	return;
 }
 
-module.exports = {importData}
+module.exports = {importData, listen}
 /* TEST FUNCTIONS, SHOULD BE REMOVED AFTER USE */
 
 /*

@@ -202,6 +202,7 @@ function restartServer() {
 
 
 function loadStats() {
+  return;
   makePostRequest(apiUrl + "/stats", {}).then((data) => {
     let stats = JSON.parse(data.stats.replaceAll("\n",""));
     document.getElementById("cpuusage").innerHTML = stats.cpuUsage;
@@ -213,7 +214,7 @@ function loadStats() {
 
 
 window.onload = function() {
-  loadStats();
+  //loadStats();
   document.getElementById("sidebar").innerHTML = `<nav>
             <ul>
                 <li onclick="openLink('index.html')"><a href="#">Dashboard</a></li>
