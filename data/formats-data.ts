@@ -6035,5 +6035,11 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 /*CUSTOM FORMATS*/
  "lucariomegax":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"Illegal"}
 , "serperiormega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "emboarmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "samurottmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "dusknoirmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "comfeymega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "corviknightmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "chandelurec":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };

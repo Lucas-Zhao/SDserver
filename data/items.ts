@@ -8410,9 +8410,45 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*CUSTOM ITEMS*/
  "lucarionitex":{"name":"Lucarionite X","megaStone":"Lucario-Mega-X","itemUser":["Lucario"],"megaEvolves":"Lucario","num":-1003,"gen":0,"isNonstandard":"Unobtainable"}
-, "serperionite":{"name":"Serperionite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1002,"isNonstandard":"Unobtainable","gen":0}
+, "serperionite":{"name":"Serperionite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1003,"isNonstandard":"Unobtainable","gen":0}
+, "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
+, "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
+, "samurottite":{"name":"Samurottite","megaStone":"Samurott-Mega","itemUser":["Samurott"],"megaEvolves":"Samurott","num":-1005,"isNonstandard":"Unobtainable","gen":0}
+, "dusknoirite":{"name":"Dusknoirite","megaStone":"Dusknoir-Mega","itemUser":["Dusknoir"],"megaEvolves":"Dusknoir","num":-1006,"isNonstandard":"Unobtainable","gen":0}
+, "comfeyite":{"name":"Comfeyite","megaStone":"Comfey-Mega","itemUser":["Comfey"],"megaEvolves":"Comfey","num":-1007,"isNonstandard":"Unobtainable","gen":0}
+, "corviknightite":{"name":"Corviknightite","megaStone":"Corviknight-Mega","itemUser":["Corviknight"],"megaEvolves":"Corviknight","num":-1008,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -8429,4 +8465,51 @@ Items["serperionite"].onTakeItem = function(item, source) {
           return false;
         return true;
       }
-//serperioniteend
+//serperioniteend//serperioritestart
+Items["serperiorite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+//serperioriteend
+//emboaritestart
+
+Items["emboarite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//emboariteend//samurottitestart
+
+Items["samurottite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//samurottiteend//dusknoiritestart
+
+Items["dusknoirite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//dusknoiriteend//comfeyitestart
+
+Items["comfeyite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//comfeyiteend//corviknightitestart
+
+Items["corviknightite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//corviknightiteend
