@@ -1,2 +1,1 @@
  "lucariomegax":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"Illegal"}
-, "serperiormega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}

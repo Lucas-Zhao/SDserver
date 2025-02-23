@@ -4392,6 +4392,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 ];
 
 /*CUSTOM FORMATS*/
-Formats[1].unbanlist = ['Lucario-Mega-X', 'Serperior-Mega', 'Lucarionite X', 'Serperionite'];
+Formats[1].unbanlist = ['Lucario-Mega-X', 'Lucarionite X'];
 
  
