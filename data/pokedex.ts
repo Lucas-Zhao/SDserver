@@ -20165,14 +20165,12 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	},
 
 /*CUSTOM POKEMONS*/
- "lucariomegax":{"name":"Lucario-Mega-X","types":["Psychic","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":110,"atk":110,"def":110,"spa":110,"spd":110,"spe":110},"abilities":{"0":"Mindscape Domain"},"heightm":121,"weightkg":67,"evoType":"trade","requiredItem":"Lucarionite X","baseSpecies":"Lucario","forme":"Mega-X","num":-1047}
-, "serperiormega":{"name":"Serperior-Mega","types":["Grass","Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":76,"atk":95,"def":115,"spa":95,"spd":115,"spe":133},"abilities":{"0":"Queenly Majesty"},"heightm":2.5,"weightkg":160,"evoType":"trade","requiredItem":"Serperiorite","baseSpecies":"Serperior","forme":"Mega","num":-1001}
+ "serperiormega":{"name":"Serperior-Mega","types":["Grass","Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":75,"atk":95,"def":115,"spa":95,"spd":115,"spe":133},"abilities":{"0":"Queenly Majesty"},"heightm":2.5,"weightkg":160,"evoType":"trade","requiredItem":"Serperiorite","baseSpecies":"Serperior","forme":"Mega","num":-1001}
 , "emboarmega":{"name":"Emboar-Mega","types":["Fire","Electric"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":110,"atk":163,"def":85,"spa":140,"spd":85,"spe":45},"abilities":{"0":"Rock Head"},"heightm":2,"weightkg":400,"evoType":"trade","requiredItem":"Emboarite","baseSpecies":"Emboar","forme":"Mega","num":-1002}
 , "samurottmega":{"name":"Samurott-Mega","types":["Water","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":95,"atk":145,"def":95,"spa":118,"spd":75,"spe":100},"abilities":{"0":"Sharpness"},"heightm":2.3,"weightkg":320,"evoType":"trade","requiredItem":"Samurottite","baseSpecies":"Samurott","forme":"Mega","num":-1003}
 , "dusknoirmega":{"name":"Dusknoir-Mega","types":["Ghost","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":45,"atk":150,"def":145,"spa":45,"spd":135,"spe":85},"abilities":{"0":"Soul Harvest"},"heightm":3,"weightkg":300,"evoType":"trade","requiredItem":"Dusknoirite","baseSpecies":"Dusknoir","forme":"Mega","num":-1004}
 , "comfeymega":{"name":"Comfey-Mega","types":["Fairy","Grass"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":51,"atk":52,"def":115,"spa":112,"spd":135,"spe":120},"abilities":{"0":"Triage"},"heightm":0.3,"weightkg":1,"evoType":"trade","requiredItem":"Comfeyite","baseSpecies":"Comfey","forme":"Mega","num":-1005}
 , "corviknightmega":{"name":"Corviknight-Mega","types":["Steel","Flying"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":98,"atk":47,"def":115,"spa":103,"spd":135,"spe":97},"abilities":{"0":"Good as Gold"},"heightm":2.5,"weightkg":250,"evoType":"trade","requiredItem":"Corviknightite","baseSpecies":"Corviknight","forme":"Mega","num":-1006}
-, "chandelurec":{"name":"Chandelurec","types":["Fire","Ice"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":60,"atk":55,"def":90,"spa":145,"spd":90,"spe":80},"abilities":{"0":"Flash Fire","1":"Flame Body","H":"Refridgerate"},"heightm":1,"weightkg":75,"evoType":"trade","num":-1007}
 
 };
  
@@ -20182,7 +20180,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	 the eviolite bonus if a custom pokemon is added as its evolution
 	*/ 
 			(() => {
-	let toChangePokemon = [{"name":"lucario","evotype":"trade","from":"Lucario-Mega-X"},{"name":"serperior","evotype":"trade","from":"Serperior-Mega"},{"name":"emboar","evotype":"trade","from":"Emboar-Mega"},{"name":"samurott","evotype":"trade","from":"Samurott-Mega"},{"name":"dusknoir","evotype":"trade","from":"Dusknoir-Mega"},{"name":"comfey","evotype":"trade","from":"Comfey-Mega"},{"name":"corviknight","evotype":"trade","from":"Corviknight-Mega"}];
+	let toChangePokemon = [{"name":"serperior","evotype":"trade","from":"Serperior-Mega"},{"name":"emboar","evotype":"trade","from":"Emboar-Mega"},{"name":"samurott","evotype":"trade","from":"Samurott-Mega"},{"name":"dusknoir","evotype":"trade","from":"Dusknoir-Mega"},{"name":"comfey","evotype":"trade","from":"Comfey-Mega"},{"name":"corviknight","evotype":"trade","from":"Corviknight-Mega"}];
 	toChangePokemon.forEach((val) => {
 		//val = JSON.parse(val)
 		if(val.from.includes("-Mega")) {

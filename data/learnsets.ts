@@ -99715,12 +99715,10 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 	},
 
 /*CUSTOM LEARNSETS*/
- "lucariomegax":{"learnset":{"aurasphere":["9L4","9L3"]}}
-, "serperiormega":{"learnset":{"energyball":["9L4","9L3"],"leafstorm":["9L4","9L3"]}}
+ "serperiormega":{"learnset":{"energyball":["9L4","9L3"],"leafstorm":["9L4","9L3"]}}
 , "emboarmega":{"learnset":{"flareblitz":["9L4","9L3"],"scald":["9L4","9L3"]}}
 , "samurottmega":{"learnset":{"sacred sword":["9L4","9L3"],"aqua jet":["9L4","9L3"]}}
 , "dusknoirmega":{"learnset":{"focuspunch":["9L4","9L3"],"substitute":["9L4","9L3"]}}
 , "comfeymega":{"learnset":{"drainingkiss":["9L4","9L3"],"gigadrain":["9L4","9L3"]}}
 , "corviknightmega":{"learnset":{"ironhead":["9L4","9L3"],"roost":["9L4","9L3"]}}
-, "chandelurec":{"learnset":{"icebeam":["9L4","9L3"],"flamethrower":["9L4","9L3"],"flamecharge":["9L4","9L3"],"freezedry":["9L4","9L3"],"calmmind":["9L4","9L3"],"rest":["9L4","9L3"]}}
 };
