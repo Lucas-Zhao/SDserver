@@ -17,8 +17,9 @@ const args = process.argv.slice(2);
 const api = require("./api.js")
 const importer = require("./importer.js")
 const syncer = require("./syncer.js")
-
 const stats = require("../utils/os.js")
+
+require("./compiler.js")
 
 
 if (!fs.existsSync(path.join(path.resolve(), "/data/customs/"))) {
@@ -27,7 +28,6 @@ if (!fs.existsSync(path.join(path.resolve(), "/data/customs/"))) {
 	);
 	return;
 }
-
 
 function listen() {
 if (args.length) {

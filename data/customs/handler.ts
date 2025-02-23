@@ -335,7 +335,8 @@ export class Handler {
 	}
 
 	getFunctions(content: string, name: string) {
-		const regex = new RegExp(`//${name}start([\\s\\S]*?)//${name}end`, "g");
+		console.log(name)
+		const regex = new RegExp(`//${name}start([\\s\\S]*?)//${name}end`, "mg");
 		const match = content.match(regex);
 		console.log(match);
 		if (match)
@@ -511,7 +512,9 @@ export class Handler {
 		let content = fsSync.readFileSync(filePath).toString();
 		let id = this.toID(item.name);
 		let funcs =  this.getFunctions(content,id);
-		buffer = `//${id}start\n${funcs}\n//${id}end`
+		console.log("funcs: " + funcs);
+		buffer = `//${id}start${funcs}//${id}end`
+		console.log(buffer)
 		content = content.replace(buffer,"");
 		fsSync.writeFileSync(filePath, content);
 		delete this.items[id]
