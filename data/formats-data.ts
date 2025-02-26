@@ -6043,5 +6043,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "irondetector":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "frostywaifu":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "ironclaw":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "dragapultmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
