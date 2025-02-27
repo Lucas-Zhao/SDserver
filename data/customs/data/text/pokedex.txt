@@ -11,3 +11,4 @@
 , "ironpod":{"name":"Ironpod"}
 , "shatterjaw":{"name":"Shatterjaw"}
 , "clashingteeth":{"name":"Clashingteeth"}
+, "frostywaifu":{"name":"Frostywaifu"}
