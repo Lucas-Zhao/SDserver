@@ -8550,6 +8550,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -8561,6 +8565,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "galvantulite":{"name":"Galvantulite","megaStone":"Galvantula-Mega","itemUser":["Galvantula"],"megaEvolves":"Galvantula","num":-1008,"isNonstandard":"Unobtainable","gen":0}
 , "bronzongite":{"name":"Bronzongite","megaStone":"Bronzong-Mega","itemUser":["Bronzong"],"megaEvolves":"Bronzong","num":-1010,"isNonstandard":"Unobtainable","gen":0}
 , "toxtricite":{"name":"Toxtricite","megaStone":"Toxtricity-Mega","itemUser":["Toxtricity"],"megaEvolves":"Toxtricity","num":-1011,"isNonstandard":"Unobtainable","gen":0}
+, "runerigusite":{"name":"Runerigusite","megaStone":"Runerigus-Mega","itemUser":["Runerigus"],"megaEvolves":"Runerigus","num":-1011,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -8646,4 +8651,12 @@ Items["toxtricite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//toxtriciteend
+//toxtriciteend//runerigusitestart
+
+Items["runerigusite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//runerigusiteend

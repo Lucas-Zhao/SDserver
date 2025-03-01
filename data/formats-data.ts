@@ -6049,5 +6049,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "galvantulamega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "bronzongmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "toxtricitymega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "runerigusmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
