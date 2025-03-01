@@ -20178,7 +20178,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "shatterjaw":{"name":"Shatterjaw","types":["Rock","Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":97,"atk":129,"def":101,"spa":65,"spd":79,"spe":99},"abilities":{"0":"Protosynthesis"},"heightm":0.2,"weightkg":30,"evoType":"trade","num":-1012}
 , "clashingteeth":{"name":"Clashingteeth","types":["Ground","Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":123,"atk":131,"def":71,"spa":57,"spd":75,"spe":113},"abilities":{"0":"Protosynthesis"},"heightm":2.3,"weightkg":103,"evoType":"trade","num":-1012}
 , "frostywaifu":{"name":"Frostywaifu","types":["Ghost","Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":117,"atk":101,"def":111,"spa":109,"spd":101,"spe":51},"abilities":{"0":"Protosynthesis"},"heightm":1.5,"weightkg":400,"evoType":"trade","num":-1012}
-, "sirfetchdmega":{"name":"Sirfetch'd-Mega","types":["Fighting","Grass"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":62,"atk":165,"def":120,"spa":68,"spd":102,"spe":90},"abilities":{"0":"Sword of Ruin"},"heightm":1,"weightkg":340,"evoType":"trade","requiredItem":"Sirfetchdite","baseSpecies":"Sirfetch'd","forme":"Mega","num":-1013}
 
 };
  
@@ -20188,7 +20187,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	 the eviolite bonus if a custom pokemon is added as its evolution
 	*/ 
 			(() => {
-	let toChangePokemon = [{"name":"serperior","evotype":"trade","from":"Serperior-Mega"},{"name":"emboar","evotype":"trade","from":"Emboar-Mega"},{"name":"samurott","evotype":"trade","from":"Samurott-Mega"},{"name":"dusknoir","evotype":"trade","from":"Dusknoir-Mega"},{"name":"comfey","evotype":"trade","from":"Comfey-Mega"},{"name":"corviknight","evotype":"trade","from":"Corviknight-Mega"},{"name":"dragapult","evotype":"trade","from":"Dragapult-Mega"},{"name":"sirfetchd","evotype":"trade","from":"Sirfetch'd-Mega"}];
+	let toChangePokemon = [{"name":"serperior","evotype":"trade","from":"Serperior-Mega"},{"name":"emboar","evotype":"trade","from":"Emboar-Mega"},{"name":"samurott","evotype":"trade","from":"Samurott-Mega"},{"name":"dusknoir","evotype":"trade","from":"Dusknoir-Mega"},{"name":"comfey","evotype":"trade","from":"Comfey-Mega"},{"name":"corviknight","evotype":"trade","from":"Corviknight-Mega"},{"name":"dragapult","evotype":"trade","from":"Dragapult-Mega"}];
 	toChangePokemon.forEach((val) => {
 		//val = JSON.parse(val)
 		if(val.from.includes("-Mega")) {
