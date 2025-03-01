@@ -8534,6 +8534,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -8543,6 +8547,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "corviknightite":{"name":"Corviknightite","megaStone":"Corviknight-Mega","itemUser":["Corviknight"],"megaEvolves":"Corviknight","num":-1008,"isNonstandard":"Unobtainable","gen":0}
 , "dragapultite":{"name":"Dragapultite","megaStone":"Dragapult-Mega","itemUser":["Dragapult"],"megaEvolves":"Dragapult","num":-1007,"isNonstandard":"Unobtainable","gen":0}
 , "galvantulite":{"name":"Galvantulite","megaStone":"Galvantula-Mega","itemUser":["Galvantula"],"megaEvolves":"Galvantula","num":-1008,"isNonstandard":"Unobtainable","gen":0}
+, "runerigusite":{"name":"Runerigusite","megaStone":"Runerigus-Mega","itemUser":["Runerigus"],"megaEvolves":"Runerigus","num":-1009,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -8612,4 +8617,12 @@ Items["galvantulite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//galvantuliteend
+//galvantuliteend//runerigusitestart
+
+Items["runerigusite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//runerigusiteend
