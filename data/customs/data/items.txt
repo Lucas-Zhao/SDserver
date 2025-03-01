@@ -7,6 +7,7 @@
 , "dragapultite":{"name":"Dragapultite","megaStone":"Dragapult-Mega","itemUser":["Dragapult"],"megaEvolves":"Dragapult","num":-1007,"isNonstandard":"Unobtainable","gen":0}
 , "galvantulite":{"name":"Galvantulite","megaStone":"Galvantula-Mega","itemUser":["Galvantula"],"megaEvolves":"Galvantula","num":-1008,"isNonstandard":"Unobtainable","gen":0}
 , "runerigusite":{"name":"Runerigusite","megaStone":"Runerigus-Mega","itemUser":["Runerigus"],"megaEvolves":"Runerigus","num":-1009,"isNonstandard":"Unobtainable","gen":0}
+, "bronzongite":{"name":"Bronzongite","megaStone":"Bronzong-Mega","itemUser":["Bronzong"],"megaEvolves":"Bronzong","num":-1010,"isNonstandard":"Unobtainable","gen":0}
 
 /*FUNCTIONS*/
 //serperioritestart
@@ -82,4 +83,12 @@ Items["runerigusite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//runerigusiteend
+//runerigusiteend//bronzongitestart
+
+Items["bronzongite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//bronzongiteend

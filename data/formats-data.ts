@@ -6048,5 +6048,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "frostywaifu":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "galvantulamega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "runerigusmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "bronzongmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
