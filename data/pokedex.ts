@@ -20183,6 +20183,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "toxtricitymega":{"name":"Toxtricity-Mega","types":["Poison","Normal"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":75,"atk":118,"def":80,"spa":154,"spd":80,"spe":95},"abilities":{"0":"Boots of Ruin"},"heightm":1.8,"weightkg":115,"evoType":"trade","requiredItem":"Toxtricite","baseSpecies":"Toxtricity","forme":"Mega","num":-1016}
 , "runerigusmega":{"name":"Runerigus-Mega","types":["Ground","Ghost"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":58,"atk":135,"def":185,"spa":50,"spd":105,"spe":50},"abilities":{"0":"Tablets of Ruin"},"heightm":2,"weightkg":300,"evoType":"trade","requiredItem":"Runerigusite","baseSpecies":"Runerigus","forme":"Mega","num":-1016}
 , "butterfreemega":{"name":"Butterfree-Mega","types":["Bug","Psychic"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":60,"atk":45,"def":50,"spa":140,"spd":87,"spe":113},"abilities":{"0":"Magic Guard"},"heightm":3,"weightkg":110,"evoType":"trade","requiredItem":"Butterfrite","baseSpecies":"Butterfree","forme":"Mega","num":-1017}
+, "dragonitemegaz":{"name":"Dragonite-Mega-Z","types":["Dragon","Fairy"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":91,"atk":94,"def":119,"spa":160,"spd":144,"spe":92},"abilities":{"0":"Pixilate"},"heightm":2.7,"weightkg":520,"evoType":"trade","requiredItem":"Dragoniteite Z","baseSpecies":"Dragonite","forme":"Mega-Z","num":-1018}
 
 };
  
@@ -20192,7 +20193,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	 the eviolite bonus if a custom pokemon is added as its evolution
 	*/ 
 			(() => {
-	let toChangePokemon = [{"name":"serperior","evotype":"trade","from":"Serperior-Mega"},{"name":"emboar","evotype":"trade","from":"Emboar-Mega"},{"name":"samurott","evotype":"trade","from":"Samurott-Mega"},{"name":"dusknoir","evotype":"trade","from":"Dusknoir-Mega"},{"name":"comfey","evotype":"trade","from":"Comfey-Mega"},{"name":"corviknight","evotype":"trade","from":"Corviknight-Mega"},{"name":"dragapult","evotype":"trade","from":"Dragapult-Mega"},{"name":"galvantula","evotype":"trade","from":"Galvantula-Mega"},{"name":"bronzong","evotype":"trade","from":"Bronzong-Mega"},{"name":"toxtricity","evotype":"trade","from":"Toxtricity-Mega"},{"name":"runerigus","evotype":"trade","from":"Runerigus-Mega"},{"name":"butterfree","evotype":"trade","from":"Butterfree-Mega"}];
+	let toChangePokemon = [{"name":"serperior","evotype":"trade","from":"Serperior-Mega"},{"name":"emboar","evotype":"trade","from":"Emboar-Mega"},{"name":"samurott","evotype":"trade","from":"Samurott-Mega"},{"name":"dusknoir","evotype":"trade","from":"Dusknoir-Mega"},{"name":"comfey","evotype":"trade","from":"Comfey-Mega"},{"name":"corviknight","evotype":"trade","from":"Corviknight-Mega"},{"name":"dragapult","evotype":"trade","from":"Dragapult-Mega"},{"name":"galvantula","evotype":"trade","from":"Galvantula-Mega"},{"name":"bronzong","evotype":"trade","from":"Bronzong-Mega"},{"name":"toxtricity","evotype":"trade","from":"Toxtricity-Mega"},{"name":"runerigus","evotype":"trade","from":"Runerigus-Mega"},{"name":"butterfree","evotype":"trade","from":"Butterfree-Mega"},{"name":"dragonite","evotype":"trade","from":"Dragonite-Mega-Z"}];
 	toChangePokemon.forEach((val) => {
 		//val = JSON.parse(val)
 		if(val.from.includes("-Mega")) {

@@ -6051,5 +6051,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "toxtricitymega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "runerigusmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "butterfreemega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "dragonitemegaz":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
