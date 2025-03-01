@@ -4392,6 +4392,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 ];
 
 /*CUSTOM FORMATS*/
-Formats[1].unbanlist = ['Serperior-Mega', 'Emboar-Mega', 'Samurott-Mega', 'Dusknoir-Mega', 'Comfey-Mega', 'Corviknight-Mega', 'Irondetector', 'Ironclaw', 'Dragapult-Mega', 'Ironpod', 'Shatterjaw', 'Clashingteeth', 'Frostywaifu', 'Galvantula-Mega', 'Runerigus-Mega', 'Bronzong-Mega', 'Serperiorite', 'Emboarite', 'Samurottite', 'Dusknoirite', 'Comfeyite', 'Corviknightite', 'Dragapultite', 'Galvantulite', 'Runerigusite', 'Bronzongite'];
+Formats[1].unbanlist = ['Serperior-Mega', 'Emboar-Mega', 'Samurott-Mega', 'Dusknoir-Mega', 'Comfey-Mega', 'Corviknight-Mega', 'Irondetector', 'Ironclaw', 'Dragapult-Mega', 'Ironpod', 'Shatterjaw', 'Clashingteeth', 'Frostywaifu', 'Galvantula-Mega', 'Runerigus-Mega', 'Bronzong-Mega', 'Toxtricity-Mega', 'Serperiorite', 'Emboarite', 'Samurottite', 'Dusknoirite', 'Comfeyite', 'Corviknightite', 'Dragapultite', 'Galvantulite', 'Runerigusite', 'Bronzongite', 'Toxtricite'];
 
  
