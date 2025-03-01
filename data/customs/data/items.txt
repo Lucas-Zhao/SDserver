@@ -5,7 +5,7 @@
 , "comfeyite":{"name":"Comfeyite","megaStone":"Comfey-Mega","itemUser":["Comfey"],"megaEvolves":"Comfey","num":-1007,"isNonstandard":"Unobtainable","gen":0}
 , "corviknightite":{"name":"Corviknightite","megaStone":"Corviknight-Mega","itemUser":["Corviknight"],"megaEvolves":"Corviknight","num":-1008,"isNonstandard":"Unobtainable","gen":0}
 , "dragapultite":{"name":"Dragapultite","megaStone":"Dragapult-Mega","itemUser":["Dragapult"],"megaEvolves":"Dragapult","num":-1007,"isNonstandard":"Unobtainable","gen":0}
-, "sirfetchdite":{"name":"Sirfetchdite","megaStone":"Sirfetch'd-Mega","itemUser":["Sirfetch'd"],"megaEvolves":"Sirfetch'd","num":-1008,"isNonstandard":"Unobtainable","gen":0}
+, "sirfetchdite":{"name":"Sirfetchdite","megaStone":"Sirfetchd-Mega","itemUser":["Sirfetch'd"],"megaEvolves":"Sirfetch'd","num":-1008,"isNonstandard":"Unobtainable","gen":0}
 
 /*FUNCTIONS*/
 //serperioritestart
