@@ -8564,6 +8564,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -8578,6 +8582,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "runerigusite":{"name":"Runerigusite","megaStone":"Runerigus-Mega","itemUser":["Runerigus"],"megaEvolves":"Runerigus","num":-1011,"isNonstandard":"Unobtainable","gen":0}
 , "butterfrite":{"name":"Butterfrite","megaStone":"Butterfree-Mega","itemUser":["Butterfree"],"megaEvolves":"Butterfree","num":-1012,"isNonstandard":"Unobtainable","gen":0}
 , "dragoniteitez":{"name":"Dragoniteite Z","megaStone":"Dragonite-Mega-Z","itemUser":["Dragonite"],"megaEvolves":"Dragonite","num":-1013,"isNonstandard":"Unobtainable","gen":0}
+, "florgesitelove":{"name":"Florgesite Love","megaStone":"Florges-Mega-Love","itemUser":["Florges"],"megaEvolves":"Florges","num":-1014,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -8687,4 +8692,12 @@ Items["dragoniteitez"].onTakeItem = function(item, source) {
         return true;
       }
 
-//dragoniteitezend
+//dragoniteitezend//florgesitelovestart
+
+Items["florgesitelove"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//florgesiteloveend
