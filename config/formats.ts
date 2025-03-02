@@ -4392,6 +4392,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 ];
 
 /*CUSTOM FORMATS*/
-Formats[1].unbanlist = ['Serperior-Mega', 'Emboar-Mega', 'Samurott-Mega', 'Dusknoir-Mega', 'Comfey-Mega', 'Corviknight-Mega', 'Irondetector', 'Ironclaw', 'Dragapult-Mega', 'Ironpod', 'Shatterjaw', 'Clashingteeth', 'Frostywaifu', 'Galvantula-Mega', 'Bronzong-Mega', 'Toxtricity-Mega', 'Runerigus-Mega', 'Butterfree-Mega', 'Dragonite-Mega-Z', 'Florges-Mega-Love', 'Noivern-Mega', 'Serperior-Mega-Ivy', 'Serperiorite', 'Emboarite', 'Samurottite', 'Dusknoirite', 'Comfeyite', 'Corviknightite', 'Dragapultite', 'Galvantulite', 'Bronzongite', 'Toxtricite', 'Runerigusite', 'Butterfrite', 'Dragoniteite Z', 'Florgesite Love', 'Noivernite', 'SerperioriteIvy'];
+Formats[1].unbanlist = ['Serperior-Mega', 'Emboar-Mega', 'Samurott-Mega', 'Dusknoir-Mega', 'Comfey-Mega', 'Corviknight-Mega', 'Irondetector', 'Ironclaw', 'Dragapult-Mega', 'Ironpod', 'Shatterjaw', 'Clashingteeth', 'Frostywaifu', 'Galvantula-Mega', 'Bronzong-Mega', 'Toxtricity-Mega', 'Runerigus-Mega', 'Butterfree-Mega', 'Dragonite-Mega-Z', 'Florges-Mega-Love', 'Noivern-Mega', 'Serperior-Mega-Ivy', 'Starmie-Mega', 'Serperiorite', 'Emboarite', 'Samurottite', 'Dusknoirite', 'Comfeyite', 'Corviknightite', 'Dragapultite', 'Galvantulite', 'Bronzongite', 'Toxtricite', 'Runerigusite', 'Butterfrite', 'Dragoniteite Z', 'Florgesite Love', 'Noivernite', 'SerperioriteIvy', 'Starmite'];
 
  
