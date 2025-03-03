@@ -6056,5 +6056,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "serperiormegaivy":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "starmiemega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "frostywaifu":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "tropiusmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
