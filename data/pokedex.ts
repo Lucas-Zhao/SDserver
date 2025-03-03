@@ -20187,7 +20187,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "noivernmega":{"name":"Noivern-Mega","types":["Electric","Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":85,"atk":131,"def":105,"spa":107,"spd":105,"spe":102},"abilities":{"0":"Tough Claws"},"heightm":2,"weightkg":350,"evoType":"trade","requiredItem":"Noivernite","baseSpecies":"Noivern","forme":"Mega","num":-1020}
 , "serperiormegaivy":{"name":"Serperior-Mega-Ivy","types":["Grass","Poison"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":75,"atk":135,"def":105,"spa":55,"spd":105,"spe":153},"abilities":{"0":"Toxify"},"heightm":3,"weightkg":170,"evoType":"trade","requiredItem":"SerperioriteIvy","baseSpecies":"Serperior","forme":"Mega","num":-1021}
 , "starmiemega":{"name":"Starmie-Mega","types":["Water","Psychic"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":60,"atk":95,"def":95,"spa":140,"spd":95,"spe":135},"abilities":{"0":"Regenerator"},"heightm":1.5,"weightkg":250,"evoType":"trade","requiredItem":"Starmite","baseSpecies":"Starmie","forme":"Mega","num":-1022}
-, "frostywaifu":{"name":"Frostywaifu","types":["Ghost","Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":117,"atk":101,"def":111,"spa":109,"spd":101,"spe":51},"abilities":{"0":"Protosynthesis"},"heightm":2,"weightkg":250,"evoType":"trade","num":-1022}
 
 };
  
