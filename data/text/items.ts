@@ -2448,7 +2448,7 @@ export const ItemsText: {[id: IDEntry]: ItemText} = {
 , "comfeyite":{"name":"Comfeyite","shortDesc":"If held by a Comfey, this item allows it to Mega Evolve in battle."}
 , "corviknightite":{"name":"Corviknightite","shortDesc":"If held by a Corviknight, this item allows it to Mega Evolve in battle."}
 , "dragapultite":{"name":"Dragapultite","shortDesc":"If held by a Dragapult, this item allows it to Mega Evolve in battle."}
-, "sirfetchdite":{"name":"Sirfetchdite","shortDesc":"If held by a Sirfetch'd, this item allows it to Mega Evolve in battle."}
+, "sirfetchdite":{"name":"Sirfetchdite","shortDesc":"If held by a Sirfetch’d, this item allows it to Mega Evolve in battle."}
 , "galvantulite":{"name":"Galvantulite","shortDesc":"If held by a Galvantula, this item allows it to Mega Evolve in battle."}
 , "runerigusite":{"name":"Runerigusite","shortDesc":"If held by a Runerigus, this item allows it to Mega Evolve in battle."}
 , "bronzongite":{"name":"Bronzongite","shortDesc":"If held by a Bronzong, this item allows it to Mega Evolve in battle."}
