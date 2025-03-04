@@ -3785,7 +3785,6 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "clashingteeth":{"name":"Clashingteeth"}
 , "galvantulamega":{"name":"Galvantula-Mega"}
 , "bronzongmega":{"name":"Bronzong-Mega"}
-, "toxtricitymega":{"name":"Toxtricity-Mega"}
 , "runerigusmega":{"name":"Runerigus-Mega"}
 , "butterfreemega":{"name":"Butterfree-Mega"}
 , "dragonitemegaz":{"name":"Dragonite-Mega-Z"}
