@@ -8656,6 +8656,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -8675,6 +8679,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "starmite":{"name":"Starmite","megaStone":"Starmie-Mega","itemUser":["Starmie"],"megaEvolves":"Starmie","num":-1017,"isNonstandard":"Unobtainable","gen":0}
 , "tropiusite":{"name":"Tropiusite","megaStone":"Tropius-Mega","itemUser":["Tropius"],"megaEvolves":"Tropius","num":-1018,"isNonstandard":"Unobtainable","gen":0}
 , "sirfetchdite":{"name":"Sirfetchdite","megaStone":"Sirfetch’d-Mega","itemUser":["Sirfetch’d"],"megaEvolves":"Sirfetch’d","num":-1019,"isNonstandard":"Unobtainable","gen":0}
+, "toxtricite":{"name":"Toxtricite","megaStone":"Toxtricity-Mega","itemUser":["Toxtricity"],"megaEvolves":"Toxtricity","num":-1019,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -8825,4 +8830,12 @@ Items["sirfetchdite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//sirfetchditeend
+//sirfetchditeend//toxtricitestart
+
+Items["toxtricite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//toxtriciteend
