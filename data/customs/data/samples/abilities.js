@@ -573,7 +573,7 @@ exports.abilities = {
 	umbralforce: {
 		onModifyTypePriority: -1,
 		onModifyType: function (move, pokemon) {
-			noModifyType = [
+			const noModifyType= [
 				"judgment",
 				"multiattack",
 				"naturalgift",
@@ -601,7 +601,7 @@ exports.abilities = {
 	draconize: {
 		onModifyTypePriority: -1,
 		onModifyType: function (move, pokemon) {
-			noModifyType = [
+			const noModifyType= [
 				"judgment",
 				"multiattack",
 				"naturalgift",
@@ -629,7 +629,7 @@ exports.abilities = {
 	combatboost: {
 		onModifyTypePriority: -1,
 		onModifyType: function (move, pokemon) {
-			noModifyType = [
+			const noModifyType= [
 				"judgment",
 				"multiattack",
 				"naturalgift",
@@ -657,7 +657,7 @@ exports.abilities = {
 	infernalize: {
 		onModifyTypePriority: -1,
 		onModifyType: function (move, pokemon) {
-			noModifyType = [
+			const noModifyType= [
 				"judgment",
 				"multiattack",
 				"naturalgift",
@@ -684,7 +684,7 @@ exports.abilities = {
 	hauntify: {
 		onModifyTypePriority: -1,
 		onModifyType: function (move, pokemon) {
-			noModifyType = [
+			const noModifyType= [
 				"judgment",
 				"multiattack",
 				"naturalgift",
@@ -712,7 +712,7 @@ exports.abilities = {
 	verdantforce: {
 		onModifyTypePriority: -1,
 		onModifyType: function (move, pokemon) {
-			noModifyType = [
+			const noModifyType= [
 				"judgment",
 				"multiattack",
 				"naturalgift",
@@ -740,7 +740,7 @@ exports.abilities = {
 	terranize: {
 		onModifyTypePriority: -1,
 		onModifyType: function (move, pokemon) {
-			noModifyType = [
+			const noModifyType= [
 				"judgment",
 				"multiattack",
 				"naturalgift",
@@ -768,7 +768,7 @@ exports.abilities = {
 	toxify: {
 		onModifyTypePriority: -1,
 		onModifyType: function (move, pokemon) {
-			noModifyType = [
+			const noModifyType = [
 				"judgment",
 				"multiattack",
 				"naturalgift",
@@ -796,7 +796,7 @@ exports.abilities = {
 	petrify: {
 		onModifyTypePriority: -1,
 		onModifyType: function (move, pokemon) {
-			noModifyType = [
+			const noModifyType= [
 				"judgment",
 				"multiattack",
 				"naturalgift",
@@ -824,7 +824,7 @@ exports.abilities = {
 	ferronize: {
 		onModifyTypePriority: -1,
 		onModifyType: function (move, pokemon) {
-			noModifyType = [
+			const noModifyType= [
 				"judgment",
 				"multiattack",
 				"naturalgift",
@@ -852,7 +852,7 @@ exports.abilities = {
 	aquify: {
 		onModifyTypePriority: -1,
 		onModifyType: function (move, pokemon) {
-			noModifyType = [
+			const noModifyType= [
 				"judgment",
 				"multiattack",
 				"naturalgift",
