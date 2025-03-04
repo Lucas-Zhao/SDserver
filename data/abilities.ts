@@ -6760,7 +6760,7 @@ Abilities["terranize"].onBasePower = function(basePower, pokemon, target, move) 
 //toxifystart
 
 Abilities["toxify"].onModifyType = function(move, pokemon) {
-		noModifyType = [
+		const noModifyType = [
 			"judgment", "multiattack", "naturalgift", "revelationdance",
 			"technoblast", "terrainpulse", "weatherball"
 		];
@@ -6779,7 +6779,7 @@ Abilities["toxify"].onBasePower = function(basePower, pokemon, target, move) {
 //petrifystart
 
 Abilities["petrify"].onModifyType = function(move, pokemon) {
-		noModifyType = [
+		const noModifyType = [
 			"judgment", "multiattack", "naturalgift", "revelationdance",
 			"technoblast", "terrainpulse", "weatherball"
 		];
@@ -6798,7 +6798,7 @@ Abilities["petrify"].onBasePower = function(basePower, pokemon, target, move) {
 //ferronizestart
 
 Abilities["ferronize"].onModifyType = function(move, pokemon) {
-		noModifyType = [
+		const noModifyType = [
 			"judgment", "multiattack", "naturalgift", "revelationdance",
 			"technoblast", "terrainpulse", "weatherball"
 		];
@@ -6817,7 +6817,7 @@ Abilities["ferronize"].onBasePower = function(basePower, pokemon, target, move) 
 //aquifystart
 
 Abilities["aquify"].onModifyType = function(move, pokemon) {
-		noModifyType = [
+		const noModifyType = [
 			"judgment", "multiattack", "naturalgift", "revelationdance",
 			"technoblast", "terrainpulse", "weatherball"
 		];
