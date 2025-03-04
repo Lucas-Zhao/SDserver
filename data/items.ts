@@ -8660,11 +8660,14 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "samurottite":{"name":"Samurottite","megaStone":"Samurott-Mega","itemUser":["Samurott"],"megaEvolves":"Samurott","num":-1005,"isNonstandard":"Unobtainable","gen":0}
-, "dusknoirite":{"name":"Dusknoirite","megaStone":"Dusknoir-Mega","itemUser":["Dusknoir"],"megaEvolves":"Dusknoir","num":-1006,"isNonstandard":"Unobtainable","gen":0}
 , "comfeyite":{"name":"Comfeyite","megaStone":"Comfey-Mega","itemUser":["Comfey"],"megaEvolves":"Comfey","num":-1007,"isNonstandard":"Unobtainable","gen":0}
 , "corviknightite":{"name":"Corviknightite","megaStone":"Corviknight-Mega","itemUser":["Corviknight"],"megaEvolves":"Corviknight","num":-1008,"isNonstandard":"Unobtainable","gen":0}
 , "dragapultite":{"name":"Dragapultite","megaStone":"Dragapult-Mega","itemUser":["Dragapult"],"megaEvolves":"Dragapult","num":-1007,"isNonstandard":"Unobtainable","gen":0}
@@ -8707,15 +8710,7 @@ Items["samurottite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//samurottiteend//dusknoiritestart
-
-Items["dusknoirite"].onTakeItem = function(item, source) {
-        if (item.megaEvolves === source.baseSpecies.baseSpecies)
-          return false;
-        return true;
-      }
-
-//dusknoiriteend//comfeyitestart
+//samurottiteend//comfeyitestart
 
 Items["comfeyite"].onTakeItem = function(item, source) {
         if (item.megaEvolves === source.baseSpecies.baseSpecies)
