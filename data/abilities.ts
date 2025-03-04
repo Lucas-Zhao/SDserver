@@ -6703,7 +6703,7 @@ Abilities["aquaflow"].onModifyAtk = function(atk, attacker, defender, move) {
 //hauntifystart
 
 Abilities["hauntify"].onModifyType = function(move, pokemon) {
-		noModifyType = [
+		const noModifyType = [
 			"judgment", "multiattack", "naturalgift", "revelationdance",
 			"technoblast", "terrainpulse", "weatherball"
 		];
@@ -6722,7 +6722,7 @@ Abilities["hauntify"].onBasePower = function(basePower, pokemon, target, move) {
 //verdantforcestart
 
 Abilities["verdantforce"].onModifyType = function(move, pokemon) {
-		noModifyType = [
+		const noModifyType = [
 			"judgment", "multiattack", "naturalgift", "revelationdance",
 			"technoblast", "terrainpulse", "weatherball"
 		];
@@ -6741,7 +6741,7 @@ Abilities["verdantforce"].onBasePower = function(basePower, pokemon, target, mov
 //terranizestart
 
 Abilities["terranize"].onModifyType = function(move, pokemon) {
-		noModifyType = [
+		const noModifyType = [
 			"judgment", "multiattack", "naturalgift", "revelationdance",
 			"technoblast", "terrainpulse", "weatherball"
 		];
