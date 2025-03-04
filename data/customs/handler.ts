@@ -389,7 +389,7 @@ export class Handler {
 		console.log("converting formats...");
 		let form = this.formats["gen9helldraftleague"];
 		let func = `Formats[1].unbanlist = [${form.unbanlist
-			?.map((el) => `'${el}'`)
+			?.map((el) => `"${el}"`)
 			.join(", ")}];`;
 
 		fsSync.writeFileSync(
