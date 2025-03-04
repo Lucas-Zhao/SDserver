@@ -534,6 +534,10 @@ export class Handler {
 			delete pokemon.prevo;
 		if (pokemon.requiredItem == null || pokemon.requiredItem == "null")
 			delete pokemon.requiredItem;
+		if(pokemon.name.includes("'")) pokemon.name = pokemon.name.replace("'","\u2019");
+		if(pokemon.baseSpecies?.includes("'")) pokemon.baseSpecies = pokemon.baseSpecies.replace("'","\u2019");
+
+
 
 		let learnset = undefined;
 		if (Array.isArray(opts.learnset) && opts.learnset.length) {
