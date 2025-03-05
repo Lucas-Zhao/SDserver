@@ -8672,6 +8672,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -8693,6 +8697,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "toxtricite":{"name":"Toxtricite","megaStone":"Toxtricity-Mega","itemUser":["Toxtricity"],"megaEvolves":"Toxtricity","num":-1019,"isNonstandard":"Unobtainable","gen":0}
 , "dusknoirite":{"name":"Dusknoirite","megaStone":"Dusknoir-Mega","itemUser":["Dusknoir"],"megaEvolves":"Dusknoir","num":-1019,"isNonstandard":"Unobtainable","gen":0}
 , "aurorusite":{"name":"Aurorusite","megaStone":"Aurorus-Mega","itemUser":["Aurorus"],"megaEvolves":"Aurorus","num":-1020,"isNonstandard":"Unobtainable","gen":0}
+, "tyrantrumite":{"name":"Tyrantrumite","megaStone":"Tyrantrum-Mega","itemUser":["Tyrantrum"],"megaEvolves":"Tyrantrum","num":-1021,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -8859,4 +8864,12 @@ Items["aurorusite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//aurorusiteend
+//aurorusiteend//tyrantrumitestart
+
+Items["tyrantrumite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//tyrantrumiteend
