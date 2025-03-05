@@ -17,6 +17,7 @@
 , "sirfetchdite":{"name":"Sirfetchdite","megaStone":"Sirfetch’d-Mega","itemUser":["Sirfetch’d"],"megaEvolves":"Sirfetch’d","num":-1019,"isNonstandard":"Unobtainable","gen":0}
 , "toxtricite":{"name":"Toxtricite","megaStone":"Toxtricity-Mega","itemUser":["Toxtricity"],"megaEvolves":"Toxtricity","num":-1019,"isNonstandard":"Unobtainable","gen":0}
 , "dusknoirite":{"name":"Dusknoirite","megaStone":"Dusknoir-Mega","itemUser":["Dusknoir"],"megaEvolves":"Dusknoir","num":-1019,"isNonstandard":"Unobtainable","gen":0}
+, "aurorusite":{"name":"Aurorusite","megaStone":"Aurorus-Mega","itemUser":["Aurorus"],"megaEvolves":"Aurorus","num":-1020,"isNonstandard":"Unobtainable","gen":0}
 
 /*FUNCTIONS*/
 //serperioritestart
@@ -173,4 +174,12 @@ Items["dusknoirite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//dusknoiriteend
+//dusknoiriteend//aurorusitestart
+
+Items["aurorusite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//aurorusiteend
