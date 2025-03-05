@@ -3800,6 +3800,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "tyrantrummega":{"name":"Tyrantrum-Mega"}
 , "drapionmega":{"name":"Drapion-Mega"}
 , "charizardmegaz":{"name":"Charizard-Mega-Z"}
+, "charizardmegaa":{"name":"Charizard-Mega-A"}
 
 };
  

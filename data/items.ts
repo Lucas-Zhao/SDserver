@@ -8696,6 +8696,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -8720,6 +8724,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "tyrantrumite":{"name":"Tyrantrumite","megaStone":"Tyrantrum-Mega","itemUser":["Tyrantrum"],"megaEvolves":"Tyrantrum","num":-1021,"isNonstandard":"Unobtainable","gen":0}
 , "drapionite":{"name":"Drapionite","megaStone":"Drapion-Mega","itemUser":["Drapion"],"megaEvolves":"Drapion","num":-1022,"isNonstandard":"Unobtainable","gen":0}
 , "charizarditez":{"name":"Charizardite Z","megaStone":"Charizard-Mega-Z","itemUser":["Charizard"],"megaEvolves":"Charizard","num":-1023,"isNonstandard":"Unobtainable","gen":0}
+, "charizarditea":{"name":"Charizardite A","megaStone":"Charizard-Mega-A","itemUser":["Charizard"],"megaEvolves":"Charizard","num":-1024,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -8910,4 +8915,12 @@ Items["charizarditez"].onTakeItem = function(item, source) {
         return true;
       }
 
-//charizarditezend
+//charizarditezend//charizarditeastart
+
+Items["charizarditea"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//charizarditeaend
