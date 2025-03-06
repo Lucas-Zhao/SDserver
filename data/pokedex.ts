@@ -20198,6 +20198,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "chesnaughtmega":{"name":"Chesnaught-Mega","types":["Grass","Steel"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":88,"atk":137,"def":152,"spa":84,"spd":95,"spe":74},"abilities":{"0":"Warrior's Will"},"heightm":1.8,"weightkg":230,"evoType":"trade","requiredItem":"Chesnaughtite","baseSpecies":"Chesnaught","forme":"Mega","num":-1031}
 , "delphoxmega":{"name":"Delphox-Mega","types":["Fire","Ghost"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":75,"atk":79,"def":87,"spa":144,"spd":135,"spe":114},"abilities":{"0":"Mindforce"},"heightm":1.2,"weightkg":100,"evoType":"trade","requiredItem":"Delphoxite","baseSpecies":"Delphox","forme":"Mega","num":-1032}
 , "greninjamega":{"name":"Greninja-Mega","types":["Water","Poison"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":72,"atk":125,"def":72,"spa":133,"spd":81,"spe":147},"abilities":{"0":"Shadowborn"},"heightm":1.7,"weightkg":105,"evoType":"trade","requiredItem":"Greninjite","baseSpecies":"Greninja","forme":"Mega","num":-1033}
+, "irondetector":{"name":"Irondetector","types":["Dark","Psychic"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":78,"atk":118,"def":64,"spa":132,"spd":56,"spe":122},"abilities":{"0":"Quark Drive"},"heightm":0.5,"weightkg":40,"evoType":"trade","num":-1033}
 
 };
  
