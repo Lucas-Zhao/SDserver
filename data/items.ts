@@ -8732,6 +8732,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -8761,6 +8765,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "chesnaughtite":{"name":"Chesnaughtite","megaStone":"Chesnaught-Mega","itemUser":["Chesnaught"],"megaEvolves":"Chesnaught","num":-1026,"isNonstandard":"Unobtainable","gen":0}
 , "delphoxite":{"name":"Delphoxite","megaStone":"Delphox-Mega","itemUser":["Delphox"],"megaEvolves":"Delphox","num":-1027,"isNonstandard":"Unobtainable","gen":0}
 , "greninjite":{"name":"Greninjite","megaStone":"Greninja-Mega","itemUser":["Greninja"],"megaEvolves":"Greninja","num":-1028,"isNonstandard":"Unobtainable","gen":0}
+, "dragoniteitea":{"name":"Dragoniteite A","megaStone":"Dragonite-Mega-A","itemUser":["Dragonite"],"megaEvolves":"Dragonite","num":-1029,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -8991,4 +8996,12 @@ Items["greninjite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//greninjiteend
+//greninjiteend//dragoniteiteastart
+
+Items["dragoniteitea"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//dragoniteiteaend
