@@ -3776,7 +3776,6 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "samurottmega":{"name":"Samurott-Mega"}
 , "comfeymega":{"name":"Comfey-Mega"}
 , "corviknightmega":{"name":"Corviknight-Mega"}
-, "irondetector":{"name":"Irondetector"}
 , "ironclaw":{"name":"Ironclaw"}
 , "dragapultmega":{"name":"Dragapult-Mega"}
 , "ironpod":{"name":"Ironpod"}
