@@ -20195,6 +20195,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "charizardmegaz":{"name":"Charizard-Mega-Z","types":["Fire","Dark"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":78,"atk":124,"def":103,"spa":119,"spd":100,"spe":110},"abilities":{"0":"Berserk"},"heightm":1.7,"weightkg":250,"evoType":"trade","requiredItem":"Charizardite Z","baseSpecies":"Charizard","forme":"Mega-Z","num":-1028}
 , "charizardmegaa":{"name":"Charizard-Mega-A","types":["Fire","Ice"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":78,"atk":134,"def":66,"spa":179,"spd":75,"spe":102},"abilities":{"0":"Slush Rush"},"heightm":1.7,"weightkg":250,"evoType":"trade","requiredItem":"Charizardite A","baseSpecies":"Charizard","forme":"Mega","num":-1029}
 , "clodsiremega":{"name":"Clodsire-Mega","types":["Poison","Steel"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":130,"atk":115,"def":90,"spa":55,"spd":130,"spe":10},"abilities":{"0":"Earth Eater"},"heightm":2.3,"weightkg":650,"evoType":"trade","requiredItem":"Clodsirite","baseSpecies":"Clodsire","forme":"Mega","num":-1030}
+, "frostywaifu":{"name":"Frostywaifu","types":["Ghost","Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":117,"atk":101,"def":111,"spa":109,"spd":101,"spe":51},"abilities":{"0":"Protosynthesis"},"heightm":2,"weightkg":250,"evoType":"trade","num":-1030}
 
 };
  
