@@ -24,6 +24,7 @@
 , "charizarditea":{"name":"Charizardite A","megaStone":"Charizard-Mega-A","itemUser":["Charizard"],"megaEvolves":"Charizard","num":-1024,"isNonstandard":"Unobtainable","gen":0}
 , "clodsirite":{"name":"Clodsirite","megaStone":"Clodsire-Mega","itemUser":["Clodsire"],"megaEvolves":"Clodsire","num":-1025,"isNonstandard":"Unobtainable","gen":0}
 , "chesnaughtite":{"name":"Chesnaughtite","megaStone":"Chesnaught-Mega","itemUser":["Chesnaught"],"megaEvolves":"Chesnaught","num":-1026,"isNonstandard":"Unobtainable","gen":0}
+, "delphoxite":{"name":"Delphoxite","megaStone":"Delphox-Mega","itemUser":["Delphox"],"megaEvolves":"Delphox","num":-1027,"isNonstandard":"Unobtainable","gen":0}
 
 /*FUNCTIONS*/
 //serperioritestart
@@ -236,4 +237,12 @@ Items["chesnaughtite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//chesnaughtiteend
+//chesnaughtiteend//delphoxitestart
+
+Items["delphoxite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//delphoxiteend
