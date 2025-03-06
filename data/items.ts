@@ -8712,6 +8712,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -8738,6 +8742,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "charizarditez":{"name":"Charizardite Z","megaStone":"Charizard-Mega-Z","itemUser":["Charizard"],"megaEvolves":"Charizard","num":-1023,"isNonstandard":"Unobtainable","gen":0}
 , "charizarditea":{"name":"Charizardite A","megaStone":"Charizard-Mega-A","itemUser":["Charizard"],"megaEvolves":"Charizard","num":-1024,"isNonstandard":"Unobtainable","gen":0}
 , "clodsirite":{"name":"Clodsirite","megaStone":"Clodsire-Mega","itemUser":["Clodsire"],"megaEvolves":"Clodsire","num":-1025,"isNonstandard":"Unobtainable","gen":0}
+, "chesnaughtite":{"name":"Chesnaughtite","megaStone":"Chesnaught-Mega","itemUser":["Chesnaught"],"megaEvolves":"Chesnaught","num":-1026,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -8944,4 +8949,12 @@ Items["clodsirite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//clodsiriteend
+//clodsiriteend//chesnaughtitestart
+
+Items["chesnaughtite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//chesnaughtiteend
