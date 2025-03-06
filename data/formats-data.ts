@@ -6053,7 +6053,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "noivernmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "serperiormegaivy":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "starmiemega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
-, "frostywaifu":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "tropiusmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "sirfetchdmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "toxtricitymega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
