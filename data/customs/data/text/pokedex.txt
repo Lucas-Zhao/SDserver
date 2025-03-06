@@ -32,3 +32,4 @@
 , "frostywaifu":{"name":"Frostywaifu"}
 , "chesnaughtmega":{"name":"Chesnaught-Mega"}
 , "delphoxmega":{"name":"Delphox-Mega"}
+, "greninjamega":{"name":"Greninja-Mega"}
