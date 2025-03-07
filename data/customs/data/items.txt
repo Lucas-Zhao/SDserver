@@ -27,6 +27,8 @@
 , "delphoxite":{"name":"Delphoxite","megaStone":"Delphox-Mega","itemUser":["Delphox"],"megaEvolves":"Delphox","num":-1027,"isNonstandard":"Unobtainable","gen":0}
 , "greninjite":{"name":"Greninjite","megaStone":"Greninja-Mega","itemUser":["Greninja"],"megaEvolves":"Greninja","num":-1028,"isNonstandard":"Unobtainable","gen":0}
 , "dragoniteitea":{"name":"Dragoniteite A","megaStone":"Dragonite-Mega-A","itemUser":["Dragonite"],"megaEvolves":"Dragonite","num":-1029,"isNonstandard":"Unobtainable","gen":0}
+, "emboaritey":{"name":"Emboarite Y","megaStone":"Emboar-Mega-Y","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1030,"isNonstandard":"Unobtainable","gen":0}
+, "empoleonite":{"name":"Empoleonite","megaStone":"Empoleon-Mega","itemUser":["Empoleon"],"megaEvolves":"Empoleon","num":-1031,"isNonstandard":"Unobtainable","gen":0}
 
 /*FUNCTIONS*/
 //serperioritestart
@@ -263,4 +265,20 @@ Items["dragoniteitea"].onTakeItem = function(item, source) {
         return true;
       }
 
-//dragoniteiteaend
+//dragoniteiteaend//emboariteystart
+
+Items["emboaritey"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//emboariteyend//empoleonitestart
+
+Items["empoleonite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//empoleoniteend

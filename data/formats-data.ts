@@ -6068,5 +6068,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "greninjamega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "irondetector":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "dragonitemegaa":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "emboarmegay":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "empoleonmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
