@@ -20208,6 +20208,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "chienpaounleashed":{"name":"Chien-Pao-Unleashed","types":["Ice","Fire"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":112,"atk":158,"def":110,"spa":117,"spd":95,"spe":155},"abilities":{"0":"Sword of Ruin","1":"Intimidate"},"heightm":5,"weightkg":500,"evoType":"trade","num":-1040}
 , "chiyuunleashed":{"name":"Chi-Yu-Unleashed","types":["Fire","Rock"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":83,"atk":100,"def":107,"spa":180,"spd":163,"spe":108},"abilities":{"0":"Beads of Ruin","1":"Sand Stream"},"heightm":10,"weightkg":800,"evoType":"trade","num":-1041}
 , "tingluunleashed":{"name":"Ting-Lu-Unleashed","types":["Water","Ground"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":178,"atk":133,"def":151,"spa":72,"spd":124,"spe":59},"abilities":{"0":"Vessel of Ruin","1":"Water Bubble"},"heightm":7,"weightkg":400,"evoType":"trade","num":-1042}
+, "wochienunleashed":{"name":"Wo-Chien-Unleashed","types":["Grass","Poison"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":113,"atk":120,"def":122,"spa":124,"spd":157,"spe":98},"abilities":{"0":"Tablets of Ruin","1":"Poison Touch"},"heightm":7,"weightkg":400,"evoType":"trade","num":-1043}
 
 };
  

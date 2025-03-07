@@ -6076,5 +6076,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "chienpaounleashed":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "chiyuunleashed":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "tingluunleashed":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "wochienunleashed":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
