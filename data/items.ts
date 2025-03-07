@@ -8744,6 +8744,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -8777,6 +8781,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "emboaritey":{"name":"Emboarite Y","megaStone":"Emboar-Mega-Y","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1030,"isNonstandard":"Unobtainable","gen":0}
 , "empoleonite":{"name":"Empoleonite","megaStone":"Empoleon-Mega","itemUser":["Empoleon"],"megaEvolves":"Empoleon","num":-1031,"isNonstandard":"Unobtainable","gen":0}
 , "samurottitey":{"name":"Samurottite Y","megaStone":"Samurott-Mega-Y","itemUser":["Samurott"],"megaEvolves":"Samurott","num":-1032,"isNonstandard":"Unobtainable","gen":0}
+, "infernapite":{"name":"Infernapite","megaStone":"Infernape-Mega","itemUser":["Infernape"],"megaEvolves":"Infernape","num":-1033,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -9039,4 +9044,12 @@ Items["samurottitey"].onTakeItem = function(item, source) {
         return true;
       }
 
-//samurottiteyend
+//samurottiteyend//infernapitestart
+
+Items["infernapite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//infernapiteend

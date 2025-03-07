@@ -36,3 +36,4 @@
 , "emboarmegay":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "empoleonmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "samurottmegay":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "infernapemega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
