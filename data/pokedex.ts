@@ -20205,6 +20205,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "samurottmegay":{"name":"Samurott-Mega-Y","types":["Water","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":95,"atk":140,"def":115,"spa":83,"spd":90,"spe":105},"abilities":{"0":"Inner Focus"},"heightm":2,"weightkg":280,"evoType":"trade","requiredItem":"Samurottite Y","baseSpecies":"Samurott","forme":"Mega-Y","num":-1037}
 , "infernapemega":{"name":"Infernape-Mega","types":["Fire","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":76,"atk":124,"def":91,"spa":124,"spd":91,"spe":128},"abilities":{"0":"Unnerve"},"heightm":1.8,"weightkg":180,"evoType":"trade","requiredItem":"Infernapite","baseSpecies":"Infernape","forme":"Mega","num":-1038}
 , "torterramega":{"name":"Torterra-Mega","types":["Grass","Rock"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":95,"atk":169,"def":155,"spa":75,"spd":95,"spe":36},"abilities":{"0":"Skill Link"},"heightm":2.8,"weightkg":850,"evoType":"trade","requiredItem":"Torterrite","baseSpecies":"Torterra","forme":"Mega","num":-1039}
+, "chienpaounleashed":{"name":"Chien-Pao-Unleashed","types":["Ice","Fire"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":112,"atk":158,"def":110,"spa":117,"spd":95,"spe":155},"abilities":{"0":"Sword of Ruin","1":"Intimidate"},"heightm":5,"weightkg":500,"evoType":"trade","num":-1040}
 
 };
  
