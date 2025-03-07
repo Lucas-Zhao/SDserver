@@ -20207,6 +20207,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "torterramega":{"name":"Torterra-Mega","types":["Grass","Rock"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":95,"atk":169,"def":155,"spa":75,"spd":95,"spe":36},"abilities":{"0":"Skill Link"},"heightm":2.8,"weightkg":850,"evoType":"trade","requiredItem":"Torterrite","baseSpecies":"Torterra","forme":"Mega","num":-1039}
 , "chienpaounleashed":{"name":"Chien-Pao-Unleashed","types":["Ice","Fire"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":112,"atk":158,"def":110,"spa":117,"spd":95,"spe":155},"abilities":{"0":"Sword of Ruin","1":"Intimidate"},"heightm":5,"weightkg":500,"evoType":"trade","num":-1040}
 , "chiyuunleashed":{"name":"Chi-Yu-Unleashed","types":["Fire","Rock"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":83,"atk":100,"def":107,"spa":180,"spd":163,"spe":108},"abilities":{"0":"Beads of Ruin","1":"Sand Stream"},"heightm":10,"weightkg":800,"evoType":"trade","num":-1041}
+, "tingluunleashed":{"name":"Ting-Lu-Unleashed","types":["Water","Ground"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":178,"atk":133,"def":151,"spa":72,"spd":124,"spe":59},"abilities":{"0":"Vessel of Ruin","1":"Water Bubble"},"heightm":7,"weightkg":400,"evoType":"trade","num":-1042}
 
 };
  
