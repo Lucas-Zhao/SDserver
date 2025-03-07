@@ -3808,6 +3808,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "dragonitemegaa":{"name":"Dragonite-Mega-A"}
 , "emboarmegay":{"name":"Emboar-Mega-Y"}
 , "empoleonmega":{"name":"Empoleon-Mega"}
+, "samurottmegay":{"name":"Samurott-Mega-Y"}
 
 };
  
