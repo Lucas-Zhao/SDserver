@@ -8780,6 +8780,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -8818,6 +8822,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "sylveonite":{"name":"Sylveonite","megaStone":"Sylveon-Mega","itemUser":["Sylveon"],"megaEvolves":"Sylveon","num":-1035,"isNonstandard":"Unobtainable","gen":0}
 , "espeonite":{"name":"Espeonite","megaStone":"Espeon-Mega","itemUser":["Espeon"],"megaEvolves":"Espeon","num":-1036,"isNonstandard":"Unobtainable","gen":0}
 , "umbreonite":{"name":"Umbreonite","megaStone":"Umbreon-Mega","itemUser":["Umbreon"],"megaEvolves":"Umbreon","num":-1037,"isNonstandard":"Unobtainable","gen":0}
+, "jolteonite":{"name":"Jolteonite","megaStone":"Jolteon-Mega","itemUser":["Jolteon"],"megaEvolves":"Jolteon","num":-1038,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -9120,4 +9125,12 @@ Items["umbreonite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//umbreoniteend
+//umbreoniteend//jolteonitestart
+
+Items["jolteonite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//jolteoniteend
