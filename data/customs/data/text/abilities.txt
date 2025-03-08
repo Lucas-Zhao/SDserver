@@ -190,6 +190,11 @@
     "desc": "This Pokémon's Normal-type moves become Water-type and deal 1.2x damage.",
     "shortDesc": "Normal moves become Water-type with 1.2x power."
   },
+   "psionize": {
+    "name": "Psionize",
+    "desc": "This Pokémon's Normal-type moves become Psychic-type and deal 1.2x damage.",
+    "shortDesc": "Normal moves become Psychic-type with 1.2x power."
+  },
   "antennaboost": {
     "name": "Antenna Boost",
     "desc": "This Pokémon's Bug-type moves gain +1 priority in Bug-type moves if HP is full.",
