@@ -8792,6 +8792,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -8833,6 +8837,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "jolteonite":{"name":"Jolteonite","megaStone":"Jolteon-Mega","itemUser":["Jolteon"],"megaEvolves":"Jolteon","num":-1038,"isNonstandard":"Unobtainable","gen":0}
 , "vaporeonite":{"name":"Vaporeonite","megaStone":"Vaporeon-Mega","itemUser":["Vaporeon"],"megaEvolves":"Vaporeon","num":-1039,"isNonstandard":"Unobtainable","gen":0}
 , "flareonite":{"name":"Flareonite","megaStone":"Flareon-Mega","itemUser":["Flareon"],"megaEvolves":"Flareon","num":-1040,"isNonstandard":"Unobtainable","gen":0}
+, "glaceonite":{"name":"Glaceonite","megaStone":"Glaceon-Mega","itemUser":["Glaceon"],"megaEvolves":"Glaceon","num":-1041,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -9159,4 +9164,12 @@ Items["flareonite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//flareoniteend
+//flareoniteend//glaceonitestart
+
+Items["glaceonite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//glaceoniteend
