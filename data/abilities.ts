@@ -5711,6 +5711,8 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 , "petrify":{"name":"Petrify","flags":{},"num":-1073,"rating":4}
 , "ferronize":{"name":"Ferronize","flags":{},"num":-1073,"rating":4}
 , "aquify":{"name":"Aquify","flags":{},"num":-1073,"rating":4}
+, "psionize":{"name":"Psionize","flags":{},"num":-1073,"rating":4}
+
 
 };
 /*FUNCTIONS*/
@@ -6209,7 +6211,7 @@ Abilities["entomize"].onBasePower = function(basePower, pokemon, target, move) {
 //umbralforcestart
 
 Abilities["umbralforce"].onModifyType = function(move, pokemon) {
-			noModifyType = [
+			const noModifyType = [
 				"judgment", "multiattack", "naturalgift", "revelationdance",
 				"technoblast", "terrainpulse", "weatherball"
 			];
@@ -6228,7 +6230,7 @@ Abilities["umbralforce"].onBasePower = function(basePower, pokemon, target, move
 //draconizestart
 
 Abilities["draconize"].onModifyType = function(move, pokemon) {
-			noModifyType = [
+			const noModifyType = [
 				"judgment", "multiattack", "naturalgift", "revelationdance",
 				"technoblast", "terrainpulse", "weatherball"
 			];
@@ -6247,7 +6249,7 @@ Abilities["draconize"].onBasePower = function(basePower, pokemon, target, move) 
 //combatbooststart
 
 Abilities["combatboost"].onModifyType = function(move, pokemon) {
-			noModifyType = [
+			const noModifyType = [
 				"judgment", "multiattack", "naturalgift", "revelationdance",
 				"technoblast", "terrainpulse", "weatherball"
 			];
@@ -6266,7 +6268,7 @@ Abilities["combatboost"].onBasePower = function(basePower, pokemon, target, move
 //infernalizestart
 
 Abilities["infernalize"].onModifyType = function(move, pokemon) {
-			noModifyType = [
+			const noModifyType = [
 				"judgment", "multiattack", "naturalgift", "revelationdance",
 				"technoblast", "terrainpulse", "weatherball"
 			];
@@ -6833,3 +6835,22 @@ Abilities["aquify"].onBasePower = function(basePower, pokemon, target, move) {
 	}
 
 //aquifyend
+//psionizestart
+
+Abilities["psionize"].onModifyType = function(move, pokemon) {
+		const noModifyType = [
+			"judgment", "multiattack", "naturalgift", "revelationdance",
+			"technoblast", "terrainpulse", "weatherball"
+		];
+		if (move.type === "Normal" && !noModifyType.includes(move.id)) {
+			move.type = "Psychic";
+			move.typeChangerBoosted = this.effect;
+		}
+	}
+
+Abilities["psionize"].onBasePower = function(basePower, pokemon, target, move) {
+		if (move.typeChangerBoosted === this.effect)
+			return this.chainModify([4915, 4096]);
+	}
+
+//psionizeend
