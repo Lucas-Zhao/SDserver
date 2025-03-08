@@ -99764,4 +99764,5 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 , "umbreonmega":{"learnset":{"darkpulse":["9L4","9L3"],"psychic":["9L4","9L3"]}}
 , "jolteonmega":{"learnset":{"thunderbolt":["9L4","9L3"],"protect":["9L4","9L3"]}}
 , "vaporeonmega":{"learnset":{"scald":["9L4","9L3"],"wish":["9L4","9L3"]}}
+, "flareonmega":{"learnset":{"shadowball":["9L4","9L3"],"flareblitz":["9L4","9L3"]}}
 };
