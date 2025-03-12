@@ -2486,6 +2486,7 @@ export const ItemsText: {[id: IDEntry]: ItemText} = {
 , "armarougite":{"name":"Armarougite","shortDesc":"If held by a Armarouge, this item allows it to Mega Evolve in battle."}
 , "ceruledgite":{"name":"Ceruledgite","shortDesc":"If held by a Ceruledge, this item allows it to Mega Evolve in battle."}
 , "gyaradositey":{"name":"Gyaradosite Y","shortDesc":"If held by a Gyarados, this item allows it to Mega Evolve in battle."}
+, "emolgite":{"name":"Emolgite","shortDesc":"If held by a Emolga, this item allows it to Mega Evolve in battle."}
 
 };
  
