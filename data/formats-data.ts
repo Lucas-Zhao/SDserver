@@ -6088,5 +6088,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "shimmeringbloom":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "ironvwoom":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "slicingsegment":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "ironmissile":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
