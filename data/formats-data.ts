@@ -6085,5 +6085,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "flareonmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "glaceonmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "leafeonmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "shimmeringbloom":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };

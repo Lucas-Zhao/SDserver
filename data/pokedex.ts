@@ -20217,6 +20217,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "flareonmega":{"name":"Flareon-Mega","types":["Fire","Ghost"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":65,"atk":140,"def":70,"spa":135,"spd":120,"spe":95},"abilities":{"0":"Adaptability"},"heightm":1.1,"weightkg":79,"evoType":"trade","requiredItem":"Flareonite","baseSpecies":"Flareon","forme":"Mega","num":-1049}
 , "glaceonmega":{"name":"Glaceon-Mega","types":["Ice","Flying"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":65,"atk":60,"def":130,"spa":150,"spd":115,"spe":105},"abilities":{"0":"Magic Guard"},"heightm":1.2,"weightkg":80,"evoType":"trade","requiredItem":"Glaceonite","baseSpecies":"Glaceon","forme":"Mega","num":-1050}
 , "leafeonmega":{"name":"Leafeon-Mega","types":["Grass","Flying"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":65,"atk":130,"def":150,"spa":60,"spd":105,"spe":115},"abilities":{"0":"Fluffy"},"heightm":1.2,"weightkg":70,"evoType":"trade","requiredItem":"Leafeonite","baseSpecies":"Leafeon","forme":"Mega","num":-1051}
+, "shimmeringbloom":{"name":"Shimmeringbloom","types":["Ice","Psychic"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":87,"atk":87,"def":65,"spa":125,"spd":103,"spe":103},"abilities":{"0":"Protosynthesis"},"heightm":3,"weightkg":75,"evoType":"trade","num":-1052}
 
 };
  
