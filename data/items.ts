@@ -8828,6 +8828,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -8872,6 +8876,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "glaceonite":{"name":"Glaceonite","megaStone":"Glaceon-Mega","itemUser":["Glaceon"],"megaEvolves":"Glaceon","num":-1041,"isNonstandard":"Unobtainable","gen":0}
 , "leafeonite":{"name":"Leafeonite","megaStone":"Leafeon-Mega","itemUser":["Leafeon"],"megaEvolves":"Leafeon","num":-1042,"isNonstandard":"Unobtainable","gen":0}
 , "armarougite":{"name":"Armarougite","megaStone":"Armarouge-Mega","itemUser":["Armarouge"],"megaEvolves":"Armarouge","num":-1043,"isNonstandard":"Unobtainable","gen":0}
+, "ceruledgite":{"name":"Ceruledgite","megaStone":"Ceruledge-Mega","itemUser":["Ceruledge"],"megaEvolves":"Ceruledge","num":-1044,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -9222,4 +9227,12 @@ Items["armarougite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//armarougiteend
+//armarougiteend//ceruledgitestart
+
+Items["ceruledgite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//ceruledgiteend
