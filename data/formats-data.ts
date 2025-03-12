@@ -6089,5 +6089,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "ironvwoom":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "slicingsegment":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "ironmissile":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "armarougemega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };

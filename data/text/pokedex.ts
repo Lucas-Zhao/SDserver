@@ -3827,6 +3827,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "ironvwoom":{"name":"Ironvwoom"}
 , "slicingsegment":{"name":"Slicingsegment"}
 , "ironmissile":{"name":"Ironmissile"}
+, "armarougemega":{"name":"Armarouge-Mega"}
 
 };
  
