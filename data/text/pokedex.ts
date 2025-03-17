@@ -3830,7 +3830,6 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "armarougemega":{"name":"Armarouge-Mega"}
 , "ceruledgemega":{"name":"Ceruledge-Mega"}
 , "gyaradosmegay":{"name":"Gyarados-Mega-Y"}
-, "emolgamega":{"name":"Emolga-Mega"}
 
 };
  
