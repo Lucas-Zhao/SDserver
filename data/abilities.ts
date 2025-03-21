@@ -5838,7 +5838,7 @@ Abilities["aquacircuit"].onModifySpA = function (atk, attacker, defender, move) 
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spa") {
 				this.debug("Weather boost");
-				return this.chainModify(1.5);
+				return this.chainModify(1.3);
 			}
 		}
 
@@ -5847,7 +5847,7 @@ Abilities["aquacircuit"].onModifyAtk = function (atk, attacker, defender, move) 
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "atk") {
 				this.debug("Weather boost");
-				return this.chainModify(1.5);
+				return this.chainModify(1.3);
 			}
 		}
 
@@ -5856,7 +5856,7 @@ Abilities["aquacircuit"].onModifyDef = function (def, attacker, defender, move) 
 			const bestStat = defender.getBestStat(true, true);
 			if (bestStat === "def") {
 				this.debug("Weather boost");
-				return this.chainModify(1.5);
+				return this.chainModify(1.3);
 			}
 		}
 
@@ -5865,7 +5865,7 @@ Abilities["aquacircuit"].onModifySpD = function (atk, attacker, defender, move) 
 			const bestStat = defender.getBestStat(true, true);
 			if (bestStat === "spd") {
 				this.debug("Weather boost");
-				return this.chainModify(1.5);
+				return this.chainModify(1.3);
 			}
 		}
 
@@ -5886,7 +5886,7 @@ Abilities["psychicpulse"].onModifySpA = function (atk, attacker, defender, move)
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spa") {
 				this.debug("Terrain boost");
-				return this.chainModify(1.5);
+				return this.chainModify(1.3);
 			}
 		}
 
@@ -5895,7 +5895,7 @@ Abilities["psychicpulse"].onModifyAtk = function (atk, attacker, defender, move)
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "atk") {
 				this.debug("Terrain boost");
-				return this.chainModify(1.5);
+				return this.chainModify(1.3);
 			}
 		}
 
@@ -5904,7 +5904,7 @@ Abilities["psychicpulse"].onModifyDef = function (atk, attacker, defender, move)
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "def") {
 				this.debug("Weather boost");
-				return this.chainModify(1.5);
+				return this.chainModify(1.3);
 			}
 		}
 
@@ -5913,7 +5913,7 @@ Abilities["psychicpulse"].onModifySpD = function (atk, attacker, defender, move)
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spd") {
 				this.debug("Weather boost");
-				return this.chainModify(1.5);
+				return this.chainModify(1.3);
 			}
 		}
 
@@ -5934,7 +5934,7 @@ Abilities["mysticaura"].onModifySpA = function (atk, attacker, defender, move) {
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spa") {
 				this.debug("Weather boost");
-				return this.chainModify(1.5);
+				return this.chainModify(1.3);
 			}
 		}
 
@@ -5943,7 +5943,7 @@ Abilities["mysticaura"].onModifyAtk = function (atk, attacker, defender, move) {
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "atk") {
 				this.debug("Weather boost");
-				return this.chainModify(1.5);
+				return this.chainModify(1.3);
 			}
 		}
 
@@ -5952,7 +5952,7 @@ Abilities["mysticaura"].onModifyDef = function (atk, attacker, defender, move) {
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "def") {
 				this.debug("Weather boost");
-				return this.chainModify(1.5);
+				return this.chainModify(1.3);
 			}
 		}
 
@@ -5961,7 +5961,7 @@ Abilities["mysticaura"].onModifySpD = function (atk, attacker, defender, move) {
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spd") {
 				this.debug("Weather boost");
-				return this.chainModify(1.5);
+				return this.chainModify(1.3);
 			}
 		}
 
@@ -5982,7 +5982,7 @@ Abilities["overgrowthengine"].onModifySpA = function (atk, attacker, defender, m
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spa") {
 				this.debug("Weather boost");
-				return this.chainModify(1.5);
+				return this.chainModify(1.3);
 			}
 		}
 
@@ -5991,7 +5991,7 @@ Abilities["overgrowthengine"].onModifyAtk = function (atk, attacker, defender, m
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "atk") {
 				this.debug("Weather boost");
-				return this.chainModify(1.5);
+				return this.chainModify(1.3);
 			}
 		}
 
@@ -6000,7 +6000,7 @@ Abilities["overgrowthengine"].onModifyDef = function (atk, attacker, defender, m
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "def") {
 				this.debug("Weather boost");
-				return this.chainModify(1.5);
+				return this.chainModify(1.3);
 			}
 		}
 
@@ -6009,7 +6009,7 @@ Abilities["overgrowthengine"].onModifySpD = function (atk, attacker, defender, m
 			const bestStat = attacker.getBestStat(true, true);
 			if (bestStat === "spd") {
 				this.debug("Weather boost");
-				return this.chainModify(1.5);
+				return this.chainModify(1.3);
 			}
 		}
 
