@@ -3,6 +3,154 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	serperiorite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	emboarite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	samurottite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	dusknoirite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	comfeyite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	corviknightite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	dragapultite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sirfetchdite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	galvantulite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	runerigusite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bronzongite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	toxtricite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	butterfrite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	noivernite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	starmite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	tropiusite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	aurorusite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	tyrantrumite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	drapionite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	clodsirite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	chesnaughtite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	delphoxite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	greninjite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	empoleonite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	infernapite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	torterrite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sylveonite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	espeonite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	umbreonite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	jolteonite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	vaporeonite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	flareonite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	glaceonite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	leafeonite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	armarougite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ceruledgite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	emolgite: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	absolite: {
 		inherit: true,
 		isNonstandard: null,
