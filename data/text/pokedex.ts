@@ -3776,11 +3776,11 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "samurottmega":{"name":"Samurott-Mega"}
 , "comfeymega":{"name":"Comfey-Mega"}
 , "corviknightmega":{"name":"Corviknight-Mega"}
-, "ironclaw":{"name":"Iron Claw"}
+, "ironclaw":{"name":"Ironclaw"}
 , "dragapultmega":{"name":"Dragapult-Mega"}
-, "ironpod":{"name":"Iron Pod"}
-, "shatterjaw":{"name":"Shatter Jaw"}
-, "clashingteeth":{"name":"Clashing Teeth"}
+, "ironpod":{"name":"Ironpod"}
+, "shatterjaw":{"name":"Shatterjaw"}
+, "clashingteeth":{"name":"Clashingteeth"}
 , "galvantulamega":{"name":"Galvantula-Mega"}
 , "bronzongmega":{"name":"Bronzong-Mega"}
 , "runerigusmega":{"name":"Runerigus-Mega"}
@@ -3800,11 +3800,11 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "charizardmegaz":{"name":"Charizard-Mega-Z"}
 , "charizardmegaa":{"name":"Charizard-Mega-A"}
 , "clodsiremega":{"name":"Clodsire-Mega"}
-, "frostywaifu":{"name":"Frosty Waifu"}
+, "frostywaifu":{"name":"Frostywaifu"}
 , "chesnaughtmega":{"name":"Chesnaught-Mega"}
 , "delphoxmega":{"name":"Delphox-Mega"}
 , "greninjamega":{"name":"Greninja-Mega"}
-, "irondetector":{"name":"Iron Detector"}
+, "irondetector":{"name":"Irondetector"}
 , "dragonitemegaa":{"name":"Dragonite-Mega-A"}
 , "emboarmegay":{"name":"Emboar-Mega-Y"}
 , "empoleonmega":{"name":"Empoleon-Mega"}
@@ -3823,10 +3823,10 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "flareonmega":{"name":"Flareon-Mega"}
 , "glaceonmega":{"name":"Glaceon-Mega"}
 , "leafeonmega":{"name":"Leafeon-Mega"}
-, "shimmeringbloom":{"name":"Shimmering Bloom"}
-, "ironvwoom":{"name":"Iron Vwoom"}
-, "slicingsegment":{"name":"Slicing Segment"}
-, "ironmissile":{"name":"Iron Missile"}
+, "shimmeringbloom":{"name":"Shimmeringbloom"}
+, "ironvwoom":{"name":"Ironvwoom"}
+, "slicingsegment":{"name":"Slicingsegment"}
+, "ironmissile":{"name":"Ironmissile"}
 , "armarougemega":{"name":"Armarouge-Mega"}
 , "ceruledgemega":{"name":"Ceruledge-Mega"}
 , "gyaradosmegay":{"name":"Gyarados-Mega-Y"}
