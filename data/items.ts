@@ -8897,6 +8897,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -8946,6 +8950,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "emolgite":{"name":"Emolgite","megaStone":"Emolga-Mega","itemUser":["Emolga"],"megaEvolves":"Emolga","num":-1046,"isNonstandard":"Unobtainable","gen":0}
 , "articunite":{"name":"Articunite","megaStone":"Articuno-Mega","itemUser":["Articuno"],"megaEvolves":"Articuno","num":-1047,"isNonstandard":"Unobtainable","gen":0}
 , "zapdosite":{"name":"Zapdosite","megaStone":"Zapdos-Mega","itemUser":["Zapdos"],"megaEvolves":"Zapdos","num":-1048,"isNonstandard":"Unobtainable","gen":0}
+, "moltresite":{"name":"Moltresite","megaStone":"Moltres-Mega","itemUser":["Moltres"],"megaEvolves":"Moltres","num":-1049,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -9336,4 +9341,12 @@ Items["zapdosite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//zapdositeend
+//zapdositeend//moltresitestart
+
+Items["moltresite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//moltresiteend
