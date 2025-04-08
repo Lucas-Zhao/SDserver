@@ -62,3 +62,4 @@
 , "articunomega":{"name":"Articuno-Mega"}
 , "zapdosmega":{"name":"Zapdos-Mega"}
 , "moltresmega":{"name":"Moltres-Mega"}
+, "chandeluremega":{"name":"Chandelure-Mega"}

@@ -47,6 +47,7 @@
 , "articunite":{"name":"Articunite","megaStone":"Articuno-Mega","itemUser":["Articuno"],"megaEvolves":"Articuno","num":-1047,"isNonstandard":"Unobtainable","gen":0}
 , "zapdosite":{"name":"Zapdosite","megaStone":"Zapdos-Mega","itemUser":["Zapdos"],"megaEvolves":"Zapdos","num":-1048,"isNonstandard":"Unobtainable","gen":0}
 , "moltresite":{"name":"Moltresite","megaStone":"Moltres-Mega","itemUser":["Moltres"],"megaEvolves":"Moltres","num":-1049,"isNonstandard":"Unobtainable","gen":0}
+, "chandelurite":{"name":"Chandelurite","megaStone":"Chandelure-Mega","itemUser":["Chandelure"],"megaEvolves":"Chandelure","num":-1050,"isNonstandard":"Unobtainable","gen":0}
 
 /*FUNCTIONS*/
 //serperioritestart
@@ -443,4 +444,12 @@ Items["moltresite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//moltresiteend
+//moltresiteend//chandeluritestart
+
+Items["chandelurite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//chandeluriteend
