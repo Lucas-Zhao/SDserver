@@ -8914,6 +8914,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -8966,6 +8970,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "moltresite":{"name":"Moltresite","megaStone":"Moltres-Mega","itemUser":["Moltres"],"megaEvolves":"Moltres","num":-1049,"isNonstandard":"Unobtainable","gen":0}
 , "chandelurite":{"name":"Chandelurite","megaStone":"Chandelure-Mega","itemUser":["Chandelure"],"megaEvolves":"Chandelure","num":-1050,"isNonstandard":"Unobtainable","gen":0}
 , "suicunite":{"name":"Suicunite","megaStone":"Suicune-Mega","itemUser":["Suicune"],"megaEvolves":"Suicune","num":-1051,"isNonstandard":"Unobtainable","gen":0}
+, "raikite":{"name":"Raikite","megaStone":"Raikou-Mega","itemUser":["Raikou"],"megaEvolves":"Raikou","num":-1052,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -9380,4 +9385,12 @@ Items["suicunite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//suicuniteend
+//suicuniteend//raikitestart
+
+Items["raikite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//raikiteend
