@@ -6100,5 +6100,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "suicunemega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "raikoumega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "enteimega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "feraligatrmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
