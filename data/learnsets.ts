@@ -99783,4 +99783,5 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 , "raikoumega":{"learnset":{"thunderbolt":["9L4","9L3"],"voltswitch":["9L4","9L3"]}}
 , "enteimega":{"learnset":{"sacredfire":["9L4","9L3"],"extremespeed":["9L4","9L3"]}}
 , "feraligatrmega":{"learnset":{"dragondance":["9L4","9L3"],"icefang":["9L4","9L3"]}}
+, "megoniummega":{"learnset":{"gigadrain":["9L4","9L3"],"leechseed":["9L4","9L3"]}}
 };

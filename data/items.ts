@@ -8934,6 +8934,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -8989,6 +8993,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "raikite":{"name":"Raikite","megaStone":"Raikou-Mega","itemUser":["Raikou"],"megaEvolves":"Raikou","num":-1052,"isNonstandard":"Unobtainable","gen":0}
 , "enteite":{"name":"Enteite","megaStone":"Entei-Mega","itemUser":["Entei"],"megaEvolves":"Entei","num":-1053,"isNonstandard":"Unobtainable","gen":0}
 , "feraligatrite":{"name":"Feraligatrite","megaStone":"Feraligatr-Mega","itemUser":["Feraligatr"],"megaEvolves":"Feraligatr","num":-1054,"isNonstandard":"Unobtainable","gen":0}
+, "meganiumite":{"name":"Meganiumite","megaStone":"Megonium-Mega","itemUser":["Meganium"],"megaEvolves":"Meganium","num":-1055,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -9428,4 +9433,12 @@ Items["feraligatrite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//feraligatriteend
+//feraligatriteend//meganiumitestart
+
+Items["meganiumite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//meganiumiteend
