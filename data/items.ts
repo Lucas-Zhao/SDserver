@@ -8962,6 +8962,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -9021,6 +9025,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "typhlosionite":{"name":"Typhlosionite","megaStone":"Typhlosion-Mega","itemUser":["Typhlosion"],"megaEvolves":"Typhlosion","num":-1056,"isNonstandard":"Unobtainable","gen":0}
 , "typhlosioniteh":{"name":"Typhlosionite H","megaStone":"Typhlosion-Mega-H","itemUser":["Typhlosion"],"megaEvolves":"Typhlosion","num":-1057,"isNonstandard":"Unobtainable","gen":0}
 , "flygonitea":{"name":"Flygonite A","megaStone":"Flygon-Mega-A","itemUser":["Flygon"],"megaEvolves":"Flygon","num":-1058,"isNonstandard":"Unobtainable","gen":0}
+, "flygonitez":{"name":"Flygonite Z","megaStone":"Flygon-Mega-Z","itemUser":["Flygon"],"megaEvolves":"Flygon","num":-1059,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -9493,4 +9498,12 @@ Items["flygonitea"].onTakeItem = function(item, source) {
         return true;
       }
 
-//flygoniteaend
+//flygoniteaend//flygonitezstart
+
+Items["flygonitez"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//flygonitezend
