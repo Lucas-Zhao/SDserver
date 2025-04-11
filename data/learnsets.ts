@@ -99788,4 +99788,5 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 , "typhlosionmegah":{"learnset":{"Eruption":["9L4","9L3"],"shadowball":["9L4","9L3"]}}
 , "flygonmegaa":{"learnset":{"dragondance":["9L4","9L3"],"earthquake":["9L4","9L3"]}}
 , "flygonmegaz":{"learnset":{"bugbuzz":["9L4","9L3"],"dragondance":["9L4","9L3"]}}
+, "froslassmega":{"learnset":{"tripleaxel":["9L4","9L3"],"spikes":["9L4","9L3"]}}
 };
