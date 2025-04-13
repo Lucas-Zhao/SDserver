@@ -8978,6 +8978,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -9041,6 +9045,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "froslassite":{"name":"Froslassite","megaStone":"Froslass-Mega","itemUser":["Froslass"],"megaEvolves":"Froslass","num":-1060,"isNonstandard":"Unobtainable","gen":0}
 , "frosmothite":{"name":"Frosmothite","megaStone":"Frosmoth-Mega","itemUser":["Frosmoth"],"megaEvolves":"Frosmoth","num":-1061,"isNonstandard":"Unobtainable","gen":0}
 , "helioliskite":{"name":"Helioliskite","megaStone":"Heliolisk-Mega","itemUser":["Heliolisk"],"megaEvolves":"Heliolisk","num":-1062,"isNonstandard":"Unobtainable","gen":0}
+, "jirachite":{"name":"Jirachite","megaStone":"Jirachi-Mega","itemUser":["Jirachi"],"megaEvolves":"Jirachi","num":-1063,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -9545,4 +9550,12 @@ Items["helioliskite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//helioliskiteend
+//helioliskiteend//jirachitestart
+
+Items["jirachite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//jirachiteend
