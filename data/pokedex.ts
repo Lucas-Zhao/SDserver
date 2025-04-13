@@ -20243,7 +20243,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "helioliskmega":{"name":"Heliolisk-Mega","types":["Electric","Poison"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":62,"atk":65,"def":72,"spa":134,"spd":114,"spe":134},"abilities":{"0":"Toxic Chain"},"heightm":1.5,"weightkg":30,"evoType":"trade","requiredItem":"Helioliskite","baseSpecies":"Heliolisk","forme":"Mega","num":-1075}
 , "jirachimega":{"name":"Jirachi-Mega","types":["Steel","Psychic"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":100,"atk":120,"def":120,"spa":120,"spd":120,"spe":120},"abilities":{"0":"Clear Body"},"heightm":0.6,"weightkg":2,"evoType":"trade","requiredItem":"Jirachite","baseSpecies":"Jirachi","forme":"Mega","num":-1076}
 , "jynxmega":{"name":"Jynx-Mega","types":["Ice","Psychic"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":65,"atk":60,"def":65,"spa":135,"spd":115,"spe":115},"abilities":{"0":"Magic Bounce"},"heightm":1.7,"weightkg":60,"evoType":"trade","requiredItem":"Jynxite","baseSpecies":"Jynx","forme":"Mega","num":-1077}
-, "laprasmega":{"name":"Lapras-Mega","types":["Dragon","Ice"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":130,"atk":95,"def":120,"spa":105,"spd":135,"spe":60},"abilities":{"0":"Liquid Voice"},"heightm":4,"weightkg":350,"evoType":"trade","requiredItem":"Laprasite","baseSpecies":"Lapras","forme":"Mega","num":-1078}
+, "laprasmega":{"name":"Lapras-Mega","types":["Dragon","Ice"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":130,"atk":95,"def":110,"spa":105,"spd":135,"spe":60},"abilities":{"0":"Liquid Voice"},"heightm":4,"weightkg":350,"evoType":"trade","requiredItem":"Laprasite","baseSpecies":"Lapras","forme":"Mega","num":-1078}
 
 };
  
