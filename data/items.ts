@@ -9002,6 +9002,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -9070,6 +9074,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "laprasite":{"name":"Laprasite","megaStone":"Lapras-Mega","itemUser":["Lapras"],"megaEvolves":"Lapras","num":-1065,"isNonstandard":"Unobtainable","gen":0}
 , "ludicolite":{"name":"Ludicolite","megaStone":"Ludicolo-Mega","itemUser":["Ludicolo"],"megaEvolves":"Ludicolo","num":-1066,"isNonstandard":"Unobtainable","gen":0}
 , "mewtwonitea":{"name":"Mewtwonite A","megaStone":"Mewtwo-Mega-A","itemUser":["Mewtwo"],"megaEvolves":"Mewtwo","num":-1067,"isNonstandard":"Unobtainable","gen":0}
+, "mewtwonitez":{"name":"Mewtwonite Z","megaStone":"Mewtwo-Mega-Z","itemUser":["Mewtwo"],"megaEvolves":"Mewtwo","num":-1068,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -9614,4 +9619,12 @@ Items["mewtwonitea"].onTakeItem = function(item, source) {
         return true;
       }
 
-//mewtwoniteaend
+//mewtwoniteaend//mewtwonitezstart
+
+Items["mewtwonitez"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//mewtwonitezend
