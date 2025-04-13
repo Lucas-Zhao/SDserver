@@ -8994,6 +8994,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -9060,6 +9064,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "jirachite":{"name":"Jirachite","megaStone":"Jirachi-Mega","itemUser":["Jirachi"],"megaEvolves":"Jirachi","num":-1063,"isNonstandard":"Unobtainable","gen":0}
 , "jynxite":{"name":"Jynxite","megaStone":"Jynx-Mega","itemUser":["Jynx"],"megaEvolves":"Jynx","num":-1064,"isNonstandard":"Unobtainable","gen":0}
 , "laprasite":{"name":"Laprasite","megaStone":"Lapras-Mega","itemUser":["Lapras"],"megaEvolves":"Lapras","num":-1065,"isNonstandard":"Unobtainable","gen":0}
+, "ludicolite":{"name":"Ludicolite","megaStone":"Ludicolo-Mega","itemUser":["Ludicolo"],"megaEvolves":"Ludicolo","num":-1066,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -9588,4 +9593,12 @@ Items["laprasite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//laprasiteend
+//laprasiteend//ludicolitestart
+
+Items["ludicolite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//ludicoliteend
