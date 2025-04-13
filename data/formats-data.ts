@@ -6111,5 +6111,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "helioliskmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "jirachimega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "jynxmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "laprasmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
