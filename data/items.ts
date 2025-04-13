@@ -8982,6 +8982,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -9046,6 +9050,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "frosmothite":{"name":"Frosmothite","megaStone":"Frosmoth-Mega","itemUser":["Frosmoth"],"megaEvolves":"Frosmoth","num":-1061,"isNonstandard":"Unobtainable","gen":0}
 , "helioliskite":{"name":"Helioliskite","megaStone":"Heliolisk-Mega","itemUser":["Heliolisk"],"megaEvolves":"Heliolisk","num":-1062,"isNonstandard":"Unobtainable","gen":0}
 , "jirachite":{"name":"Jirachite","megaStone":"Jirachi-Mega","itemUser":["Jirachi"],"megaEvolves":"Jirachi","num":-1063,"isNonstandard":"Unobtainable","gen":0}
+, "jynxite":{"name":"Jynxite","megaStone":"Jynx-Mega","itemUser":["Jynx"],"megaEvolves":"Jynx","num":-1064,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -9558,4 +9563,12 @@ Items["jirachite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//jirachiteend
+//jirachiteend//jynxitestart
+
+Items["jynxite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//jynxiteend
