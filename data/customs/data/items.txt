@@ -71,6 +71,7 @@
 , "shiftrite":{"name":"Shiftrite","megaStone":"Shiftry-Mega","itemUser":["Shiftry"],"megaEvolves":"Shiftry","num":-1071,"isNonstandard":"Unobtainable","gen":0}
 , "slowbroniteg":{"name":"Slowbronite G","megaStone":"Slowbro-Mega-G","itemUser":["Slowbro"],"megaEvolves":"Slowbro","num":-1072,"isNonstandard":"Unobtainable","gen":0}
 , "sudowoodite":{"name":"Sudowoodite","megaStone":"Sudowoodo-Mega","itemUser":["Sudowoodo"],"megaEvolves":"Sudowoodo","num":-1073,"isNonstandard":"Unobtainable","gen":0}
+, "tinkatonite":{"name":"Tinkatonite","megaStone":"Tinkaton-Mega","itemUser":["Tinkaton"],"megaEvolves":"Tinkaton","num":-1074,"isNonstandard":"Unobtainable","gen":0}
 
 /*FUNCTIONS*/
 //serperioritestart
@@ -661,4 +662,12 @@ Items["sudowoodite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//sudowooditeend
+//sudowooditeend//tinkatonitestart
+
+Items["tinkatonite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//tinkatoniteend

@@ -9030,6 +9030,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -9104,6 +9108,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "shiftrite":{"name":"Shiftrite","megaStone":"Shiftry-Mega","itemUser":["Shiftry"],"megaEvolves":"Shiftry","num":-1071,"isNonstandard":"Unobtainable","gen":0}
 , "slowbroniteg":{"name":"Slowbronite G","megaStone":"Slowbro-Mega-G","itemUser":["Slowbro"],"megaEvolves":"Slowbro","num":-1072,"isNonstandard":"Unobtainable","gen":0}
 , "sudowoodite":{"name":"Sudowoodite","megaStone":"Sudowoodo-Mega","itemUser":["Sudowoodo"],"megaEvolves":"Sudowoodo","num":-1073,"isNonstandard":"Unobtainable","gen":0}
+, "tinkatonite":{"name":"Tinkatonite","megaStone":"Tinkaton-Mega","itemUser":["Tinkaton"],"megaEvolves":"Tinkaton","num":-1074,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -9696,4 +9701,12 @@ Items["sudowoodite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//sudowooditeend
+//sudowooditeend//tinkatonitestart
+
+Items["tinkatonite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//tinkatoniteend
