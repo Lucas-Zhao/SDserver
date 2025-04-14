@@ -9014,6 +9014,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -9085,6 +9089,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "mewtwonitez":{"name":"Mewtwonite Z","megaStone":"Mewtwo-Mega-Z","itemUser":["Mewtwo"],"megaEvolves":"Mewtwo","num":-1068,"isNonstandard":"Unobtainable","gen":0}
 , "miloticite":{"name":"Miloticite","megaStone":"Milotic-Mega","itemUser":["Milotic"],"megaEvolves":"Milotic","num":-1069,"isNonstandard":"Unobtainable","gen":0}
 , "noctowlite":{"name":"Noctowlite","megaStone":"Noctowl-Mega","itemUser":["Noctowl"],"megaEvolves":"Noctowl","num":-1070,"isNonstandard":"Unobtainable","gen":0}
+, "shiftrite":{"name":"Shiftrite","megaStone":"Shiftry-Mega","itemUser":["Shiftry"],"megaEvolves":"Shiftry","num":-1071,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -9653,4 +9658,12 @@ Items["noctowlite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//noctowliteend
+//noctowliteend//shiftritestart
+
+Items["shiftrite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//shiftriteend
