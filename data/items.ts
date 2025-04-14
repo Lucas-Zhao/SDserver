@@ -9022,6 +9022,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -9095,6 +9099,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "noctowlite":{"name":"Noctowlite","megaStone":"Noctowl-Mega","itemUser":["Noctowl"],"megaEvolves":"Noctowl","num":-1070,"isNonstandard":"Unobtainable","gen":0}
 , "shiftrite":{"name":"Shiftrite","megaStone":"Shiftry-Mega","itemUser":["Shiftry"],"megaEvolves":"Shiftry","num":-1071,"isNonstandard":"Unobtainable","gen":0}
 , "slowbroniteg":{"name":"Slowbronite G","megaStone":"Slowbro-Mega-G","itemUser":["Slowbro"],"megaEvolves":"Slowbro","num":-1072,"isNonstandard":"Unobtainable","gen":0}
+, "sudowoodite":{"name":"Sudowoodite","megaStone":"Sudowoodo-Mega","itemUser":["Sudowoodo"],"megaEvolves":"Sudowoodo","num":-1073,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -9679,4 +9684,12 @@ Items["slowbroniteg"].onTakeItem = function(item, source) {
         return true;
       }
 
-//slowbronitegend
+//slowbronitegend//sudowooditestart
+
+Items["sudowoodite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//sudowooditeend
