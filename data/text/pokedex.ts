@@ -3856,6 +3856,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "miloticmega":{"name":"Milotic-Mega"}
 , "noctowlmega":{"name":"Noctowl-Mega"}
 , "shiftrymega":{"name":"Shiftry-Mega"}
+, "slowbromegag":{"name":"Slowbro-Mega-G"}
 
 };
  

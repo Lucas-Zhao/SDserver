@@ -99800,4 +99800,5 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 , "miloticmega":{"learnset":{"scald":["9L4","9L3"],"flipturn":["9L4","9L3"]}}
 , "noctowlmega":{"learnset":{"airslash":["9L4","9L3"],"hypnosis":["9L4","9L3"]}}
 , "shiftrymega":{"learnset":{"leafblade":["9L4","9L3"],"knockoff":["9L4","9L3"]}}
+, "slowbromegag":{"learnset":{"blizzard":["9L4","9L3"],"bodypress":["9L4","9L3"]}}
 };
