@@ -20266,6 +20266,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "ironsaw":{"name":"Ironsaw","types":["Electric","Steel"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":82,"atk":112,"def":74,"spa":106,"spd":78,"spe":138},"abilities":{"0":"Quark Drive"},"heightm":1,"weightkg":90,"evoType":"trade","num":-1098}
 , "ironspike":{"name":"Ironspike","types":["Water","Steel"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":100,"atk":90,"def":100,"spa":102,"spd":112,"spe":86},"abilities":{"0":"Quark Drive"},"heightm":1.2,"weightkg":130,"evoType":"trade","num":-1099}
 , "ironmask":{"name":"Ironmask","types":["Flying","Electric"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":110,"atk":130,"def":80,"spa":170,"spd":70,"spe":110},"abilities":{"0":"Quark Drive"},"heightm":12,"weightkg":1000,"evoType":"trade","num":-1100}
+, "soaringhalo":{"name":"Soaringhalo","types":["Dragon","Rock"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":95,"atk":175,"def":71,"spa":127,"spd":95,"spe":107},"abilities":{"0":"Protosynthesis"},"heightm":12,"weightkg":1150,"evoType":"trade","num":-1101}
 
 };
  
