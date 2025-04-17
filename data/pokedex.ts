@@ -20268,6 +20268,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "ironmask":{"name":"Ironmask","types":["Flying","Electric"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":110,"atk":130,"def":80,"spa":170,"spd":70,"spe":110},"abilities":{"0":"Quark Drive"},"heightm":12,"weightkg":1000,"evoType":"trade","num":-1100}
 , "soaringhalo":{"name":"Soaringhalo","types":["Dragon","Rock"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":95,"atk":175,"def":71,"spa":127,"spd":95,"spe":107},"abilities":{"0":"Protosynthesis"},"heightm":12,"weightkg":1150,"evoType":"trade","num":-1101}
 , "ironobliviontype1":{"name":"Ironoblivion-Type-1","types":["Water","Steel"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":110,"atk":140,"def":60,"spa":140,"spd":60,"spe":140},"abilities":{"0":"Quark Drive"},"heightm":4,"weightkg":750,"evoType":"trade","num":-1102}
+, "ironobliviontype2":{"name":"Ironoblivion-Type-2","types":["Fire","Steel"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":160,"atk":160,"def":66,"spa":90,"spd":60,"spe":114},"abilities":{"0":"Quark Drive"},"heightm":6,"weightkg":800,"evoType":"trade","num":-1103}
 
 };
  
