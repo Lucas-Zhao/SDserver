@@ -101,3 +101,4 @@
 , "ironspike":{"name":"Ironspike"}
 , "ironmask":{"name":"Ironmask"}
 , "soaringhalo":{"name":"Soaringhalo"}
+, "ironobliviontype1":{"name":"Ironoblivion-Type-1"}
