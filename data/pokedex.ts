@@ -20259,6 +20259,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "howlingflare":{"name":"Howlingflare","types":["Grass","Ghost"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":109,"atk":111,"def":73,"spa":81,"spd":83,"spe":133},"abilities":{"0":"Protosynthesis"},"heightm":1.3,"weightkg":100,"evoType":"trade","num":-1091}
 , "risinghorn":{"name":"Risinghorn","types":["Water","Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":121,"atk":81,"def":91,"spa":129,"spd":97,"spe":71},"abilities":{"0":"Protosynthesis"},"heightm":2.5,"weightkg":345,"evoType":"trade","num":-1092}
 , "ironblaze":{"name":"Ironblaze","types":["Fire","Flying"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":120,"atk":120,"def":104,"spa":84,"spd":60,"spe":102},"abilities":{"0":"Quark Drive"},"heightm":3.2,"weightkg":400,"evoType":"trade","num":-1093}
+, "ironmirage":{"name":"Ironmirage","types":["Electric","Psychic"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":144,"atk":72,"def":60,"spa":126,"spd":130,"spe":58},"abilities":{"0":"Quark Drive"},"heightm":4,"weightkg":270,"evoType":"trade","num":-1094}
 
 };
  

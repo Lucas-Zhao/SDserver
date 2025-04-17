@@ -6127,5 +6127,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "howlingflare":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "risinghorn":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "ironblaze":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "ironmirage":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
