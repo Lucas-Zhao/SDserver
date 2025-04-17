@@ -94,3 +94,4 @@
 , "risinghorn":{"name":"Risinghorn"}
 , "ironblaze":{"name":"Ironblaze"}
 , "ironmirage":{"name":"Ironmirage"}
+, "ironphantom":{"name":"Ironphantom"}
