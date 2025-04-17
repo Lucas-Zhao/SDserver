@@ -20256,6 +20256,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "victreebelmega":{"name":"Victreebel-Mega","types":["Grass","Poison"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":80,"atk":135,"def":75,"spa":125,"spd":75,"spe":100},"abilities":{"0":"Stench"},"heightm":2,"weightkg":40,"evoType":"trade","requiredItem":"Victreebelite","baseSpecies":"Victreebel","forme":"Mega","num":-1088}
 , "dashinghammer":{"name":"Dashinghammer","types":["Rock","Ghost"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":97,"atk":137,"def":95,"spa":77,"spd":77,"spe":107},"abilities":{"0":"Protosynthesis"},"heightm":3,"weightkg":450,"evoType":"trade","num":-1089}
 , "razorspine":{"name":"Razorspine","types":["Steel","Ghost"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":93,"atk":125,"def":101,"spa":73,"spd":73,"spe":125},"abilities":{"0":"Protosynthesis"},"heightm":2.3,"weightkg":320,"evoType":"trade","num":-1090}
+, "howlingflare":{"name":"Howlingflare","types":["Grass","Ghost"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":109,"atk":111,"def":73,"spa":81,"spd":83,"spe":133},"abilities":{"0":"Protosynthesis"},"heightm":1.3,"weightkg":100,"evoType":"trade","num":-1091}
 
 };
  
