@@ -20257,6 +20257,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "dashinghammer":{"name":"Dashinghammer","types":["Rock","Ghost"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":97,"atk":137,"def":95,"spa":77,"spd":77,"spe":107},"abilities":{"0":"Protosynthesis"},"heightm":3,"weightkg":450,"evoType":"trade","num":-1089}
 , "razorspine":{"name":"Razorspine","types":["Steel","Ghost"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":93,"atk":125,"def":101,"spa":73,"spd":73,"spe":125},"abilities":{"0":"Protosynthesis"},"heightm":2.3,"weightkg":320,"evoType":"trade","num":-1090}
 , "howlingflare":{"name":"Howlingflare","types":["Grass","Ghost"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":109,"atk":111,"def":73,"spa":81,"spd":83,"spe":133},"abilities":{"0":"Protosynthesis"},"heightm":1.3,"weightkg":100,"evoType":"trade","num":-1091}
+, "risinghorn":{"name":"Risinghorn","types":["Water","Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":121,"atk":81,"def":91,"spa":129,"spd":97,"spe":71},"abilities":{"0":"Protosynthesis"},"heightm":2.5,"weightkg":345,"evoType":"trade","num":-1092}
 
 };
  
