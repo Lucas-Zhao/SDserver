@@ -20270,6 +20270,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "ironobliviontype1":{"name":"Ironoblivion-Type-1","types":["Water","Steel"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":110,"atk":140,"def":60,"spa":140,"spd":60,"spe":140},"abilities":{"0":"Quark Drive"},"heightm":4,"weightkg":750,"evoType":"trade","num":-1102}
 , "ironobliviontype2":{"name":"Ironoblivion-Type-2","types":["Fire","Steel"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":160,"atk":160,"def":66,"spa":90,"spd":60,"spe":114},"abilities":{"0":"Quark Drive"},"heightm":6,"weightkg":800,"evoType":"trade","num":-1103}
 , "ironobliviontype3":{"name":"Ironoblivion-Type-3","types":["Electric","Steel"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":200,"atk":98,"def":72,"spa":128,"spd":82,"spe":70},"abilities":{"0":"Quark Drive"},"heightm":8,"weightkg":1200,"evoType":"trade","num":-1104}
+, "ironyfriends":{"name":"Ironyfriends","types":["Psychic","Steel"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":122,"atk":82,"def":116,"spa":110,"spd":116,"spe":44},"abilities":{"0":"Quark Drive"},"heightm":1,"weightkg":70,"evoType":"trade","num":-1105}
 
 };
  

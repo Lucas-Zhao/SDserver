@@ -6138,5 +6138,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "ironobliviontype1":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "ironobliviontype2":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "ironobliviontype3":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "ironyfriends":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
