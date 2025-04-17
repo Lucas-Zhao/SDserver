@@ -3875,6 +3875,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "soaringhalo":{"name":"Soaringhalo"}
 , "ironobliviontype1":{"name":"Ironoblivion-Type-1"}
 , "ironobliviontype2":{"name":"Ironoblivion-Type-2"}
+, "ironobliviontype3":{"name":"Ironoblivion-Type-3"}
 
 };
  

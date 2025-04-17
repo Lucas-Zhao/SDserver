@@ -6137,5 +6137,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "soaringhalo":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "ironobliviontype1":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "ironobliviontype2":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "ironobliviontype3":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
