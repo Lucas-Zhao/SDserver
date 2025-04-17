@@ -20262,6 +20262,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "ironmirage":{"name":"Ironmirage","types":["Electric","Psychic"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":144,"atk":72,"def":60,"spa":126,"spd":130,"spe":58},"abilities":{"0":"Quark Drive"},"heightm":4,"weightkg":270,"evoType":"trade","num":-1094}
 , "ironphantom":{"name":"Ironphantom","types":["Water","Ghost"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":94,"atk":92,"def":58,"spa":114,"spd":96,"spe":136},"abilities":{"0":"Quark Drive"},"heightm":1.7,"weightkg":120,"evoType":"trade","num":-1095}
 , "irondrill":{"name":"Irondrill","types":["Grass","Steel"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":62,"atk":144,"def":122,"spa":78,"spd":78,"spe":106},"abilities":{"0":"Quark Drive"},"heightm":1.3,"weightkg":180,"evoType":"trade","num":-1096}
+, "irongear":{"name":"Irongear","types":["Psychic","Steel"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":64,"atk":96,"def":108,"spa":128,"spd":84,"spe":110},"abilities":{"0":"Quark Drive"},"heightm":1,"weightkg":100,"evoType":"trade","num":-1097}
 
 };
  
