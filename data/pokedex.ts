@@ -20281,6 +20281,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "voidarm":{"name":"Voidarm","types":["Dragon","Steel"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":77,"atk":129,"def":129,"spa":65,"spd":63,"spe":107},"abilities":{"0":"Protosynthesis"},"heightm":3,"weightkg":500,"evoType":"trade","num":-1113}
 , "wavingtongue":{"name":"Wavingtongue","types":["Ghost","Poison"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":133,"atk":65,"def":99,"spa":81,"spd":99,"spe":93},"abilities":{"0":"Protosynthesis"},"heightm":1,"weightkg":85,"evoType":"trade","num":-1114}
 , "annihilapechained":{"name":"Annihilape-Chained","types":["Poison","Ghost"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":115,"atk":125,"def":80,"spa":50,"spd":90,"spe":95},"abilities":{"0":"Toxic Chain","H":"Defiant"},"heightm":1.2,"weightkg":56,"evoType":"trade","num":-1115}
+, "blazikenchained":{"name":"Blaziken-Chained","types":["Poison","Fire"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":85,"atk":125,"def":70,"spa":115,"spd":70,"spe":90},"abilities":{"0":"Toxic Chain","H":"Speed Boost"},"heightm":2,"weightkg":54,"evoType":"trade","num":-1116}
 
 };
  
