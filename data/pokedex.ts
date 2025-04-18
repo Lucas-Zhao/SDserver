@@ -20278,6 +20278,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "titanbeak":{"name":"Titanbeak","types":["Ice","Poison"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":177,"atk":133,"def":61,"spa":91,"spd":55,"spe":53},"abilities":{"0":"Protosynthesis"},"heightm":4,"weightkg":500,"evoType":"trade","num":-1110}
 , "toxingland":{"name":"Toxingland","types":["Water","Poison"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":99,"atk":111,"def":65,"spa":129,"spd":47,"spe":119},"abilities":{"0":"Protosynthesis"},"heightm":6,"weightkg":110,"evoType":"trade","num":-1111}
 , "venommatrix":{"name":"Venommatrix","types":["Steel","Poison"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":61,"atk":111,"def":98,"spa":91,"spd":100,"spe":109},"abilities":{"0":"Protosynthesis"},"heightm":1.2,"weightkg":210,"evoType":"trade","num":-1112}
+, "voidarm":{"name":"Voidarm","types":["Dragon","Steel"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":77,"atk":129,"def":129,"spa":65,"spd":63,"spe":107},"abilities":{"0":"Protosynthesis"},"heightm":3,"weightkg":500,"evoType":"trade","num":-1113}
 
 };
  
