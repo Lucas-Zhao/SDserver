@@ -20273,6 +20273,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "ironyfriends":{"name":"Ironyfriends","types":["Psychic","Steel"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":122,"atk":82,"def":116,"spa":110,"spd":116,"spe":44},"abilities":{"0":"Quark Drive"},"heightm":1,"weightkg":70,"evoType":"trade","num":-1105}
 , "jaggedmaw":{"name":"Jaggedmaw","types":["Grass","Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":101,"atk":127,"def":91,"spa":87,"spd":91,"spe":73},"abilities":{"0":"Protosynthesis"},"heightm":2,"weightkg":200,"evoType":"trade","num":-1106}
 , "mightyspine":{"name":"Mightyspine","types":["Fighting","Dark"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":109,"atk":103,"def":95,"spa":77,"spd":95,"spe":91},"abilities":{"0":"Protosynthesis"},"heightm":2.3,"weightkg":210,"evoType":"trade","num":-1107}
+, "slicingsear":{"name":"Slicingsear","types":["Normal","Fire"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":113,"atk":113,"def":77,"spa":77,"spd":77,"spe":113},"abilities":{"0":"Protosynthesis"},"heightm":2,"weightkg":100,"evoType":"trade","num":-1108}
 
 };
  
