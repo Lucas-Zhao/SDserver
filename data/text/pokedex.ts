@@ -3886,6 +3886,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "venommatrix":{"name":"Venommatrix"}
 , "voidarm":{"name":"Voidarm"}
 , "wavingtongue":{"name":"Wavingtongue"}
+, "annihilapechained":{"name":"Annihilape-Chained"}
 
 };
  

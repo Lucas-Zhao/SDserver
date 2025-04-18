@@ -6148,5 +6148,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "venommatrix":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "voidarm":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "wavingtongue":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "annihilapechained":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
