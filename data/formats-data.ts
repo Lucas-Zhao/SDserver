@@ -6150,5 +6150,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "wavingtongue":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "annihilapechained":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "blazikenchained":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "lucariochained":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
