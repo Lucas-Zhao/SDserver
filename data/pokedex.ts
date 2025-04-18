@@ -20276,6 +20276,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "slicingsear":{"name":"Slicingsear","types":["Normal","Fire"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":113,"atk":113,"def":77,"spa":77,"spd":77,"spe":113},"abilities":{"0":"Protosynthesis"},"heightm":2,"weightkg":100,"evoType":"trade","num":-1108}
 , "sneakfist":{"name":"Sneakfist","types":["Grass","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":135,"atk":135,"def":135,"spa":55,"spd":55,"spe":55},"abilities":{"0":"Protosynthesis"},"heightm":5,"weightkg":300,"evoType":"trade","num":-1109}
 , "titanbeak":{"name":"Titanbeak","types":["Ice","Poison"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":177,"atk":133,"def":61,"spa":91,"spd":55,"spe":53},"abilities":{"0":"Protosynthesis"},"heightm":4,"weightkg":500,"evoType":"trade","num":-1110}
+, "toxingland":{"name":"Toxingland","types":["Water","Poison"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":99,"atk":111,"def":65,"spa":129,"spd":47,"spe":119},"abilities":{"0":"Protosynthesis"},"heightm":6,"weightkg":110,"evoType":"trade","num":-1111}
 
 };
  
