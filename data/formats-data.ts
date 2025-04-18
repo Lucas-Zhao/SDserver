@@ -6145,5 +6145,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "sneakfist":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "titanbeak":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "toxingland":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "venommatrix":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
