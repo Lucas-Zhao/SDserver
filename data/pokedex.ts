@@ -20275,6 +20275,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "mightyspine":{"name":"Mightyspine","types":["Fighting","Dark"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":109,"atk":103,"def":95,"spa":77,"spd":95,"spe":91},"abilities":{"0":"Protosynthesis"},"heightm":2.3,"weightkg":210,"evoType":"trade","num":-1107}
 , "slicingsear":{"name":"Slicingsear","types":["Normal","Fire"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":113,"atk":113,"def":77,"spa":77,"spd":77,"spe":113},"abilities":{"0":"Protosynthesis"},"heightm":2,"weightkg":100,"evoType":"trade","num":-1108}
 , "sneakfist":{"name":"Sneakfist","types":["Grass","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":135,"atk":135,"def":135,"spa":55,"spd":55,"spe":55},"abilities":{"0":"Protosynthesis"},"heightm":5,"weightkg":300,"evoType":"trade","num":-1109}
+, "titanbeak":{"name":"Titanbeak","types":["Ice","Poison"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":177,"atk":133,"def":61,"spa":91,"spd":55,"spe":53},"abilities":{"0":"Protosynthesis"},"heightm":4,"weightkg":500,"evoType":"trade","num":-1110}
 
 };
  

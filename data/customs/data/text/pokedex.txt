@@ -109,3 +109,4 @@
 , "mightyspine":{"name":"Mightyspine"}
 , "slicingsear":{"name":"Slicingsear"}
 , "sneakfist":{"name":"Sneakfist"}
+, "titanbeak":{"name":"Titanbeak"}
