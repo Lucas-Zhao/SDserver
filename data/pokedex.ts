@@ -20272,6 +20272,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "ironobliviontype3":{"name":"Ironoblivion-Type-3","types":["Electric","Steel"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":200,"atk":98,"def":72,"spa":128,"spd":82,"spe":70},"abilities":{"0":"Quark Drive"},"heightm":8,"weightkg":1200,"evoType":"trade","num":-1104}
 , "ironyfriends":{"name":"Ironyfriends","types":["Psychic","Steel"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":122,"atk":82,"def":116,"spa":110,"spd":116,"spe":44},"abilities":{"0":"Quark Drive"},"heightm":1,"weightkg":70,"evoType":"trade","num":-1105}
 , "jaggedmaw":{"name":"Jaggedmaw","types":["Grass","Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":101,"atk":127,"def":91,"spa":87,"spd":91,"spe":73},"abilities":{"0":"Protosynthesis"},"heightm":2,"weightkg":200,"evoType":"trade","num":-1106}
+, "mightyspine":{"name":"Mightyspine","types":["Fighting","Dark"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":109,"atk":103,"def":95,"spa":77,"spd":95,"spe":91},"abilities":{"0":"Protosynthesis"},"heightm":2.3,"weightkg":210,"evoType":"trade","num":-1107}
 
 };
  

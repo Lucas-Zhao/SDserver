@@ -6140,5 +6140,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "ironobliviontype3":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "ironyfriends":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "jaggedmaw":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "mightyspine":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
