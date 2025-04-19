@@ -9193,6 +9193,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -9270,6 +9274,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "tinkatonite":{"name":"Tinkatonite","megaStone":"Tinkaton-Mega","itemUser":["Tinkaton"],"megaEvolves":"Tinkaton","num":-1074,"isNonstandard":"Unobtainable","gen":0}
 , "victreebelite":{"name":"Victreebelite","megaStone":"Victreebel-Mega","itemUser":["Victreebel"],"megaEvolves":"Victreebel","num":-1075,"isNonstandard":"Unobtainable","gen":0}
 , "queendrite":{"name":"Queendrite","megaStone":"Queendra-Mega","itemUser":["Queendra"],"megaEvolves":"Queendra","num":-1076,"isNonstandard":"Unobtainable","gen":0}
+, "queendritedark":{"name":"Queendrite Dark","megaStone":"Queendra-Dark-Mega","itemUser":["Queendra-Dark"],"megaEvolves":"Queendra-Dark","num":-1077,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -9886,4 +9891,12 @@ Items["queendrite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//queendriteend
+//queendriteend//queendritedarkstart
+
+Items["queendritedark"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//queendritedarkend
