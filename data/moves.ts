@@ -22138,4 +22138,15 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Ghost",
 		contestType: "Clever",
 	},
+		hell: {
+		num: -1,
+		accuracy: 0,
+		basePower: 0,
+		category: "Physical",
+		name: "HELL",
+		pp: 10,
+		priority: 0,
+		target: "normal",
+		type: "Normal",
+	},
 };
