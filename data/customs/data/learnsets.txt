@@ -1,4 +1,4 @@
- "serperiormega":{"learnset":{"energyball":["9L4","9L3"],"leafstorm":["9L4","9L3"]}}
+ "serperiormega":{"learnset":{"hell":["9L4","9L3"],"energyball":["9L4","9L3"],"leafstorm":["9L4","9L3"]}}
 , "emboarmega":{"learnset":{"flareblitz":["9L4","9L3"],"scald":["9L4","9L3"]}}
 , "samurottmega":{"learnset":{"sacred sword":["9L4","9L3"],"aqua jet":["9L4","9L3"]}}
 , "comfeymega":{"learnset":{"drainingkiss":["9L4","9L3"],"gigadrain":["9L4","9L3"]}}
