@@ -20287,6 +20287,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "queendramega":{"name":"Queendra-Mega","types":["Ice","Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":65,"atk":125,"def":100,"spa":125,"spd":100,"spe":125},"abilities":{"0":"Infiltrator"},"heightm":2.6,"weightkg":200,"evoType":"trade","requiredItem":"Queendrite","baseSpecies":"Queendra","forme":"Mega","num":-1119}
 , "queendradark":{"name":"Queendra-Dark","types":["Ice","Poison"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":70,"atk":95,"def":95,"spa":95,"spd":95,"spe":90},"abilities":{"0":"Slush Rush","1":"Sniper","H":"Poison Touch"},"heightm":1.8,"weightkg":152,"prevo":"Seadra","evoType":"trade","num":-1120}
 , "queendradarkmega":{"name":"Queendra-Dark-Mega","types":["Ice","Poison"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":70,"atk":130,"def":100,"spa":130,"spd":100,"spe":110},"abilities":{"0":"Steadfast"},"heightm":2.3,"weightkg":180,"evoType":"trade","requiredItem":"Queendrite Dark","baseSpecies":"Queendra-Dark","forme":"Mega","num":-1121}
+, "eelektrosshell":{"name":"Eelektross-Hell","types":["Dark","Poison"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":85,"atk":115,"def":80,"spa":105,"spd":80,"spe":50},"abilities":{"0":"Levitate"},"heightm":2.1,"weightkg":80,"evoType":"trade","num":-1122}
 
 };
  
