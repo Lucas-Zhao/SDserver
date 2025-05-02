@@ -75,6 +75,7 @@
 , "victreebelite":{"name":"Victreebelite","megaStone":"Victreebel-Mega","itemUser":["Victreebel"],"megaEvolves":"Victreebel","num":-1075,"isNonstandard":"Unobtainable","gen":0}
 , "queendrite":{"name":"Queendrite","megaStone":"Queendra-Mega","itemUser":["Queendra"],"megaEvolves":"Queendra","num":-1076,"isNonstandard":"Unobtainable","gen":0}
 , "queendritedark":{"name":"Queendrite Dark","megaStone":"Queendra-Dark-Mega","itemUser":["Queendra-Dark"],"megaEvolves":"Queendra-Dark","num":-1077,"isNonstandard":"Unobtainable","gen":0}
+, "eelektrossitehell":{"name":"Eelektrossite HELL","megaStone":"Eelektross-Mega-Hell","itemUser":["Eelektross-Hell"],"megaEvolves":"Eelektross-Hell","num":-1078,"isNonstandard":"Unobtainable","gen":0}
 
 /*FUNCTIONS*/
 //serperioritestart
@@ -697,4 +698,12 @@ Items["queendritedark"].onTakeItem = function(item, source) {
         return true;
       }
 
-//queendritedarkend
+//queendritedarkend//eelektrossitehellstart
+
+Items["eelektrossitehell"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//eelektrossitehellend
