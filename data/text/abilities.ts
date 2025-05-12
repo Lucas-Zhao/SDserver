@@ -2268,12 +2268,6 @@ export const AbilitiesText: {[id: IDEntry]: AbilityText} = {
 
 		activate: "  [POKEMON] extends [MOVE] by 2 turns!",
 	},
-	"rightsidedown": {
-		"name": "Right Side Down",
-		"desc": "On switch in, opposing pokemon's stat changes get flipped. Positive becomes negative, negative becomes positive.",
-		"shortDesc": "On switch in, opposing pokemon's stat changes get flipped. "
-	  },
-
 /*CUSTOM TEXTS*/
 
   "monsoonsurge": {
@@ -2641,7 +2635,32 @@ export const AbilitiesText: {[id: IDEntry]: AbilityText} = {
     "name": "Aqua Flow",
     "desc": "This Pokémon's Water-type attacks gain the STAB bonus.",
     "shortDesc": "Water-type attacks gain STAB."
-  }
+  },
+"terraineater": {
+  "name": "Terrain Eater",
+  "desc": "On switch-in, this Pokémon removes any terrain currently active on the field.",
+  "shortDesc": "Removes terrain on switch-in."
+},
+"cleanfreak": {
+  "name": "Clean Freak",
+  "desc": "On switch-in, this Pokémon removes all entry hazards from its side of the field. It takes damage from the hazards first before removing them.",
+  "shortDesc": "Clears its side's hazards after taking hazard damage."
+},
+"gravitygenerator": {
+  "name": "Gravity Generator",
+  "desc": "On switch-in, this Pokémon sets Gravity for 5 turns. If Gravity is already active when it switches in, Gravity is removed instead.",
+  "shortDesc": "Sets Gravity for 5 turns or ends it if already active."
+},
+"windwalker": {
+  "name": "Wind Walker",
+  "desc": "On switch-in, this Pokémon sets up Tailwind for 4 turns. If Tailwind is already active, it does not activate again.",
+  "shortDesc": "Sets Tailwind for 4 turns if it's not already active."
+},
+"rightsidedown": {
+  "name": "Rightside Down",
+  "desc": "On switch-in, all opposing Pokémon have their stat changes inverted. Stat boosts become drops, and stat drops become boosts.",
+  "shortDesc": "Opponents' stat changes are inverted on switch-in."
+}
 
 
 
