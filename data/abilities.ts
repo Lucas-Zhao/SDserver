@@ -5637,39 +5637,64 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3,
 		num: -4,
 	},
+	rightsidedown: {
+			onStart(pokemon) {
+				let activated = false;
+				for (const target of pokemon.adjacentFoes()) {
+					if (!activated) {
+						this.add('-ability', pokemon, 'Right Side Down', 'boost');
+						activated = true;
+					}
+					if (target.volatiles['substitute']) {
+						this.add('-immune', target);
+					} else {
+						for (let i in target.boosts) {
+							if (target.boosts[i as (keyof BoostsTable)] === 0) continue;
+							target.boosts[i as (keyof BoostsTable)] = -target.boosts[i as (keyof BoostsTable)];
+						}
+					this.add('-invertboost', target, '[from] ability: Right Side Down');
+					}
+				}
+	
+			},
+			flags: {},
+			name: "Right Side Down",
+			rating: 3.5,
+			num: -1066,
+		},
 
 /*CUSTOM ABILITIES*/
- "monsoonsurge":{"name":"Monsoon Surge","flags":{},"num":-1073,"rating":4}
-, "blizzardveil":{"name":"Blizzard Veil","flags":{},"num":-1073,"rating":4}
-, "sandstormrage":{"name":"Sandstorm Rage","flags":{},"num":-1073,"rating":4}
-, "solarflare":{"name":"Solar Flare","flags":{},"num":-1073,"rating":4}
-, "eerieresonance":{"name":"Eerie Resonance","flags":{},"num":-1073,"rating":4}
-, "mindscapedomain":{"name":"Mindscape Domain","flags":{},"num":-1073,"rating":4}
-, "verdantbloom":{"name":"Verdant Bloom","flags":{},"num":-1073,"rating":4}
-, "mystichaze":{"name":"Mystic Haze","flags":{},"num":-1073,"rating":4}
-, "tundrecore":{"name":"Tundre Core","flags":{},"num":-1073,"rating":4}
-, "desertheart":{"name":"Desert Heart","flags":{},"num":-1073,"rating":4}
-, "aquacircuit":{"name":"Aqua Circuit","flags":{},"num":-1073,"rating":4}
-, "psychicpulse":{"name":"Psychic Pulse","flags":{},"num":-1073,"rating":4}
-, "mysticaura":{"name":"Mystic Aura","flags":{},"num":-1073,"rating":4}
-, "overgrowthengine":{"name":"Overgrowth Engine","flags":{},"num":-1073,"rating":4}
-, "arcanemight":{"name":"Arcane Might","flags":{},"num":-1073,"rating":5}
-, "terrify":{"name":"Terrify","flags":{},"num":-1073,"rating":3.5}
-, "charisma":{"name":"Charisma","flags":{},"num":-1073,"rating":3}
-, "mentalfortitude":{"name":"Mental Fortitude","flags":{},"num":-1073,"rating":4}
-, "bootsofruin":{"name":"Boots of Ruin","flags":{},"num":-1073,"rating":4.5}
-, "prismaticaura":{"name":"Prismatic Aura","flags":{},"num":-1073,"rating":2.5}
-, "adaptivemastery":{"name":"Adaptive Mastery","flags":{},"num":-1073,"rating":3.5}
-, "stormbloom":{"name":"Stormbloom","flags":{},"num":-1073,"rating":4}
-, "solarmist":{"name":"Solar Mist","flags":{},"num":-1073,"rating":4}
-, "desertmind":{"name":"Desert Mind","flags":{},"num":-1073,"rating":4}
-, "frostvolt":{"name":"Frostvolt","flags":{},"num":-1073,"rating":4}
-, "soulharvest":{"name":"Soul Harvest","flags":{},"num":-1073,"rating":4}
-, "entomize":{"name":"Entomize","flags":{},"num":-1073,"rating":4}
-, "umbralforce":{"name":"Umbral Force","flags":{},"num":-1073,"rating":4}
-, "draconize":{"name":"Draconize","flags":{},"num":-1073,"rating":4}
-, "combatboost":{"name":"Combat Boost","flags":{},"num":-1073,"rating":4}
-, "infernalize":{"name":"Infernalize","flags":{},"num":-1073,"rating":4}
+ "monsoonsurge":{"name":"Monsoon Surge","flags":{},"num":-1074,"rating":4}
+, "blizzardveil":{"name":"Blizzard Veil","flags":{},"num":-1074,"rating":4}
+, "sandstormrage":{"name":"Sandstorm Rage","flags":{},"num":-1074,"rating":4}
+, "solarflare":{"name":"Solar Flare","flags":{},"num":-1074,"rating":4}
+, "eerieresonance":{"name":"Eerie Resonance","flags":{},"num":-1074,"rating":4}
+, "mindscapedomain":{"name":"Mindscape Domain","flags":{},"num":-1074,"rating":4}
+, "verdantbloom":{"name":"Verdant Bloom","flags":{},"num":-1074,"rating":4}
+, "mystichaze":{"name":"Mystic Haze","flags":{},"num":-1074,"rating":4}
+, "tundrecore":{"name":"Tundre Core","flags":{},"num":-1074,"rating":4}
+, "desertheart":{"name":"Desert Heart","flags":{},"num":-1074,"rating":4}
+, "aquacircuit":{"name":"Aqua Circuit","flags":{},"num":-1074,"rating":4}
+, "psychicpulse":{"name":"Psychic Pulse","flags":{},"num":-1074,"rating":4}
+, "mysticaura":{"name":"Mystic Aura","flags":{},"num":-1074,"rating":4}
+, "overgrowthengine":{"name":"Overgrowth Engine","flags":{},"num":-1074,"rating":4}
+, "arcanemight":{"name":"Arcane Might","flags":{},"num":-1074,"rating":5}
+, "terrify":{"name":"Terrify","flags":{},"num":-1074,"rating":3.5}
+, "charisma":{"name":"Charisma","flags":{},"num":-1074,"rating":3}
+, "mentalfortitude":{"name":"Mental Fortitude","flags":{},"num":-1074,"rating":4}
+, "bootsofruin":{"name":"Boots of Ruin","flags":{},"num":-1074,"rating":4.5}
+, "prismaticaura":{"name":"Prismatic Aura","flags":{},"num":-1074,"rating":2.5}
+, "adaptivemastery":{"name":"Adaptive Mastery","flags":{},"num":-1074,"rating":3.5}
+, "stormbloom":{"name":"Stormbloom","flags":{},"num":-1074,"rating":4}
+, "solarmist":{"name":"Solar Mist","flags":{},"num":-1074,"rating":4}
+, "desertmind":{"name":"Desert Mind","flags":{},"num":-1074,"rating":4}
+, "frostvolt":{"name":"Frostvolt","flags":{},"num":-1074,"rating":4}
+, "soulharvest":{"name":"Soul Harvest","flags":{},"num":-1074,"rating":4}
+, "entomize":{"name":"Entomize","flags":{},"num":-1074,"rating":4}
+, "umbralforce":{"name":"Umbral Force","flags":{},"num":-1074,"rating":4}
+, "draconize":{"name":"Draconize","flags":{},"num":-1074,"rating":4}
+, "combatboost":{"name":"Combat Boost","flags":{},"num":-1074,"rating":4}
+, "infernalize":{"name":"Infernalize","flags":{},"num":-1074,"rating":4}
 , "antennaboost":{"name":"Antenna Boost","flags":{},"num":-1073,"rating":1.5}
 , "shadowsprint":{"name":"Shadow Sprint","flags":{},"num":-1073,"rating":1.5}
 , "wyvernwings":{"name":"Wyvern Wings","flags":{},"num":-1073,"rating":1.5}
@@ -5704,15 +5729,14 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 , "stoneborn":{"name":"Stoneborn","flags":{},"num":-1073,"rating":3.5}
 , "metallicsoul":{"name":"Metallic Soul","flags":{},"num":-1073,"rating":3.5}
 , "aquaflow":{"name":"Aqua Flow","flags":{},"num":-1073,"rating":3.5}
-, "hauntify":{"name":"Hauntify","flags":{},"num":-1073,"rating":4}
-, "verdantforce":{"name":"Verdant Force","flags":{},"num":-1073,"rating":4}
-, "terranize":{"name":"Terranize","flags":{},"num":-1073,"rating":4}
-, "toxify":{"name":"Toxify","flags":{},"num":-1073,"rating":4}
-, "petrify":{"name":"Petrify","flags":{},"num":-1073,"rating":4}
-, "ferronize":{"name":"Ferronize","flags":{},"num":-1073,"rating":4}
+, "hauntify":{"name":"Hauntify","flags":{},"num":-1074,"rating":4}
+, "verdantforce":{"name":"Verdant Force","flags":{},"num":-1074,"rating":4}
+, "terranize":{"name":"Terranize","flags":{},"num":-1074,"rating":4}
+, "toxify":{"name":"Toxify","flags":{},"num":-1074,"rating":4}
+, "petrify":{"name":"Petrify","flags":{},"num":-1074,"rating":4}
+, "ferronize":{"name":"Ferronize","flags":{},"num":-1074,"rating":4}
 , "aquify":{"name":"Aquify","flags":{},"num":-1073,"rating":4}
 , "psionize":{"name":"Psionize","flags":{},"num":-1073,"rating":4}
-
 
 };
 /*FUNCTIONS*/
