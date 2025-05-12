@@ -2268,6 +2268,11 @@ export const AbilitiesText: {[id: IDEntry]: AbilityText} = {
 
 		activate: "  [POKEMON] extends [MOVE] by 2 turns!",
 	},
+	"rightsidedown": {
+		"name": "Right Side Down",
+		"desc": "On switch in, opposing pokemon's stat changes get flipped. Positive becomes negative, negative becomes positive.",
+		"shortDesc": "On switch in, opposing pokemon's stat changes get flipped. "
+	  },
 
 /*CUSTOM TEXTS*/
 
