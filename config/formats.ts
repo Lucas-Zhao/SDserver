@@ -30,6 +30,17 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		'OHKO Clause', 'Evasion Clause', 'Sleep Clause Mod'
 		],
 	},
+	{
+		name: "[Gen 9] Random Abilities Draft",
+		mod: "gen9",
+		battle: {},
+		teraPreviewDefault: true,
+		ruleset: [
+			"Team Preview",
+			'Standard NatDex','!Obtainable Abilities', 'Ability Clause = 1',
+		'OHKO Clause', 'Evasion Clause', 'Sleep Clause Mod'
+		],
+	},
 
 	// S/V Singles
 	///////////////////////////////////////////////////////////////////
