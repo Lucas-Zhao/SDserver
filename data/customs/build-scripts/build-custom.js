@@ -9,7 +9,6 @@
  * data from the text files
  */
 
-
 const fs = require("fs");
 const path = require("path");
 

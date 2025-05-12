@@ -134,7 +134,7 @@ let importTextData = () => {
 	});
 };
 let importFormats = () => {
-	
+
 		let customdexFilePath = getCustomPath("formats");
 		let pokedexFilePath = (sourceFilePath = path.join(path.resolve(),"/config/formats.ts"));
 		try {
