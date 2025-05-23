@@ -20295,6 +20295,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "cinderacefreakyfusion":{"name":"Cinderace-Freaky-Fusion","types":["Fire","Grass"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":73,"atk":113,"def":103,"spa":63,"spd":71,"spe":108},"abilities":{"0":"Blaze","1":"Libero","H":"Chlorophyll"},"heightm":1.4,"weightkg":33,"evoType":"trade","num":-1127}
 , "salazzlefreakyfusion":{"name":"Salazzle-Freaky-Fusion","types":["Poison","Fairy"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":82,"atk":65,"def":63,"spa":111,"spd":95,"spe":89},"abilities":{"0":"Corrosion","1":"Cute Charm","H":"Pixilate"},"heightm":1.2,"weightkg":48.9,"evoType":"trade","num":-1128}
 , "tangrowthfreakyfusion":{"name":"Tangrowth-Freaky-Fusion","types":["Normal","Grass"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":87,"atk":108,"def":93,"spa":85,"spd":55,"spe":70},"abilities":{"0":"Regenerator","1":"Immunity","H":"Toxic Boost"},"heightm":2,"weightkg":128.6,"evoType":"trade","num":-1129}
+, "altariadollplush":{"name":"Altaria-Doll-Plush","types":["Ghost","Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":75,"atk":70,"def":90,"spa":70,"spd":105,"spe":80},"abilities":{"0":"Natural Cure","1":"Fluffy","H":"Cloud Nine"},"heightm":1.1,"weightkg":10,"evoType":"trade","num":-1130}
 
 };
  
