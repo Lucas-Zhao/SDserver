@@ -3909,6 +3909,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "spritzeehisui":{"name":"Spritzee-Hisui"}
 , "aromatissehisui":{"name":"Aromatisse-Hisui"}
 , "bergmitesinnoh":{"name":"Bergmite-Sinnoh"}
+, "avalurd":{"name":"Avalurd"}
 
 };
  
