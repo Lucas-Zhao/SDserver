@@ -6158,5 +6158,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "eelektrosshell":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "eelektrossmegahell":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "abyluxneon":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "dittofreakyfusion":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
