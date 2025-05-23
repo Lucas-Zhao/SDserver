@@ -6168,5 +6168,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "kangaskhandollplush":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "miloticdollplush":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "dittodollplush":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "spritzeehisui":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };

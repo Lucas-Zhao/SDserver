@@ -20300,6 +20300,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "kangaskhandollplush":{"name":"Kangaskhan-Doll-Plush","types":["Ghost","Normal"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":105,"atk":95,"def":80,"spa":40,"spd":80,"spe":90},"abilities":{"0":"Scrappy","1":"Fluffy","H":"Inner Focus"},"heightm":2.2,"weightkg":40,"evoType":"trade","num":-1132}
 , "miloticdollplush":{"name":"Milotic-Doll-Plush","types":["Ghost","Water"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":95,"atk":60,"def":79,"spa":100,"spd":125,"spe":81},"abilities":{"0":"Marvel Scale","1":"Fluffy","H":"Competitive"},"heightm":6.2,"weightkg":81,"evoType":"trade","num":-1133}
 , "dittodollplush":{"name":"Ditto-Doll-Plush","types":["Ghost"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":48,"atk":48,"def":48,"spa":48,"spd":48,"spe":48},"abilities":{"0":"Fluffy","H":"Imposter"},"heightm":0.3,"weightkg":2,"evoType":"trade","num":-1134}
+, "spritzeehisui":{"name":"Spritzee-Hisui","types":["Poison","Dark"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":78,"atk":52,"def":60,"spa":63,"spd":63,"spe":23},"abilities":{"0":"Healer","H":"Neutralizing Gas"},"heightm":0.2,"weightkg":0.5,"evoType":"trade","num":-1135}
 
 };
  
