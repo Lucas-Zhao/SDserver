@@ -125,3 +125,4 @@
 , "abyluxneon":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "dittofreakyfusion":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "aggronfreakyfusion":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "cinderacefreakyfusion":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}

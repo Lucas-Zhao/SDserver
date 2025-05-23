@@ -20292,6 +20292,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "abyluxneon":{"name":"Abyluxneon","types":["Water","Fairy"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":83,"atk":73,"def":76,"spa":89,"spd":98,"spe":101},"abilities":{"0":"Swift Swim","1":"Storm Drain","H":"Water Veil"},"heightm":2.2,"weightkg":40,"prevo":"Lumineon","evoType":"trade","num":-1124}
 , "dittofreakyfusion":{"name":"Ditto-Freaky-Fusion","types":["Normal","Poison"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":48,"atk":48,"def":48,"spa":48,"spd":48,"spe":48},"abilities":{"0":"Limber","H":"Imposter"},"heightm":0.3,"weightkg":4,"evoType":"trade","num":-1125}
 , "aggronfreakyfusion":{"name":"Aggron-Freaky-Fusion","types":["Steel","Flying"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":80,"atk":98,"def":135,"spa":80,"spd":93,"spe":70},"abilities":{"0":"Sturdy","1":"Rock Head","H":"Berserk"},"heightm":2.2,"weightkg":395,"evoType":"trade","num":-1126}
+, "cinderacefreakyfusion":{"name":"Cinderace-Freaky-Fusion","types":["Fire","Grass"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":73,"atk":113,"def":103,"spa":63,"spd":71,"spe":108},"abilities":{"0":"Blaze","1":"Libero","H":"Chlorophyll"},"heightm":1.4,"weightkg":33,"evoType":"trade","num":-1127}
 
 };
  
