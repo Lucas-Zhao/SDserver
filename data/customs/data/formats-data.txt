@@ -145,3 +145,4 @@
 , "tinkatonflight":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "tinkatinkscissor":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "tinkatuffscissor":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "tinkatonscissor":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
