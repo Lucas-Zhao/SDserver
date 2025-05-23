@@ -150,3 +150,4 @@
 , "tinkatuffscythe":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "tinkatonscythe":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "tinkatinkseamaiden":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "tinkatuffseamaiden":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}

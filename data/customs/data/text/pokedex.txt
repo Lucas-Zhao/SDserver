@@ -151,3 +151,4 @@
 , "tinkatuffscythe":{"name":"Tinkatuff-Scythe"}
 , "tinkatonscythe":{"name":"Tinkaton-Scythe"}
 , "tinkatinkseamaiden":{"name":"Tinkatink-Sea-Maiden"}
+, "tinkatuffseamaiden":{"name":"Tinkatuff-Sea-Maiden"}
