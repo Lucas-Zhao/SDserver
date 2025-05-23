@@ -6176,5 +6176,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "bihantuff":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "bihanton":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "tinkatinkflight":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "tinkatuffflight":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
