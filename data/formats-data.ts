@@ -6164,5 +6164,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "salazzlefreakyfusion":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "tangrowthfreakyfusion":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "altariadollplush":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "gengardollplush":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };

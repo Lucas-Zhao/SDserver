@@ -3902,6 +3902,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "salazzlefreakyfusion":{"name":"Salazzle-Freaky-Fusion"}
 , "tangrowthfreakyfusion":{"name":"Tangrowth-Freaky-Fusion"}
 , "altariadollplush":{"name":"Altaria-Doll-Plush"}
+, "gengardollplush":{"name":"Gengar-Doll-Plush"}
 
 };
  
