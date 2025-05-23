@@ -20304,6 +20304,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "aromatissehisui":{"name":"Aromatisse-Hisui","types":["Poison","Fire"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":101,"atk":72,"def":72,"spa":99,"spd":89,"spe":29},"abilities":{"0":"Healer","H":"Neutralizing Gas"},"heightm":0.8,"weightkg":15.5,"prevo":"Spritzee-Hisui","evoType":"trade","num":-1136}
 , "bergmitesinnoh":{"name":"Bergmite-Sinnoh","types":["Ice","Fire"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":55,"atk":69,"def":35,"spa":32,"spd":85,"spe":28},"abilities":{"0":"Own Tempo","1":"Flame Body","H":"Sturdy"},"heightm":1,"weightkg":75,"evoType":"trade","num":-1137}
 , "avalurd":{"name":"Avalurd","types":["Ice","Fire"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":95,"atk":184,"def":46,"spa":44,"spd":117,"spe":28},"abilities":{"0":"Own Tempo","1":"Flame Body","H":"Sturdy"},"heightm":3,"weightkg":400,"prevo":"Bergmite-Sinnoh","evoType":"trade","num":-1138}
+, "bihantink":{"name":"Bihantink","types":["Steel","Fairy"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":50,"atk":64,"def":45,"spa":36,"spd":45,"spe":58},"abilities":{"0":"Mold Breaker","1":"Own Tempo","H":"Pickpocket"},"heightm":0.4,"weightkg":8,"evoType":"trade","num":-1139}
 
 };
  

@@ -6172,5 +6172,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "aromatissehisui":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "bergmitesinnoh":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "avalurd":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "bihantink":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
