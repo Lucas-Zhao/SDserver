@@ -139,3 +139,4 @@
 , "bergmitesinnoh":{"name":"Bergmite-Sinnoh"}
 , "avalurd":{"name":"Avalurd"}
 , "bihantink":{"name":"Bihantink"}
+, "bihantuff":{"name":"Bihantuff"}
