@@ -6181,5 +6181,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "tinkatinkscissor":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "tinkatuffscissor":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "tinkatonscissor":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "tinkatinkscythe":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
