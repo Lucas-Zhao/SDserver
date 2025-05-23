@@ -20298,6 +20298,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "altariadollplush":{"name":"Altaria-Doll-Plush","types":["Ghost","Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":75,"atk":70,"def":90,"spa":70,"spd":105,"spe":80},"abilities":{"0":"Natural Cure","1":"Fluffy","H":"Cloud Nine"},"heightm":1.1,"weightkg":10,"evoType":"trade","num":-1130}
 , "gengardollplush":{"name":"Gengar-Doll-Plush","types":["Normal","Ghost"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":60,"atk":65,"def":60,"spa":130,"spd":75,"spe":110},"abilities":{"0":"Cursed Body","1":"Fluffy"},"heightm":1.5,"weightkg":20.2,"evoType":"trade","num":-1131}
 , "kangaskhandollplush":{"name":"Kangaskhan-Doll-Plush","types":["Ghost","Normal"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":105,"atk":95,"def":80,"spa":40,"spd":80,"spe":90},"abilities":{"0":"Scrappy","1":"Fluffy","H":"Inner Focus"},"heightm":2.2,"weightkg":40,"evoType":"trade","num":-1132}
+, "miloticdollplush":{"name":"Milotic-Doll-Plush","types":["Ghost","Water"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":95,"atk":60,"def":79,"spa":100,"spd":125,"spe":81},"abilities":{"0":"Marvel Scale","1":"Fluffy","H":"Competitive"},"heightm":6.2,"weightkg":81,"evoType":"trade","num":-1133}
 
 };
  
