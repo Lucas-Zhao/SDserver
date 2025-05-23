@@ -20297,6 +20297,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "tangrowthfreakyfusion":{"name":"Tangrowth-Freaky-Fusion","types":["Normal","Grass"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":87,"atk":108,"def":93,"spa":85,"spd":55,"spe":70},"abilities":{"0":"Regenerator","1":"Immunity","H":"Toxic Boost"},"heightm":2,"weightkg":128.6,"evoType":"trade","num":-1129}
 , "altariadollplush":{"name":"Altaria-Doll-Plush","types":["Ghost","Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":75,"atk":70,"def":90,"spa":70,"spd":105,"spe":80},"abilities":{"0":"Natural Cure","1":"Fluffy","H":"Cloud Nine"},"heightm":1.1,"weightkg":10,"evoType":"trade","num":-1130}
 , "gengardollplush":{"name":"Gengar-Doll-Plush","types":["Normal","Ghost"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":60,"atk":65,"def":60,"spa":130,"spd":75,"spe":110},"abilities":{"0":"Cursed Body","1":"Fluffy"},"heightm":1.5,"weightkg":20.2,"evoType":"trade","num":-1131}
+, "kangaskhandollplush":{"name":"Kangaskhan-Doll-Plush","types":["Ghost","Normal"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":105,"atk":95,"def":80,"spa":40,"spd":80,"spe":90},"abilities":{"0":"Scrappy","1":"Fluffy","H":"Inner Focus"},"heightm":2.2,"weightkg":40,"evoType":"trade","num":-1132}
 
 };
  
