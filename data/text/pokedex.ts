@@ -3950,6 +3950,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "burmypixiedust":{"name":"Burmy-Pixie-Dust"}
 , "wormadampixiedust":{"name":"Wormadam-Pixie-Dust"}
 , "wormatronpixiedust":{"name":"Wormatron-Pixie-Dust"}
+, "burmyseaweed":{"name":"Burmy-Seaweed"}
 
 };
  
