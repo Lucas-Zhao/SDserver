@@ -3930,6 +3930,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "tinkatonspectre":{"name":"Tinkaton-Spectre"}
 , "blazikenkalos":{"name":"Blaziken-Kalos"}
 , "empoleonkalos":{"name":"Empoleon-Kalos"}
+, "serperiorkalos":{"name":"Serperior-Kalos"}
 
 };
  
