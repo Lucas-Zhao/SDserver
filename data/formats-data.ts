@@ -6227,5 +6227,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "centiskorchcreativeink":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "greninjacreativeink":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "luxraycreativeink":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "staraptorcreativeink":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
