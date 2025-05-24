@@ -20358,6 +20358,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "carbinksea":{"name":"Carbink-Sea","types":["Water","Fairy"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":50,"atk":50,"def":150,"spa":50,"spd":150,"spe":50},"abilities":{"0":"Clear Body","H":"Sturdy"},"heightm":0.3,"weightkg":5.7,"evoType":"trade","num":-1190}
 , "centiskorchcreativeink":{"name":"Centiskorch-Creative-Ink","types":["Steel","Fire"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":100,"atk":115,"def":65,"spa":90,"spd":90,"spe":65},"abilities":{"0":"Flash Fire","1":"Color Change","H":"Flame Body"},"heightm":3,"weightkg":120,"evoType":"trade","num":-1191}
 , "greninjacreativeink":{"name":"Greninja-Creative-Ink","types":["Steel","Water"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":72,"atk":95,"def":67,"spa":103,"spd":71,"spe":122},"abilities":{"0":"Color Change","1":"Protean","H":"Battle Bond"},"heightm":1.5,"weightkg":40,"evoType":"trade","num":-1192}
+, "luxraycreativeink":{"name":"Luxray-Creative-Ink","types":["Steel","Electric"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":80,"atk":120,"def":79,"spa":95,"spd":79,"spe":70},"abilities":{"0":"Color Change","1":"Intimidate","H":"Guts"},"heightm":1.4,"weightkg":42,"evoType":"trade","num":-1193}
 
 };
  

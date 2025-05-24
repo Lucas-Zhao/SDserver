@@ -3964,6 +3964,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "carbinksea":{"name":"Carbink-Sea"}
 , "centiskorchcreativeink":{"name":"Centiskorch-Creative-Ink"}
 , "greninjacreativeink":{"name":"Greninja-Creative-Ink"}
+, "luxraycreativeink":{"name":"Luxray-Creative-Ink"}
 
 };
  
