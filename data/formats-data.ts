@@ -6224,5 +6224,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "snorlaxhell":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "snorlaxhellmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "carbinksea":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "centiskorchcreativeink":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
