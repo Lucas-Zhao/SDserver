@@ -6202,5 +6202,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "wormatroncoal":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "burmycopper":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "wormadamcopper":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "wormatroncopper":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
