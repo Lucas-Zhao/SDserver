@@ -169,3 +169,4 @@
 , "burmycopper":{"name":"Burmy-Copper"}
 , "wormadamcopper":{"name":"Wormadam-Copper"}
 , "wormatroncopper":{"name":"Wormatron-Copper"}
+, "burmygossamer":{"name":"Burmy-Gossamer"}

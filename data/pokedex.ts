@@ -20335,6 +20335,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "burmycopper":{"name":"Burmy-Copper","types":["Bug"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":40,"atk":29,"def":45,"spa":29,"spd":45,"spe":36},"abilities":{"0":"Shed Skin","H":"Overcoat"},"heightm":0.2,"weightkg":3.4,"evoType":"trade","num":-1167}
 , "wormadamcopper":{"name":"Wormadam-Copper","types":["Bug","Electric"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":60,"atk":79,"def":59,"spa":105,"spd":85,"spe":36},"abilities":{"0":"Anticipation","H":"Overcoat"},"heightm":0.5,"weightkg":6.5,"prevo":"Burmy-Copper","evoType":"trade","num":-1168}
 , "wormatroncopper":{"name":"Wormatron-Copper","types":["Bug","Electric"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":90,"atk":89,"def":69,"spa":125,"spd":105,"spe":46},"abilities":{"0":"Anticipation","H":"Overcoat"},"heightm":1.3,"weightkg":15,"prevo":"Wormadam-Copper","evoType":"trade","num":-1169}
+, "burmygossamer":{"name":"Burmy-Gossamer","types":["Bug"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":40,"atk":29,"def":45,"spa":29,"spd":45,"spe":36},"abilities":{"0":"Shed Skin","H":"Overcoat"},"heightm":0.2,"weightkg":3.4,"evoType":"trade","num":-1170}
 
 };
  
