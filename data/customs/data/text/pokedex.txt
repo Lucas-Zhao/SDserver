@@ -162,3 +162,4 @@
 , "bobwefest":{"name":"Bobwefest"}
 , "bronzolord":{"name":"Bronzolord"}
 , "bunearyunova":{"name":"Buneary-Unova"}
+, "lopunnyunova":{"name":"Lopunny-Unova"}
