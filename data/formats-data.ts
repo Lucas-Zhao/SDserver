@@ -6198,5 +6198,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "bunearyunova":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "lopunnyunova":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "burmycoal":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "wormadamcoal":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
