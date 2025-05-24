@@ -181,3 +181,4 @@
 , "wormadamseaweed":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "wormatronseaweed":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "burmysnow":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "wormadamsnow":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
