@@ -20353,6 +20353,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "wormatronplant":{"name":"Wormatron-Plant","types":["Bug","Grass"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":90,"atk":69,"def":105,"spa":89,"spd":125,"spe":46},"abilities":{"0":"Anticipation","H":"Overcoat"},"heightm":1.3,"weightkg":15,"prevo":"Wormadam","evoType":"trade","num":-1185}
 , "wormatronsandy":{"name":"Wormatron-Sandy","types":["Bug","Ground"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":90,"atk":89,"def":125,"spa":69,"spd":105,"spe":46},"abilities":{"0":"Anticipation","H":"Overcoat"},"heightm":1.3,"weightkg":15,"prevo":"Wormadam-Sandy","evoType":"trade","num":-1186}
 , "wormatrontrash":{"name":"Wormatron-Trash","types":["Bug","Steel"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":90,"atk":89,"def":105,"spa":89,"spd":105,"spe":46},"abilities":{"0":"Anticipation","H":"Overcoat"},"heightm":1.3,"weightkg":15,"prevo":"Wormadam-Trash","evoType":"trade","num":-1187}
+, "snorlaxhell":{"name":"Snorlax-Hell","types":["Ice","Ground"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":160,"atk":110,"def":65,"spa":65,"spd":110,"spe":30},"abilities":{"0":"Thick Fat","1":"Cursed Body","H":"Refridgerate"},"heightm":2.1,"weightkg":460,"evoType":"trade","num":-1188}
 
 };
  
