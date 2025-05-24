@@ -20338,6 +20338,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "burmygossamer":{"name":"Burmy-Gossamer","types":["Bug"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":40,"atk":29,"def":45,"spa":29,"spd":45,"spe":36},"abilities":{"0":"Shed Skin","H":"Overcoat"},"heightm":0.2,"weightkg":3.4,"evoType":"trade","num":-1170}
 , "wormadamgossamer":{"name":"Wormadam-Gossamer","types":["Bug","Ghost"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":60,"atk":79,"def":59,"spa":85,"spd":105,"spe":36},"abilities":{"0":"Anticipation","H":"Overcoat"},"heightm":0.5,"weightkg":6.5,"prevo":"Burmy-Gossamer","evoType":"trade","num":-1171}
 , "wormatrongossamer":{"name":"Wormatron-Gossamer","types":["Bug","Ghost"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":90,"atk":89,"def":69,"spa":105,"spd":125,"spe":46},"abilities":{"0":"Anticipation","H":"Overcoat"},"heightm":1.3,"weightkg":15,"prevo":"Wormadam-Gossamer","evoType":"trade","num":-1172}
+, "burmynocoat":{"name":"Burmy-No-Coat","types":["Bug"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":40,"atk":29,"def":35,"spa":29,"spd":35,"spe":56},"abilities":{"0":"Shed Skin","H":"Overcoat"},"heightm":0.2,"weightkg":3.4,"evoType":"trade","num":-1173}
 
 };
  
