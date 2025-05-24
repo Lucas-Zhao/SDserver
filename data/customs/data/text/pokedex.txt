@@ -156,3 +156,4 @@
 , "tinkatinkspectre":{"name":"Tinkatink-Spectre"}
 , "tinkatuffspectre":{"name":"Tinkatuff-Spectre"}
 , "tinkatonspectre":{"name":"Tinkaton-Spectre"}
+, "blazikenkalos":{"name":"Blaziken-Kalos"}
