@@ -189,3 +189,4 @@
 , "wormatrontrash":{"name":"Wormatron-Trash"}
 , "snorlaxhell":{"name":"Snorlax-Hell"}
 , "snorlaxhellmega":{"name":"Snorlax-Hell-Mega"}
+, "carbinksea":{"name":"Carbink-Sea"}

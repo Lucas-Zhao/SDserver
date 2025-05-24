@@ -20355,6 +20355,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "wormatrontrash":{"name":"Wormatron-Trash","types":["Bug","Steel"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":90,"atk":89,"def":105,"spa":89,"spd":105,"spe":46},"abilities":{"0":"Anticipation","H":"Overcoat"},"heightm":1.3,"weightkg":15,"prevo":"Wormadam-Trash","evoType":"trade","num":-1187}
 , "snorlaxhell":{"name":"Snorlax-Hell","types":["Ice","Ground"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":160,"atk":110,"def":65,"spa":65,"spd":110,"spe":30},"abilities":{"0":"Thick Fat","1":"Cursed Body","H":"Refridgerate"},"heightm":2.1,"weightkg":460,"evoType":"trade","num":-1188}
 , "snorlaxhellmega":{"name":"Snorlax-Hell-Mega","types":["Ice","Ground"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":160,"atk":147,"def":80,"spa":90,"spd":123,"spe":40},"abilities":{"0":"Sheer Force"},"heightm":3,"weightkg":930,"evoType":"trade","requiredItem":"Snorlaxite HELL","baseSpecies":"Snorlax-HELL","forme":"Mega","num":-1189}
+, "carbinksea":{"name":"Carbink-Sea","types":["Water","Fairy"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":50,"atk":50,"def":150,"spa":50,"spd":150,"spe":50},"abilities":{"0":"Clear Body","H":"Sturdy"},"heightm":0.3,"weightkg":5.7,"evoType":"trade","num":-1190}
 
 };
  
