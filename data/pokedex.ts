@@ -20362,6 +20362,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "staraptorcreativeink":{"name":"Staraptor-Creative-Ink","types":["Steel","Flying"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":85,"atk":120,"def":70,"spa":50,"spd":60,"spe":100},"abilities":{"0":"Intimidate","1":"Color Change","H":"Reckless"},"heightm":1.2,"weightkg":24.9,"evoType":"trade","num":-1194}
 , "dittocreativeink":{"name":"Ditto-Creative-Ink","types":["Steel"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":48,"atk":48,"def":48,"spa":48,"spd":48,"spe":48},"abilities":{"0":"Color Change","H":"Imposter"},"heightm":0.3,"weightkg":4,"evoType":"trade","num":-1195}
 , "chesnaughtchained":{"name":"Chesnaught-Chained","types":["Poison","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":93,"atk":112,"def":132,"spa":74,"spd":80,"spe":64},"abilities":{"0":"Toxic Chain","H":"Bulletproof"},"heightm":1.6,"weightkg":90,"evoType":"trade","num":-1196}
+, "serperiorchained":{"name":"Serperior-Chained","types":["Poison","Grass"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":75,"atk":80,"def":100,"spa":80,"spd":100,"spe":120},"abilities":{"0":"Toxic Chain","H":"Contrary"},"heightm":3.3,"weightkg":63,"evoType":"trade","num":-1197}
 
 };
  
