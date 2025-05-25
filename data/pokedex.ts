@@ -20381,6 +20381,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "turtwigkoopa":{"name":"Turtwig-Koopa","types":["Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":55,"atk":68,"def":64,"spa":45,"spd":55,"spe":31},"abilities":{"0":"Levitate","H":"Shell Armor"},"heightm":0.4,"weightkg":10.2,"evoType":"trade","num":-1213}
 , "gardevoirsuper":{"name":"Gardevoir-Super","types":["Fairy","Normal"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":68,"atk":65,"def":65,"spa":125,"spd":115,"spe":80},"abilities":{"0":"Synchronize","1":"Trace","H":"Telepathy"},"heightm":1.6,"weightkg":48.4,"evoType":"trade","num":-1214}
 , "gardevoirmegasuper":{"name":"Gardevoir-Mega-Super","types":["Fairy","Normal"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":68,"atk":85,"def":65,"spa":165,"spd":135,"spe":100},"abilities":{"0":"Charisma"},"heightm":1.6,"weightkg":48.4,"evoType":"trade","requiredItem":"Gardevoirite Super","baseSpecies":"Gardevoir-Super","forme":"Mega","num":-1215}
+, "combeehisuiswarm":{"name":"Combee-Hisui-Swarm","types":["Bug","Flying"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":120,"atk":120,"def":158,"spa":120,"spd":158,"spe":70},"abilities":{"0":"Intimidate"},"heightm":3,"weightkg":100,"evoType":"trade","num":-1216}
 
 };
  
