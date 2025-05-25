@@ -20387,6 +20387,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "crossblue":{"name":"Crossblue","types":["Bug","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":90,"atk":135,"def":80,"spa":40,"spd":100,"spe":100},"abilities":{"0":"Swarm","1":"Guts","H":"Moxie"},"heightm":2,"weightkg":75,"prevo":"Heracross","evoType":"trade","num":-1219}
 , "diamoneye":{"name":"Diamoneye","types":["Ghost","Dark"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":75,"atk":105,"def":83,"spa":70,"spd":74,"spe":102},"abilities":{"0":"Pickpocket","1":"Stall","H":"Prankster"},"heightm":1,"weightkg":201,"prevo":"Sableye","evoType":"trade","num":-1220}
 , "diamoneyemega":{"name":"Diamoneye-Mega","types":["Ghost","Dark"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":75,"atk":80,"def":84,"spa":144,"spd":94,"spe":132},"abilities":{"0":"Unnerve"},"heightm":2,"weightkg":301,"evoType":"trade","requiredItem":"Diamoneyite","baseSpecies":"Diamoneye","forme":"Mega","num":-1221}
+, "diancieangel":{"name":"Diancie-Angel","types":["Rock","Flying"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":50,"atk":100,"def":150,"spa":100,"spd":150,"spe":50},"abilities":{"0":"Clear Body"},"heightm":1.1,"weightkg":27.8,"evoType":"trade","num":-1222}
 
 };
  
