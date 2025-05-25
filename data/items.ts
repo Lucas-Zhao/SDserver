@@ -10091,6 +10091,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -10180,6 +10184,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "darkraite":{"name":"Darkraite","megaStone":"Darkrai-Mega","itemUser":["Darkrai"],"megaEvolves":"Darkrai","num":-1086,"isNonstandard":"Unobtainable","gen":0}
 , "darkritez":{"name":"Darkrite Z","megaStone":"Darkrai-Mega-Z","itemUser":["Darkrai"],"megaEvolves":"Darkrai","num":-1087,"isNonstandard":"Unobtainable","gen":0}
 , "lumineonite":{"name":"Lumineonite","megaStone":"Lumineon-Mega","itemUser":["Lumineon"],"megaEvolves":"Lumineon","num":-1088,"isNonstandard":"Unobtainable","gen":0}
+, "meloettitearia":{"name":"Meloettite Aria","megaStone":"Meloetta-Mega-Aria","itemUser":["Meloetta"],"megaEvolves":"Meloetta","num":-1089,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -10892,4 +10897,12 @@ Items["lumineonite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//lumineoniteend
+//lumineoniteend//meloettiteariastart
+
+Items["meloettitearia"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//meloettiteariaend

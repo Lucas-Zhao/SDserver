@@ -99948,4 +99948,5 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 , "darkraimega":{"learnset":{"darkpulse":["9L4","9L3"],"nastyplot":["9L4","9L3"]}}
 , "darkraimegaz":{"learnset":{"darkpulse":["9L4","9L3"],"nastyplot":["9L4","9L3"]}}
 , "lumineonmega":{"learnset":{"surf":["9L4","9L3"],"airslash":["9L4","9L3"]}}
+, "meloettamegaaria":{"learnset":{"relicsong":["9L4","9L3"],"psychic":["9L4","9L3"]}}
 };

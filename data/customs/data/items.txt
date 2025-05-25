@@ -86,6 +86,7 @@
 , "darkraite":{"name":"Darkraite","megaStone":"Darkrai-Mega","itemUser":["Darkrai"],"megaEvolves":"Darkrai","num":-1086,"isNonstandard":"Unobtainable","gen":0}
 , "darkritez":{"name":"Darkrite Z","megaStone":"Darkrai-Mega-Z","itemUser":["Darkrai"],"megaEvolves":"Darkrai","num":-1087,"isNonstandard":"Unobtainable","gen":0}
 , "lumineonite":{"name":"Lumineonite","megaStone":"Lumineon-Mega","itemUser":["Lumineon"],"megaEvolves":"Lumineon","num":-1088,"isNonstandard":"Unobtainable","gen":0}
+, "meloettitearia":{"name":"Meloettite Aria","megaStone":"Meloetta-Mega-Aria","itemUser":["Meloetta"],"megaEvolves":"Meloetta","num":-1089,"isNonstandard":"Unobtainable","gen":0}
 
 /*FUNCTIONS*/
 //serperioritestart
@@ -796,4 +797,12 @@ Items["lumineonite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//lumineoniteend
+//lumineoniteend//meloettiteariastart
+
+Items["meloettitearia"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//meloettiteariaend

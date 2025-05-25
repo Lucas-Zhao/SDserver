@@ -4004,6 +4004,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "darkraimega":{"name":"Darkrai-Mega"}
 , "darkraimegaz":{"name":"Darkrai-Mega-Z"}
 , "lumineonmega":{"name":"Lumineon-Mega"}
+, "meloettamegaaria":{"name":"Meloetta-Mega-Aria"}
 
 };
  
