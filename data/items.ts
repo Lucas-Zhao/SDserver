@@ -10075,6 +10075,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -10160,6 +10164,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "dianciteangel":{"name":"Diancite Angel","megaStone":"Diancie-Angel-Mega","itemUser":["Diancie-Angel"],"megaEvolves":"Diancie-Angel","num":-1082,"isNonstandard":"Unobtainable","gen":0}
 , "dianciteinnerdemon":{"name":"Diancite Inner Demon","megaStone":"Diancie-Inner-Demon-Mega","itemUser":["Diancie-Inner-Demon"],"megaEvolves":"Diancie-Inner-Demon","num":-1083,"isNonstandard":"Unobtainable","gen":0}
 , "diancitesea":{"name":"Diancite Sea","megaStone":"Diancie-Mega-Sea","itemUser":["Diancie-Sea"],"megaEvolves":"Diancie-Sea","num":-1084,"isNonstandard":"Unobtainable","gen":0}
+, "azumarillite":{"name":"Azumarillite","megaStone":"Azumarill-Mega","itemUser":["Azumarill"],"megaEvolves":"Azumarill","num":-1085,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -10840,4 +10845,12 @@ Items["diancitesea"].onTakeItem = function(item, source) {
         return true;
       }
 
-//dianciteseaend
+//dianciteseaend//azumarillitestart
+
+Items["azumarillite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//azumarilliteend

@@ -2525,6 +2525,7 @@ export const ItemsText: {[id: IDEntry]: ItemText} = {
 , "dianciteangel":{"name":"Diancite Angel","shortDesc":"If held by a Diancie-Angel, this item allows it to Mega Evolve in battle."}
 , "dianciteinnerdemon":{"name":"Diancite Inner Demon","shortDesc":"If held by a Diancie-Inner-Demon, this item allows it to Mega Evolve in battle."}
 , "diancitesea":{"name":"Diancite Sea","shortDesc":"If held by a Diancie-Sea, this item allows it to Mega Evolve in battle."}
+, "azumarillite":{"name":"Azumarillite","shortDesc":"If held by a Azumarill, this item allows it to Mega Evolve in battle."}
 
 };
  
