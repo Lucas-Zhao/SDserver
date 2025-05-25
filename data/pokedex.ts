@@ -20374,6 +20374,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "sawkluigi":{"name":"Sawk-Luigi","types":["Normal","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":75,"atk":125,"def":75,"spa":30,"spd":75,"spe":85},"abilities":{"0":"Sturdy","1":"Inner Focus","H":"Mold Breaker"},"heightm":1.4,"weightkg":51,"evoType":"trade","num":-1206}
 , "tyruntyoshi":{"name":"Tyrunt-Yoshi","types":["Dragon","Normal"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":58,"atk":89,"def":77,"spa":45,"spd":45,"spe":48},"abilities":{"0":"Strong Jaw","H":"Sturdy"},"heightm":0.8,"weightkg":26,"evoType":"trade","num":-1207}
 , "oddishgoomba":{"name":"Oddish-Goomba","types":["Grass","Dark"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":45,"atk":50,"def":55,"spa":75,"spd":65,"spe":30},"abilities":{"0":"Chlorophyll","H":"Run Away"},"heightm":0.5,"weightkg":5.4,"evoType":"trade","num":-1208}
+, "gengarkingboo":{"name":"Gengar-King-Boo","types":["Ghost","Dark"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":60,"atk":65,"def":60,"spa":130,"spd":75,"spe":110},"abilities":{"0":"Levitate"},"heightm":1.5,"weightkg":40.5,"evoType":"trade","num":-1209}
 
 };
  
