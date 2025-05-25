@@ -3970,6 +3970,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "chesnaughtchained":{"name":"Chesnaught-Chained"}
 , "serperiorchained":{"name":"Serperior-Chained"}
 , "torterrachained":{"name":"Torterra-Chained"}
+, "chromehorse":{"name":"Chromehorse"}
 
 };
  
