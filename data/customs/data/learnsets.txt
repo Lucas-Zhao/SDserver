@@ -232,3 +232,4 @@
 , "darkraimegaz":{"learnset":{"darkpulse":["9L4","9L3"],"nastyplot":["9L4","9L3"]}}
 , "lumineonmega":{"learnset":{"surf":["9L4","9L3"],"airslash":["9L4","9L3"]}}
 , "meloettamegaaria":{"learnset":{"relicsong":["9L4","9L3"],"psychic":["9L4","9L3"]}}
+, "meloettamegapirouette":{"learnset":{"relic song":["9L4","9L3"],"closecombat":["9L4","9L3"]}}
