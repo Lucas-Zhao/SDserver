@@ -10059,6 +10059,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -10142,6 +10146,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "gardevoiritesuper":{"name":"Gardevoirite Super","megaStone":"Gardevoir-Mega-Super","itemUser":["Gardevoir-Super"],"megaEvolves":"Gardevoir-Super","num":-1080,"isNonstandard":"Unobtainable","gen":0}
 , "diamoneyite":{"name":"Diamoneyite","megaStone":"Diamoneye-Mega","itemUser":["Diamoneye"],"megaEvolves":"Diamoneye","num":-1081,"isNonstandard":"Unobtainable","gen":0}
 , "dianciteangel":{"name":"Diancite Angel","megaStone":"Diancie-Angel-Mega","itemUser":["Diancie-Angel"],"megaEvolves":"Diancie-Angel","num":-1082,"isNonstandard":"Unobtainable","gen":0}
+, "dianciteinnerdemon":{"name":"Diancite Inner Demon","megaStone":"Diancie-Inner-Demon-Mega","itemUser":["Diancie-Inner-Demon"],"megaEvolves":"Diancie-Inner-Demon","num":-1083,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -10806,4 +10811,12 @@ Items["dianciteangel"].onTakeItem = function(item, source) {
         return true;
       }
 
-//dianciteangelend
+//dianciteangelend//dianciteinnerdemonstart
+
+Items["dianciteinnerdemon"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//dianciteinnerdemonend
