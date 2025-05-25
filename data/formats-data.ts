@@ -6233,5 +6233,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "serperiorchained":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "torterrachained":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "chromehorse":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "chromeprince":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };

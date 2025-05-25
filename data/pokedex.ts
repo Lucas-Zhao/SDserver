@@ -20365,6 +20365,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "serperiorchained":{"name":"Serperior-Chained","types":["Poison","Grass"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":75,"atk":80,"def":100,"spa":80,"spd":100,"spe":120},"abilities":{"0":"Toxic Chain","H":"Contrary"},"heightm":3.3,"weightkg":63,"evoType":"trade","num":-1197}
 , "torterrachained":{"name":"Torterra-Chained","types":["Poison","Ground"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":100,"atk":119,"def":115,"spa":75,"spd":90,"spe":56},"abilities":{"0":"Toxic Chain","H":"Shell Armor"},"heightm":2.2,"weightkg":310,"evoType":"trade","num":-1198}
 , "chromehorse":{"name":"Chromehorse","types":["Fire","Electric"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":80,"atk":132,"def":68,"spa":88,"spd":68,"spe":134},"abilities":{"0":"Quark Drive"},"heightm":2.5,"weightkg":175,"evoType":"trade","num":-1199}
+, "chromeprince":{"name":"Chromeprince","types":["Psychic","Steel"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":140,"atk":90,"def":90,"spa":90,"spd":90,"spe":90},"abilities":{"0":"Quark Drive"},"heightm":3,"weightkg":98,"evoType":"trade","num":-1200}
 
 };
  
