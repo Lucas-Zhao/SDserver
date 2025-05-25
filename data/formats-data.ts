@@ -6265,5 +6265,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "azumarillmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "darkraimega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "darkraimegaz":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "lumineonmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };

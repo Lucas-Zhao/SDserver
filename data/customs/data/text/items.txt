@@ -87,3 +87,4 @@
 , "azumarillite":{"name":"Azumarillite","shortDesc":"If held by a Azumarill, this item allows it to Mega Evolve in battle."}
 , "darkraite":{"name":"Darkraite","shortDesc":"If held by a Darkrai, this item allows it to Mega Evolve in battle."}
 , "darkritez":{"name":"Darkrite Z","shortDesc":"If held by a Darkrai, this item allows it to Mega Evolve in battle."}
+, "lumineonite":{"name":"Lumineonite","shortDesc":"If held by a Lumineon, this item allows it to Mega Evolve in battle."}
