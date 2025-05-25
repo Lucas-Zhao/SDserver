@@ -20375,6 +20375,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "tyruntyoshi":{"name":"Tyrunt-Yoshi","types":["Dragon","Normal"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":58,"atk":89,"def":77,"spa":45,"spd":45,"spe":48},"abilities":{"0":"Strong Jaw","H":"Sturdy"},"heightm":0.8,"weightkg":26,"evoType":"trade","num":-1207}
 , "oddishgoomba":{"name":"Oddish-Goomba","types":["Grass","Dark"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":45,"atk":50,"def":55,"spa":75,"spd":65,"spe":30},"abilities":{"0":"Chlorophyll","H":"Run Away"},"heightm":0.5,"weightkg":5.4,"evoType":"trade","num":-1208}
 , "gengarkingboo":{"name":"Gengar-King-Boo","types":["Ghost","Dark"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":60,"atk":65,"def":60,"spa":130,"spd":75,"spe":110},"abilities":{"0":"Levitate"},"heightm":1.5,"weightkg":40.5,"evoType":"trade","num":-1209}
+, "magikarpcheepcheep":{"name":"Magikarp-Cheep-Cheep","types":["Water","Normal"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":20,"atk":10,"def":55,"spa":15,"spd":20,"spe":80},"abilities":{"0":"Swift Swim","H":"Rattled"},"heightm":0.9,"weightkg":10,"evoType":"trade","num":-1210}
 
 };
  
