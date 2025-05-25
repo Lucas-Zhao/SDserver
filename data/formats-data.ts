@@ -6236,5 +6236,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "chromeprince":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "chromerider":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "chromeranger":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "chrometurbo":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };

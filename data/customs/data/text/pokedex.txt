@@ -202,3 +202,4 @@
 , "chromeprince":{"name":"Chromeprince"}
 , "chromerider":{"name":"Chromerider"}
 , "chromeranger":{"name":"Chromeranger"}
+, "chrometurbo":{"name":"Chrometurbo"}
