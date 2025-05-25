@@ -6252,5 +6252,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "combeehisuiswarm":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "crescentrunner":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "shadowhunter":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "crossblue":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
