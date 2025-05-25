@@ -20391,6 +20391,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "diancieangelmega":{"name":"Diancie-Angel-Mega","types":["Rock","Flying"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":50,"atk":160,"def":110,"spa":160,"spd":110,"spe":110},"abilities":{"0":"Magic Bounce"},"heightm":1.1,"weightkg":27.8,"evoType":"trade","requiredItem":"Diancite Angel","baseSpecies":"Diancie-Angel","forme":"Mega","num":-1223}
 , "diancieinnerdemon":{"name":"Diancie-Inner-Demon","types":["Rock","Dark"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":50,"atk":100,"def":150,"spa":100,"spd":150,"spe":50},"abilities":{"0":"Clear Body"},"heightm":0.7,"weightkg":8.8,"evoType":"trade","num":-1224}
 , "diancieinnerdemonmega":{"name":"Diancie-Inner-Demon-Mega","types":["Rock","Dark"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":50,"atk":160,"def":110,"spa":160,"spd":110,"spe":110},"abilities":{"0":"Magic Bounce"},"heightm":1.1,"weightkg":27.8,"evoType":"trade","requiredItem":"Diancite Inner Demon","baseSpecies":"Diancie-Inner-Demon","forme":"Mega","num":-1225}
+, "dianciesea":{"name":"Diancie-Sea","types":["Rock","Water"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":50,"atk":100,"def":150,"spa":100,"spd":150,"spe":50},"abilities":{"0":"Clear Body"},"heightm":0.7,"weightkg":8.8,"evoType":"trade","num":-1226}
 
 };
  
