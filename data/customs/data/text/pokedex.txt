@@ -219,3 +219,4 @@
 , "crescentrunner":{"name":"Crescentrunner"}
 , "shadowhunter":{"name":"Shadowhunter"}
 , "crossblue":{"name":"Crossblue"}
+, "diamoneye":{"name":"Diamoneye"}
