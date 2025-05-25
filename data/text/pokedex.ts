@@ -3989,6 +3989,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "gardevoirmegasuper":{"name":"Gardevoir-Mega-Super"}
 , "combeehisuiswarm":{"name":"Combee-Hisui-Swarm"}
 , "crescentrunner":{"name":"Crescentrunner"}
+, "shadowhunter":{"name":"Shadowhunter"}
 
 };
  

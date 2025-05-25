@@ -20383,6 +20383,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "gardevoirmegasuper":{"name":"Gardevoir-Mega-Super","types":["Fairy","Normal"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":68,"atk":85,"def":65,"spa":165,"spd":135,"spe":100},"abilities":{"0":"Charisma"},"heightm":1.6,"weightkg":48.4,"evoType":"trade","requiredItem":"Gardevoirite Super","baseSpecies":"Gardevoir-Super","forme":"Mega","num":-1215}
 , "combeehisuiswarm":{"name":"Combee-Hisui-Swarm","types":["Bug","Flying"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":120,"atk":120,"def":158,"spa":120,"spd":158,"spe":70},"abilities":{"0":"Intimidate"},"heightm":3,"weightkg":100,"evoType":"trade","num":-1216}
 , "crescentrunner":{"name":"Crescentrunner","types":["Psychic","Fairy"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":115,"atk":75,"def":95,"spa":75,"spd":95,"spe":115},"abilities":{"0":"Protosynthesis"},"heightm":2.4,"weightkg":130,"evoType":"trade","num":-1217}
+, "shadowhunter":{"name":"Shadowhunter","types":["Dark","Ghost"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":101,"atk":135,"def":83,"spa":77,"spd":83,"spe":91},"abilities":{"0":"Protosynthesis"},"heightm":2,"weightkg":110,"evoType":"trade","num":-1218}
 
 };
  
