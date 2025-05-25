@@ -220,3 +220,4 @@
 , "shadowhunter":{"name":"Shadowhunter"}
 , "crossblue":{"name":"Crossblue"}
 , "diamoneye":{"name":"Diamoneye"}
+, "diamoneyemega":{"name":"Diamoneye-Mega"}

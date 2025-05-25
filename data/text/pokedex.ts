@@ -3992,6 +3992,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "shadowhunter":{"name":"Shadowhunter"}
 , "crossblue":{"name":"Crossblue"}
 , "diamoneye":{"name":"Diamoneye"}
+, "diamoneyemega":{"name":"Diamoneye-Mega"}
 
 };
  

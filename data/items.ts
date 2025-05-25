@@ -10039,6 +10039,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -10120,6 +10124,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "eelektrossitehell":{"name":"Eelektrossite HELL","megaStone":"Eelektross-Mega-Hell","itemUser":["Eelektross-Hell"],"megaEvolves":"Eelektross-Hell","num":-1078,"isNonstandard":"Unobtainable","gen":0}
 , "snorlaxitehell":{"name":"Snorlaxite HELL","megaStone":"Snorlax-Hell-Mega","itemUser":["Snorlax-HELL"],"megaEvolves":"Snorlax-HELL","num":-1079,"isNonstandard":"Unobtainable","gen":0}
 , "gardevoiritesuper":{"name":"Gardevoirite Super","megaStone":"Gardevoir-Mega-Super","itemUser":["Gardevoir-Super"],"megaEvolves":"Gardevoir-Super","num":-1080,"isNonstandard":"Unobtainable","gen":0}
+, "diamoneyite":{"name":"Diamoneyite","megaStone":"Diamoneye-Mega","itemUser":["Diamoneye"],"megaEvolves":"Diamoneye","num":-1081,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -10768,4 +10773,12 @@ Items["gardevoiritesuper"].onTakeItem = function(item, source) {
         return true;
       }
 
-//gardevoiritesuperend
+//gardevoiritesuperend//diamoneyitestart
+
+Items["diamoneyite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//diamoneyiteend
