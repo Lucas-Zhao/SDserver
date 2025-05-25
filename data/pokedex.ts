@@ -20377,6 +20377,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "gengarkingboo":{"name":"Gengar-King-Boo","types":["Ghost","Dark"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":60,"atk":65,"def":60,"spa":130,"spd":75,"spe":110},"abilities":{"0":"Levitate"},"heightm":1.5,"weightkg":40.5,"evoType":"trade","num":-1209}
 , "magikarpcheepcheep":{"name":"Magikarp-Cheep-Cheep","types":["Water","Normal"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":20,"atk":10,"def":55,"spa":15,"spd":20,"spe":80},"abilities":{"0":"Swift Swim","H":"Rattled"},"heightm":0.9,"weightkg":10,"evoType":"trade","num":-1210}
 , "slakingdk":{"name":"Slaking-Dk","types":["Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":150,"atk":160,"def":100,"spa":95,"spd":65,"spe":100},"abilities":{"0":"Truant"},"heightm":2,"weightkg":130.5,"evoType":"trade","num":-1211}
+, "sharpedobulletbill":{"name":"Sharpedo-Bullet-Bill","types":["Steel","Fire"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":70,"atk":120,"def":40,"spa":95,"spd":40,"spe":95},"abilities":{"0":"Clear Body","H":"Speed Boost"},"heightm":1.8,"weightkg":130,"evoType":"trade","num":-1212}
 
 };
  

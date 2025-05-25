@@ -3983,6 +3983,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "gengarkingboo":{"name":"Gengar-King-Boo"}
 , "magikarpcheepcheep":{"name":"Magikarp-Cheep-Cheep"}
 , "slakingdk":{"name":"Slaking-Dk"}
+, "sharpedobulletbill":{"name":"Sharpedo-Bullet-Bill"}
 
 };
  
