@@ -10083,6 +10083,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -10170,6 +10174,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "diancitesea":{"name":"Diancite Sea","megaStone":"Diancie-Mega-Sea","itemUser":["Diancie-Sea"],"megaEvolves":"Diancie-Sea","num":-1084,"isNonstandard":"Unobtainable","gen":0}
 , "azumarillite":{"name":"Azumarillite","megaStone":"Azumarill-Mega","itemUser":["Azumarill"],"megaEvolves":"Azumarill","num":-1085,"isNonstandard":"Unobtainable","gen":0}
 , "darkraite":{"name":"Darkraite","megaStone":"Darkrai-Mega","itemUser":["Darkrai"],"megaEvolves":"Darkrai","num":-1086,"isNonstandard":"Unobtainable","gen":0}
+, "darkritez":{"name":"Darkrite Z","megaStone":"Darkrai-Mega-Z","itemUser":["Darkrai"],"megaEvolves":"Darkrai","num":-1087,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -10866,4 +10871,12 @@ Items["darkraite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//darkraiteend
+//darkraiteend//darkritezstart
+
+Items["darkritez"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//darkritezend
