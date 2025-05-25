@@ -3984,6 +3984,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "magikarpcheepcheep":{"name":"Magikarp-Cheep-Cheep"}
 , "slakingdk":{"name":"Slaking-Dk"}
 , "sharpedobulletbill":{"name":"Sharpedo-Bullet-Bill"}
+, "turtwigkoopa":{"name":"Turtwig-Koopa"}
 
 };
  

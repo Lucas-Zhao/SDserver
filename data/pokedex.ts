@@ -20378,6 +20378,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "magikarpcheepcheep":{"name":"Magikarp-Cheep-Cheep","types":["Water","Normal"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":20,"atk":10,"def":55,"spa":15,"spd":20,"spe":80},"abilities":{"0":"Swift Swim","H":"Rattled"},"heightm":0.9,"weightkg":10,"evoType":"trade","num":-1210}
 , "slakingdk":{"name":"Slaking-Dk","types":["Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":150,"atk":160,"def":100,"spa":95,"spd":65,"spe":100},"abilities":{"0":"Truant"},"heightm":2,"weightkg":130.5,"evoType":"trade","num":-1211}
 , "sharpedobulletbill":{"name":"Sharpedo-Bullet-Bill","types":["Steel","Fire"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":70,"atk":120,"def":40,"spa":95,"spd":40,"spe":95},"abilities":{"0":"Clear Body","H":"Speed Boost"},"heightm":1.8,"weightkg":130,"evoType":"trade","num":-1212}
+, "turtwigkoopa":{"name":"Turtwig-Koopa","types":["Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":55,"atk":68,"def":64,"spa":45,"spd":55,"spe":31},"abilities":{"0":"Levitate","H":"Shell Armor"},"heightm":0.4,"weightkg":10.2,"evoType":"trade","num":-1213}
 
 };
  
