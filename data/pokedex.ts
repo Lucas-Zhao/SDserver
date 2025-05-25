@@ -20367,6 +20367,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "chromehorse":{"name":"Chromehorse","types":["Fire","Electric"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":80,"atk":132,"def":68,"spa":88,"spd":68,"spe":134},"abilities":{"0":"Quark Drive"},"heightm":2.5,"weightkg":175,"evoType":"trade","num":-1199}
 , "chromeprince":{"name":"Chromeprince","types":["Psychic","Steel"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":140,"atk":90,"def":90,"spa":90,"spd":90,"spe":90},"abilities":{"0":"Quark Drive"},"heightm":3,"weightkg":98,"evoType":"trade","num":-1200}
 , "chromerider":{"name":"Chromerider","types":["Psychic","Fire"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":100,"atk":152,"def":90,"spa":64,"spd":90,"spe":154},"abilities":{"0":"Quark Drive"},"heightm":4.5,"weightkg":273,"evoType":"trade","num":-1201}
+, "chromeranger":{"name":"Chromeranger","types":["Steel","Psychic"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":96,"atk":108,"def":108,"spa":60,"spd":80,"spe":118},"abilities":{"0":"Quark Drive"},"heightm":1,"weightkg":92,"evoType":"trade","num":-1202}
 
 };
  
