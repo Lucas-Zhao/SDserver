@@ -6248,5 +6248,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "sharpedobulletbill":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "turtwigkoopa":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "gardevoirsuper":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "gardevoirmegasuper":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
