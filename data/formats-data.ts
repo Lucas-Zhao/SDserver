@@ -6244,5 +6244,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "oddishgoomba":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "gengarkingboo":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "magikarpcheepcheep":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "slakingdk":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
