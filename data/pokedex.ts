@@ -20369,6 +20369,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "chromerider":{"name":"Chromerider","types":["Psychic","Fire"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":100,"atk":152,"def":90,"spa":64,"spd":90,"spe":154},"abilities":{"0":"Quark Drive"},"heightm":4.5,"weightkg":273,"evoType":"trade","num":-1201}
 , "chromeranger":{"name":"Chromeranger","types":["Steel","Psychic"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":96,"atk":108,"def":108,"spa":60,"spd":80,"spe":118},"abilities":{"0":"Quark Drive"},"heightm":1,"weightkg":92,"evoType":"trade","num":-1202}
 , "chrometurbo":{"name":"Chrometurbo","types":["Fairy","Electric"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":78,"atk":122,"def":82,"spa":70,"spd":110,"spe":108},"abilities":{"0":"Quark Drive"},"heightm":1,"weightkg":134,"evoType":"trade","num":-1203}
+, "cleffaluma":{"name":"Cleffa-Luma","types":["Psychic"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":50,"atk":25,"def":28,"spa":45,"spd":55,"spe":15},"abilities":{"0":"Cute Charm","1":"Magic Guard","H":"Friend Guard"},"heightm":0.3,"weightkg":3,"evoType":"trade","num":-1204}
 
 };
  
