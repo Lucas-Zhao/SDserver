@@ -20412,6 +20412,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "dittopaperbender":{"name":"Ditto-Paper-Bender","types":["Fairy"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":48,"atk":48,"def":48,"spa":48,"spd":48,"spe":48},"abilities":{"0":"Sharpness","H":"Imposter"},"heightm":0.3,"weightkg":0.4,"evoType":"trade","num":-1244}
 , "drifloonlight":{"name":"Drifloon-Light","types":["Ghost","Electric"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":90,"atk":50,"def":34,"spa":60,"spd":44,"spe":70},"abilities":{"0":"Volt Absorb","1":"Unburden","H":"Flare Boost"},"heightm":0.4,"weightkg":1.2,"evoType":"trade","num":-1245}
 , "driflight":{"name":"Driflight","types":["Ghost","Electric"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":150,"atk":80,"def":44,"spa":90,"spd":54,"spe":80},"abilities":{"0":"Volt Absorb","1":"Unburden","H":"Flare Boost"},"heightm":1.2,"weightkg":33.1,"prevo":"Drifloon-Light","evoType":"trade","num":-1246}
+, "falinksunova":{"name":"Falinks-Unova","types":["Fighting","Psychic"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":65,"atk":100,"def":100,"spa":70,"spd":60,"spe":75},"abilities":{"0":"Battle Armor","H":"Defiant"},"heightm":3,"weightkg":62,"evoType":"trade","num":-1247}
 
 };
  
