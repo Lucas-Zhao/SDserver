@@ -4024,6 +4024,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "okidogiunchained":{"name":"Okidogi-Unchained"}
 , "raltstrenchmaiden":{"name":"Ralts-Trench-Maiden"}
 , "kirliatrenchmaiden":{"name":"Kirlia-Trench-Maiden"}
+, "gardevoirtrenchmaiden":{"name":"Gardevoir-Trench-Maiden"}
 
 };
  

@@ -6286,5 +6286,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "okidogiunchained":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "raltstrenchmaiden":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "kirliatrenchmaiden":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "gardevoirtrenchmaiden":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
