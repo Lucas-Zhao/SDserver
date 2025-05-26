@@ -4015,6 +4015,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "beedrillpaperbender":{"name":"Beedrill-Paper-Bender"}
 , "gyaradospaperbender":{"name":"Gyarados-Paper-Bender"}
 , "skarmorypaperbender":{"name":"Skarmory-Paper-Bender"}
+, "dittopaperbender":{"name":"Ditto-Paper-Bender"}
 
 };
  
