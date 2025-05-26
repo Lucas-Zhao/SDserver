@@ -6279,5 +6279,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "skarmorypaperbender":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "dittopaperbender":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "drifloonlight":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "driflight":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
