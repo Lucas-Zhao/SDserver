@@ -6272,5 +6272,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "hippowdonshadowframe":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "lopunnyshadowframe":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "mausholdshadowframe":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "dittoshadowframe":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
