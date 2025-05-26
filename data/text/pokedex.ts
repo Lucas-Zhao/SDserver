@@ -4007,6 +4007,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "meloettamegaaria":{"name":"Meloetta-Mega-Aria"}
 , "meloettamegapirouette":{"name":"Meloetta-Mega-Pirouette"}
 , "dodrioshadowframe":{"name":"Dodrio-Shadow-Frame"}
+, "hippowdonshadowframe":{"name":"Hippowdon-Shadow-Frame"}
 
 };
  
