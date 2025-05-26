@@ -20410,6 +20410,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "gyaradospaperbender":{"name":"Gyarados-Paper-Bender","types":["Fairy","Water"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":95,"atk":125,"def":79,"spa":60,"spd":100,"spe":81},"abilities":{"0":"Sharpness","H":"Moxie"},"heightm":6.5,"weightkg":23.5,"evoType":"trade","num":-1242}
 , "skarmorypaperbender":{"name":"Skarmory-Paper-Bender","types":["Fairy","Steel"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":65,"atk":80,"def":140,"spa":40,"spd":70,"spe":70},"abilities":{"0":"Sharpness","1":"Sturdy","H":"Weak Armor"},"heightm":1.7,"weightkg":11.1,"evoType":"trade","num":-1243}
 , "dittopaperbender":{"name":"Ditto-Paper-Bender","types":["Fairy"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":48,"atk":48,"def":48,"spa":48,"spd":48,"spe":48},"abilities":{"0":"Sharpness","H":"Imposter"},"heightm":0.3,"weightkg":0.4,"evoType":"trade","num":-1244}
+, "drifloonlight":{"name":"Drifloon-Light","types":["Ghost","Electric"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":90,"atk":50,"def":34,"spa":60,"spd":44,"spe":70},"abilities":{"0":"Volt Absorb","1":"Unburden","H":"Flare Boost"},"heightm":0.4,"weightkg":1.2,"evoType":"trade","num":-1245}
 
 };
  
