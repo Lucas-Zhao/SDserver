@@ -6281,5 +6281,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "drifloonlight":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "driflight":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "falinksunova":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "fezandipitiunchained":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
