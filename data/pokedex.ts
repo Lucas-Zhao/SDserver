@@ -20403,6 +20403,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "dodrioshadowframe":{"name":"Dodrio-Shadow-Frame","types":["Dark","Flying"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":60,"atk":110,"def":70,"spa":60,"spd":60,"spe":110},"abilities":{"0":"Cursed Body","1":"Early Bird","H":"Tangled Feet"},"heightm":1.8,"weightkg":42,"evoType":"trade","num":-1235}
 , "hippowdonshadowframe":{"name":"Hippowdon-Shadow-Frame","types":["Dark","Ground"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":108,"atk":112,"def":118,"spa":68,"spd":72,"spe":47},"abilities":{"0":"Sand Stream","1":"Cursed Body","H":"Sand Force"},"heightm":2,"weightkg":150,"evoType":"trade","num":-1236}
 , "lopunnyshadowframe":{"name":"Lopunny-Shadow-Frame","types":["Dark","Normal"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":65,"atk":76,"def":84,"spa":54,"spd":96,"spe":105},"abilities":{"0":"Cursed Body","1":"Klutz","H":"Limber"},"heightm":1.2,"weightkg":17.8,"evoType":"trade","num":-1237}
+, "mausholdshadowframe":{"name":"Maushold-Shadow-Frame","types":["Dark","Normal"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":74,"atk":75,"def":70,"spa":65,"spd":75,"spe":111},"abilities":{"0":"Friend Guard","1":"Cursed Body","H":"Technician"},"heightm":0.3,"weightkg":1.4,"evoType":"trade","num":-1238}
 
 };
  

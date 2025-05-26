@@ -4009,6 +4009,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "dodrioshadowframe":{"name":"Dodrio-Shadow-Frame"}
 , "hippowdonshadowframe":{"name":"Hippowdon-Shadow-Frame"}
 , "lopunnyshadowframe":{"name":"Lopunny-Shadow-Frame"}
+, "mausholdshadowframe":{"name":"Maushold-Shadow-Frame"}
 
 };
  
