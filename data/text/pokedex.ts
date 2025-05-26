@@ -4012,6 +4012,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "mausholdshadowframe":{"name":"Maushold-Shadow-Frame"}
 , "dittoshadowframe":{"name":"Ditto-Shadow-Frame"}
 , "drapionpaperbender":{"name":"Drapion-Paper-Bender"}
+, "beedrillpaperbender":{"name":"Beedrill-Paper-Bender"}
 
 };
  
