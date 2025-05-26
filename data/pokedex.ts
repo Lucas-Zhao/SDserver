@@ -20407,6 +20407,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "dittoshadowframe":{"name":"Ditto-Shadow-Frame","types":["Dark"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":48,"atk":48,"def":48,"spa":48,"spd":48,"spe":48},"abilities":{"0":"Cursed Body","H":"Imposter"},"heightm":0.3,"weightkg":2,"evoType":"trade","num":-1239}
 , "drapionpaperbender":{"name":"Drapion-Paper-Bender","types":["Fairy","Dark"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":70,"atk":90,"def":110,"spa":60,"spd":75,"spe":95},"abilities":{"0":"Battle Armor","1":"Sniper","H":"Sharpness"},"heightm":1.3,"weightkg":6.1,"evoType":"trade","num":-1240}
 , "beedrillpaperbender":{"name":"Beedrill-Paper-Bender","types":["Fairy","Bug"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":65,"atk":90,"def":40,"spa":45,"spd":80,"spe":75},"abilities":{"0":"Sharpness","H":"Sniper"},"heightm":1,"weightkg":3,"evoType":"trade","num":-1241}
+, "gyaradospaperbender":{"name":"Gyarados-Paper-Bender","types":["Fairy","Water"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":95,"atk":125,"def":79,"spa":60,"spd":100,"spe":81},"abilities":{"0":"Sharpness","H":"Moxie"},"heightm":6.5,"weightkg":23.5,"evoType":"trade","num":-1242}
 
 };
  

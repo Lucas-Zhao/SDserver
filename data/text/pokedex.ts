@@ -4013,6 +4013,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "dittoshadowframe":{"name":"Ditto-Shadow-Frame"}
 , "drapionpaperbender":{"name":"Drapion-Paper-Bender"}
 , "beedrillpaperbender":{"name":"Beedrill-Paper-Bender"}
+, "gyaradospaperbender":{"name":"Gyarados-Paper-Bender"}
 
 };
  
