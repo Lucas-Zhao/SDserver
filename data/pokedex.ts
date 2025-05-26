@@ -20414,6 +20414,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "driflight":{"name":"Driflight","types":["Ghost","Electric"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":150,"atk":80,"def":44,"spa":90,"spd":54,"spe":80},"abilities":{"0":"Volt Absorb","1":"Unburden","H":"Flare Boost"},"heightm":1.2,"weightkg":33.1,"prevo":"Drifloon-Light","evoType":"trade","num":-1246}
 , "falinksunova":{"name":"Falinks-Unova","types":["Fighting","Psychic"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":65,"atk":100,"def":100,"spa":70,"spd":60,"spe":75},"abilities":{"0":"Battle Armor","H":"Defiant"},"heightm":3,"weightkg":62,"evoType":"trade","num":-1247}
 , "fezandipitiunchained":{"name":"Fezandipiti-Unchained","types":["Fairy","Fire"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":88,"atk":91,"def":82,"spa":70,"spd":125,"spe":99},"abilities":{"0":"Clear Body","H":"Technician"},"heightm":1.4,"weightkg":30.1,"evoType":"trade","num":-1248}
+, "munkidoriunchained":{"name":"Munkidori-Unchained","types":["Psychic","Water"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":88,"atk":75,"def":66,"spa":130,"spd":90,"spe":106},"abilities":{"0":"Clear Body","H":"Frisk"},"heightm":1,"weightkg":12.2,"evoType":"trade","num":-1249}
 
 };
  
