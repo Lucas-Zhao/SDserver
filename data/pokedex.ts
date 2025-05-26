@@ -20415,6 +20415,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "falinksunova":{"name":"Falinks-Unova","types":["Fighting","Psychic"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":65,"atk":100,"def":100,"spa":70,"spd":60,"spe":75},"abilities":{"0":"Battle Armor","H":"Defiant"},"heightm":3,"weightkg":62,"evoType":"trade","num":-1247}
 , "fezandipitiunchained":{"name":"Fezandipiti-Unchained","types":["Fairy","Fire"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":88,"atk":91,"def":82,"spa":70,"spd":125,"spe":99},"abilities":{"0":"Clear Body","H":"Technician"},"heightm":1.4,"weightkg":30.1,"evoType":"trade","num":-1248}
 , "munkidoriunchained":{"name":"Munkidori-Unchained","types":["Psychic","Water"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":88,"atk":75,"def":66,"spa":130,"spd":90,"spe":106},"abilities":{"0":"Clear Body","H":"Frisk"},"heightm":1,"weightkg":12.2,"evoType":"trade","num":-1249}
+, "okidogiunchained":{"name":"Okidogi-Unchained","types":["Fighting","Rock"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":88,"atk":128,"def":115,"spa":58,"spd":86,"spe":80},"abilities":{"0":"Clear Body","H":"Guard Dog"},"heightm":1.8,"weightkg":92,"evoType":"trade","num":-1250}
 
 };
  
