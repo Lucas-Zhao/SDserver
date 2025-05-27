@@ -4029,6 +4029,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "gimmighoulsea":{"name":"Gimmighoul-Sea"}
 , "gimmighoulroamingsea":{"name":"Gimmighoul-Roaming-Sea"}
 , "gholdengosea":{"name":"Gholdengo-Sea"}
+, "gogoatstellar":{"name":"Gogoat-Stellar"}
 
 };
  
