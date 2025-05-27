@@ -4057,6 +4057,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "primeapehisuiskier":{"name":"Primeape-Hisui-Skier"}
 , "kabuyetibonfire":{"name":"Kabuyeti-Bonfire"}
 , "kabuyeticlimb":{"name":"Kabuyeti-Climb"}
+, "klefkihisui":{"name":"Klefki-Hisui"}
 
 };
  
