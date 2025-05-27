@@ -20432,6 +20432,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "hatbirdytrash":{"name":"Hatbirdy-Trash","types":["Flying","Steel"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":70,"atk":95,"def":59,"spa":59,"spd":59,"spe":82},"abilities":{"0":"Keen Eye","H":"Overcoat"},"heightm":0.5,"weightkg":13,"evoType":"trade","num":-1264}
 , "hatbirdysandy":{"name":"Hatbirdy-Sandy","types":["Flying","Ground"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":70,"atk":95,"def":59,"spa":59,"spd":59,"spe":82},"abilities":{"0":"Keen Eye","H":"Overcoat"},"heightm":0.5,"weightkg":13,"evoType":"trade","num":-1265}
 , "gothisieur":{"name":"Gothisieur","types":["Psychic","Dark"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":70,"atk":95,"def":110,"spa":55,"spd":95,"spe":65},"abilities":{"0":"Frisk","1":"Defiant","H":"Shadow Tag"},"heightm":1.5,"weightkg":44,"evoType":"trade","num":-1266}
+, "hatennaalola":{"name":"Hatenna-Alola","types":["Psychic","Water"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":42,"atk":30,"def":45,"spa":56,"spd":53,"spe":39},"abilities":{"0":"Healer","1":"Anticipation","H":"Magic Bounce"},"heightm":0.4,"weightkg":3.4,"evoType":"trade","num":-1267}
 
 };
  
