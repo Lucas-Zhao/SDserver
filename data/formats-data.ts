@@ -6313,5 +6313,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "wildwind":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "spikeclaw":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "ironterrarium":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "mankeyhisuifury":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
