@@ -278,3 +278,4 @@
 , "ironspore":{"name":"Ironspore"}
 , "wildwind":{"name":"Wildwind"}
 , "spikeclaw":{"name":"Spikeclaw"}
+, "ironterrarium":{"name":"Ironterrarium"}
