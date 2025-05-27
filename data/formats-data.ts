@@ -6328,5 +6328,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "latiis":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "latius":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "moltik":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "lavantula":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
