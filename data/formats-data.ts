@@ -6309,5 +6309,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "ironmatrix":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "ironpixel":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "ironspark":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "ironspore":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
