@@ -20428,6 +20428,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "machampstellar":{"name":"Machamp-Stellar","types":["Psychic","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":90,"atk":130,"def":80,"spa":65,"spd":85,"spe":55},"abilities":{"0":"Guts","1":"No Guard","H":"Trace"},"heightm":1.6,"weightkg":65,"evoType":"trade","num":-1260}
 , "noctowlstellar":{"name":"Noctowl-Stellar","types":["Psychic","Flying"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":100,"atk":50,"def":50,"spa":86,"spd":96,"spe":70},"abilities":{"0":"Insomnia","1":"Trace","H":"Tinted Lens"},"heightm":1.6,"weightkg":20.4,"evoType":"trade","num":-1261}
 , "dittostellar":{"name":"Ditto-Stellar","types":["Psychic"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":48,"atk":48,"def":48,"spa":48,"spd":48,"spe":48},"abilities":{"0":"Trace","H":"Imposter"},"heightm":0.3,"weightkg":2,"evoType":"trade","num":-1262}
+, "hatbirdyplant":{"name":"Hatbirdy-Plant","types":["Flying","Grass"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":70,"atk":95,"def":59,"spa":59,"spd":59,"spe":82},"abilities":{"0":"Keen Eye","H":"Overcoat"},"heightm":0.5,"weightkg":13,"evoType":"trade","num":-1263}
 
 };
  

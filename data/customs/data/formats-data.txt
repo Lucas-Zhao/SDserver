@@ -261,3 +261,4 @@
 , "machampstellar":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "noctowlstellar":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "dittostellar":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "hatbirdyplant":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
