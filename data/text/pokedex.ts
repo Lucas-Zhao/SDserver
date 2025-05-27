@@ -4063,6 +4063,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "klekelord":{"name":"Klekelord"}
 , "latiaschained":{"name":"Latias-Chained"}
 , "laties":{"name":"Laties"}
+, "latiis":{"name":"Latiis"}
 
 };
  

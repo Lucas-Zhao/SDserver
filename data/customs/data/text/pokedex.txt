@@ -291,3 +291,4 @@
 , "klekelord":{"name":"Klekelord"}
 , "latiaschained":{"name":"Latias-Chained"}
 , "laties":{"name":"Laties"}
+, "latiis":{"name":"Latiis"}

@@ -6325,5 +6325,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "klekelord":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "latiaschained":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "laties":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "latiis":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
