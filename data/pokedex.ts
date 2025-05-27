@@ -20426,6 +20426,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "gogoatstellar":{"name":"Gogoat-Stellar","types":["Psychic","Grass"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":123,"atk":100,"def":63,"spa":97,"spd":81,"spe":68},"abilities":{"0":"Sap Sipper","1":"Trace","H":"Grass Pelt"},"heightm":1.7,"weightkg":45.5,"evoType":"trade","num":-1258}
 , "hydrapplestellar":{"name":"Hydrapple-Stellar","types":["Psychic","Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":106,"atk":86,"def":110,"spa":120,"spd":80,"spe":44},"abilities":{"0":"Supersweet Syrup","1":"Regenerator","H":"Sticky Hold"},"heightm":1.8,"weightkg":46,"evoType":"trade","num":-1259}
 , "machampstellar":{"name":"Machamp-Stellar","types":["Psychic","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":90,"atk":130,"def":80,"spa":65,"spd":85,"spe":55},"abilities":{"0":"Guts","1":"No Guard","H":"Trace"},"heightm":1.6,"weightkg":65,"evoType":"trade","num":-1260}
+, "noctowlstellar":{"name":"Noctowl-Stellar","types":["Psychic","Flying"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":100,"atk":50,"def":50,"spa":86,"spd":96,"spe":70},"abilities":{"0":"Insomnia","1":"Trace","H":"Tinted Lens"},"heightm":1.6,"weightkg":20.4,"evoType":"trade","num":-1261}
 
 };
  
