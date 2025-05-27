@@ -6318,5 +6318,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "primeapehisuioven":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "primeapehisuiskier":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "kabuyetibonfire":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "kabuyeticlimb":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
