@@ -20440,6 +20440,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "irondoll":{"name":"Irondoll","types":["Steel","Electric"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":92,"atk":114,"def":88,"spa":84,"spd":102,"spe":90},"abilities":{"0":"Quark Drive"},"heightm":0.7,"weightkg":152.8,"evoType":"trade","num":-1272}
 , "ironmatrix":{"name":"Ironmatrix","types":["Ice","Psychic"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":88,"atk":90,"def":174,"spa":80,"spd":58,"spe":78},"abilities":{"0":"Quark Drive"},"heightm":2,"weightkg":232.5,"evoType":"trade","num":-1273}
 , "ironpixel":{"name":"Ironpixel","types":["Poison","Electric"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":126,"atk":64,"def":64,"spa":126,"spd":64,"spe":126},"abilities":{"0":"Quark Drive"},"heightm":1.3,"weightkg":7,"evoType":"trade","num":-1274}
+, "ironspark":{"name":"Ironspark","types":["Electric","Psychic"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":92,"atk":126,"def":90,"spa":76,"spd":70,"spe":116},"abilities":{"0":"Quark Drive"},"heightm":2,"weightkg":270,"evoType":"trade","num":-1275}
 
 };
  
