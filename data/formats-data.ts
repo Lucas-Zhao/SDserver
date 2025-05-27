@@ -6303,5 +6303,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "hatennaalola":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "hattremalola":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "hatterenealola":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "hatterenealolagmax":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
