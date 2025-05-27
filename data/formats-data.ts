@@ -6293,5 +6293,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "gholdengosea":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "gogoatstellar":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "hydrapplestellar":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "machampstellar":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };

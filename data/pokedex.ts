@@ -20425,6 +20425,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "gholdengosea":{"name":"Gholdengo-Sea","types":["Ghost","Water"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":87,"atk":60,"def":95,"spa":133,"spd":91,"spe":84},"abilities":{"0":"Good as Gold"},"heightm":1.2,"weightkg":30,"prevo":"Gimmighoul-Sea","evoType":"trade","num":-1257}
 , "gogoatstellar":{"name":"Gogoat-Stellar","types":["Psychic","Grass"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":123,"atk":100,"def":63,"spa":97,"spd":81,"spe":68},"abilities":{"0":"Sap Sipper","1":"Trace","H":"Grass Pelt"},"heightm":1.7,"weightkg":45.5,"evoType":"trade","num":-1258}
 , "hydrapplestellar":{"name":"Hydrapple-Stellar","types":["Psychic","Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":106,"atk":86,"def":110,"spa":120,"spd":80,"spe":44},"abilities":{"0":"Supersweet Syrup","1":"Regenerator","H":"Sticky Hold"},"heightm":1.8,"weightkg":46,"evoType":"trade","num":-1259}
+, "machampstellar":{"name":"Machamp-Stellar","types":["Psychic","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":90,"atk":130,"def":80,"spa":65,"spd":85,"spe":55},"abilities":{"0":"Guts","1":"No Guard","H":"Trace"},"heightm":1.6,"weightkg":65,"evoType":"trade","num":-1260}
 
 };
  
