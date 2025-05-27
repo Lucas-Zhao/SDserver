@@ -280,3 +280,4 @@
 , "spikeclaw":{"name":"Spikeclaw"}
 , "ironterrarium":{"name":"Ironterrarium"}
 , "mankeyhisuifury":{"name":"Mankey-Hisui-Fury"}
+, "mankeyhisuicalm":{"name":"Mankey-Hisui-Calm"}
