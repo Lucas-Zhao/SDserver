@@ -261,3 +261,4 @@
 , "hydrapplestellar":{"name":"Hydrapple-Stellar"}
 , "machampstellar":{"name":"Machamp-Stellar"}
 , "noctowlstellar":{"name":"Noctowl-Stellar"}
+, "dittostellar":{"name":"Ditto-Stellar"}
