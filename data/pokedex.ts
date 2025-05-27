@@ -20458,6 +20458,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "latiaschained":{"name":"Latias-Chained","types":["Poison","Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":80,"atk":80,"def":90,"spa":110,"spd":130,"spe":110},"abilities":{"0":"Toxic Chain","1":"Levitate"},"heightm":1.4,"weightkg":40,"evoType":"trade","num":-1290}
 , "laties":{"name":"Laties","types":["Psychic","Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":80,"atk":130,"def":100,"spa":100,"spd":80,"spe":110},"abilities":{"0":"Levitate"},"heightm":1.5,"weightkg":45,"evoType":"trade","num":-1291}
 , "latiis":{"name":"Latiis","types":["Psychic","Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":100,"atk":80,"def":110,"spa":90,"spd":120,"spe":100},"abilities":{"0":"Levitate"},"heightm":1.4,"weightkg":38,"evoType":"trade","num":-1292}
+, "latius":{"name":"Latius","types":["Psychic","Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":80,"atk":90,"def":90,"spa":110,"spd":100,"spe":130},"abilities":{"0":"Levitate"},"heightm":1.4,"weightkg":40,"evoType":"trade","num":-1293}
 
 };
  

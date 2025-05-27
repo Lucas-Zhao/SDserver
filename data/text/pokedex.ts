@@ -4064,6 +4064,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "latiaschained":{"name":"Latias-Chained"}
 , "laties":{"name":"Laties"}
 , "latiis":{"name":"Latiis"}
+, "latius":{"name":"Latius"}
 
 };
  
