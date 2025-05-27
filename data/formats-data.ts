@@ -6320,5 +6320,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "kabuyetibonfire":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "kabuyeticlimb":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "klefkihisui":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "milotichell":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };

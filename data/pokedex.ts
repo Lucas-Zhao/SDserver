@@ -20452,6 +20452,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "kabuyetibonfire":{"name":"Kabuyeti-Bonfire","types":["Ice","Fire"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":80,"atk":135,"def":65,"spa":60,"spd":75,"spe":105},"abilities":{"0":"Flame Body","1":"Iron Fist","H":"Defiant"},"heightm":1.8,"weightkg":54,"prevo":"Primeape-Hisui-Oven","evoType":"trade","num":-1284}
 , "kabuyeticlimb":{"name":"Kabuyeti-Climb","types":["Ice","Fire"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":80,"atk":125,"def":65,"spa":60,"spd":75,"spe":115},"abilities":{"0":"Mold Breaker","1":"Iron Fist","H":"Defiant"},"heightm":1.7,"weightkg":56,"prevo":"Primeape-Hisui-Skier","evoType":"trade","num":-1285}
 , "klefkihisui":{"name":"Klefki-Hisui","types":["Dark"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":57,"atk":91,"def":80,"spa":87,"spd":80,"spe":75},"abilities":{"0":"Prankster","H":"Poison Touch"},"heightm":0.2,"weightkg":3,"evoType":"trade","num":-1286}
+, "milotichell":{"name":"Milotic-Hell","types":["Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":95,"atk":60,"def":79,"spa":100,"spd":125,"spe":81},"abilities":{"0":"Marvel Scale","1":"Competitive","H":"Multiscale"},"heightm":6.2,"weightkg":162,"evoType":"trade","num":-1287}
 
 };
  
