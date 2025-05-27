@@ -20420,6 +20420,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "kirliatrenchmaiden":{"name":"Kirlia-Trench-Maiden","types":["Water","Fairy"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":38,"atk":35,"def":35,"spa":65,"spd":55,"spe":50},"abilities":{"0":"Synchronize","1":"Trace","H":"Telepathy"},"heightm":0.8,"weightkg":20.2,"prevo":"Ralts-Trench-Maiden","evoType":"trade","num":-1252}
 , "gardevoirtrenchmaiden":{"name":"Gardevoir-Trench-Maiden","types":["Water","Fairy"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":68,"atk":65,"def":65,"spa":125,"spd":115,"spe":80},"abilities":{"0":"Synchronize","1":"Trace","H":"Telepathy"},"heightm":1.6,"weightkg":48.4,"prevo":"Kirlia-Trench-Maiden","evoType":"trade","num":-1253}
 , "galladetrenchmaiden":{"name":"Gallade-Trench-Maiden","types":["Water","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":68,"atk":125,"def":65,"spa":65,"spd":115,"spe":80},"abilities":{"0":"Steadfast","1":"Sharpness","H":"Justified"},"heightm":1.6,"weightkg":52,"prevo":"Kirlia-Trench-Maiden","evoType":"trade","num":-1254}
+, "gimmighoulsea":{"name":"Gimmighoul-Sea","types":["Ghost","Water"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":45,"atk":30,"def":70,"spa":75,"spd":70,"spe":10},"abilities":{"0":"Rattled"},"heightm":0.3,"weightkg":5,"evoType":"trade","num":-1255}
 
 };
  

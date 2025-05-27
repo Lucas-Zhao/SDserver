@@ -6288,5 +6288,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "kirliatrenchmaiden":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "gardevoirtrenchmaiden":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "galladetrenchmaiden":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "gimmighoulsea":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
