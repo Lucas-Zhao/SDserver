@@ -20439,6 +20439,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "axbone":{"name":"Axbone","types":["Fairy","Ground"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":93,"atk":113,"def":101,"spa":83,"spd":89,"spe":91},"abilities":{"0":"Protosynthesis"},"heightm":0.7,"weightkg":102.8,"evoType":"trade","num":-1271}
 , "irondoll":{"name":"Irondoll","types":["Steel","Electric"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":92,"atk":114,"def":88,"spa":84,"spd":102,"spe":90},"abilities":{"0":"Quark Drive"},"heightm":0.7,"weightkg":152.8,"evoType":"trade","num":-1272}
 , "ironmatrix":{"name":"Ironmatrix","types":["Ice","Psychic"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":88,"atk":90,"def":174,"spa":80,"spd":58,"spe":78},"abilities":{"0":"Quark Drive"},"heightm":2,"weightkg":232.5,"evoType":"trade","num":-1273}
+, "ironpixel":{"name":"Ironpixel","types":["Poison","Electric"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":126,"atk":64,"def":64,"spa":126,"spd":64,"spe":126},"abilities":{"0":"Quark Drive"},"heightm":1.3,"weightkg":7,"evoType":"trade","num":-1274}
 
 };
  
