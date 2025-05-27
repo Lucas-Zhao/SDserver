@@ -20437,6 +20437,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "hatterenealola":{"name":"Hatterene-Alola","types":["Psychic","Water"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":57,"atk":90,"def":95,"spa":136,"spd":103,"spe":29},"abilities":{"0":"Healer","1":"Anticipation","H":"Magic Bounce"},"heightm":2.1,"weightkg":5.1,"prevo":"Hattrem-Alola","evoType":"trade","num":-1269}
 , "hatterenealolagmax":{"name":"Hatterene-Alola-Gmax","types":["Psychic","Water"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":114,"atk":90,"def":95,"spa":136,"spd":103,"spe":29},"abilities":{"0":"Healer","1":"Anticipation","H":"Magic Bounce"},"heightm":10.2,"weightkg":51,"prevo":"Hattrem-Alola","evoType":"trade","num":-1270}
 , "axbone":{"name":"Axbone","types":["Fairy","Ground"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":93,"atk":113,"def":101,"spa":83,"spd":89,"spe":91},"abilities":{"0":"Protosynthesis"},"heightm":0.7,"weightkg":102.8,"evoType":"trade","num":-1271}
+, "irondoll":{"name":"Irondoll","types":["Steel","Electric"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":92,"atk":114,"def":88,"spa":84,"spd":102,"spe":90},"abilities":{"0":"Quark Drive"},"heightm":0.7,"weightkg":152.8,"evoType":"trade","num":-1272}
 
 };
  
