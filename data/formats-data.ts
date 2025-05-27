@@ -6330,5 +6330,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "moltik":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "lavantula":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "lunarjumper":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "luxraysnowpoint":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
