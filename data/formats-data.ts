@@ -6323,5 +6323,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "milotichell":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "miloticmegahell":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "klekelord":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "latiaschained":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };

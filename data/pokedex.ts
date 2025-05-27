@@ -20455,6 +20455,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "milotichell":{"name":"Milotic-Hell","types":["Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":95,"atk":60,"def":79,"spa":100,"spd":125,"spe":81},"abilities":{"0":"Marvel Scale","1":"Competitive","H":"Multiscale"},"heightm":6.2,"weightkg":162,"evoType":"trade","num":-1287}
 , "miloticmegahell":{"name":"Milotic-Mega-Hell","types":["Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":95,"atk":70,"def":99,"spa":150,"spd":135,"spe":91},"abilities":{"0":"Primordial Sea"},"heightm":8,"weightkg":240,"evoType":"trade","requiredItem":"Miloticite HELL","baseSpecies":"Milotic-Hell","forme":"Mega","num":-1288}
 , "klekelord":{"name":"Klekelord","types":["Normal"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":65,"atk":110,"def":75,"spa":65,"spd":130,"spe":80},"abilities":{"0":"Color Change","H":"Protean"},"heightm":1.6,"weightkg":41,"prevo":"Kecleon","evoType":"trade","num":-1289}
+, "latiaschained":{"name":"Latias-Chained","types":["Poison","Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":80,"atk":80,"def":90,"spa":110,"spd":130,"spe":110},"abilities":{"0":"Toxic Chain","1":"Levitate"},"heightm":1.4,"weightkg":40,"evoType":"trade","num":-1290}
 
 };
  
