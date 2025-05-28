@@ -20499,6 +20499,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "eldegossmega":{"name":"Eldegoss-Mega","types":["Grass","Normal"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":60,"atk":50,"def":110,"spa":110,"spd":140,"spe":90},"abilities":{"0":"Verdant Bloom"},"heightm":1,"weightkg":7,"evoType":"trade","requiredItem":"Eldegossite","baseSpecies":"Eldegoss","forme":"Mega","num":-1331}
 , "orbeetlemega":{"name":"Orbeetle-Mega","types":["Bug","Psychic"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":60,"atk":95,"def":115,"spa":110,"spd":125,"spe":100},"abilities":{"0":"Mindscape Domain"},"heightm":0.9,"weightkg":94,"evoType":"trade","requiredItem":"Orbeetlite","baseSpecies":"Orbeetle","forme":"Mega","num":-1332}
 , "wailordmega":{"name":"Wailord-Mega","types":["Water","Fairy"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":170,"atk":110,"def":75,"spa":110,"spd":75,"spe":60},"abilities":{"0":"Mystic Haze"},"heightm":20,"weightkg":750,"evoType":"trade","requiredItem":"Wailordite","baseSpecies":"Wailord","forme":"Mega","num":-1333}
+, "savagegrace":{"name":"Savagegrace","types":["Dragon","Psychic"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":85,"atk":121,"def":63,"spa":119,"spd":81,"spe":121},"abilities":{"0":"Protosynthesis"},"heightm":1.4,"weightkg":101,"evoType":"trade","num":-1334}
 
 };
  
