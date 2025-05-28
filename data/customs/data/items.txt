@@ -90,6 +90,7 @@
 , "meloettitepirouette":{"name":"Meloettite Pirouette","megaStone":"Meloetta-Mega-Pirouette","itemUser":["Meloetta"],"megaEvolves":"Meloetta","num":-1090,"isNonstandard":"Unobtainable","gen":0}
 , "miloticitehell":{"name":"Miloticite HELL","megaStone":"Milotic-Mega-Hell","itemUser":["Milotic-Hell"],"megaEvolves":"Milotic-Hell","num":-1091,"isNonstandard":"Unobtainable","gen":0}
 , "roseraditehell":{"name":"Roseradite HELL","megaStone":"Roserade-Hell-Mega","itemUser":["Roserade-Hell"],"megaEvolves":"Roserade-Hell","num":-1092,"isNonstandard":"Unobtainable","gen":0}
+, "drifblimitehell":{"name":"Drifblimite Hell","megaStone":"Drifblim-Hell-Mega","itemUser":["Drifblim-Hell"],"megaEvolves":"Drifblim-Hell","num":-1093,"isNonstandard":"Unobtainable","gen":0}
 
 /*FUNCTIONS*/
 //serperioritestart
@@ -832,4 +833,12 @@ Items["roseraditehell"].onTakeItem = function(item, source) {
         return true;
       }
 
-//roseraditehellend
+//roseraditehellend//drifblimitehellstart
+
+Items["drifblimitehell"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//drifblimitehellend

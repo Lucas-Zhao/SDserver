@@ -321,3 +321,4 @@
 , "roseradehell":{"name":"Roserade-Hell"}
 , "roseradehellmega":{"name":"Roserade-Hell-Mega"}
 , "drifblimhell":{"name":"Drifblim-Hell"}
+, "drifblimhellmega":{"name":"Drifblim-Hell-Mega"}

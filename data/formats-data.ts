@@ -6355,5 +6355,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "roseradehell":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "roseradehellmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "drifblimhell":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "drifblimhellmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
