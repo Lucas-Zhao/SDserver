@@ -4084,6 +4084,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "revavroomgearmoto":{"name":"Revavroom-Gear-Moto"}
 , "revavroomgearpull":{"name":"Revavroom-Gear-Pull"}
 , "revavroomgearrail":{"name":"Revavroom-Gear-Rail"}
+, "yamaskhisui":{"name":"Yamask-Hisui"}
 
 };
  
