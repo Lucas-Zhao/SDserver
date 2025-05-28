@@ -6351,5 +6351,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "runerigushisuidefense":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "sepielago":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "swampwalker":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "tulimeow":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };

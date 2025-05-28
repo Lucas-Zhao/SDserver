@@ -317,3 +317,4 @@
 , "runerigushisuidefense":{"name":"Runerigus-Hisui-Defense"}
 , "sepielago":{"name":"Sepielago"}
 , "swampwalker":{"name":"Swampwalker"}
+, "tulimeow":{"name":"Tulimeow"}
