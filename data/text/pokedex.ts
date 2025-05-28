@@ -4078,6 +4078,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "nocturnaleye":{"name":"Nocturnaleye"}
 , "orchestarrot":{"name":"Orchestarrot"}
 , "pecharuntpure":{"name":"Pecharunt-Pure"}
+, "plasmatomb":{"name":"Plasmatomb"}
 
 };
  
