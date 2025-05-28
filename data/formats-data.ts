@@ -6341,5 +6341,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "orchestarrot":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "pecharuntpure":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "plasmatomb":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "primaltriffid":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };

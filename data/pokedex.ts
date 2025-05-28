@@ -20473,6 +20473,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "orchestarrot":{"name":"Orchestarrot","types":["Normal","Psychic"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":83,"atk":70,"def":75,"spa":104,"spd":72,"spe":103},"abilities":{"0":"Keen Eye","1":"Tangled Feet","H":"Soundproof"},"heightm":1,"weightkg":6.8,"prevo":"Chatot","evoType":"trade","num":-1305}
 , "pecharuntpure":{"name":"Pecharunt-Pure","types":["Grass","Normal"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":88,"atk":88,"def":160,"spa":88,"spd":88,"spe":88},"abilities":{"0":"Natural Cure"},"heightm":0.3,"weightkg":0.3,"evoType":"trade","num":-1307}
 , "plasmatomb":{"name":"Plasmatomb","types":["Ghost","Dark"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":70,"atk":102,"def":118,"spa":102,"spd":118,"spe":30},"abilities":{"0":"Pressure","H":"Infiltrator"},"heightm":2,"weightkg":201,"prevo":"Spiritomb","evoType":"trade","num":-1307}
+, "primaltriffid":{"name":"Primaltriffid","types":["Dragon","Grass"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":83,"atk":121,"def":73,"spa":121,"spd":71,"spe":101},"abilities":{"0":"Protosynthesis"},"heightm":1.5,"weightkg":101,"evoType":"trade","num":-1308}
 
 };
  

@@ -307,3 +307,4 @@
 , "orchestarrot":{"name":"Orchestarrot"}
 , "pecharuntpure":{"name":"Pecharunt-Pure"}
 , "plasmatomb":{"name":"Plasmatomb"}
+, "primaltriffid":{"name":"Primaltriffid"}
