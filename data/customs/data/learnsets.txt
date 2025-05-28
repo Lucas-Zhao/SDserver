@@ -329,3 +329,4 @@
 , "turtonatormega":{"learnset":{"hell":["9L4","9L3"],"flamethrower":["9L4","9L3"],"dragonpulse":["9L4","9L3"]}}
 , "unownmega":{"learnset":{"hiddenpower":["9L4","9L3"],"hell":["9L4","9L3"]}}
 , "zebstrikamega":{"learnset":{"hell":["9L4","9L3"],"flamecharge":["9L4","9L3"]}}
+, "eldegossmega":{"learnset":{"hell":["9L4","9L3"],"leechseed":["9L4","9L3"]}}
