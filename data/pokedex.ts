@@ -20471,6 +20471,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "mothimen":{"name":"Mothimen","types":["Bug","Psychic"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":75,"atk":109,"def":75,"spa":109,"spd":75,"spe":86},"abilities":{"0":"Swarm","H":"Tinted Lens"},"heightm":1.8,"weightkg":41,"prevo":"Mothim","evoType":"trade","num":-1303}
 , "nocturnaleye":{"name":"Nocturnaleye","types":["Electric","Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":117,"atk":131,"def":75,"spa":73,"spd":75,"spe":99},"abilities":{"0":"Protosynthesis"},"heightm":1.7,"weightkg":170,"evoType":"trade","num":-1304}
 , "orchestarrot":{"name":"Orchestarrot","types":["Normal","Psychic"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":83,"atk":70,"def":75,"spa":104,"spd":72,"spe":103},"abilities":{"0":"Keen Eye","1":"Tangled Feet","H":"Soundproof"},"heightm":1,"weightkg":6.8,"prevo":"Chatot","evoType":"trade","num":-1305}
+, "pecharuntpure":{"name":"Pecharunt-Pure","types":["Grass","Normal"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":88,"atk":88,"def":160,"spa":88,"spd":88,"spe":88},"abilities":{"0":"Natural Cure"},"heightm":0.3,"weightkg":0.3,"evoType":"trade","num":-1307}
 
 };
  
