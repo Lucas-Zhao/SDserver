@@ -20465,6 +20465,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "luxraysnowpoint":{"name":"Luxray-Snowpoint","types":["Electric","Ice"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":80,"atk":120,"def":79,"spa":95,"spd":79,"spe":70},"abilities":{"0":"Rivalry","1":"Fur Coat","H":"Guts"},"heightm":1.4,"weightkg":42,"evoType":"trade","num":-1297}
 , "azelfchained":{"name":"Azelf-Chained","types":["Psychic","Poison"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":75,"atk":125,"def":70,"spa":125,"spd":70,"spe":115},"abilities":{"0":"Toxic Chain","H":"Levitate"},"heightm":0.3,"weightkg":0.3,"evoType":"trade","num":-1298}
 , "mespritchained":{"name":"Mesprit-Chained","types":["Psychic","Poison"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":80,"atk":105,"def":105,"spa":105,"spd":105,"spe":80},"abilities":{"0":"Toxic Chain","H":"Levitate"},"heightm":0.3,"weightkg":0.3,"evoType":"trade","num":-1299}
+, "uxiechained":{"name":"Uxie-Chained","types":["Psychic","Poison"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":75,"atk":75,"def":130,"spa":75,"spd":130,"spe":95},"abilities":{"0":"Toxic Chain","H":"Levitate"},"heightm":0.3,"weightkg":0.3,"evoType":"trade","num":-1300}
 
 };
  
