@@ -319,3 +319,4 @@
 , "swampwalker":{"name":"Swampwalker"}
 , "tulimeow":{"name":"Tulimeow"}
 , "roseradehell":{"name":"Roserade-Hell"}
+, "roseradehellmega":{"name":"Roserade-Hell-Mega"}

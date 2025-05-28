@@ -10478,6 +10478,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -10570,6 +10574,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "meloettitearia":{"name":"Meloettite Aria","megaStone":"Meloetta-Mega-Aria","itemUser":["Meloetta"],"megaEvolves":"Meloetta","num":-1089,"isNonstandard":"Unobtainable","gen":0}
 , "meloettitepirouette":{"name":"Meloettite Pirouette","megaStone":"Meloetta-Mega-Pirouette","itemUser":["Meloetta"],"megaEvolves":"Meloetta","num":-1090,"isNonstandard":"Unobtainable","gen":0}
 , "miloticitehell":{"name":"Miloticite HELL","megaStone":"Milotic-Mega-Hell","itemUser":["Milotic-Hell"],"megaEvolves":"Milotic-Hell","num":-1091,"isNonstandard":"Unobtainable","gen":0}
+, "roseraditehell":{"name":"Roseradite HELL","megaStone":"Roserade-Hell-Mega","itemUser":["Roserade-Hell"],"megaEvolves":"Roserade-Hell","num":-1092,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -11306,4 +11311,12 @@ Items["miloticitehell"].onTakeItem = function(item, source) {
         return true;
       }
 
-//miloticitehellend
+//miloticitehellend//roseraditehellstart
+
+Items["roseraditehell"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//roseraditehellend
