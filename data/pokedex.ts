@@ -20469,6 +20469,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "mewone":{"name":"Mewone","types":["Psychic"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":150,"atk":60,"def":150,"spa":90,"spd":150,"spe":80},"abilities":{"0":"Magic Guard","H":"Synchronize"},"heightm":1.6,"weightkg":106,"evoType":"trade","num":-1301}
 , "mienshaohoenn":{"name":"Mienshao-Hoenn","types":["Fighting","Water"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":65,"atk":125,"def":60,"spa":95,"spd":60,"spe":105},"abilities":{"0":"Inner Focus","1":"Regenerator","H":"Reckless"},"heightm":1.4,"weightkg":35.5,"evoType":"trade","num":-1302}
 , "mothimen":{"name":"Mothimen","types":["Bug","Psychic"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":75,"atk":109,"def":75,"spa":109,"spd":75,"spe":86},"abilities":{"0":"Swarm","H":"Tinted Lens"},"heightm":1.8,"weightkg":41,"prevo":"Mothim","evoType":"trade","num":-1303}
+, "nocturnaleye":{"name":"Nocturnaleye","types":["Electric","Dragon"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":117,"atk":131,"def":75,"spa":73,"spd":75,"spe":99},"abilities":{"0":"Protosynthesis"},"heightm":1.7,"weightkg":170,"evoType":"trade","num":-1304}
 
 };
  

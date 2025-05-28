@@ -6337,5 +6337,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "mewone":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "mienshaohoenn":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "mothimen":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "nocturnaleye":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
