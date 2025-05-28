@@ -6360,5 +6360,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "altariahell":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "altariahellmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "reuniclushell":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "thievulhell":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
