@@ -6332,5 +6332,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "lunarjumper":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "luxraysnowpoint":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "azelfchained":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "mespritchained":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
