@@ -20484,6 +20484,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "sepielago":{"name":"Sepielago","types":["Water","Psychic"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":73,"atk":68,"def":75,"spa":92,"spd":88,"spe":86},"abilities":{"0":"Contrary","1":"Suction Cups","H":"Infiltrator"},"heightm":1.7,"weightkg":50,"prevo":"Inkay","evoType":"trade","num":-1316}
 , "swampwalker":{"name":"Swampwalker","types":["Grass","Fire"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":137,"atk":113,"def":81,"spa":83,"spd":81,"spe":75},"abilities":{"0":"Protosynthesis"},"heightm":2,"weightkg":137,"evoType":"trade","num":-1317}
 , "tulimeow":{"name":"Tulimeow","types":["Normal","Grass"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":85,"atk":87,"def":78,"spa":60,"spd":70,"spe":70},"abilities":{"0":"Solar Power"},"heightm":0.4,"weightkg":7,"prevo":"Cherubi","evoType":"trade","num":-1318}
+, "roseradehell":{"name":"Roserade-Hell","types":["Dark","Fairy"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":60,"atk":70,"def":65,"spa":125,"spd":105,"spe":90},"abilities":{"0":"Natural Cure","1":"Poison Heal","H":"Technician"},"heightm":0.9,"weightkg":14.5,"evoType":"trade","num":-1319}
 
 };
  
