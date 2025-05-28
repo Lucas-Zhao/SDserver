@@ -4083,6 +4083,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "regifly":{"name":"Regifly"}
 , "revavroomgearmoto":{"name":"Revavroom-Gear-Moto"}
 , "revavroomgearpull":{"name":"Revavroom-Gear-Pull"}
+, "revavroomgearrail":{"name":"Revavroom-Gear-Rail"}
 
 };
  
