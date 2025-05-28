@@ -20491,6 +20491,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "floatzelhell":{"name":"Floatzel-Hell","types":["Fairy"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":85,"atk":105,"def":55,"spa":85,"spd":50,"spe":115},"abilities":{"0":"Dancer","H":"No Guard"},"heightm":1.1,"weightkg":33.5,"evoType":"trade","num":-1323}
 , "altariahell":{"name":"Altaria-Hell","types":["Fire","Flying"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":75,"atk":80,"def":80,"spa":80,"spd":95,"spe":80},"abilities":{"0":"Natural Cure","H":"Flash Fire"},"heightm":1.1,"weightkg":20.6,"evoType":"trade","num":-1324}
 , "altariahellmega":{"name":"Altaria-Hell-Mega","types":["Fire","Fairy"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":75,"atk":130,"def":90,"spa":130,"spd":85,"spe":80},"abilities":{"0":"Magic Guard"},"heightm":1.5,"weightkg":20.6,"evoType":"trade","requiredItem":"Altarite HELL","baseSpecies":"Altaria-Hell","forme":"Mega","num":-1325}
+, "reuniclushell":{"name":"Reuniclus-Hell","types":["Normal","Fairy"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":110,"atk":65,"def":75,"spa":125,"spd":85,"spe":30},"abilities":{"0":"Cute Charm","1":"Magic Guard","H":"Regenerator"},"heightm":1,"weightkg":20.1,"evoType":"trade","num":-1326}
 
 };
  
