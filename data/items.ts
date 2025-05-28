@@ -10518,6 +10518,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -10613,6 +10617,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "roseraditehell":{"name":"Roseradite HELL","megaStone":"Roserade-Hell-Mega","itemUser":["Roserade-Hell"],"megaEvolves":"Roserade-Hell","num":-1092,"isNonstandard":"Unobtainable","gen":0}
 , "drifblimitehell":{"name":"Drifblimite Hell","megaStone":"Drifblim-Hell-Mega","itemUser":["Drifblim-Hell"],"megaEvolves":"Drifblim-Hell","num":-1093,"isNonstandard":"Unobtainable","gen":0}
 , "altaritehell":{"name":"Altarite HELL","megaStone":"Altaria-Hell-Mega","itemUser":["Altaria-Hell"],"megaEvolves":"Altaria-Hell","num":-1094,"isNonstandard":"Unobtainable","gen":0}
+, "turtonatorite":{"name":"Turtonatorite","megaStone":"Turtonator-Mega","itemUser":["Turtonator"],"megaEvolves":"Turtonator","num":-1095,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -11373,4 +11378,12 @@ Items["altaritehell"].onTakeItem = function(item, source) {
         return true;
       }
 
-//altaritehellend
+//altaritehellend//turtonatoritestart
+
+Items["turtonatorite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//turtonatoriteend

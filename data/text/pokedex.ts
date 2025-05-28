@@ -4099,6 +4099,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "altariahellmega":{"name":"Altaria-Hell-Mega"}
 , "reuniclushell":{"name":"Reuniclus-Hell"}
 , "thievulhell":{"name":"Thievul-Hell"}
+, "turtonatormega":{"name":"Turtonator-Mega"}
 
 };
  
