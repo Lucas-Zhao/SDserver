@@ -4100,6 +4100,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "reuniclushell":{"name":"Reuniclus-Hell"}
 , "thievulhell":{"name":"Thievul-Hell"}
 , "turtonatormega":{"name":"Turtonator-Mega"}
+, "unownmega":{"name":"Unown-Mega"}
 
 };
  

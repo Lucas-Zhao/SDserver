@@ -6362,5 +6362,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "reuniclushell":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "thievulhell":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "turtonatormega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "unownmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
