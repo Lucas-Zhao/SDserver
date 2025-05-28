@@ -10542,6 +10542,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -10642,6 +10646,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "zebstrikite":{"name":"Zebstrikite","megaStone":"Zebstrika-Mega","itemUser":["Zebstrika"],"megaEvolves":"Zebstrika","num":-1097,"isNonstandard":"Unobtainable","gen":0}
 , "eldegossite":{"name":"Eldegossite","megaStone":"Eldegoss-Mega","itemUser":["Eldegoss"],"megaEvolves":"Eldegoss","num":-1098,"isNonstandard":"Unobtainable","gen":0}
 , "orbeetlite":{"name":"Orbeetlite","megaStone":"Orbeetle-Mega","itemUser":["Orbeetle"],"megaEvolves":"Orbeetle","num":-1099,"isNonstandard":"Unobtainable","gen":0}
+, "wailordite":{"name":"Wailordite","megaStone":"Wailord-Mega","itemUser":["Wailord"],"megaEvolves":"Wailord","num":-1100,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -11442,4 +11447,12 @@ Items["orbeetlite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//orbeetliteend
+//orbeetliteend//wailorditestart
+
+Items["wailordite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//wailorditeend
