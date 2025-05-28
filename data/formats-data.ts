@@ -6348,5 +6348,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "revavroomgearrail":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "yamaskhisui":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "runerigushisuiattack":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "runerigushisuidefense":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
