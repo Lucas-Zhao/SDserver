@@ -20489,6 +20489,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "drifblimhell":{"name":"Drifblim-Hell","types":["Water","Poison"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":150,"atk":80,"def":44,"spa":90,"spd":54,"spe":80},"abilities":{"0":"Poison Point","1":"Unburden","H":"Water Absorb"},"heightm":1.2,"weightkg":15,"evoType":"trade","num":-1321}
 , "drifblimhellmega":{"name":"Drifblim-Hell-Mega","types":["Water","Poison"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":150,"atk":90,"def":84,"spa":130,"spd":84,"spe":60},"abilities":{"0":"Levitate"},"heightm":3.5,"weightkg":30,"evoType":"trade","requiredItem":"Drifblimite Hell","baseSpecies":"Drifblim-Hell","forme":"Mega","num":-1322}
 , "floatzelhell":{"name":"Floatzel-Hell","types":["Fairy"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":85,"atk":105,"def":55,"spa":85,"spd":50,"spe":115},"abilities":{"0":"Dancer","H":"No Guard"},"heightm":1.1,"weightkg":33.5,"evoType":"trade","num":-1323}
+, "altariahell":{"name":"Altaria-Hell","types":["Fire","Flying"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":75,"atk":80,"def":80,"spa":80,"spd":95,"spe":80},"abilities":{"0":"Natural Cure","H":"Flash Fire"},"heightm":1.1,"weightkg":20.6,"evoType":"trade","num":-1324}
 
 };
  
