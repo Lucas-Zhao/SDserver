@@ -6344,5 +6344,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "primaltriffid":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "regifly":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "revavroomgearmoto":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "revavroomgearpull":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
