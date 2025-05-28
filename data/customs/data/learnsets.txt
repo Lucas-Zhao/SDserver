@@ -330,3 +330,4 @@
 , "unownmega":{"learnset":{"hiddenpower":["9L4","9L3"],"hell":["9L4","9L3"]}}
 , "zebstrikamega":{"learnset":{"hell":["9L4","9L3"],"flamecharge":["9L4","9L3"]}}
 , "eldegossmega":{"learnset":{"hell":["9L4","9L3"],"leechseed":["9L4","9L3"]}}
+, "orbeetlemega":{"learnset":{"hell":["9L4","9L3"],"bugbuzz":["9L4","9L3"]}}
