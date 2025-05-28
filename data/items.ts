@@ -10530,6 +10530,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -10627,6 +10631,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "altaritehell":{"name":"Altarite HELL","megaStone":"Altaria-Hell-Mega","itemUser":["Altaria-Hell"],"megaEvolves":"Altaria-Hell","num":-1094,"isNonstandard":"Unobtainable","gen":0}
 , "turtonatorite":{"name":"Turtonatorite","megaStone":"Turtonator-Mega","itemUser":["Turtonator"],"megaEvolves":"Turtonator","num":-1095,"isNonstandard":"Unobtainable","gen":0}
 , "unownite":{"name":"Unownite","megaStone":"Unown-Mega","itemUser":["Unown"],"megaEvolves":"Unown","num":-1096,"isNonstandard":"Unobtainable","gen":0}
+, "zebstrikite":{"name":"Zebstrikite","megaStone":"Zebstrika-Mega","itemUser":["Zebstrika"],"megaEvolves":"Zebstrika","num":-1097,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -11403,4 +11408,12 @@ Items["unownite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//unowniteend
+//unowniteend//zebstrikitestart
+
+Items["zebstrikite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//zebstrikiteend
