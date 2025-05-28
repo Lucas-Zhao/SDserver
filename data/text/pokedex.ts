@@ -4081,6 +4081,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "plasmatomb":{"name":"Plasmatomb"}
 , "primaltriffid":{"name":"Primaltriffid"}
 , "regifly":{"name":"Regifly"}
+, "revavroomgearmoto":{"name":"Revavroom-Gear-Moto"}
 
 };
  
