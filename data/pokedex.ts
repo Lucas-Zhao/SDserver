@@ -20486,6 +20486,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "tulimeow":{"name":"Tulimeow","types":["Normal","Grass"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":85,"atk":87,"def":78,"spa":60,"spd":70,"spe":70},"abilities":{"0":"Solar Power"},"heightm":0.4,"weightkg":7,"prevo":"Cherubi","evoType":"trade","num":-1318}
 , "roseradehell":{"name":"Roserade-Hell","types":["Dark","Fairy"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":60,"atk":70,"def":65,"spa":125,"spd":105,"spe":90},"abilities":{"0":"Natural Cure","1":"Poison Heal","H":"Technician"},"heightm":0.9,"weightkg":14.5,"evoType":"trade","num":-1319}
 , "roseradehellmega":{"name":"Roserade-Hell-Mega","types":["Dark","Fairy"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":60,"atk":135,"def":75,"spa":100,"spd":120,"spe":125},"abilities":{"0":"Moxie"},"heightm":1.2,"weightkg":15,"evoType":"trade","requiredItem":"Roseradite HELL","baseSpecies":"Roserade-Hell","forme":"Mega","num":-1320}
+, "drifblimhell":{"name":"Drifblim-Hell","types":["Water","Poison"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":150,"atk":80,"def":44,"spa":90,"spd":54,"spe":80},"abilities":{"0":"Poison Point","1":"Unburden","H":"Water Absorb"},"heightm":1.2,"weightkg":15,"evoType":"trade","num":-1321}
 
 };
  
