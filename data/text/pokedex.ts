@@ -4087,6 +4087,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "yamaskhisui":{"name":"Yamask-Hisui"}
 , "runerigushisuiattack":{"name":"Runerigus-Hisui-Attack"}
 , "runerigushisuidefense":{"name":"Runerigus-Hisui-Defense"}
+, "sepielago":{"name":"Sepielago"}
 
 };
  
