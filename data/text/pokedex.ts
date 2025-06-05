@@ -4110,6 +4110,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "rotomstring":{"name":"Rotom-String"}
 , "rotombeat":{"name":"Rotom-Beat"}
 , "rotombrass":{"name":"Rotom-Brass"}
+, "rotomgrand":{"name":"Rotom-Grand"}
 
 };
  
