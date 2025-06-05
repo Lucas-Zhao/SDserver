@@ -20502,6 +20502,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "savagegrace":{"name":"Savage Grace","types":["Dragon","Psychic"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":85,"atk":121,"def":63,"spa":119,"spd":81,"spe":121},"abilities":{"0":"Protosynthesis"},"heightm":1.4,"weightkg":101,"evoType":"trade","num":-1334}
 , "rotomkaijo":{"name":"Rotom-Kaijo","types":["Ghost","Normal"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":50,"atk":50,"def":77,"spa":95,"spd":77,"spe":91},"abilities":{"0":"Levitate"},"heightm":0.3,"weightkg":0.3,"evoType":"trade","num":-1335}
 , "rotomstring":{"name":"Rotom-String","types":["Ghost","Grass"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":50,"atk":65,"def":107,"spa":105,"spd":107,"spe":86},"abilities":{"0":"Levitate"},"heightm":0.8,"weightkg":0.5,"evoType":"trade","num":-1336}
+, "rotombeat":{"name":"Rotom-Beat","types":["Ghost","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":50,"atk":65,"def":107,"spa":105,"spd":107,"spe":86},"abilities":{"0":"Levitate"},"heightm":0.8,"weightkg":0.5,"evoType":"trade","num":-1337}
 
 };
  
