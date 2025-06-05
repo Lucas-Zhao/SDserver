@@ -6369,5 +6369,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "wailordmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "savagegrace":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "rotomkaijo":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "rotomstring":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
