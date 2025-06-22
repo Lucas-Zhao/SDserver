@@ -10610,6 +10610,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -10621,7 +10625,6 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "bronzongite":{"name":"Bronzongite","megaStone":"Bronzong-Mega","itemUser":["Bronzong"],"megaEvolves":"Bronzong","num":-1010,"isNonstandard":"Unobtainable","gen":0}
 , "runerigusite":{"name":"Runerigusite","megaStone":"Runerigus-Mega","itemUser":["Runerigus"],"megaEvolves":"Runerigus","num":-1011,"isNonstandard":"Unobtainable","gen":0}
 , "butterfrite":{"name":"Butterfrite","megaStone":"Butterfree-Mega","itemUser":["Butterfree"],"megaEvolves":"Butterfree","num":-1012,"isNonstandard":"Unobtainable","gen":0}
-, "dragoniteitez":{"name":"Dragoniteite Z","megaStone":"Dragonite-Mega-Z","itemUser":["Dragonite"],"megaEvolves":"Dragonite","num":-1013,"isNonstandard":"Unobtainable","gen":0}
 , "florgesitelove":{"name":"Florgesite Love","megaStone":"Florges-Mega-Love","itemUser":["Florges"],"megaEvolves":"Florges","num":-1014,"isNonstandard":"Unobtainable","gen":0}
 , "noivernite":{"name":"Noivernite","megaStone":"Noivern-Mega","itemUser":["Noivern"],"megaEvolves":"Noivern","num":-1015,"isNonstandard":"Unobtainable","gen":0}
 , "serperioriteivy":{"name":"SerperioriteIvy","megaStone":"Serperior-Mega-Ivy","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1016,"isNonstandard":"Unobtainable","gen":0}
@@ -10796,15 +10799,7 @@ Items["butterfrite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//butterfriteend//dragoniteitezstart
-
-Items["dragoniteitez"].onTakeItem = function(item, source) {
-        if (item.megaEvolves === source.baseSpecies.baseSpecies)
-          return false;
-        return true;
-      }
-
-//dragoniteitezend//florgesitelovestart
+//butterfriteend//florgesitelovestart
 
 Items["florgesitelove"].onTakeItem = function(item, source) {
         if (item.megaEvolves === source.baseSpecies.baseSpecies)

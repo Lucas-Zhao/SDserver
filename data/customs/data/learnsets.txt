@@ -12,7 +12,6 @@
 , "bronzongmega":{"learnset":{"hell":["9L4","9L3"],"flashcannon":["9L4","9L3"],"psychic":["9L4","9L3"]}}
 , "runerigusmega":{"learnset":{"hell":["9L4","9L3"],"earthquake":["9L4","9L3"],"curse":["9L4","9L3"]}}
 , "butterfreemega":{"learnset":{"hell":["9L4","9L3"],"bugbuzz":["9L4","9L3"],"sleeppowder":["9L4","9L3"]}}
-, "dragonitemegaz":{"learnset":{"hell":["9L4","9L3"],"extremespeed":["9L4","9L3"],"dragondance":["9L4","9L3"]}}
 , "florgesmegalove":{"learnset":{"hell":["9L4","9L3"],"moonblast":["9L4","9L3"],"gigadrain":["9L4","9L3"]}}
 , "noivernmega":{"learnset":{"hell":["9L4","9L3"],"boomburst":["9L4","9L3"],"hurricane":["9L4","9L3"]}}
 , "serperiormegaivy":{"learnset":{"hell":["9L4","9L3"],"coil":["9L4","9L3"],"gigadrain":["9L4","9L3"]}}
