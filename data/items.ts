@@ -10614,6 +10614,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -10714,6 +10718,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "eldegossite":{"name":"Eldegossite","megaStone":"Eldegoss-Mega","itemUser":["Eldegoss"],"megaEvolves":"Eldegoss","num":-1098,"isNonstandard":"Unobtainable","gen":0}
 , "orbeetlite":{"name":"Orbeetlite","megaStone":"Orbeetle-Mega","itemUser":["Orbeetle"],"megaEvolves":"Orbeetle","num":-1099,"isNonstandard":"Unobtainable","gen":0}
 , "wailordite":{"name":"Wailordite","megaStone":"Wailord-Mega","itemUser":["Wailord"],"megaEvolves":"Wailord","num":-1100,"isNonstandard":"Unobtainable","gen":0}
+, "dragontieitez":{"name":"Dragontieite Z","megaStone":"Dragonite-Mega-Z","itemUser":["Dragonite"],"megaEvolves":"Dragonite","num":-1100,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -11514,4 +11519,12 @@ Items["wailordite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//wailorditeend
+//wailorditeend//dragontieitezstart
+
+Items["dragontieitez"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//dragontieitezend
