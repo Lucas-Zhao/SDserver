@@ -4110,6 +4110,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "typhlosionmegah":{"name":"Typhlosion-Mega-H"}
 , "flygonmegaz":{"name":"Flygon-Mega-Z"}
 , "mewtwomegaz":{"name":"Mewtwo-Mega-Z"}
+, "slowbromegag":{"name":"Slowbro-Mega-G"}
 
 };
  
