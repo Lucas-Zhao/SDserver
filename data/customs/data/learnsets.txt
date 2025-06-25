@@ -78,7 +78,6 @@
 , "miloticmega":{"learnset":{"hell":["9L4","9L3"],"scald":["9L4","9L3"],"flipturn":["9L4","9L3"]}}
 , "noctowlmega":{"learnset":{"hell":["9L4","9L3"],"airslash":["9L4","9L3"],"hypnosis":["9L4","9L3"]}}
 , "shiftrymega":{"learnset":{"hell":["9L4","9L3"],"leafblade":["9L4","9L3"],"knockoff":["9L4","9L3"]}}
-, "slowbromegag":{"learnset":{"hell":["9L4","9L3"],"blizzard":["9L4","9L3"],"bodypress":["9L4","9L3"]}}
 , "sudowoodomega":{"learnset":{"hell":["9L4","9L3"],"suckerpunch":["9L4","9L3"],"woodhammer":["9L4","9L3"]}}
 , "tinkatonmega":{"learnset":{"hell":["9L4","9L3"],"gigatonhammer":["9L4","9L3"],"playrough":["9L4","9L3"]}}
 , "victreebelmega":{"learnset":{"hell":["9L4","9L3"],"poisonjab":["9L4","9L3"],"leafblade":["9L4","9L3"]}}
