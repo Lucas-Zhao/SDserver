@@ -76,7 +76,6 @@
 , "laprasmega":{"name":"Lapras-Mega"}
 , "ludicolomega":{"name":"Ludicolo-Mega"}
 , "mewtwomegaa":{"name":"Mewtwo-Mega-A"}
-, "mewtwomegaz":{"name":"Mewtwo-Mega-Z"}
 , "miloticmega":{"name":"Milotic-Mega"}
 , "noctowlmega":{"name":"Noctowl-Mega"}
 , "shiftrymega":{"name":"Shiftry-Mega"}

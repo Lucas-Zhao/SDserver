@@ -75,7 +75,6 @@
 , "laprasmega":{"learnset":{"hell":["9L4","9L3"],"icebeam":["9L4","9L3"],"surf":["9L4","9L3"]}}
 , "ludicolomega":{"learnset":{"hell":["9L4","9L3"],"gigadrain":["9L4","9L3"],"surf":["9L4","9L3"]}}
 , "mewtwomegaa":{"learnset":{"hell":["9L4","9L3"],"psystrike":["9L4","9L3"],"aurasphere":["9L4","9L3"]}}
-, "mewtwomegaz":{"learnset":{"hell":["9L4","9L3"],"psystrike":["9L4","9L3"],"calmmind":["9L4","9L3"]}}
 , "miloticmega":{"learnset":{"hell":["9L4","9L3"],"scald":["9L4","9L3"],"flipturn":["9L4","9L3"]}}
 , "noctowlmega":{"learnset":{"hell":["9L4","9L3"],"airslash":["9L4","9L3"],"hypnosis":["9L4","9L3"]}}
 , "shiftrymega":{"learnset":{"hell":["9L4","9L3"],"leafblade":["9L4","9L3"],"knockoff":["9L4","9L3"]}}
