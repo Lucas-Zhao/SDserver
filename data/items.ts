@@ -10676,6 +10676,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -10776,6 +10780,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "flygonitez":{"name":"Flygonite Z","megaStone":"Flygon-Mega-Z","itemUser":["Flygon"],"megaEvolves":"Flygon","num":-1100,"isNonstandard":"Unobtainable","gen":0}
 , "mewtwonitez":{"name":"Mewtwonite Z","megaStone":"Mewtwo-Mega-Z","itemUser":["Mewtwo"],"megaEvolves":"Mewtwo","num":-1100,"isNonstandard":"Unobtainable","gen":0}
 , "slowbroniteg":{"name":"Slowbronite G","megaStone":"Slowbro-Mega-G","itemUser":["Slowbro"],"megaEvolves":"Slowbro","num":-1100,"isNonstandard":"Unobtainable","gen":0}
+, "darkritez":{"name":"Darkrite Z","megaStone":"Darkrai-Mega-Z","itemUser":["Darkrai"],"megaEvolves":"Darkrai","num":-1100,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -11576,4 +11581,12 @@ Items["slowbroniteg"].onTakeItem = function(item, source) {
         return true;
       }
 
-//slowbronitegend
+//slowbronitegend//darkritezstart
+
+Items["darkritez"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//darkritezend
