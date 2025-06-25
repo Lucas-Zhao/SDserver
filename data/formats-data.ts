@@ -6102,7 +6102,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "meganiummega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "typhlosionmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "flygonmegaa":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
-, "flygonmegaz":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "froslassmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "frosmothmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "helioliskmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}

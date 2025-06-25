@@ -10639,6 +10639,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -10695,7 +10699,6 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "meganiumite":{"name":"Meganiumite","megaStone":"Meganium-Mega","itemUser":["Meganium"],"megaEvolves":"Meganium","num":-1055,"isNonstandard":"Unobtainable","gen":0}
 , "typhlosionite":{"name":"Typhlosionite","megaStone":"Typhlosion-Mega","itemUser":["Typhlosion"],"megaEvolves":"Typhlosion","num":-1056,"isNonstandard":"Unobtainable","gen":0}
 , "flygonitea":{"name":"Flygonite A","megaStone":"Flygon-Mega-A","itemUser":["Flygon"],"megaEvolves":"Flygon","num":-1058,"isNonstandard":"Unobtainable","gen":0}
-, "flygonitez":{"name":"Flygonite Z","megaStone":"Flygon-Mega-Z","itemUser":["Flygon"],"megaEvolves":"Flygon","num":-1059,"isNonstandard":"Unobtainable","gen":0}
 , "froslassite":{"name":"Froslassite","megaStone":"Froslass-Mega","itemUser":["Froslass"],"megaEvolves":"Froslass","num":-1060,"isNonstandard":"Unobtainable","gen":0}
 , "frosmothite":{"name":"Frosmothite","megaStone":"Frosmoth-Mega","itemUser":["Frosmoth"],"megaEvolves":"Frosmoth","num":-1061,"isNonstandard":"Unobtainable","gen":0}
 , "helioliskite":{"name":"Helioliskite","megaStone":"Heliolisk-Mega","itemUser":["Heliolisk"],"megaEvolves":"Heliolisk","num":-1062,"isNonstandard":"Unobtainable","gen":0}
@@ -11188,15 +11191,7 @@ Items["flygonitea"].onTakeItem = function(item, source) {
         return true;
       }
 
-//flygoniteaend//flygonitezstart
-
-Items["flygonitez"].onTakeItem = function(item, source) {
-        if (item.megaEvolves === source.baseSpecies.baseSpecies)
-          return false;
-        return true;
-      }
-
-//flygonitezend//froslassitestart
+//flygoniteaend//froslassitestart
 
 Items["froslassite"].onTakeItem = function(item, source) {
         if (item.megaEvolves === source.baseSpecies.baseSpecies)
