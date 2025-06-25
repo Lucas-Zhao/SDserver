@@ -6372,5 +6372,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "rotomgrand":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "dragonitemegaz":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "charizardmegaz":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "typhlosionmegah":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };

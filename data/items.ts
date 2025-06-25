@@ -10634,6 +10634,9 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -10734,6 +10737,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "wailordite":{"name":"Wailordite","megaStone":"Wailord-Mega","itemUser":["Wailord"],"megaEvolves":"Wailord","num":-1100,"isNonstandard":"Unobtainable","gen":0}
 , "dragontieitez":{"name":"Dragontieite Z","megaStone":"Dragonite-Mega-Z","itemUser":["Dragonite"],"megaEvolves":"Dragonite","num":-1100,"isNonstandard":"Unobtainable","gen":0}
 , "charizarditez":{"name":"Charizardite Z","megaStone":"Charizard-Mega-Z","itemUser":["Charizard"],"megaEvolves":"Charizard","num":-1100,"isNonstandard":"Unobtainable","gen":0}
+, "typhlosioniteh":{"name":"Typhlosionite H","megaStone":"Typhlosion-Mega-H","itemUser":["Typhlosion"],"megaEvolves":"Typhlosion","num":-1100,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -11534,4 +11538,12 @@ Items["charizarditez"].onTakeItem = function(item, source) {
         return true;
       }
 
-//charizarditezend
+//charizarditezend//typhlosionitehstart
+
+Items["typhlosioniteh"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//typhlosionitehend
