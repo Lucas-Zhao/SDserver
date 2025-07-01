@@ -391,7 +391,9 @@ export class Handler {
 		let func = `Formats[1].unbanlist = [${form.unbanlist
 			?.map((el) => `"${el}"`)
 			.join(", ")}];`;
-
+		func += `Formats[2].unbanlist = [${form.unbanlist
+			?.map((el) => `"${el}"`)
+			.join(", ")}];`;
 		fsSync.writeFileSync(
 			path.join(path.resolve(), "/data/customs/data/formats.txt"),
 			func
