@@ -7076,7 +7076,6 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	cleanfreak: {
 		onStart(pokemon) {
-			this.damage(damage);
 			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
 			sideConditions.forEach((condition) => {
 				pokemon.side.removeSideCondition(condition);
