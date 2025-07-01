@@ -9261,6 +9261,1429 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -9272,7 +10695,6 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "bronzongite":{"name":"Bronzongite","megaStone":"Bronzong-Mega","itemUser":["Bronzong"],"megaEvolves":"Bronzong","num":-1010,"isNonstandard":"Unobtainable","gen":0}
 , "runerigusite":{"name":"Runerigusite","megaStone":"Runerigus-Mega","itemUser":["Runerigus"],"megaEvolves":"Runerigus","num":-1011,"isNonstandard":"Unobtainable","gen":0}
 , "butterfrite":{"name":"Butterfrite","megaStone":"Butterfree-Mega","itemUser":["Butterfree"],"megaEvolves":"Butterfree","num":-1012,"isNonstandard":"Unobtainable","gen":0}
-, "dragoniteitez":{"name":"Dragoniteite Z","megaStone":"Dragonite-Mega-Z","itemUser":["Dragonite"],"megaEvolves":"Dragonite","num":-1013,"isNonstandard":"Unobtainable","gen":0}
 , "florgesitelove":{"name":"Florgesite Love","megaStone":"Florges-Mega-Love","itemUser":["Florges"],"megaEvolves":"Florges","num":-1014,"isNonstandard":"Unobtainable","gen":0}
 , "noivernite":{"name":"Noivernite","megaStone":"Noivern-Mega","itemUser":["Noivern"],"megaEvolves":"Noivern","num":-1015,"isNonstandard":"Unobtainable","gen":0}
 , "serperioriteivy":{"name":"SerperioriteIvy","megaStone":"Serperior-Mega-Ivy","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1016,"isNonstandard":"Unobtainable","gen":0}
@@ -9284,7 +10706,6 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "aurorusite":{"name":"Aurorusite","megaStone":"Aurorus-Mega","itemUser":["Aurorus"],"megaEvolves":"Aurorus","num":-1020,"isNonstandard":"Unobtainable","gen":0}
 , "tyrantrumite":{"name":"Tyrantrumite","megaStone":"Tyrantrum-Mega","itemUser":["Tyrantrum"],"megaEvolves":"Tyrantrum","num":-1021,"isNonstandard":"Unobtainable","gen":0}
 , "drapionite":{"name":"Drapionite","megaStone":"Drapion-Mega","itemUser":["Drapion"],"megaEvolves":"Drapion","num":-1022,"isNonstandard":"Unobtainable","gen":0}
-, "charizarditez":{"name":"Charizardite Z","megaStone":"Charizard-Mega-Z","itemUser":["Charizard"],"megaEvolves":"Charizard","num":-1023,"isNonstandard":"Unobtainable","gen":0}
 , "charizarditea":{"name":"Charizardite A","megaStone":"Charizard-Mega-A","itemUser":["Charizard"],"megaEvolves":"Charizard","num":-1024,"isNonstandard":"Unobtainable","gen":0}
 , "clodsirite":{"name":"Clodsirite","megaStone":"Clodsire-Mega","itemUser":["Clodsire"],"megaEvolves":"Clodsire","num":-1025,"isNonstandard":"Unobtainable","gen":0}
 , "chesnaughtite":{"name":"Chesnaughtite","megaStone":"Chesnaught-Mega","itemUser":["Chesnaught"],"megaEvolves":"Chesnaught","num":-1026,"isNonstandard":"Unobtainable","gen":0}
@@ -9318,9 +10739,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "feraligatrite":{"name":"Feraligatrite","megaStone":"Feraligatr-Mega","itemUser":["Feraligatr"],"megaEvolves":"Feraligatr","num":-1054,"isNonstandard":"Unobtainable","gen":0}
 , "meganiumite":{"name":"Meganiumite","megaStone":"Meganium-Mega","itemUser":["Meganium"],"megaEvolves":"Meganium","num":-1055,"isNonstandard":"Unobtainable","gen":0}
 , "typhlosionite":{"name":"Typhlosionite","megaStone":"Typhlosion-Mega","itemUser":["Typhlosion"],"megaEvolves":"Typhlosion","num":-1056,"isNonstandard":"Unobtainable","gen":0}
-, "typhlosioniteh":{"name":"Typhlosionite H","megaStone":"Typhlosion-Mega-H","itemUser":["Typhlosion"],"megaEvolves":"Typhlosion","num":-1057,"isNonstandard":"Unobtainable","gen":0}
 , "flygonitea":{"name":"Flygonite A","megaStone":"Flygon-Mega-A","itemUser":["Flygon"],"megaEvolves":"Flygon","num":-1058,"isNonstandard":"Unobtainable","gen":0}
-, "flygonitez":{"name":"Flygonite Z","megaStone":"Flygon-Mega-Z","itemUser":["Flygon"],"megaEvolves":"Flygon","num":-1059,"isNonstandard":"Unobtainable","gen":0}
 , "froslassite":{"name":"Froslassite","megaStone":"Froslass-Mega","itemUser":["Froslass"],"megaEvolves":"Froslass","num":-1060,"isNonstandard":"Unobtainable","gen":0}
 , "frosmothite":{"name":"Frosmothite","megaStone":"Frosmoth-Mega","itemUser":["Frosmoth"],"megaEvolves":"Frosmoth","num":-1061,"isNonstandard":"Unobtainable","gen":0}
 , "helioliskite":{"name":"Helioliskite","megaStone":"Heliolisk-Mega","itemUser":["Heliolisk"],"megaEvolves":"Heliolisk","num":-1062,"isNonstandard":"Unobtainable","gen":0}
@@ -9329,17 +10748,43 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "laprasite":{"name":"Laprasite","megaStone":"Lapras-Mega","itemUser":["Lapras"],"megaEvolves":"Lapras","num":-1065,"isNonstandard":"Unobtainable","gen":0}
 , "ludicolite":{"name":"Ludicolite","megaStone":"Ludicolo-Mega","itemUser":["Ludicolo"],"megaEvolves":"Ludicolo","num":-1066,"isNonstandard":"Unobtainable","gen":0}
 , "mewtwonitea":{"name":"Mewtwonite A","megaStone":"Mewtwo-Mega-A","itemUser":["Mewtwo"],"megaEvolves":"Mewtwo","num":-1067,"isNonstandard":"Unobtainable","gen":0}
-, "mewtwonitez":{"name":"Mewtwonite Z","megaStone":"Mewtwo-Mega-Z","itemUser":["Mewtwo"],"megaEvolves":"Mewtwo","num":-1068,"isNonstandard":"Unobtainable","gen":0}
 , "miloticite":{"name":"Miloticite","megaStone":"Milotic-Mega","itemUser":["Milotic"],"megaEvolves":"Milotic","num":-1069,"isNonstandard":"Unobtainable","gen":0}
 , "noctowlite":{"name":"Noctowlite","megaStone":"Noctowl-Mega","itemUser":["Noctowl"],"megaEvolves":"Noctowl","num":-1070,"isNonstandard":"Unobtainable","gen":0}
 , "shiftrite":{"name":"Shiftrite","megaStone":"Shiftry-Mega","itemUser":["Shiftry"],"megaEvolves":"Shiftry","num":-1071,"isNonstandard":"Unobtainable","gen":0}
-, "slowbroniteg":{"name":"Slowbronite G","megaStone":"Slowbro-Mega-G","itemUser":["Slowbro"],"megaEvolves":"Slowbro","num":-1072,"isNonstandard":"Unobtainable","gen":0}
 , "sudowoodite":{"name":"Sudowoodite","megaStone":"Sudowoodo-Mega","itemUser":["Sudowoodo"],"megaEvolves":"Sudowoodo","num":-1073,"isNonstandard":"Unobtainable","gen":0}
 , "tinkatonite":{"name":"Tinkatonite","megaStone":"Tinkaton-Mega","itemUser":["Tinkaton"],"megaEvolves":"Tinkaton","num":-1074,"isNonstandard":"Unobtainable","gen":0}
 , "victreebelite":{"name":"Victreebelite","megaStone":"Victreebel-Mega","itemUser":["Victreebel"],"megaEvolves":"Victreebel","num":-1075,"isNonstandard":"Unobtainable","gen":0}
 , "queendrite":{"name":"Queendrite","megaStone":"Queendra-Mega","itemUser":["Queendra"],"megaEvolves":"Queendra","num":-1076,"isNonstandard":"Unobtainable","gen":0}
 , "queendritedark":{"name":"Queendrite Dark","megaStone":"Queendra-Dark-Mega","itemUser":["Queendra-Dark"],"megaEvolves":"Queendra-Dark","num":-1077,"isNonstandard":"Unobtainable","gen":0}
 , "eelektrossitehell":{"name":"Eelektrossite HELL","megaStone":"Eelektross-Mega-Hell","itemUser":["Eelektross-Hell"],"megaEvolves":"Eelektross-Hell","num":-1078,"isNonstandard":"Unobtainable","gen":0}
+, "snorlaxitehell":{"name":"Snorlaxite HELL","megaStone":"Snorlax-Hell-Mega","itemUser":["Snorlax-HELL"],"megaEvolves":"Snorlax-HELL","num":-1079,"isNonstandard":"Unobtainable","gen":0}
+, "gardevoiritesuper":{"name":"Gardevoirite Super","megaStone":"Gardevoir-Mega-Super","itemUser":["Gardevoir-Super"],"megaEvolves":"Gardevoir-Super","num":-1080,"isNonstandard":"Unobtainable","gen":0}
+, "diamoneyite":{"name":"Diamoneyite","megaStone":"Diamoneye-Mega","itemUser":["Diamoneye"],"megaEvolves":"Diamoneye","num":-1081,"isNonstandard":"Unobtainable","gen":0}
+, "dianciteangel":{"name":"Diancite Angel","megaStone":"Diancie-Angel-Mega","itemUser":["Diancie-Angel"],"megaEvolves":"Diancie-Angel","num":-1082,"isNonstandard":"Unobtainable","gen":0}
+, "dianciteinnerdemon":{"name":"Diancite Inner Demon","megaStone":"Diancie-Inner-Demon-Mega","itemUser":["Diancie-Inner-Demon"],"megaEvolves":"Diancie-Inner-Demon","num":-1083,"isNonstandard":"Unobtainable","gen":0}
+, "diancitesea":{"name":"Diancite Sea","megaStone":"Diancie-Mega-Sea","itemUser":["Diancie-Sea"],"megaEvolves":"Diancie-Sea","num":-1084,"isNonstandard":"Unobtainable","gen":0}
+, "azumarillite":{"name":"Azumarillite","megaStone":"Azumarill-Mega","itemUser":["Azumarill"],"megaEvolves":"Azumarill","num":-1085,"isNonstandard":"Unobtainable","gen":0}
+, "darkraite":{"name":"Darkraite","megaStone":"Darkrai-Mega","itemUser":["Darkrai"],"megaEvolves":"Darkrai","num":-1086,"isNonstandard":"Unobtainable","gen":0}
+, "lumineonite":{"name":"Lumineonite","megaStone":"Lumineon-Mega","itemUser":["Lumineon"],"megaEvolves":"Lumineon","num":-1088,"isNonstandard":"Unobtainable","gen":0}
+, "meloettitearia":{"name":"Meloettite Aria","megaStone":"Meloetta-Mega-Aria","itemUser":["Meloetta"],"megaEvolves":"Meloetta","num":-1089,"isNonstandard":"Unobtainable","gen":0}
+, "meloettitepirouette":{"name":"Meloettite Pirouette","megaStone":"Meloetta-Mega-Pirouette","itemUser":["Meloetta"],"megaEvolves":"Meloetta","num":-1090,"isNonstandard":"Unobtainable","gen":0}
+, "miloticitehell":{"name":"Miloticite HELL","megaStone":"Milotic-Mega-Hell","itemUser":["Milotic-Hell"],"megaEvolves":"Milotic-Hell","num":-1091,"isNonstandard":"Unobtainable","gen":0}
+, "roseraditehell":{"name":"Roseradite HELL","megaStone":"Roserade-Hell-Mega","itemUser":["Roserade-Hell"],"megaEvolves":"Roserade-Hell","num":-1092,"isNonstandard":"Unobtainable","gen":0}
+, "drifblimitehell":{"name":"Drifblimite Hell","megaStone":"Drifblim-Hell-Mega","itemUser":["Drifblim-Hell"],"megaEvolves":"Drifblim-Hell","num":-1093,"isNonstandard":"Unobtainable","gen":0}
+, "altaritehell":{"name":"Altarite HELL","megaStone":"Altaria-Hell-Mega","itemUser":["Altaria-Hell"],"megaEvolves":"Altaria-Hell","num":-1094,"isNonstandard":"Unobtainable","gen":0}
+, "turtonatorite":{"name":"Turtonatorite","megaStone":"Turtonator-Mega","itemUser":["Turtonator"],"megaEvolves":"Turtonator","num":-1095,"isNonstandard":"Unobtainable","gen":0}
+, "unownite":{"name":"Unownite","megaStone":"Unown-Mega","itemUser":["Unown"],"megaEvolves":"Unown","num":-1096,"isNonstandard":"Unobtainable","gen":0}
+, "zebstrikite":{"name":"Zebstrikite","megaStone":"Zebstrika-Mega","itemUser":["Zebstrika"],"megaEvolves":"Zebstrika","num":-1097,"isNonstandard":"Unobtainable","gen":0}
+, "eldegossite":{"name":"Eldegossite","megaStone":"Eldegoss-Mega","itemUser":["Eldegoss"],"megaEvolves":"Eldegoss","num":-1098,"isNonstandard":"Unobtainable","gen":0}
+, "orbeetlite":{"name":"Orbeetlite","megaStone":"Orbeetle-Mega","itemUser":["Orbeetle"],"megaEvolves":"Orbeetle","num":-1099,"isNonstandard":"Unobtainable","gen":0}
+, "wailordite":{"name":"Wailordite","megaStone":"Wailord-Mega","itemUser":["Wailord"],"megaEvolves":"Wailord","num":-1100,"isNonstandard":"Unobtainable","gen":0}
+, "dragontieitez":{"name":"Dragontieite Z","megaStone":"Dragonite-Mega-Z","itemUser":["Dragonite"],"megaEvolves":"Dragonite","num":-1100,"isNonstandard":"Unobtainable","gen":0}
+, "charizarditez":{"name":"Charizardite Z","megaStone":"Charizard-Mega-Z","itemUser":["Charizard"],"megaEvolves":"Charizard","num":-1100,"isNonstandard":"Unobtainable","gen":0}
+, "typhlosioniteh":{"name":"Typhlosionite H","megaStone":"Typhlosion-Mega-H","itemUser":["Typhlosion"],"megaEvolves":"Typhlosion","num":-1100,"isNonstandard":"Unobtainable","gen":0}
+, "flygonitez":{"name":"Flygonite Z","megaStone":"Flygon-Mega-Z","itemUser":["Flygon"],"megaEvolves":"Flygon","num":-1100,"isNonstandard":"Unobtainable","gen":0}
+, "mewtwonitez":{"name":"Mewtwonite Z","megaStone":"Mewtwo-Mega-Z","itemUser":["Mewtwo"],"megaEvolves":"Mewtwo","num":-1100,"isNonstandard":"Unobtainable","gen":0}
+, "slowbroniteg":{"name":"Slowbronite G","megaStone":"Slowbro-Mega-G","itemUser":["Slowbro"],"megaEvolves":"Slowbro","num":-1100,"isNonstandard":"Unobtainable","gen":0}
+, "darkritez":{"name":"Darkrite Z","megaStone":"Darkrai-Mega-Z","itemUser":["Darkrai"],"megaEvolves":"Darkrai","num":-1100,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -9425,15 +10870,7 @@ Items["butterfrite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//butterfriteend//dragoniteitezstart
-
-Items["dragoniteitez"].onTakeItem = function(item, source) {
-        if (item.megaEvolves === source.baseSpecies.baseSpecies)
-          return false;
-        return true;
-      }
-
-//dragoniteitezend//florgesitelovestart
+//butterfriteend//florgesitelovestart
 
 Items["florgesitelove"].onTakeItem = function(item, source) {
         if (item.megaEvolves === source.baseSpecies.baseSpecies)
@@ -9522,15 +10959,7 @@ Items["drapionite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//drapioniteend//charizarditezstart
-
-Items["charizarditez"].onTakeItem = function(item, source) {
-        if (item.megaEvolves === source.baseSpecies.baseSpecies)
-          return false;
-        return true;
-      }
-
-//charizarditezend//charizarditeastart
+//drapioniteend//charizarditeastart
 
 Items["charizarditea"].onTakeItem = function(item, source) {
         if (item.megaEvolves === source.baseSpecies.baseSpecies)
@@ -9796,15 +11225,7 @@ Items["typhlosionite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//typhlosioniteend//typhlosionitehstart
-
-Items["typhlosioniteh"].onTakeItem = function(item, source) {
-        if (item.megaEvolves === source.baseSpecies.baseSpecies)
-          return false;
-        return true;
-      }
-
-//typhlosionitehend//flygoniteastart
+//typhlosioniteend//flygoniteastart
 
 Items["flygonitea"].onTakeItem = function(item, source) {
         if (item.megaEvolves === source.baseSpecies.baseSpecies)
@@ -9812,15 +11233,7 @@ Items["flygonitea"].onTakeItem = function(item, source) {
         return true;
       }
 
-//flygoniteaend//flygonitezstart
-
-Items["flygonitez"].onTakeItem = function(item, source) {
-        if (item.megaEvolves === source.baseSpecies.baseSpecies)
-          return false;
-        return true;
-      }
-
-//flygonitezend//froslassitestart
+//flygoniteaend//froslassitestart
 
 Items["froslassite"].onTakeItem = function(item, source) {
         if (item.megaEvolves === source.baseSpecies.baseSpecies)
@@ -9884,15 +11297,7 @@ Items["mewtwonitea"].onTakeItem = function(item, source) {
         return true;
       }
 
-//mewtwoniteaend//mewtwonitezstart
-
-Items["mewtwonitez"].onTakeItem = function(item, source) {
-        if (item.megaEvolves === source.baseSpecies.baseSpecies)
-          return false;
-        return true;
-      }
-
-//mewtwonitezend//miloticitestart
+//mewtwoniteaend//miloticitestart
 
 Items["miloticite"].onTakeItem = function(item, source) {
         if (item.megaEvolves === source.baseSpecies.baseSpecies)
@@ -9916,15 +11321,7 @@ Items["shiftrite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//shiftriteend//slowbronitegstart
-
-Items["slowbroniteg"].onTakeItem = function(item, source) {
-        if (item.megaEvolves === source.baseSpecies.baseSpecies)
-          return false;
-        return true;
-      }
-
-//slowbronitegend//sudowooditestart
+//shiftriteend//sudowooditestart
 
 Items["sudowoodite"].onTakeItem = function(item, source) {
         if (item.megaEvolves === source.baseSpecies.baseSpecies)
@@ -9972,4 +11369,228 @@ Items["eelektrossitehell"].onTakeItem = function(item, source) {
         return true;
       }
 
-//eelektrossitehellend
+//eelektrossitehellend//snorlaxitehellstart
+
+Items["snorlaxitehell"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//snorlaxitehellend//gardevoiritesuperstart
+
+Items["gardevoiritesuper"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//gardevoiritesuperend//diamoneyitestart
+
+Items["diamoneyite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//diamoneyiteend//dianciteangelstart
+
+Items["dianciteangel"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//dianciteangelend//dianciteinnerdemonstart
+
+Items["dianciteinnerdemon"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//dianciteinnerdemonend//dianciteseastart
+
+Items["diancitesea"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//dianciteseaend//azumarillitestart
+
+Items["azumarillite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//azumarilliteend//darkraitestart
+
+Items["darkraite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//darkraiteend//lumineonitestart
+
+Items["lumineonite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//lumineoniteend//meloettiteariastart
+
+Items["meloettitearia"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//meloettiteariaend//meloettitepirouettestart
+
+Items["meloettitepirouette"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//meloettitepirouetteend//miloticitehellstart
+
+Items["miloticitehell"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//miloticitehellend//roseraditehellstart
+
+Items["roseraditehell"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//roseraditehellend//drifblimitehellstart
+
+Items["drifblimitehell"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//drifblimitehellend//altaritehellstart
+
+Items["altaritehell"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//altaritehellend//turtonatoritestart
+
+Items["turtonatorite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//turtonatoriteend//unownitestart
+
+Items["unownite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//unowniteend//zebstrikitestart
+
+Items["zebstrikite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//zebstrikiteend//eldegossitestart
+
+Items["eldegossite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//eldegossiteend//orbeetlitestart
+
+Items["orbeetlite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//orbeetliteend//wailorditestart
+
+Items["wailordite"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//wailorditeend//dragontieitezstart
+
+Items["dragontieitez"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//dragontieitezend//charizarditezstart
+
+Items["charizarditez"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//charizarditezend//typhlosionitehstart
+
+Items["typhlosioniteh"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//typhlosionitehend//flygonitezstart
+
+Items["flygonitez"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//flygonitezend//mewtwonitezstart
+
+Items["mewtwonitez"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//mewtwonitezend//slowbronitegstart
+
+Items["slowbroniteg"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//slowbronitegend//darkritezstart
+
+Items["darkritez"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//darkritezend
