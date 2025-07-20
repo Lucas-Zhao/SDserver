@@ -7100,24 +7100,20 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -1069,
 	},
 	ejected: {
-		onSwitchOut(pokemon) {
-			pokemon.heal(pokemon.baseMaxhp / 3);
-		},
-		onEmergencyExit(target) {
-			if (
-				!this.canSwitch(target.side) ||
-				target.forceSwitchFlag ||
-				target.switchFlag
-			)
-				return;
-			for (const side of this.sides) {
-				for (const active of side.active) {
-					active.switchFlag = false;
-				}
-			}
-			target.switchFlag = true;
-			this.add("-activate", target, "ability: Ejected");
-		},
+		onSwitchOut: function(pokemon) {
+        // Heal 20% on ALL switches (both voluntary and Emergency Exit)
+        pokemon.heal(pokemon.baseMaxhp / 5);
+        this.add('-heal', pokemon, pokemon.getHealth, '[from] ability: Ejected');
+    	},
+    	onResidualOrder: 100,
+    	onResidual: function(pokemon) {
+        // Emergency Exit check at end of turn
+        if (pokemon.hp <= pokemon.maxhp / 2 && !pokemon.beingCalledBack && pokemon.hp > 0) {
+            this.add('-activate', pokemon, 'ability: Ejected');
+            // This triggers the switch menu rather than forcing a random switch
+            pokemon.switchFlag = true;
+        }
+   	},
 		flags: {},
 		name: "Ejected",
 		rating: 1,
