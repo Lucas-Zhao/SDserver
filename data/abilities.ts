@@ -7119,6 +7119,42 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 1,
 		num: -1970,
 	},
+	dnatracing: {
+		onModifyMovePriority: -1,
+		onModifyMove: function(move) {
+			if (move.id === 'synchronoise') {
+					move.ignoreImmunity = true;
+					move.ignoreResistances = true;
+			}
+		},
+		onBeforeMovePriority: 9,
+		onBeforeMove: function(pokemon, target, move) {
+			if (move.category !== 'Status' && move.id !== 'reflecttype' && target && !pokemon.volatiles['dnatracing']) {
+					// Store original types before changing
+					if (!pokemon.volatiles['dnatracing']) {
+						pokemon.addVolatile('dnatracing');
+						pokemon.volatiles['dnatracing'].originalTypes = pokemon.getTypes(true);
+						this.add('-ability', pokemon, 'DNA Tracing');
+						this.add('-message', `${pokemon.name}'s DNA Tracing activated!`);
+						this.actions.useMove('reflecttype', pokemon, target);
+					}
+			}
+		},
+		onResidualOrder: 100,
+		onResidual: function(pokemon) {
+			if (pokemon.volatiles['dnatracing'] && pokemon.volatiles['dnatracing'].originalTypes) {
+					const originalTypes = pokemon.volatiles['dnatracing'].originalTypes;
+					this.add('-ability', pokemon, 'DNA Tracing');
+					this.add('-message', `${pokemon.name}'s DNA Tracing restored its original type!`);
+					pokemon.setType(originalTypes);
+					pokemon.removeVolatile('dnatracing');
+			}
+		},
+		flags: {},
+		name: "DNA Tracing",
+		rating: 3.5,
+		num: -1076,
+	},
 
 	/*CUSTOM ABILITIES*/
  "monsoonsurge":{"name":"Monsoon Surge","flags":{},"num":-1074,"rating":4}
