@@ -7155,7 +7155,50 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 3.5,
 		num: -1076,
 	},
+	sheerwillpower: {
+		// Remove charge flags and modify move behavior
+		onModifyMovePriority: 1,
+		onModifyMove: function(move) {
+			const chargeMoves = [
+					'skullbash', 'skyattack', 'solarbeam', 'solarblade',
+					'phantomforce', 'shadowforce', 'fly', 'dig', 'dive', 'bounce'
+			];
 
+			if (move.flags['charge'] || chargeMoves.includes(move.id)) {
+					// Remove all charge-related properties
+					delete move.flags['charge'];
+					delete move.onTryMove;
+					delete move.onTry;
+					delete move.onPrepareHit;
+
+					// Replace with direct attack behavior
+					move.overrideAction = function(source, target, move) {
+						this.add('-ability', source, 'Sheer Willpower');
+						this.add('-message', `${source.name}'s ${move.name} hits instantly!`);
+						this.actions.runMove(move, source, target);
+					};
+			}
+
+			// Remove recharge effects
+			if (move.self?.volatileStatus === 'mustrecharge') {
+					delete move.self.volatileStatus;
+			}
+		},
+
+		// Clean up any existing recharge
+		onUpdate: function(pokemon) {
+			if (pokemon.volatiles['mustrecharge']) {
+					pokemon.removeVolatile('mustrecharge');
+					this.add('-ability', pokemon, 'Sheer Willpower');
+					this.add('-message', `${pokemon.name} avoids recharging!`);
+			}
+		},
+
+		flags: {failcopycat: 1},
+		name: "Sheer Willpower",
+		rating: 4.5,
+		num: -1077,
+	},
 	/*CUSTOM ABILITIES*/
  "monsoonsurge":{"name":"Monsoon Surge","flags":{},"num":-1074,"rating":4}
 , "blizzardveil":{"name":"Blizzard Veil","flags":{},"num":-1074,"rating":4}
