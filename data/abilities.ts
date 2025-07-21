@@ -7199,6 +7199,61 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 4.5,
 		num: -1077,
 	},
+	repetitiveforce: {
+		// Damage boost for consecutive move use
+		onStart: function(pokemon) {
+			pokemon.addVolatile('repetitiveforce');
+		},
+		onEnd: function(pokemon) {
+			pokemon.removeVolatile('repetitiveforce');
+		},
+		onBasePowerPriority: 21,
+		onBasePower: function(basePower, attacker, defender, move) {
+			const repetitiveForce = attacker.volatiles['repetitiveforce'];
+			if (!repetitiveForce) return;
+
+			if (move.id === repetitiveForce.lastMove) {
+					repetitiveForce.consecutive++;
+			} else {
+					repetitiveForce.consecutive = 0;
+			}
+			repetitiveForce.lastMove = move.id;
+
+			// Damage boost tiers (matches Metronome item)
+			const boostTable = [1, 1.2, 1.4, 1.6, 1.8, 2.0];
+			const boost = boostTable[Math.min(repetitiveForce.consecutive, 5)];
+
+			if (repetitiveForce.consecutive > 0) {
+					this.add('-ability', attacker, 'Repetitive Force');
+					this.add('-message', `${attacker.name}'s consecutive hits boost its power! (x${boost.toFixed(1)})`);
+					return this.chainModify(boost);
+			}
+		},
+		flags: {},
+		name: "Repetitive Force",
+		rating: 3.5,
+		num: -1078,
+	},
+	petrifyinggaze: {
+		onStart: function(pokemon) {
+			let activated = false;
+			for (const target of pokemon.adjacentFoes()) {
+					if (!activated) {
+						this.add('-ability', pokemon, 'Petrifying Gaze', 'boost');
+						activated = true;
+					}
+					if (target.volatiles['substitute']) {
+						this.add('-immune', target);
+					} else {
+						this.boost({spe: -1}, target, pokemon, null, true);
+					}
+			}
+		},
+		flags: {protect: 1, reflectable: 1},
+		name: "Petrifying Gaze",
+		rating: 3.5,
+		num: -1079,
+	},
 	/*CUSTOM ABILITIES*/
  "monsoonsurge":{"name":"Monsoon Surge","flags":{},"num":-1074,"rating":4}
 , "blizzardveil":{"name":"Blizzard Veil","flags":{},"num":-1074,"rating":4}
