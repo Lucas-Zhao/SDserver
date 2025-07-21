@@ -7254,6 +7254,76 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 3.5,
 		num: -1079,
 	},
+	rezero: {
+		onStart: function(pokemon) {
+			this.add('-ability', pokemon, 'ReZero');
+			this.add('-message', "The battle state has been reset to zero!");
+
+			// Clear all stat changes
+			for (const active of this.getAllActive()) {
+					active.clearBoosts();
+					this.add('-clearboost', active);
+			}
+
+			// Remove all hazards from both sides
+			for (const side of this.sides) {
+					const hazards = [
+						'stealthrock', 'spikes', 'toxicspikes',
+						'stickyweb', 'gmaxsteelsurge'
+					];
+					for (const hazard of hazards) {
+						if (side.sideConditions[hazard]) {
+							side.removeSideCondition(hazard);
+							this.add('-sideend', side, this.dex.conditions.get(hazard).name, '[from] ability: ReZero');
+						}
+					}
+			}
+
+			// Remove screens from both sides
+			for (const side of this.sides) {
+					const screens = [
+						'reflect', 'lightscreen', 'auroraveil'
+					];
+					for (const screen of screens) {
+						if (side.sideConditions[screen]) {
+							side.removeSideCondition(screen);
+							this.add('-sideend', side, this.dex.conditions.get(screen).name, '[from] ability: ReZero');
+						}
+					}
+			}
+
+			// Clear weather
+			if (this.field.weather) {
+					const weatherName = this.field.weather;
+					this.field.clearWeather();
+					this.add('-weather', 'none', '[from] ability: ReZero');
+					this.add('-message', `${weatherName} weather was cleared!`);
+			}
+
+			// Clear terrain
+			if (this.field.terrain) {
+					const terrainName = this.field.terrain;
+					this.field.clearTerrain();
+					this.add('-terrain', 'none', '[from] ability: ReZero');
+					this.add('-message', `${terrainName} terrain was cleared!`);
+			}
+
+			// Clear all rooms
+			const rooms = [
+					'trickroom', 'magicroom', 'wonderroom', 'gravity'
+			];
+			for (const room of rooms) {
+					if (this.field.pseudoWeather[room]) {
+						this.field.removePseudoWeather(room);
+						this.add('-fieldend', this.dex.conditions.get(room).name, '[from] ability: ReZero');
+					}
+			}
+		},
+		flags: {},
+		name: "ReZero",
+		rating: 5,
+		num: -1080,
+	},
 	/*CUSTOM ABILITIES*/
  "monsoonsurge":{"name":"Monsoon Surge","flags":{},"num":-1074,"rating":4}
 , "blizzardveil":{"name":"Blizzard Veil","flags":{},"num":-1074,"rating":4}
