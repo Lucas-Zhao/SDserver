@@ -344,3 +344,4 @@
 , "miltankmega":{"learnset":{"bodyslam":["9L4","9L3"],"hell":["9L4","9L3"]}}
 , "emolgamegay":{"learnset":{"hell":["9L4","9L3"],"voltswitch":["9L4","9L3"]}}
 , "beheeyemmega":{"learnset":{"hell":["9L4","9L3"],"psychic":["9L4","9L3"]}}
+, "swellowmega":{"learnset":{"hell":["9L4","9L3"],"boomburst":["9L4","9L3"]}}
