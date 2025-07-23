@@ -6382,5 +6382,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "swellowmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "paleogeist":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "celebihell":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "gardevoirhell":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
