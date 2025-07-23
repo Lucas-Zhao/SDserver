@@ -4113,6 +4113,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "darkraimegaz":{"name":"Darkrai-Mega-Z"}
 , "regigigasshine":{"name":"Regigigas-Shine"}
 , "hatterenealolagigamax":{"name":"Hatterene-Alola-Gigamax"}
+, "amoongussmega":{"name":"Amoonguss-Mega"}
 
 };
  
