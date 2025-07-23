@@ -343,3 +343,4 @@
 , "amoongussmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "miltankmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "emolgamegay":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "beheeyemmega":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
