@@ -4121,6 +4121,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "paleogeist":{"name":"Paleogeist"}
 , "celebihell":{"name":"Celebi-Hell"}
 , "gardevoirhell":{"name":"Gardevoir-Hell"}
+, "gloomhorn":{"name":"Gloomhorn"}
 
 };
  
