@@ -10742,6 +10742,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -10845,6 +10849,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "darkritez":{"name":"Darkrite Z","megaStone":"Darkrai-Mega-Z","itemUser":["Darkrai"],"megaEvolves":"Darkrai","num":-1100,"isNonstandard":"Unobtainable","gen":0}
 , "vent":{"name":"Vent","megaStone":"Amoonguss-Mega","itemUser":["Amoonguss"],"megaEvolves":"Amoonguss","num":-1101,"isNonstandard":"Unobtainable","gen":0}
 , "miltankite":{"name":"Miltankite","megaStone":"Miltank-Mega","itemUser":["Miltank"],"megaEvolves":"Miltank","num":-1102,"isNonstandard":"Unobtainable","gen":0}
+, "emolgitey":{"name":"Emolgite Y","megaStone":"Emolga-Mega-Y","itemUser":["Emolga"],"megaEvolves":"Emolga","num":-1103,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -11669,4 +11674,12 @@ Items["miltankite"].onTakeItem = function(item, source) {
         return true;
       }
 
-//miltankiteend
+//miltankiteend//emolgiteystart
+
+Items["emolgitey"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//emolgiteyend
