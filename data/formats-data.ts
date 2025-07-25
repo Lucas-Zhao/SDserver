@@ -6384,5 +6384,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "celebihell":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "gardevoirhell":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "gloomhorn":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "venusaurprime":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
