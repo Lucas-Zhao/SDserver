@@ -4123,6 +4123,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "gardevoirhell":{"name":"Gardevoir-Hell"}
 , "gloomhorn":{"name":"Gloomhorn"}
 , "venusaurprime":{"name":"Venusaur-Prime"}
+, "venusaurmegaprime":{"name":"Venusaur-Mega-Prime"}
 
 };
  

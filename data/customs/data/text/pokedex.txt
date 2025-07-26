@@ -351,3 +351,4 @@
 , "gardevoirhell":{"name":"Gardevoir-Hell"}
 , "gloomhorn":{"name":"Gloomhorn"}
 , "venusaurprime":{"name":"Venusaur-Prime"}
+, "venusaurmegaprime":{"name":"Venusaur-Mega-Prime"}
