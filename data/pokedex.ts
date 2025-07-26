@@ -20518,6 +20518,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "gloomhorn":{"name":"Gloomhorn","types":["Dark","Ghost"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":89,"atk":140,"def":80,"spa":90,"spd":70,"spe":61},"abilities":{"0":"Stench","1":"Poison Heal","H":"Technician"},"heightm":2.4,"weightkg":95,"evoType":"trade","num":-1350}
 , "venusaurprime":{"name":"Venusaur-Prime","types":["Grass","Poison"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":100,"atk":102,"def":103,"spa":120,"spd":120,"spe":100},"abilities":{"0":"Overgrow","1":"Grassy Surge","H":"Chlorophyll"},"heightm":2,"weightkg":100,"evoType":"trade","num":-1351}
 , "venusaurmegaprime":{"name":"Venusaur-Mega-Prime","types":["Grass","Poison"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":100,"atk":120,"def":143,"spa":142,"spd":140,"spe":100},"abilities":{"0":"Thick Fat"},"heightm":2.4,"weightkg":155.5,"evoType":"trade","requiredItem":"Venusaurite Prime","baseSpecies":"Venusaur-Prime","forme":"Mega","num":-1352}
+, "charizardprime":{"name":"Charizard-Prime","types":["Fire","Flying"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":98,"atk":104,"def":98,"spa":129,"spd":105,"spe":120},"abilities":{"0":"Blaze","1":"Sheer Force","H":"Solar Power"},"heightm":1.7,"weightkg":89.5,"evoType":"trade","num":-1353}
 
 };
  
