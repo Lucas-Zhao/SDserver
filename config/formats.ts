@@ -24,7 +24,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: "gen9",
 		battle: {},
 		teraPreviewDefault: true,
-		unbanlist: ["lgpe", "unreleased"],
+		unbanlist: ["lgpe", "unreleased", "unobtainable"],
 		ruleset: [
 			"Team Preview",
 			'Standard NatDex',
