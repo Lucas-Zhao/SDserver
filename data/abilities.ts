@@ -7120,40 +7120,48 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -1970,
 	},
 	dnatracing: {
-		onModifyMovePriority: -1,
-		onModifyMove: function(move) {
-			if (move.id === 'synchronoise') {
-					move.ignoreImmunity = true;
-					move.ignoreResistances = true;
-			}
-		},
-		onBeforeMovePriority: 9,
-		onBeforeMove: function(pokemon, target, move) {
-			if (move.category !== 'Status' && move.id !== 'reflecttype' && target && !pokemon.volatiles['dnatracing']) {
-					// Store original types before changing
-					if (!pokemon.volatiles['dnatracing']) {
-						pokemon.addVolatile('dnatracing');
-						pokemon.volatiles['dnatracing'].originalTypes = pokemon.getTypes(true);
-						this.add('-ability', pokemon, 'DNA Tracing');
-						this.add('-message', `${pokemon.name}'s DNA Tracing activated!`);
-						this.actions.useMove('reflecttype', pokemon, target);
-					}
-			}
-		},
-		onResidualOrder: 100,
-		onResidual: function(pokemon) {
-			if (pokemon.volatiles['dnatracing'] && pokemon.volatiles['dnatracing'].originalTypes) {
-					const originalTypes = pokemon.volatiles['dnatracing'].originalTypes;
-					this.add('-ability', pokemon, 'DNA Tracing');
-					this.add('-message', `${pokemon.name}'s DNA Tracing restored its original type!`);
-					pokemon.setType(originalTypes);
-					pokemon.removeVolatile('dnatracing');
-			}
-		},
-		flags: {},
-		name: "DNA Tracing",
-		rating: 3.5,
-		num: -1076,
+    // Make Synchronoise ignore immunities and resistances
+    onModifyMovePriority: -1,
+    onModifyMove: function(move) {
+        if (move.id === 'synchronoise') {
+            move.ignoreImmunity = true;
+            // Force neutral effectiveness against all types
+            move.onEffectiveness = function (typeMod, target, type) {
+                return 0; // 0 means neutral damage (1x)
+            };
+            this.debug("DNA Tracing makes Synchronoise ignore type matchups");
+        }
+    },
+
+    // Use Reflect Type before attacking moves
+    onBeforeMovePriority: 9,
+    onBeforeMove: function(pokemon, target, move) {
+        if (move.category !== 'Status' && move.id !== 'reflecttype' && target && !pokemon.volatiles['dnatracing']) {
+            this.add('-ability', pokemon, 'DNA Tracing');
+            // Store original types
+            if (!pokemon.volatiles['dnatracing']) {
+                pokemon.addVolatile('dnatracing');
+                pokemon.volatiles['dnatracing'].originalTypes = pokemon.getTypes(true);
+            }
+            this.actions.useMove('reflecttype', pokemon, target);
+        }
+    },
+
+    // Revert typing at end of turn
+    onResidualOrder: 100,
+    onResidual: function(pokemon) {
+        if (pokemon.volatiles['dnatracing'] && pokemon.volatiles['dnatracing'].originalTypes) {
+            const originalTypes = pokemon.volatiles['dnatracing'].originalTypes;
+            this.add('-ability', pokemon, 'DNA Tracing');
+            this.add('-message', `${pokemon.name}'s DNA Tracing reverted its type!`);
+            pokemon.setType(originalTypes);
+            pokemon.removeVolatile('dnatracing');
+        }
+    },
+    flags: {},
+    name: "DNA Tracing",
+    rating: 3.5,
+    num: -1076,
 	},
 	sheerwillpower: {
 		// Remove charge flags and modify move behavior
