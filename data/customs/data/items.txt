@@ -105,6 +105,7 @@
 , "swellowite":{"name":"Swellowite","megaStone":"Swellow-Mega","itemUser":["Swellow"],"megaEvolves":"Swellow","num":-1105,"isNonstandard":"Unobtainable","gen":0}
 , "venusauriteprime":{"name":"Venusaurite Prime","megaStone":"Venusaur-Mega-Prime","itemUser":["Venusaur-Prime"],"megaEvolves":"Venusaur-Prime","num":-1106,"isNonstandard":"Unobtainable","gen":0}
 , "charizarditeprime":{"name":"Charizardite Prime","megaStone":"Charizard-Mega-Prime-X","itemUser":["Charizard-Prime"],"megaEvolves":"Charizard-Prime","num":-1107,"isNonstandard":"Unobtainable","gen":0}
+, "charizarditeprimey":{"name":"Charizardite Prime Y","megaStone":"Charizard-Mega-Prime-Y","itemUser":["Charizard-Prime"],"megaEvolves":"Charizard-Prime","num":-1108,"isNonstandard":"Unobtainable","gen":0}
 
 /*FUNCTIONS*/
 //serperioritestart
@@ -967,4 +968,12 @@ Items["charizarditeprime"].onTakeItem = function(item, source) {
         return true;
       }
 
-//charizarditeprimeend
+//charizarditeprimeend//charizarditeprimeystart
+
+Items["charizarditeprimey"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//charizarditeprimeyend
