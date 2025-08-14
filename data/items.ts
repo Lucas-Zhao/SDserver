@@ -10824,6 +10824,12 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -10931,6 +10937,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "beheeyemite":{"name":"Beheeyemite","megaStone":"Beheeyem-Mega","itemUser":["Beheeyem"],"megaEvolves":"Beheeyem","num":-1104,"isNonstandard":"Unobtainable","gen":0}
 , "swellowite":{"name":"Swellowite","megaStone":"Swellow-Mega","itemUser":["Swellow"],"megaEvolves":"Swellow","num":-1105,"isNonstandard":"Unobtainable","gen":0}
 , "venusauriteprime":{"name":"Venusaurite Prime","megaStone":"Venusaur-Mega-Prime","itemUser":["Venusaur-Prime"],"megaEvolves":"Venusaur-Prime","num":-1106,"isNonstandard":"Unobtainable","gen":0}
+, "charizarditeprime":{"name":"Charizardite Prime","megaStone":"Charizard-Mega-Prime-X","itemUser":["Charizard-Prime"],"megaEvolves":"Charizard-Prime","num":-1107,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -11787,4 +11794,12 @@ Items["venusauriteprime"].onTakeItem = function(item, source) {
         return true;
       }
 
-//venusauriteprimeend
+//venusauriteprimeend//charizarditeprimestart
+
+Items["charizarditeprime"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//charizarditeprimeend

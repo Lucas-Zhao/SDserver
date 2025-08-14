@@ -4125,6 +4125,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "venusaurprime":{"name":"Venusaur-Prime"}
 , "venusaurmegaprime":{"name":"Venusaur-Mega-Prime"}
 , "charizardprime":{"name":"Charizard-Prime"}
+, "charizardmegaprimex":{"name":"Charizard-Mega-Prime-X"}
 
 };
  
