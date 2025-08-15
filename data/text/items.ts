@@ -2550,6 +2550,7 @@ export const ItemsText: {[id: IDEntry]: ItemText} = {
 , "venusauriteprime":{"name":"Venusaurite Prime","shortDesc":"If held by a Venusaur-Prime, this item allows it to Mega Evolve in battle."}
 , "charizarditeprime":{"name":"Charizardite Prime","shortDesc":"If held by a Charizard-Prime, this item allows it to Mega Evolve in battle."}
 , "charizarditeprimey":{"name":"Charizardite Prime Y","shortDesc":"If held by a Charizard-Prime, this item allows it to Mega Evolve in battle."}
+, "blastoisiteprime":{"name":"Blastoisite Prime","shortDesc":"If held by a Blastoise-Prime, this item allows it to Mega Evolve in battle."}
 
 };
  

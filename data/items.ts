@@ -10848,6 +10848,10 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 
 
+
+
+
+
 /*CUSTOM ITEMS*/
  "serperiorite":{"name":"Serperiorite","megaStone":"Serperior-Mega","itemUser":["Serperior"],"megaEvolves":"Serperior","num":-1005,"isNonstandard":"Unobtainable","gen":0}
 , "emboarite":{"name":"Emboarite","megaStone":"Emboar-Mega","itemUser":["Emboar"],"megaEvolves":"Emboar","num":-1005,"isNonstandard":"Unobtainable","gen":0}
@@ -10957,6 +10961,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 , "venusauriteprime":{"name":"Venusaurite Prime","megaStone":"Venusaur-Mega-Prime","itemUser":["Venusaur-Prime"],"megaEvolves":"Venusaur-Prime","num":-1106,"isNonstandard":"Unobtainable","gen":0}
 , "charizarditeprime":{"name":"Charizardite Prime","megaStone":"Charizard-Mega-Prime-X","itemUser":["Charizard-Prime"],"megaEvolves":"Charizard-Prime","num":-1107,"isNonstandard":"Unobtainable","gen":0}
 , "charizarditeprimey":{"name":"Charizardite Prime Y","megaStone":"Charizard-Mega-Prime-Y","itemUser":["Charizard-Prime"],"megaEvolves":"Charizard-Prime","num":-1108,"isNonstandard":"Unobtainable","gen":0}
+, "blastoisiteprime":{"name":"Blastoisite Prime","megaStone":"Blastoise-Mega-Prime","itemUser":["Blastoise-Prime"],"megaEvolves":"Blastoise-Prime","num":-1109,"isNonstandard":"Unobtainable","gen":0}
 
 };
 /*FUNCTIONS*/
@@ -11829,4 +11834,12 @@ Items["charizarditeprimey"].onTakeItem = function(item, source) {
         return true;
       }
 
-//charizarditeprimeyend
+//charizarditeprimeyend//blastoisiteprimestart
+
+Items["blastoisiteprime"].onTakeItem = function(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies)
+          return false;
+        return true;
+      }
+
+//blastoisiteprimeend
