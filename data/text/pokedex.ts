@@ -4128,6 +4128,7 @@ export const PokedexText: {[id: IDEntry]: PokedexText} = {
 , "charizardmegaprimex":{"name":"Charizard-Mega-Prime-X"}
 , "charizardmegaprimey":{"name":"Charizard-Mega-Prime-Y"}
 , "flutterlame":{"name":"Flutterlame"}
+, "blastoiseprime":{"name":"Blastoise-Prime"}
 
 };
  

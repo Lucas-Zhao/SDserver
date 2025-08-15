@@ -6390,5 +6390,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "charizardmegaprimex":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "charizardmegaprimey":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "flutterlame":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "blastoiseprime":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };

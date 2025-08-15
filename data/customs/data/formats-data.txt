@@ -355,3 +355,4 @@
 , "charizardmegaprimex":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "charizardmegaprimey":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "flutterlame":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "blastoiseprime":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
