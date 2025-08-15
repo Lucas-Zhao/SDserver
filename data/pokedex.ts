@@ -20524,6 +20524,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "flutterlame":{"name":"Flutter Lame","types":["Ghost","Fairy"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":73,"atk":73,"def":73,"spa":117,"spd":117,"spe":117},"abilities":{"0":"Protosynthesis"},"heightm":1.4,"weightkg":4,"evoType":"trade","num":-1356}
 , "blastoiseprime":{"name":"Blastoise-Prime","types":["Water"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":99,"atk":103,"def":120,"spa":105,"spd":125,"spe":98},"abilities":{"0":"Torrent","1":"Dauntless Shield","H":"Rain Dish"},"heightm":1.6,"weightkg":85.5,"evoType":"trade","num":-1357}
 , "blastoisemegaprime":{"name":"Blastoise-Mega-Prime","types":["Water"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":99,"atk":123,"def":140,"spa":155,"spd":135,"spe":98},"abilities":{"0":"Mega Launcher"},"heightm":1.6,"weightkg":101.1,"evoType":"trade","requiredItem":"Blastoisite Prime","baseSpecies":"Blastoise-Prime","forme":"Mega","num":-1358}
+, "hoho":{"name":"Ho-Ho","types":["Fire","Flying"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":86,"atk":110,"def":70,"spa":90,"spd":134,"spe":70},"abilities":{"0":"Pressure","H":"Regenerator"},"heightm":3.8,"weightkg":199,"evoType":"trade","num":-1359}
 
 };
  

@@ -6392,5 +6392,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "flutterlame":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "blastoiseprime":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "blastoisemegaprime":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "hoho":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
