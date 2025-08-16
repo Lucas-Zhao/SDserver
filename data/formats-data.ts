@@ -6393,5 +6393,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "blastoiseprime":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "blastoisemegaprime":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "hoho":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "lugaya":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };
