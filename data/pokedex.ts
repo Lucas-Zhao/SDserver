@@ -20526,6 +20526,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "blastoisemegaprime":{"name":"Blastoise-Mega-Prime","types":["Water"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":99,"atk":123,"def":140,"spa":155,"spd":135,"spe":98},"abilities":{"0":"Mega Launcher"},"heightm":1.6,"weightkg":101.1,"evoType":"trade","requiredItem":"Blastoisite Prime","baseSpecies":"Blastoise-Prime","forme":"Mega","num":-1358}
 , "hoho":{"name":"Ho-Ho","types":["Fire","Flying"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":86,"atk":110,"def":70,"spa":90,"spd":134,"spe":70},"abilities":{"0":"Pressure","H":"Regenerator"},"heightm":3.8,"weightkg":199,"evoType":"trade","num":-1359}
 , "lugaya":{"name":"Lugaya","types":["Psychic","Flying"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":86,"atk":70,"def":110,"spa":70,"spd":134,"spe":90},"abilities":{"0":"Pressure","H":"Multiscale"},"heightm":5.2,"weightkg":216,"evoType":"trade","num":-1360}
+, "mewtwah":{"name":"Mewtwah","types":["Psychic"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":96,"atk":110,"def":75,"spa":124,"spd":75,"spe":120},"abilities":{"0":"Pressure","H":"Unnerve"},"heightm":2,"weightkg":122.2,"evoType":"trade","num":-1361}
 
 };
  
