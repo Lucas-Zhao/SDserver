@@ -6396,5 +6396,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 , "lugaya":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "mewtwah":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 , "marshydow":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
+, "ledigod":{"isNonstandard":"Unobtainable","tier":"HELL","natDexTier":"HELL"}
 
 };

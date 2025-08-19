@@ -20528,6 +20528,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 , "lugaya":{"name":"Lugaya","types":["Psychic","Flying"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":86,"atk":70,"def":110,"spa":70,"spd":134,"spe":90},"abilities":{"0":"Pressure","H":"Multiscale"},"heightm":5.2,"weightkg":216,"evoType":"trade","num":-1360}
 , "mewtwah":{"name":"Mewtwah","types":["Psychic"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":96,"atk":110,"def":75,"spa":124,"spd":75,"spe":120},"abilities":{"0":"Pressure","H":"Unnerve"},"heightm":2,"weightkg":122.2,"evoType":"trade","num":-1361}
 , "marshydow":{"name":"Marshydow","types":["Ghost","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":90,"atk":108,"def":80,"spa":90,"spd":90,"spe":108},"abilities":{"0":"Technician"},"heightm":0.7,"weightkg":22.2,"evoType":"trade","num":-1362}
+, "ledigod":{"name":"Ledigod","types":["Bug","Fighting"],"genderRatio":{"M":0.875,"F":0.125},"baseStats":{"hp":55,"atk":135,"def":50,"spa":55,"spd":110,"spe":85},"abilities":{"0":"Swarm","1":"Early Bird","H":"Iron Fist"},"heightm":1.4,"weightkg":35.6,"evoType":"trade","num":-1363}
 
 };
  
